@@ -1,0 +1,53 @@
+\chapter*{Introducción}
+En la actualidad, vivimos en un mundo donde cada vez más datos se generan y almacenan en diversos tipos de sistemas, lo que nos presenta un gran desafío: ¿cómo convertir estos datos en información valiosa que pueda ser utilizada para tomar decisiones informadas? Para resolver este reto, se han desarrollado diversas técnicas y herramientas para extraer información útil de grandes cantidades de datos. Uno de estos enfoques es el Aprendizaje Automático. \\
+El Aprendizaje Automático, mayormente conocido como Machine Learning, es un subcampo de la Inteligencia Artificial, que se enfoca en el desarrollo de algoritmos y modelos que permiten a las computadoras aprender de los datos sin ser programadas explícitamente para hacerlo. Se define como un conjunto de métodos que puede detectar patrones en los datos automáticamente, y luego usar los patrones descubiertos para predecir datos en el futuro, o para realizar otro tipo de toma de decisiones bajo incertidumbre \citep{murphy2012machine}. Estos patrones interesantes son los que representan el conocimiento.  Sin embargo, el proceso de aprendizaje automático requiere de un gran volumen de datos y, a menudo, estos datos no están estructurados. Es aquí donde la minería de datos entra en juego.\\
+La minería de datos es el proceso de extraer conocimiento útil y comprensible, previamente desconocido, desde grandes cantidades de datos almacenados en distintos formatos \citep{orallo2004}. Como parte del proceso de descubrimiento de conocimiento en los datos (KDD, por sus siglas en inglés), involucra las fases de dicho proceso: integración, recopilación, selección, limpieza, transformación, evaluación e interpretación de de los datos; así como la difusión y uso del conocimiento obtenido \citep{Han2011}.  \\
+La implementación efectiva de estas técnicas requiere la intervención humana, incluyendo la selección de algoritmos adecuados, el preprocesamiento de datos y la optimización de hiperparámetros. La automatización del aprendizaje automático (AutoML) se ha desarrollado como una solución para simplificar y acelerar este proceso. AutoML tiene como objetivo tomar estas decisiones de una manera automatizada, objetiva y basada en datos: el usuario simplemente proporciona datos y el sistema AutoML determina automáticamente el enfoque que funciona mejor para esta aplicación en particular \citep{hutter2019automated}. Para realizar la minería de datos de manera efectiva, se requiere de herramientas especializadas que permitan procesar grandes cantidades de información de forma rápida y eficiente. Una de estas herramientas es KNIME, un software de código abierto que ofrece una amplia variedad de funciones para la preparación de datos, análisis estadísticos y visualización de resultados.\\
+KNIME es una herramienta popular que proporciona un entorno de desarrollo visual para la creación, ejecución y evaluación de flujos de trabajo de análisis de datos. Es una plataforma de software libre y abierto que incluye una amplia variedad de nodos para el preprocesado de datos, la minería de datos y la modelización de datos \citep{KNIME2023}. En KNIME, el AutoML se puede implementar a través de diferentes nodos, por ejemplo, el nodo \textit{AutoML Learner}, que permite seleccionar automáticamente el mejor algoritmo de aprendizaje automático para un conjunto de datos en particular, así como ajustar los hiperparámetros del modelo. No obstante, una de las principales desventajas que presenta es la falta de control y personalización. Aunque el nodo AutoML permite a los usuarios seleccionar automáticamente los algoritmos y ajustar los hiperparámetros, los usuarios no tienen control directo sobre estos procesos y no pueden ajustar los parámetros de manera manual. Esto puede limitar la capacidad de los usuarios para personalizar y optimizar los modelos para satisfacer sus necesidades específicas. \\
+En \citep{Carrazana2022} se desarrolla un componente de KNIME, que ejecuta y compara el desempeño de múltiples flujos de AutoML en tareas de clasificación, partiendo de la problemática de que no es posible, mediante un único nodo, desarrollar todo el proceso de KDD con la posibilidad de visualizar y analizar las consideraciones realizadas durante el pre-procesado. En este componente se desarrollaron subcomponentes enfocados en tareas concisas de pre-procesado: el procesamiento de datos numéricos, \textit{string}, valores faltantes y el ajuste de tipos columna; y se demostró el correcto funcionamiento del componente propuesto y los subcomponentes que lo integran. Sin embargo quedaron tareas pendientes, como la optimización de hiperparámetros y la automatización de algunas de las actividades esenciales en el pre-procesado, siendo esta la \textbf{situación problemática}. \\
+Se define como \textbf{problema a resolver} ¿cómo incorporar a este componente la posibilidad de optimizar los hiperparámetros y algunas de las actividades iniciales en el pre-procesado a partir de un algoritmo de clasificación? Para dar solución a esta problemática, se determina como \textbf{objetivo general} desarrollar una nueva versión del componente KNIME que permita la selección de manera automatizada de valores e hiperparámetros predefinidos en la implementación anterior. Este objetivo general se desglosa en los siguientes \textbf{objetivos específicos y tareas}:
+
+\begin{enumerate}
+	\item Analizar el estado del arte de Machine Learning, AutoML y KNIME. 
+	\begin{enumerate}
+		\item Investigar las técnicas de Machine Learning. 
+		\item Investigar los enfoques de AutoML. 
+		\item Investigar la implementación e inclusión de nuevos componentes en KNIME.
+	\end{enumerate}
+	\item Modificar múltiples flujos de AutoML en tareas de Clasificación. 
+	\begin{enumerate}
+		\item Desarrollar los subcomponentes KNIME que implementen los flujos de AutoML de pre-procesado. 
+		\item Desarrollar los subcomponentes KNIME que implementen los flujos de AutoML en optimización de hiperparámetros.
+		\item Desarrollar componentes KNIME para la visualización de los resultados. 
+	\end{enumerate}
+	\item Realizar la validación de cada flujo implementado.
+	\begin{enumerate}
+		\item Diseñar y ejecutar las pruebas y experimentos de los flujos implementados. 
+		\item Documentar los resultados obtenidos.
+	\end{enumerate} 
+\end{enumerate}
+
+El \textbf{valor práctico} de este proyecto consiste en las modificaciones desarrolladas al componente KNIME de AutoML para el pre-procesado en tareas de clasificación, capaz de automatizar la optimización de hiperparámetros y ejecutar flujos de pre-procesado para diferentes algoritmos en dicha tarea. \\
+En cuanto a la estructuración, este trabajo está dividido en cuatro capítulos:
+\begin{itemize}
+	\item \textbf{Capítulo 1: Aprendizaje automático y AutoML}, se presenta el estudio realizado sobre las temáticas que aborda el trabajo, se muestran los conceptos fundamentales relacionados con el Aprendizaje automático, la Minería de Datos y AutoML; así como la descripción del componente KNIME de AutoML para pre-procesado.
+	\item \textbf{Capítulo 2: Propuesta de modificación al componente KNIME de AutoML para pre-procesado}, se presenta y expone el diseño e implementación de la modificación al componente KNIME para tareas de AutoML en pre-procesado.
+	\item \textbf{Capítulo 3: Propuesta de componente de AutoML para la optimización de hiperparámetros en tareas de clasificación}, se presenta y expone el diseño e implementación de la modificación al componente KNIME para tareas de AutoML en optimización de hiperparámetros.
+	\item \textbf{Capítulo 4: Integración y validación de soluciones propuestas al componente de AutoML}, se muestran, comparan y analizan los resultados obtenidos de los algoritmos para diferentes configuraciones.
+\end{itemize}
+
+
+
+
+%Las figuras deben referenciarse en el texto, así como lo muestra este ejemplo, ver Figura \ref{fig:figCUJAE}.
+
+%\begin{figure}[H] %la opción H indica al compilador LaTeX que posicione la figura lo más cerca posible de este lugar.
+%\centering
+ % \includegraphics[width=0.5\linewidth]{figuras/membrete-cujae-centrado.png}
+ % \caption{El título de la figura debe estar acorde con su contenido.}
+ % \label{fig:figCUJAE} %incluir el label permite referenciarla en cualquier parte del documento.
+%\end{figure}
+
+%Se deben utilizar siempre los mismos términos para referirse a los mismos conceptos y no olvidar de definir los términos que son claves en el campo de acción, o sea, la propuesta de la tesis.\\
+
+%Describir la Situación problemática. Problema. Objetivo general. Objetivos específicos. Tareas. Beneficios. Breve resumen del contenido de la tesis.

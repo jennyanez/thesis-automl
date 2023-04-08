@@ -1,0 +1,12 @@
+\babel@toc {spanish}{}\relax 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Fases del proceso KDD.\relax }}{6}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Ejemplo de flujo de trabajo en la herramienta KNIME.\relax }}{13}{figure.caption.14}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Fases y tareas de la metodología CRISP-DM.\relax }}{18}{figure.caption.22}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Algoritmos supervisados estudiados dedicados a la detección de fraude bancario\relax }}{19}{figure.caption.23}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Algoritmos no supervisados estudiados dedicados a la detección de fraude bancario\relax }}{20}{figure.caption.24}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Resultados del nodo \textit {Decision Tree} con todas las variables de la vista minable\relax }}{21}{figure.caption.25}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Resultados del nodo \textit {Decision Tree} tras la elección de variables\relax }}{21}{figure.caption.26}%
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Resultados del nodo \textit {Random Forest} con todas las variables de la vista minable\relax }}{22}{figure.caption.27}%
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Resultados del nodo \textit {Random Forest} tras la elección de variables\relax }}{22}{figure.caption.28}%

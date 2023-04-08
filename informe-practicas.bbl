@@ -1,0 +1,58 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citename{Agrawal {\em et~al.}, }1993]{Agrawal1519}
+Agrawal, Rakesh, Imielinski, Tomasz, \& Swami, Arun. 1993.
+\newblock Mining Association Rules between Sets of Items in Large Databases.
+
+\bibitem[\protect\citename{Bonaccorso, }2017]{bonaccorso2017machine}
+Bonaccorso, Giuseppe. 2017.
+\newblock {\em Machine learning algorithms}.
+\newblock Packt Publishing Ltd.
+
+\bibitem[\protect\citename{Carrazana~Ruiz, }2022]{Carrazana2022}
+Carrazana~Ruiz, Ernesto. 2022.
+\newblock {\em Componente KNIME de AutoML para pre-procesado en tareas de
+  Clasificación}.
+\newblock M.Phil. thesis.
+
+\bibitem[\protect\citename{Hern{\'a}ndez~Orallo {\em et~al.},
+  }2004]{orallo2004}
+Hern{\'a}ndez~Orallo, Jos{\'e}, {\em et~al.} 2004.
+\newblock {\em Introducci{\'o}n a la Miner{\'\i}a de Datos}.
+\newblock Biblioteca Hern{\'a}n Malo Gonz{\'a}lez.
+
+\bibitem[\protect\citename{Hutter {\em et~al.}, }2019]{hutter2019automated}
+Hutter, Frank, Kotthoff, Lars, \& Vanschoren, Joaquin. 2019.
+\newblock {\em Automated machine learning: methods, systems, challenges}.
+\newblock Springer Nature.
+
+\bibitem[\protect\citename{Javed Mehedi~Shamrat {\em et~al.},
+  }2022]{javed2022performance}
+Javed Mehedi~Shamrat, FM, Ranjan, Rumesh, Hasib, Khan~Md, Yadav, Amit, \&
+  Siddique, Abdul~Hasib. 2022.
+\newblock Performance evaluation among ID3, C4.5, and CART Decision Tree
+  Algorithm.
+\newblock {\em Pages  127--142 of:} {\em Pervasive Computing and Social
+  Networking: Proceedings of ICPCSN 2021}.
+\newblock Springer.
+
+\bibitem[\protect\citename{Jiawei~Han, }2011]{Han2011}
+Jiawei~Han, Micheline~Kamber, Jian~Pei. 2011.
+\newblock {\em Data Mining. Concepts and Techniques (The Morgan Kaufmann Series
+  in Data Management Systems)}. 3rd edn.
+
+\bibitem[\protect\citename{Knime, }2023]{KNIME2023}
+Knime. 2023 (Mar.).
+\newblock {\em KNIME Official Website}.
+
+\bibitem[\protect\citename{Murphy, }2012]{murphy2012machine}
+Murphy, Kevin~P. 2012.
+\newblock {\em Machine learning: a probabilistic perspective}.
+\newblock MIT press.
+
+\bibitem[\protect\citename{Sammut \& Webb, }2011]{sammut2011encyclopedia}
+Sammut, Claude, \& Webb, Geoffrey~I. 2011.
+\newblock {\em Encyclopedia of machine learning}.
+\newblock Springer Science \& Business Media.
+
+\end{thebibliography}

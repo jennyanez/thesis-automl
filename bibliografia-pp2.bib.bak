@@ -1,0 +1,269 @@
+@Article{he2021automl,
+  author    = {He, Xin and Zhao, Kaiyong and Chu, Xiaowen},
+  journal   = {Knowledge-Based Systems},
+  title     = {AutoML: A survey of the state-of-the-art},
+  year      = {2021},
+  pages     = {106622},
+  volume    = {212},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/he-xin-automl-a-survey-of-the-state-of-the-art.pdf:PDF},
+  publisher = {Elsevier},
+}
+
+@Book{hutter2019automated,
+  author    = {Hutter, Frank and Kotthoff, Lars and Vanschoren, Joaquin},
+  publisher = {Springer Nature},
+  title     = {Automated machine learning: methods, systems, challenges},
+  year      = {2019},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/978-3-030-05318-5.pdf:PDF},
+}
+
+@Article{zoller2021benchmark,
+  author  = {Z{\"o}ller, Marc-Andr{\'e} and Huber, Marco F},
+  journal = {Journal of artificial intelligence research},
+  title   = {Benchmark and survey of automated machine learning frameworks},
+  year    = {2021},
+  pages   = {409--472},
+  volume  = {70},
+  file    = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/zöller-marc-andré-benchmark-and-survey-of-automated.pdf:PDF},
+}
+
+@InProceedings{tuggener2019automated,
+  author       = {Tuggener, Lukas and Amirian, Mohammadreza and Rombach, Katharina and L{\"o}rwald, Stefan and Varlet, Anastasia and Westermann, Christian and Stadelmann, Thilo},
+  booktitle    = {2019 6th Swiss Conference on Data Science (SDS)},
+  title        = {Automated machine learning in practice: state of the art and recent results},
+  year         = {2019},
+  organization = {IEEE},
+  pages        = {31--36},
+  file         = {:tuggener2019.pdf:PDF},
+}
+
+@Article{moreno2013comparative,
+  author    = {Moreno, Alberto Prieto and Santiago, Orestes Llanes and de Lazaro, Jose Manuel Bernal and Moreno, Emilio Garcia},
+  journal   = {IEEE Latin America Transactions},
+  title     = {Comparative evaluation of classification methods used in fault diagnosis of industrial processes},
+  year      = {2013},
+  number    = {2},
+  pages     = {682--689},
+  volume    = {11},
+  abstract  = {This article presents a comparative study of the obtención de los modelos adecuados, se usan otros enfoques
+performance of classification techniques used for fault diagnosis como son la aplicación de técnicas de inteligencia artificial 
+in industrial processes. The techniques studied ranging from para capturar el conocimiento experto y la utilización de 
+classifiers based on Bayes theory as Maximum a Posteriori 
+Probability (MAP) and Nearest Neighbor (kNN) classifiers, técnicas estadísticas multivariadas y de reconocimiento de},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/prietomoreno2013.pdf:PDF},
+  keywords  = {industrial processes, fault diagnosis, support vector que las cinco herramientas de clasificación más difundidas machines, artificial neural networks, partial least squares, son: el clasificador de Máxima Probabilidad a Posteriori nearest neighbors classifier, MAP classifier},
+  publisher = {IEEE},
+}
+
+@Book{sammut2011encyclopedia,
+  author    = {Sammut, Claude and Webb, Geoffrey I},
+  publisher = {Springer Science \& Business Media},
+  title     = {Encyclopedia of machine learning},
+  year      = {2011},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/sammut-claude-encyclopedia-of-machine-learning-2010.pdf:PDF},
+}
+
+@InProceedings{Feurer2019,
+  author   = {Matthias Feurer and Aaron Klein and Katharina Eggensperger and Jost Tobias Springenberg and Manuel Blum and Frank Hutter},
+  title    = {Chapter 6 Auto-sklearn: Efficient and Robust Automated Machine Learning},
+  year     = {2019},
+  abstract = {The success of machine learning in a broad range of applications has led
+to an ever-growing demand for machine learning systems that can be used off the
+shelf by non-experts. To be effective in practice, such systems need to automatically
+choose a good algorithm and feature preprocessing steps for a new dataset at hand,
+and also set their respective hyperparameters. Recent work has started to tackle this
+automated machine learning (AutoML) problem with the help of efficient Bayesian
+optimization methods. Building on this, we introduce a robust new AutoML system
+based on the Python machine learning package scikit-learn (using 15 classifiers, 14
+feature preprocessing methods, and 4 data preprocessing methods, giving rise to a
+structured hypothesis space with 110 hyperparameters). This system, which we dub
+Auto-sklearn, improves on existing AutoML methods by automatically taking into
+account past performance on similar datasets, and by constructing ensembles from
+the models evaluated during the optimization. Our system won six out of ten phases
+of the first ChaLearn AutoML challenge, and our comprehensive analysis on over
+100 diverse datasets shows that it substantially outperforms the previous state of
+the art in AutoML. We also demonstrate the performance gains due to each of our
+contributions and derive insights into the effectiveness of the individual components
+of Auto-sklearn.},
+  doi      = {.org/10.1007/978-3-030-05318-5_6},
+  file     = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/feurer-matthias-auto-sklearn-efficient-and-robust.pdf:PDF},
+}
+
+@Article{waring2020automated,
+  author    = {Waring, Jonathan and Lindvall, Charlotta and Umeton, Renato},
+  journal   = {Artificial intelligence in medicine},
+  title     = {Automated machine learning: Review of the state-of-the-art and opportunities for healthcare},
+  year      = {2020},
+  pages     = {101822},
+  volume    = {104},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/waring-jonathan-automated-machine-learning-review-of.pdf:PDF},
+  publisher = {Elsevier},
+}
+
+@Book{orallo2004,
+  author    = {Hern{\'a}ndez Orallo, Jos{\'e} and others},
+  publisher = {Biblioteca Hern{\'a}n Malo Gonz{\'a}lez},
+  title     = {Introducci{\'o}n a la Miner{\'\i}a de Datos},
+  year      = {2004},
+  file      = {:D\:/School/Informatica/3er Año/1er trimestre/Practicas/Data mining/curso mineria de datos y knime/bibliografía/Libro Introducción a la MD (Hernández Orallo).pdf:PDF},
+}
+
+@InProceedings{Agrawal1519,
+  author   = {Rakesh Agrawal and Tomasz Imielinski and Arun Swami},
+  title    = {Mining Association Rules between Sets of Items in Large Databases},
+  year     = {1993},
+  abstract = {on tertiary storage and are very slowly migrating to},
+  file     = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/agrawal1993.pdf:PDF},
+}
+
+@InProceedings{moine2011estudio,
+  author    = {Moine, Juan Miguel and Haedo, Ana Silvia and Gordillo, Silvia Ethel},
+  booktitle = {XIII Workshop de Investigadores en Ciencias de la Computaci{\'o}n},
+  title     = {Estudio comparativo de metodolog{\'\i}as para miner{\'\i}a de datos},
+  year      = {2011},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/Estudio comparativo de metodologías para minería de datos..pdf:PDF},
+}
+
+@InProceedings{Han1999,
+  author = {Han, Jiawei.; Kamber, Micheline.},
+  title  = {Data Mining : Concepts and Techniques},
+  year   = {1999},
+  file   = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/data-mining-concepts-and-techniques-2nd-edition-impressao.pdf:PDF},
+}
+
+@Book{murphy2012machine,
+  author    = {Murphy, Kevin P},
+  publisher = {MIT press},
+  title     = {Machine learning: a probabilistic perspective},
+  year      = {2012},
+  file      = {:murphy2012machine - Machine Learning_ a Probabilistic Perspective.pdf:PDF;:Data Preprocessing in Data Mining.pdf:PDF},
+}
+
+@Book{garcia2015data,
+  author    = {Garc{\'\i}a, Salvador and Luengo, Juli{\'a}n and Herrera, Francisco},
+  publisher = {Springer},
+  title     = {Data preprocessing in data mining},
+  year      = {2015},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/Data Preprocessing in Data Mining.pdf:PDF},
+}
+
+@InProceedings{Carrazana2022,
+  author = {Ernesto Carrazana Ruiz},
+  title  = {Componente KNIME de AutoML para pre-procesado en tareas de Clasificación},
+  year   = {2022},
+  file   = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/cosas de ernesto/Tesis_Ernesto_Carrazana_Ruiz_IC/Tesis_Ernesto_Carrazana_Ruiz_IC/Tesis_Ernesto_Carrazana_Ruiz_IC.pdf:PDF},
+}
+
+@Article{celik2022online,
+  author    = {Celik, Bilge and Singh, Prabhant and Vanschoren, Joaquin},
+  journal   = {Machine Learning},
+  title     = {Online AutoML: An adaptive AutoML framework for online learning},
+  year      = {2022},
+  pages     = {1--25},
+  abstract  = {Automated Machine Learning (AutoML) has been used successfully in settings where 
+the learning task is assumed to be static. In many real-world scenarios, however, the data 
+distribution will evolve over time, and it is yet to be shown whether AutoML techniques 
+can effectively design online pipelines in dynamic environments. This study aims to auto-
+mate pipeline design for online learning while continuously adapting to data drift. For this 
+purpose, we design an adaptive Online Automated Machine Learning (OAML) system, 
+searching the complete pipeline configuration space of online learners, including preproc-
+essing algorithms and ensembling techniques. This system combines the inherent adapta-
+tion capabilities of online learners with fast automated pipeline (re)optimization. Focusing 
+on optimization techniques that can adapt to evolving objectives, we evaluate asynchronous 
+genetic programming and asynchronous successive halving to optimize these pipelines 
+continually. We experiment on real and artificial data streams with varying types of con-
+cept drift to test the performance and adaptation capabilities of the proposed system. The 
+results confirm the utility of OAML over popular online learning algorithms and under-
+score the benefits of continuous pipeline redesign in the presence of data drift.},
+  doi       = {.org/10.1007/s10994-022-06262-0},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/celik-bilge-online-automl-an-adaptive-automl-framework.pdf:PDF},
+  keywords  = {Online automl · Automated online learning · Concept drift · Automated drift adaptation},
+  publisher = {Springer},
+}
+
+@Article{soh2020introduction,
+  author    = {Soh, Julian and Singh, Priyanshi and Soh, Julian and Singh, Priyanshi},
+  journal   = {Data Science Solutions on Azure: Tools and Techniques Using Databricks and MLOps},
+  title     = {Introduction to azure machine learning},
+  year      = {2020},
+  pages     = {117--148},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/soh-julian-introduction-to-azure-machine-learning-2020.pdf:PDF},
+  publisher = {Springer},
+}
+
+@InProceedings{Das2020,
+  author   = {Piali Das and Nikita Ivkin and Tanya Bansal and Laurence Rouesnel and Philip Gautier and Zohar Karnin and Leo Dirac and Lakshmi Ramakrishnan and Andre Perunicic and Iaroslav Shcherbatyi and Wilton Wu},
+  title    = {Amazon SageMaker Autopilot: a white box AutoML solution at scale},
+  year     = {2020},
+  abstract = {data to be prepared and transformed in specific ways (i.e. feature
+We present Amazon SageMaker Autopilot: a fully managed system engineering) for optimal learning. There are several other decision
+that provides an automatic machine learning solution. Given a points that needs to be taken in the process; viz. picking the compute
+tabular dataset and the target column name, Autopilot identifies resources to ensure the model can be trained while still keeping the
+the problem type, analyzes the data and produces a diverse set of cost under control, how well the model generalizes, how efficiently,
+completeML pipelines, which are tuned to generate a leaderboard of in terms of compute resources, can the model infer.
+candidate models that the customer can choose from. The diversity These decisions frequently require the expertise of both a data
+allows users to balance between different needs such as model scientist and a software engineer. However, there is a lack of data sci-
+accuracy vs. latency. By exposing not only the final models but the ence experts, and of machine-learning informed software engineers
+way they are trained, meaning the pipelines, we allow to customize in the industry, but an over-abundance of data science problems.
+the generated training pipeline, thus catering the need of users with Even if the experts are available there is no escape from running
+different levels of expertise. This trait is crucial for users and is the plenty of trial and error experiments to find the optimal solution
+main novelty of Autopilot; it provides a solution that on one hand is for the given data.
+not fully black-box and can be further worked on, while on the other With a vision to reduce these repetitive development costs, the
+hand is not a do it yourself solution, requiring expertise in all aspects concept of automated machine learning (AutoML) has emerged in
+of machine learning. This paper describes the different components the recent years and has become a hot area of research.
+in the eco-system of Autopilot, emphasizing the infrastructure Before proceeding further, it is important to describe an ML
+choices that allow scalability, high quality models, editable ML pipeline and the typical steps involved in building a good MLmodel.
+pipelines, consumption of artifacts of offline meta-learning, and a Any ML based solution has 2 phases — building a good ML model
+convenient integration with the entire SageMaker system allowing and using (a.k.a. deploying) that ML model. Figure 1 shows the
+these trained models to be used in a production setting. typical stages of building a model.},
+  doi      = {.org/10.1145/3399579.3399870},
+  file     = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/das-piali-amazon-sagemaker-autopilot-a-white-box.pdf:PDF},
+}
+
+@Article{hernandeztecnicas,
+  author   = {Hern{\'a}ndez, Eduardo S{\'a}nchez-Jim{\'e}nez Yasm{\'\i}n and Ortiz-Hern{\'a}ndez, Javier},
+  title    = {T{\'e}cnicas de Optimizaci{\'o}n de Hiperpar{\'a}metros en Modelos de Aprendizaje Autom{\'a}tico para Predicci{\'o}n de Enfermedades Cardiovasculares},
+  year     = {2017},
+  file     = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/Técnicas_de_Optimización_de_Hiperparámetros_en_Modelos_de_Aprendizaje.pdf:PDF},
+  keywords = {Aprendizaje automático, Enfermedades cardiovasculares, Hiperparámetros, Optimización Matemática},
+}
+
+@Book{hastie2009elements,
+  author    = {Hastie, Trevor and Tibshirani, Robert and Friedman, Jerome H and Friedman, Jerome H},
+  publisher = {Springer},
+  title     = {The elements of statistical learning: data mining, inference, and prediction},
+  year      = {2009},
+  volume    = {2},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/hastie-trevor-the-elements-of-statistical-learning-2009.pdf:PDF},
+}
+
+@Book{geron2022hands,
+  author    = {G{\'e}ron, Aur{\'e}lien},
+  publisher = {" O'Reilly Media, Inc."},
+  title     = {Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow},
+  year      = {2022},
+}
+
+@InProceedings{Lisandra2012,
+  author   = {Lisandra Bravo Ilastegui},
+  title    = {PROPUESTA DE HERRAMIENTA PARA APLICAR MINERÍA DE DATOS EN ENTORNOS COMPLEJOS.},
+  year     = {2012},
+  abstract = {Trabajo de diploma para optar por el título de Ingeniería en Informática},
+  file     = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/bravo_ilisastigui_lisandra.pdf:PDF},
+}
+
+@Misc{,
+  title = {KNIME Official Site},
+  url   = {www.knime.com},
+}
+
+@Book{Han2011,
+  author   = {Jiawei Han, Micheline Kamber, Jian Pei},
+  title    = {Data Mining. Concepts and Techniques (The Morgan Kaufmann Series in Data Management Systems)},
+  year     = {2011},
+  edition  = {3rd},
+  abstract = {Morgan Kaufmann 2011},
+  file     = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf:PDF},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
