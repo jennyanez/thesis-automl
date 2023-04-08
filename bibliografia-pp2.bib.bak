@@ -148,7 +148,7 @@ of Auto-sklearn.},
 }
 
 @InProceedings{Carrazana2022,
-  author = {Ernesto Carrazana Ruiz},
+  author = {Carrazana Ruiz, Ernesto},
   title  = {Componente KNIME de AutoML para pre-procesado en tareas de Clasificación},
   year   = {2022},
   file   = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/cosas de ernesto/Tesis_Ernesto_Carrazana_Ruiz_IC/Tesis_Ernesto_Carrazana_Ruiz_IC/Tesis_Ernesto_Carrazana_Ruiz_IC.pdf:PDF},
@@ -264,6 +264,73 @@ these trained models to be used in a production setting. typical stages of build
   edition  = {3rd},
   abstract = {Morgan Kaufmann 2011},
   file     = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf:PDF},
+}
+
+@Book{bonaccorso2017machine,
+  author    = {Bonaccorso, Giuseppe},
+  publisher = {Packt Publishing Ltd},
+  title     = {Machine learning algorithms},
+  year      = {2017},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/machine-learning-algorithms_text-book.pdf:PDF},
+}
+
+@InProceedings{javed2022performance,
+  author       = {Javed Mehedi Shamrat, FM and Ranjan, Rumesh and Hasib, Khan Md and Yadav, Amit and Siddique, Abdul Hasib},
+  booktitle    = {Pervasive Computing and Social Networking: Proceedings of ICPCSN 2021},
+  title        = {Performance evaluation among ID3, C4.5, and CART Decision Tree Algorithm},
+  year         = {2022},
+  organization = {Springer},
+  pages        = {127--142},
+  file         = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/PerformaceevaluationamongID3C4.5andCARTDecisionTreeAlgor.pdf:PDF},
+}
+
+@Article{gupta2017analysis,
+  author    = {Gupta, Bhumika and Rawat, Aditya and Jain, Akshay and Arora, Arpit and Dhami, Naresh},
+  journal   = {International Journal of Computer Applications},
+  title     = {Analysis of various decision tree algorithms for classification in data mining},
+  year      = {2017},
+  number    = {8},
+  pages     = {15--19},
+  volume    = {163},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/gupta-bhumika-analysis-of-various-decision-tree.pdf:PDF},
+  publisher = {Foundation of Computer Science},
+}
+
+@Article{abiodun2018state,
+  author    = {Abiodun, Oludare Isaac and Jantan, Aman and Omolara, Abiodun Esther and Dada, Kemi Victoria and Mohamed, Nachaat AbdElatif and Arshad, Humaira},
+  journal   = {Heliyon},
+  title     = {State-of-the-art in artificial neural network applications: A survey},
+  year      = {2018},
+  number    = {11},
+  pages     = {e00938},
+  volume    = {4},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/abiodun-oludare-isaac-state-of-the-art-in-artificial.pdf:PDF},
+  publisher = {Elsevier},
+}
+
+@Article{guenther2016support,
+  author    = {Guenther, Nick and Schonlau, Matthias},
+  journal   = {The Stata Journal},
+  title     = {Support vector machines},
+  year      = {2016},
+  number    = {4},
+  pages     = {917--937},
+  volume    = {16},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/guenther-nick-support-vector-machines-2016.pdf:PDF},
+  keywords  = {st0461, svmachines, svm, statistical learning, machine learning, sup- port vector machines},
+  publisher = {SAGE Publications Sage CA: Los Angeles, CA},
+}
+
+@Article{abiodun2018state,
+  author    = {Abiodun, Oludare Isaac and Jantan, Aman and Omolara, Abiodun Esther and Dada, Kemi Victoria and Mohamed, Nachaat AbdElatif and Arshad, Humaira},
+  journal   = {Heliyon},
+  title     = {State-of-the-art in artificial neural network applications: A survey},
+  year      = {2018},
+  number    = {11},
+  pages     = {e00938},
+  volume    = {4},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/abiodun-oludare-isaac-state-of-the-art-in-artificial.pdf:PDF},
+  publisher = {Elsevier},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

@@ -3,29 +3,29 @@
 \contentsline {chapter}{\numberline {1}Aprendizaje Automático y \textit {AutoML}}{4}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Aprendizaje Automático}{4}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Proceso de descubrimiento de conocimiento en bases de datos}{5}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Minería de Datos}{7}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Clasificación}{8}{subsection.1.3.1}%
-\contentsline {subsubsection}{Clasificación con Árboles de Decisión}{8}{section*.10}%
-\contentsline {subsubsection}{Clasificación con Redes Neuronales}{9}{section*.11}%
-\contentsline {subsubsection}{Clasificación con Support Vector Machine}{10}{section*.12}%
-\contentsline {section}{\numberline {1.4}\textit {AutoML}}{10}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Preprocesado}{11}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Optimización de hiperparámetros}{11}{subsection.1.4.2}%
-\contentsline {section}{\numberline {1.5}Herramienta de minería de datos KNIME}{13}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Componente en KNIME de AutoML para el pre-procesado en tareas de clasificación}{14}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Bases de datos de prueba}{14}{section.1.7}%
-\contentsline {subsection}{\numberline {1.7.1}Repositorio \textit {Kaggle}}{14}{subsection.1.7.1}%
-\contentsline {subsection}{\numberline {1.7.2}Repositorio \textit {UCI Machine Learning}}{14}{subsection.1.7.2}%
-\contentsline {section}{\numberline {1.8}Conclusiones parciales}{14}{section.1.8}%
-\contentsline {chapter}{Conclusiones}{15}{section*.15}%
-\contentsline {chapter}{Recomendaciones}{16}{section*.17}%
-\contentsline {chapter}{Referencias bibliográficas}{17}{section*.19}%
-\contentsline {chapter}{\numberline {A}Anexos}{18}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Fases y tareas de la metodología CRISP-DM}{18}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Estudio de algoritmos supervisados}{19}{section.Alph1.2}%
-\contentsline {section}{\numberline {A.3}Estudio de algoritmos no supervisados}{20}{section.Alph1.3}%
-\contentsline {section}{\numberline {A.4}Modelo de Árbol de Decisión}{21}{section.Alph1.4}%
-\contentsline {subsection}{\numberline {A.4.1}Resultados de la ejecución del nodo \textit {Decision Tree}}{21}{subsection.Alph1.4.1}%
-\contentsline {section}{\numberline {A.5}Modelo de Random Forest}{22}{section.Alph1.5}%
-\contentsline {subsection}{\numberline {A.5.1}Resultados de la ejecución del nodo \textit {Random Forest}}{22}{subsection.Alph1.5.1}%
-\contentsline {chapter}{Anexos}{18}{section*.21}%
+\contentsline {section}{\numberline {1.3}Minería de Datos}{6}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Clasificación}{7}{subsection.1.3.1}%
+\contentsline {subsubsection}{Clasificación con Árboles de Decisión}{8}{section*.9}%
+\contentsline {subsubsection}{Clasificación con Redes Neuronales}{8}{section*.10}%
+\contentsline {subsubsection}{Clasificación con Support Vector Machine}{10}{section*.14}%
+\contentsline {section}{\numberline {1.4}\textit {AutoML}}{11}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Preprocesado}{12}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Optimización de hiperparámetros}{12}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Herramienta de minería de datos KNIME}{14}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Componente en KNIME de AutoML para el pre-procesado en tareas de clasificación}{15}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Bases de datos de prueba}{15}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Repositorio \textit {Kaggle}}{15}{subsection.1.7.1}%
+\contentsline {subsection}{\numberline {1.7.2}Repositorio \textit {UCI Machine Learning}}{15}{subsection.1.7.2}%
+\contentsline {section}{\numberline {1.8}Conclusiones parciales}{15}{section.1.8}%
+\contentsline {chapter}{Conclusiones}{16}{section*.19}%
+\contentsline {chapter}{Recomendaciones}{17}{section*.21}%
+\contentsline {chapter}{Referencias bibliográficas}{18}{section*.23}%
+\contentsline {chapter}{\numberline {A}Anexos}{20}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Fases y tareas de la metodología CRISP-DM}{20}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Estudio de algoritmos supervisados}{21}{section.Alph1.2}%
+\contentsline {section}{\numberline {A.3}Estudio de algoritmos no supervisados}{22}{section.Alph1.3}%
+\contentsline {section}{\numberline {A.4}Modelo de Árbol de Decisión}{23}{section.Alph1.4}%
+\contentsline {subsection}{\numberline {A.4.1}Resultados de la ejecución del nodo \textit {Decision Tree}}{23}{subsection.Alph1.4.1}%
+\contentsline {section}{\numberline {A.5}Modelo de Random Forest}{24}{section.Alph1.5}%
+\contentsline {subsection}{\numberline {A.5.1}Resultados de la ejecución del nodo \textit {Random Forest}}{24}{subsection.Alph1.5.1}%
+\contentsline {chapter}{Anexos}{20}{section*.25}%

@@ -148,7 +148,7 @@ of Auto-sklearn.},
 }
 
 @InProceedings{Carrazana2022,
-  author = {Ernesto Carrazana Ruiz},
+  author = {Carrazana Ruiz, Ernesto},
   title  = {Componente KNIME de AutoML para pre-procesado en tareas de Clasificación},
   year   = {2022},
   file   = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/cosas de ernesto/Tesis_Ernesto_Carrazana_Ruiz_IC/Tesis_Ernesto_Carrazana_Ruiz_IC/Tesis_Ernesto_Carrazana_Ruiz_IC.pdf:PDF},
@@ -263,4 +263,4 @@ these trained models to be used in a production setting. typical stages of build
   year     = {2011},
   edition  = {3rd},
   abstract = {Morgan Kaufmann 2011},
-  file     = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/The-Morgan-Kaufmann-Series
+  file     = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/The-Morgan-Kaufmann-Serie

@@ -1,5 +1,11 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\citename{Abiodun {\em et~al.}, }2018]{abiodun2018state}
+Abiodun, Oludare~Isaac, Jantan, Aman, Omolara, Abiodun~Esther, Dada,
+  Kemi~Victoria, Mohamed, Nachaat~AbdElatif, \& Arshad, Humaira. 2018.
+\newblock State-of-the-art in artificial neural network applications: A survey.
+\newblock {\em Heliyon}, {\bf 4}(11), e00938.
+
 \bibitem[\protect\citename{Agrawal {\em et~al.}, }1993]{Agrawal1519}
 Agrawal, Rakesh, Imielinski, Tomasz, \& Swami, Arun. 1993.
 \newblock Mining Association Rules between Sets of Items in Large Databases.
@@ -11,9 +17,48 @@ Bonaccorso, Giuseppe. 2017.
 
 \bibitem[\protect\citename{Carrazana~Ruiz, }2022]{Carrazana2022}
 Carrazana~Ruiz, Ernesto. 2022.
-\newblock {\em Componente KNIME de AutoML para pre-procesado en tareas de
-  Clasificación}.
-\newblock M.Phil. thesis.
+\newblock Componente KNIME de AutoML para pre-procesado en tareas de
+  Clasificación.
+
+\bibitem[\protect\citename{G{\'e}ron, }2022]{geron2022hands}
+G{\'e}ron, Aur{\'e}lien. 2022.
+\newblock {\em Hands-on machine learning with Scikit-Learn, Keras, and
+  TensorFlow}.
+\newblock " O'Reilly Media, Inc.".
+
+\bibitem[\protect\citename{Guenther \& Schonlau, }2016]{guenther2016support}
+Guenther, Nick, \& Schonlau, Matthias. 2016.
+\newblock Support vector machines.
+\newblock {\em The Stata Journal}, {\bf 16}(4), 917--937.
+
+\bibitem[\protect\citename{Gupta {\em et~al.}, }2017]{gupta2017analysis}
+Gupta, Bhumika, Rawat, Aditya, Jain, Akshay, Arora, Arpit, \& Dhami, Naresh.
+  2017.
+\newblock Analysis of various decision tree algorithms for classification in
+  data mining.
+\newblock {\em International Journal of Computer Applications}, {\bf 163}(8),
+  15--19.
+
+\bibitem[\protect\citename{Hastie {\em et~al.}, }2009]{hastie2009elements}
+Hastie, Trevor, Tibshirani, Robert, Friedman, Jerome~H, \& Friedman, Jerome~H.
+  2009.
+\newblock {\em The elements of statistical learning: data mining, inference,
+  and prediction}.
+\newblock  Vol. 2.
+\newblock Springer.
+
+\bibitem[\protect\citename{He {\em et~al.}, }2021]{he2021automl}
+He, Xin, Zhao, Kaiyong, \& Chu, Xiaowen. 2021.
+\newblock AutoML: A survey of the state-of-the-art.
+\newblock {\em Knowledge-Based Systems}, {\bf 212}, 106622.
+
+\bibitem[\protect\citename{Hern{\'a}ndez \& Ortiz-Hern{\'a}ndez,
+  }2017]{hernandeztecnicas}
+Hern{\'a}ndez, Eduardo S{\'a}nchez-Jim{\'e}nez~Yasm{\'\i}n, \&
+  Ortiz-Hern{\'a}ndez, Javier. 2017.
+\newblock T{\'e}cnicas de Optimizaci{\'o}n de Hiperpar{\'a}metros en Modelos de
+  Aprendizaje Autom{\'a}tico para Predicci{\'o}n de Enfermedades
+  Cardiovasculares.
 
 \bibitem[\protect\citename{Hern{\'a}ndez~Orallo {\em et~al.},
   }2004]{orallo2004}
@@ -25,6 +70,11 @@ Hern{\'a}ndez~Orallo, Jos{\'e}, {\em et~al.} 2004.
 Hutter, Frank, Kotthoff, Lars, \& Vanschoren, Joaquin. 2019.
 \newblock {\em Automated machine learning: methods, systems, challenges}.
 \newblock Springer Nature.
+
+\bibitem[\protect\citename{Ilastegui, }2012]{Lisandra2012}
+Ilastegui, Lisandra~Bravo. 2012.
+\newblock PROPUESTA DE HERRAMIENTA PARA APLICAR MINERÍA DE DATOS EN ENTORNOS
+  COMPLEJOS.
 
 \bibitem[\protect\citename{Javed Mehedi~Shamrat {\em et~al.},
   }2022]{javed2022performance}
@@ -41,10 +91,6 @@ Jiawei~Han, Micheline~Kamber, Jian~Pei. 2011.
 \newblock {\em Data Mining. Concepts and Techniques (The Morgan Kaufmann Series
   in Data Management Systems)}. 3rd edn.
 
-\bibitem[\protect\citename{Knime, }2023]{KNIME2023}
-Knime. 2023 (Mar.).
-\newblock {\em KNIME Official Website}.
-
 \bibitem[\protect\citename{Murphy, }2012]{murphy2012machine}
 Murphy, Kevin~P. 2012.
 \newblock {\em Machine learning: a probabilistic perspective}.
@@ -54,5 +100,26 @@ Murphy, Kevin~P. 2012.
 Sammut, Claude, \& Webb, Geoffrey~I. 2011.
 \newblock {\em Encyclopedia of machine learning}.
 \newblock Springer Science \& Business Media.
+
+\bibitem[\protect\citename{Tuggener {\em et~al.}, }2019]{tuggener2019automated}
+Tuggener, Lukas, Amirian, Mohammadreza, Rombach, Katharina, L{\"o}rwald,
+  Stefan, Varlet, Anastasia, Westermann, Christian, \& Stadelmann, Thilo. 2019.
+\newblock Automated machine learning in practice: state of the art and recent
+  results.
+\newblock {\em Pages  31--36 of:} {\em 2019 6th Swiss Conference on Data
+  Science (SDS)}.
+\newblock IEEE.
+
+\bibitem[\protect\citename{Waring {\em et~al.}, }2020]{waring2020automated}
+Waring, Jonathan, Lindvall, Charlotta, \& Umeton, Renato. 2020.
+\newblock Automated machine learning: Review of the state-of-the-art and
+  opportunities for healthcare.
+\newblock {\em Artificial intelligence in medicine}, {\bf 104}, 101822.
+
+\bibitem[\protect\citename{Z{\"o}ller \& Huber, }2021]{zoller2021benchmark}
+Z{\"o}ller, Marc-Andr{\'e}, \& Huber, Marco~F. 2021.
+\newblock Benchmark and survey of automated machine learning frameworks.
+\newblock {\em Journal of artificial intelligence research}, {\bf 70},
+  409--472.
 
 \end{thebibliography}

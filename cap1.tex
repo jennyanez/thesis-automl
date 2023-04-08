@@ -17,7 +17,7 @@ Existen varios tipos de aprendizaje en Machine Learning, cada uno con sus propia
 En resumen, Machine Learning es una técnica que permite a las computadoras aprender patrones a partir de datos, con el objetivo de realizar predicciones o clasificaciones precisas en datos nuevos. Sin embargo, antes de aplicar técnicas de Machine Learning a un conjunto de datos, es necesario realizar una serie de procesos previos, como la selección y preprocesamiento de datos, la selección de técnicas de aprendizaje adecuadas, la evaluación y ajuste de modelos, entre otros. De esta manera, el proceso de  descubrimiento de conocimiento en bases de datos complementa al Machine Learning, permitiendo una exploración más completa de los datos y una selección más adecuada de las técnicas de aprendizaje.
 
 \section{Proceso de descubrimiento de conocimiento en bases de datos}
-La Extracción de Conocimiento en Bases de Datos (\textit{Knwodlege Discovery from Databases}, o \textit{KDD} por sus siglas en inglés) se define como: “el proceso no trivial de identificar patrones válidos, novedosos, potencialmente útiles y, en última instancia, comprensibles a partir de los datos” \citep{orallo2004}. Este proceso está compuesto por una serie de etapas o fases, presentes en la figura \ref{fig:kdd}, descritas a continuación:
+La Extracción de Conocimiento en Bases de Datos (\textit{Knwodlege Discovery from Databases}, o \textit{KDD} por sus siglas en inglés) se define como: “el proceso no trivial de identificar patrones válidos, novedosos, potencialmente útiles y, en última instancia, comprensibles a partir de los datos” \citep{orallo2004}. Este proceso está compuesto por una serie de etapas o fases, descritas a continuación:
 \begin{itemize}
 	\item Integración y recopilación: Se requiere poseer todos los datos que sean de utilidad a partir de las necesidades de la organización. Determina las fuentes de información que pueden ser útiles y dónde conseguirlas. Como parte del desarrollo de esta fase es necesario diseñar o conocer el modo en que se van a organizar e integrar los datos; con el fin de eliminar redundancias e inconsistencias.
 	\item Selección, limpieza y transformación: Se seleccionan los datos más relevantes y que aporten mejor información, garantizando que el dato tenga la mejor calidad posible logrando obtener las vistas minables, con los datos listos para la aplicación del algoritmo.
@@ -25,12 +25,6 @@ La Extracción de Conocimiento en Bases de Datos (\textit{Knwodlege Discovery fr
 	\item Evaluación e Interpretación: El objetivo de esta etapa es medir la calidad de los modelos obtenidos utilizando diferentes métricas de calidad. Las cuales dependen de las técnicas de minería de datos que se utilicen. La interpretación de los resultados se apoya en el uso de técnicas de visualización y de representación con el fin de entender mejor el conocimiento aportado. 
 	\item Difusión y uso: En esta etapa, se integra el conocimiento obtenido de la comprensión del negocio, con el conocimiento de los modelos de minería de datos usado en la toma de decisiones de los especialistas. La monitorización de los patrones debe realizarse, pues en ocasiones resulta necesaria la reevaluación del modelo, su reentrenamiento o incluso su reconstrucción total.
 \end{itemize}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{figuras/kdd}
-	\caption{Fases del proceso KDD.}
-	\label{fig:kdd}
-\end{figure}
 Tras el aumento de  grandes volúmenes de información en toda institución donde se almacenen datos históricos, ahora informatizados en bases de datos digitales, es necesaria la extracción de información valiosa a través de patrones ocultos en estos datos. Sin embargo, esta cantidad de información sobrepasa las capacidades de los analistas de estas instituciones, provocando la necesidad del empleo de técnicas automatizadas. De aquí, surge como una nueva necesidad la minería de datos, siendo parte del proceso KDD.		
 
 
@@ -54,38 +48,61 @@ En aprendizaje automático, la clasificación, se utiliza para identificar a qu�
 \subsubsection{Clasificación con Árboles de Decisión}
 La clasificación con árboles de decisión es un método popular en la minería de datos y en el aprendizaje automático supervisado, se utiliza para predecir la clase o categoría de un objeto o registro. Los Árboles de Decisión son unos de los modelos más populares, su representación es de fácil entendimiento, incluso por personas no afines al área, pues su construcción en sencilla: las hojas toman los valores objetivos, mientras los atributos y sus posibles valores conforman los nodos y ramas respectivamente \citep{sammut2011encyclopedia}. \\
 
-Basados en árboles de decisión existen otros algoritmos de clasificación como: ID3, C4.5 y CART. Cada uno de ellos fue desarrollado como una versión mejorada del anterior, pero todos tienen una alta eficiencia y tiempos de ejecución reducidos, lo que los hace igualmente populares en la actualidad \citep{javed2022performance}. Se comparan y analizan en [10], donde se arrojan sus principales características:
+Basados en árboles de decisión existen otros algoritmos de clasificación como: ID3, C4.5 y CART. Cada uno de ellos fue desarrollado como una versión mejorada del anterior, pero todos tienen una alta eficiencia y tiempos de ejecución reducidos, lo que los hace igualmente populares en la actualidad \citep{javed2022performance}. Se comparan y analizan en \citep{gupta2017analysis}, donde se arrojan sus principales características:
 
 \begin{itemize}
-	\item ID3 (Iterative Dichotomiser 3): Basa su funcionamiento en la entropía y la ganancia de información. El árbol se construye iterativamente de arriba hacia abajo, eligiendo en cada caso el atributo con mayor ganancia de información, hasta que la información ganada sea cero o se haya llegado a todas las hojas [9, 10]. Maneja datos nominales y no tolera valores faltantes.
-	\item C4.5 (Classification 4.5): Desarrollado con el objetivo de mejorar los defectos de ID3. Añade la poda, desestimando las ramas sin aportes, que reduce los errores al clasificar como resultado de un gran número de ramas en el modelo [8, 9, 10]. Adicionalmente maneja valores faltantes y numéricos. 
-	\item CART (Classification and Regression Trees): Genera un árbol binario siguiendo el mismo enfoque entrópico que ID3, pero empleando el coeficiente de Gini como criterio de selección [9, 10]. Es capaz de manejar datos faltantes, al igual que datos numéricos y nominales.
+	\item ID3 (Iterative Dichotomiser 3): Basa su funcionamiento en la entropía y la ganancia de información. El árbol se construye iterativamente de arriba hacia abajo, eligiendo en cada caso el atributo con mayor ganancia de información, hasta que la información ganada sea cero o se haya llegado a todas las hojas \citep{javed2022performance}, \citep{gupta2017analysis}. Maneja datos nominales y no tolera valores faltantes.
+	\item C4.5 (Classification 4.5): Desarrollado con el objetivo de mejorar los defectos de ID3. Añade la poda, desestimando las ramas sin aportes, que reduce los errores al clasificar como resultado de un gran número de ramas en el modelo \citep{sammut2011encyclopedia}, \citep{javed2022performance}, \citep{gupta2017analysis}. Adicionalmente maneja valores faltantes y numéricos. 
+	\item CART (Classification and Regression Trees): Genera un árbol binario siguiendo el mismo enfoque entrópico que ID3, pero empleando el coeficiente de Gini como criterio de selección \citep{javed2022performance}, \citep{gupta2017analysis}. Es capaz de manejar datos faltantes, al igual que datos numéricos y nominales.
 \end{itemize}
 
 \subsubsection{Clasificación con Redes Neuronales}
-Las redes neuronales o redes neuronales artificiales, son algoritmos de aprendizaje basados en una vaga analogía de cómo funciona el cerebro humano. El aprendizaje se logra ajustando los pesos en las conexiones entre nodos, que son análogas a las sinapsis y las neuronas [8]. \\
-Las primeras redes neuronales conocidas como pre-alimentadas (figura*) se caracterizan por tener una arquitectura en la que cada capa de neuronas está conectada completamente con la capa siguiente, pero no con la capa anterior. Esto significa que la información fluye de forma unidireccional, sin retroalimentación [11]. \\
+Las redes neuronales o redes neuronales artificiales, son algoritmos de aprendizaje basados en una vaga analogía de cómo funciona el cerebro humano. El aprendizaje se logra ajustando los pesos en las conexiones entre nodos, que son análogas a las sinapsis y las neuronas \citep{sammut2011encyclopedia}. \\
+Las primeras redes neuronales conocidas como pre-alimentadas, como la de la figura \ref{fig:red-neuronal-prealimentada}, se caracterizan por tener una arquitectura en la que cada capa de neuronas está conectada completamente con la capa siguiente, pero no con la capa anterior. Esto significa que la información fluye de forma unidireccional, sin retroalimentación \citep{abiodun2018state}. \\
 
-foto\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{figuras/Ray/red-neuronal-prealimentada}
+	\caption{Red Neuronal Pre-Alimentada \citep{abiodun2018state}}
+	\label{fig:red-neuronal-prealimentada}
+\end{figure}
 
-Posteriormente, se desarrollaron las redes neuronales por retro propagación (figura*) que comparan la salida obtenida por la red con la salida deseada, y ajustan los pesos de las conexiones entre las neuronas de la red para reducir el error de predicción. La retro propagación se utiliza para calcular la contribución de cada peso en el error de la red, y así ajustarlos de manera adecuada [11]. \\
 
-foto\\
+Posteriormente, se desarrollaron las redes neuronales por retro propagación, como la presente en la figura \ref{fig:red-neuronal-retropropagacion}, que comparan la salida obtenida por la red con la salida deseada, y ajustan los pesos de las conexiones entre las neuronas de la red para reducir el error de predicción. La retro propagación se utiliza para calcular la contribución de cada peso en el error de la red, y así ajustarlos de manera adecuada \citep{abiodun2018state}. \\
 
-Gracias a su gran versatilidad se pueden aplicar en una amplia variedad de campos y disciplinas para resolver problemas complejos de aprendizaje automático, como es el procesamiento del lenguaje natural, reconocimiento de voz e imágenes [11]. Debido a la complejidad de sus modelos puede ser difícil su entendimiento, por lo que preferiblemente se utilizan en el contexto del reconocimiento de patrones, en la fig* se muestra un ejemplo de Red neuronal multicapa para el reconocimiento facial. \\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{figuras/Ray/red-neuronal-retropropagación}
+	\caption{Red neuronal por retro-propagación \citep{abiodun2018state}}
+	\label{fig:red-neuronal-retropropagacion}
+\end{figure}
 
-foto
+
+Gracias a su gran versatilidad se pueden aplicar en una amplia variedad de campos y disciplinas para resolver problemas complejos de aprendizaje automático, como es el procesamiento del lenguaje natural, reconocimiento de voz e imágenes \citep{abiodun2018state}. Debido a la complejidad de sus modelos puede ser difícil su entendimiento, por lo que preferiblemente se utilizan en el contexto del reconocimiento de patrones, en la figura \ref{fig:red-neuronal-multicapa-compleja} se muestra un ejemplo de Red neuronal multicapa para el reconocimiento facial. \\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{figuras/Ray/red-neuronal-multicapa-compleja}
+	\caption{Red neuronal multicapa compleja \citep{abiodun2018state}}
+	\label{fig:red-neuronal-multicapa-compleja}
+\end{figure}
+
 
 \subsubsection{Clasificación con Support Vector Machine}
-Las Máquinas de Soporte Vectorial o Support Vector Machine (SVM) en inglés, son una clase de algoritmos lineales que se pueden usar para clasificación [8], cuyo objetivo es encontrar el hiperplano que mejor separa dos clases de datos en un espacio de alta dimensionalidad [12]. En la figura* se representa como el hiperplano H2 divide con mayor margen las clases que el hiperplano H1.\\
+Las Máquinas de Soporte Vectorial o Support Vector Machine (SVM) en inglés, son una clase de algoritmos lineales que se pueden usar para clasificación \citep{sammut2011encyclopedia}, cuyo objetivo es encontrar el hiperplano que mejor separa dos clases de datos en un espacio de alta dimensionalidad \citep{guenther2016support}. En la figura \ref{fig:ejemplos-de-posibles-hiperplanos-de-svm} se representa como el hiperplano H2 divide con mayor margen las clases que el hiperplano H1.\\
 
-foto\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{"figuras/Ray/Ejemplos de posibles hiperplanos de SVM"}
+	\caption{Ejemplos de posibles hiperplanos de SVM \citep{sammut2011encyclopedia}}
+	\label{fig:ejemplos-de-posibles-hiperplanos-de-svm}
+\end{figure}
 
 Uno de los desafíos de SVM en problemas de clasificación de múltiples clases es cómo manejar la predicción de estas. En este contexto, existen dos enfoques principales:
 
 \begin{itemize}
-	\item Uno contra uno (One-vs-One): Durante la fase de predicción, cada clasificador binario vota por la clase que cree que es correcta y la clase con el mayor número de votos se selecciona como la clase final para el punto de datos dado. Este enfoque presenta la ventaja de que cada clasificador binario solo necesita ser entrenado en un subconjunto de los datos, lo que puede ser útil cuando hay grandes conjuntos de datos. Es más resistente a desequilibrios en la distribución de clases que otros enfoques de SVM [12].
-	\item Uno contra todos (One-vs-All): Entrena un clasificador binario para cada clase posible, donde el conjunto de datos de una clase se considera positivo y los datos de las otras clases se consideran negativos. Durante la fase de predicción, cada clasificador binario vota por su clase correspondiente y la clase con la mayor puntuación se selecciona como la clase final para el punto de datos dado. Fácil de implementar y puede funcionar bien en conjuntos de datos pequeños, pero puede ser menos preciso en conjuntos de datos grandes y complejos [12].
+	\item Uno contra uno (One-vs-One): Durante la fase de predicción, cada clasificador binario vota por la clase que cree que es correcta y la clase con el mayor número de votos se selecciona como la clase final para el punto de datos dado. Este enfoque presenta la ventaja de que cada clasificador binario solo necesita ser entrenado en un subconjunto de los datos, lo que puede ser útil cuando hay grandes conjuntos de datos. Es más resistente a desequilibrios en la distribución de clases que otros enfoques de SVM \citep{guenther2016support}.
+	\item Uno contra todos (One-vs-All): Entrena un clasificador binario para cada clase posible, donde el conjunto de datos de una clase se considera positivo y los datos de las otras clases se consideran negativos. Durante la fase de predicción, cada clasificador binario vota por su clase correspondiente y la clase con la mayor puntuación se selecciona como la clase final para el punto de datos dado. Fácil de implementar y puede funcionar bien en conjuntos de datos pequeños, pero puede ser menos preciso en conjuntos de datos grandes y complejos \citep{guenther2016support}.
 \end{itemize}
 
 Agregar que existen otros dos enfoques: Clasificación jerárquica (Hierarchical classification) y Clasificación por parejas (Pairwise classification). Cada uno de estos tiene sus propias ventajas y desventajas, y la elección de uno de ellos dependerá del tipo de datos y del problema que se esté tratando de resolver.
@@ -108,27 +125,33 @@ AutoML (Automated Machine Learning) es una técnica que tiene como objetivo auto
 .................
 
 \subsection{Optimización de hiperparámetros}
-Cada sistema de aprendizaje automático tiene hiperparámetros, y la tarea básica de AutoML es automatizar el ajuste de estos para maximizar el rendimiento del modelo en un conjunto de datos de prueba o validación [1]. La optimización de hiperparámetros automatizada (HPO) tiene varios casos de uso importantes [3]; puede
+Cada sistema de aprendizaje automático tiene hiperparámetros, y la tarea básica de AutoML es automatizar el ajuste de estos para maximizar el rendimiento del modelo en un conjunto de datos de prueba o validación \citep{hastie2009elements}. La optimización de hiperparámetros automatizada (HPO) tiene varios casos de uso importantes \citep{hutter2019automated}; puede
 \begin{itemize}
 	\item reducir el esfuerzo humano necesario para aplicar el aprendizaje automático. Particularmente importante en el contexto de AutoML.
 	\item mejorar el rendimiento de los algoritmos de aprendizaje automático (adaptándolos al problema en cuestión).
 	\item mejorar la reproducibilidad y equidad de los estudios científicos.
 \end{itemize}
-Para ahorrar tiempo y mejorar la precisión de los modelos de aprendizaje automático se combina la selección de algoritmos y la optimización de hiperparámetros en un solo proceso, denominado Selección de Algoritmos y Optimización de Hiperparámetros Combinados (CASH por sus siglas en inglés) [6]. \\
-CASH en conjunción con la automatización del pre-procesado de los datos, integran el problema general del AutoML, reflejado en la Figura 7. \\
+Para ahorrar tiempo y mejorar la precisión de los modelos de aprendizaje automático se combina la selección de algoritmos y la optimización de hiperparámetros en un solo proceso, denominado Selección de Algoritmos y Optimización de Hiperparámetros Combinados (CASH por sus siglas en inglés) \citep{tuggener2019automated}. \\
+CASH en conjunción con la automatización del pre-procesado de los datos, integran el problema general del AutoML, reflejado en la figura \ref{fig:desglose-de-los-subproblemas-de-automl}. 
 
- foto  \\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{"figuras/Ray/Desglose de los subproblemas de AutoML"}
+	\caption{Desglose de los subproblemas de AutoML \citep{zoller2021benchmark}}
+	\label{fig:desglose-de-los-subproblemas-de-automl}
+\end{figure}
+
  
  Existen varias estrategias de HPO, algunas de las cuales son:
 \begin{itemize}
-	\item Búsqueda aleatoria: Selecciona valores de forma aleatoria dentro de un rango definido. No garantiza encontrar los mejores valores posibles y puede requerir numerosas iteraciones para encontrar un conjunto de hiperparámetros que proporcione un rendimiento óptimo [3,4].
-	\item Búsqueda voraz: Prueba todas las combinaciones posibles de valores de los hiperparámetros dentro de un rango definido. Presenta una alta demanda computacional, imposible de manejar a medida que escalan los sistemas y las bases de datos [4].
-	\item Búsqueda en cuadrícula: Prueba cada combinación de valores de hiperparámetros y selecciona la combinación de hiperparámetros que ha dado el mejor rendimiento. Puede ser computacionalmente costoso si el espacio de búsqueda y el número de hiperparámetros es grande [23].
-	\item Optimización Bayesiana: Construye modelos probabilísticos para representar la función objetivo, que se actualiza después de cada iteración. Maneja espacios de búsqueda de alta dimensionalidad y no requiere tantas iteraciones como la búsqueda en cuadrícula o la búsqueda aleatoria para encontrar combinaciones de hiperparámetros de alto rendimiento [3,23].
-	\item Optimización basada en gradiente: Emplea la información del gradiente para optimizar los hiperparámetros de manera iterativa. Genera una gran carga computacional y presenta la limitación de caer en mínimos locales [4].
+	\item Búsqueda aleatoria: Selecciona valores de forma aleatoria dentro de un rango definido. No garantiza encontrar los mejores valores posibles y puede requerir numerosas iteraciones para encontrar un conjunto de hiperparámetros que proporcione un rendimiento óptimo \citep{geron2022hands}, \citep{zoller2021benchmark}.
+	\item Búsqueda voraz: Prueba todas las combinaciones posibles de valores de los hiperparámetros dentro de un rango definido. Presenta una alta demanda computacional, imposible de manejar a medida que escalan los sistemas y las bases de datos \citep{zoller2021benchmark}.
+	\item Búsqueda en cuadrícula: Prueba cada combinación de valores de hiperparámetros y selecciona la combinación de hiperparámetros que ha dado el mejor rendimiento. Puede ser computacionalmente costoso si el espacio de búsqueda y el número de hiperparámetros es grande \citep{he2021automl}.
+	\item Optimización Bayesiana: Construye modelos probabilísticos para representar la función objetivo, que se actualiza después de cada iteración. Maneja espacios de búsqueda de alta dimensionalidad y no requiere tantas iteraciones como la búsqueda en cuadrícula o la búsqueda aleatoria para encontrar combinaciones de hiperparámetros de alto rendimiento \citep{hutter2019automated}, \citep{he2021automl}.
+	\item Optimización basada en gradiente: Emplea la información del gradiente para optimizar los hiperparámetros de manera iterativa. Genera una gran carga computacional y presenta la limitación de caer en mínimos locales \citep{zoller2021benchmark}.
 \end{itemize} 
 
-A pesar del incesante estudio vinculado al HPO, este sigue presentando en la actualidad diversos desafíos [3]:
+A pesar del incesante estudio vinculado al HPO, este sigue presentando en la actualidad diversos desafíos \citep{hutter2019automated}:
 
 \begin{itemize}
 	\item Costo computacional: la optimización de hiperparámetros puede ser muy costosa en términos de tiempo de cómputo y recursos de hardware, especialmente cuando se utiliza un espacio de hiperparámetros grande o se ejecutan muchas iteraciones de entrenamiento. Esto puede limitar la escalabilidad y la eficiencia de la HPO.
@@ -136,7 +159,7 @@ A pesar del incesante estudio vinculado al HPO, este sigue presentando en la act
 	\item Complejidad del espacio de hiperparámetros: el espacio de hiperparámetros puede ser muy complejo y estar altamente interconectado, lo que dificulta la exploración y la selección de los hiperparámetros adecuados.
 \end{itemize}
 
-Entre las aplicaciones de HPO se pueden encontrar [5], donde se aplica HPO en SVM y Bosque aleatorio para la Predicción de Enfermedades Cardiovasculares y [7], que manifiesta el desarrollo del problema de HPO en redes Neuronales en un contexto de análisis de salud.
+Entre las aplicaciones de HPO se pueden encontrar \citep{hernandeztecnicas}, donde se aplica HPO en SVM y Bosque aleatorio para la Predicción de Enfermedades Cardiovasculares y \citep{waring2020automated}, que manifiesta el desarrollo del problema de HPO en redes Neuronales en un contexto de análisis de salud.
  
  
  
