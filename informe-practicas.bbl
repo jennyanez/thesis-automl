@@ -20,6 +20,19 @@ Carrazana~Ruiz, Ernesto. 2022.
 \newblock Componente KNIME de AutoML para pre-procesado en tareas de
   Clasificación.
 
+\bibitem[\protect\citename{Garcia {\em et~al.}, }2012]{garcia2012survey}
+Garcia, Salvador, Luengo, Julian, S{\'a}ez, Jos{\'e}~Antonio, Lopez, Victoria,
+  \& Herrera, Francisco. 2012.
+\newblock A survey of discretization techniques: Taxonomy and empirical
+  analysis in supervised learning.
+\newblock {\em IEEE transactions on Knowledge and Data Engineering}, {\bf
+  25}(4), 734--750.
+
+\bibitem[\protect\citename{Garc{\'\i}a {\em et~al.}, }2015]{garcia2015data}
+Garc{\'\i}a, Salvador, Luengo, Juli{\'a}n, \& Herrera, Francisco. 2015.
+\newblock {\em Data preprocessing in data mining}.
+\newblock Springer.
+
 \bibitem[\protect\citename{G{\'e}ron, }2022]{geron2022hands}
 G{\'e}ron, Aur{\'e}lien. 2022.
 \newblock {\em Hands-on machine learning with Scikit-Learn, Keras, and
@@ -95,6 +108,12 @@ Jiawei~Han, Micheline~Kamber, Jian~Pei. 2011.
 Murphy, Kevin~P. 2012.
 \newblock {\em Machine learning: a probabilistic perspective}.
 \newblock MIT press.
+
+\bibitem[\protect\citename{R {\em et~al.}, }2021]{Praba2021}
+R, Praba, G, Darshan, T, Roshanraj, \& B, Surya. 2021.
+\newblock Study On Machine Learning Algorithms.
+\newblock {\em International Journal of Scientific Research in Computer
+  Science, Engineering and Information Technology}, 07, 67--72.
 
 \bibitem[\protect\citename{Sammut \& Webb, }2011]{sammut2011encyclopedia}
 Sammut, Claude, \& Webb, Geoffrey~I. 2011.
