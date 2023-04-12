@@ -4,13 +4,8 @@
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Red neuronal por retro-propagación \citep {abiodun2018state}\relax }}{9}{figure.caption.12}%
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Red neuronal multicapa compleja \citep {abiodun2018state}\relax }}{10}{figure.caption.13}%
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Ejemplos de posibles hiperplanos de SVM \citep {sammut2011encyclopedia}\relax }}{10}{figure.caption.15}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Desglose de los subproblemas de AutoML \citep {zoller2021benchmark}\relax }}{13}{figure.caption.18}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Ejemplo de flujo de trabajo en la herramienta KNIME.\relax }}{15}{figure.caption.19}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Desglose de los subproblemas de AutoML \citep {zoller2021benchmark}\relax }}{14}{figure.caption.18}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Ejemplo de flujo de trabajo en la herramienta KNIME.\relax }}{16}{figure.caption.19}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Flujo KNIME del componente AutoML Clasificación (pre-procesado) \citep {Carrazana2022}\relax }}{17}{figure.caption.20}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Flujo de pre-procesado para el algoritmo ID3 \citep {Carrazana2022}\relax }}{17}{figure.caption.21}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Fases y tareas de la metodología CRISP-DM.\relax }}{21}{figure.caption.27}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Algoritmos supervisados estudiados dedicados a la detección de fraude bancario\relax }}{22}{figure.caption.28}%
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Algoritmos no supervisados estudiados dedicados a la detección de fraude bancario\relax }}{23}{figure.caption.29}%
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Resultados del nodo \textit {Decision Tree} con todas las variables de la vista minable\relax }}{24}{figure.caption.30}%
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Resultados del nodo \textit {Decision Tree} tras la elección de variables\relax }}{24}{figure.caption.31}%
-\contentsline {figure}{\numberline {A.6}{\ignorespaces Resultados del nodo \textit {Random Forest} con todas las variables de la vista minable\relax }}{25}{figure.caption.32}%
-\contentsline {figure}{\numberline {A.7}{\ignorespaces Resultados del nodo \textit {Random Forest} tras la elección de variables\relax }}{25}{figure.caption.33}%

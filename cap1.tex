@@ -56,21 +56,21 @@ Las redes neuronales o redes neuronales artificiales, son algoritmos de aprendiz
 Las primeras redes neuronales conocidas como pre-alimentadas, como la de la figura \ref{fig:red-neuronal-prealimentada}, se caracterizan por tener una arquitectura en la que cada capa de neuronas está conectada completamente con la capa siguiente, pero no con la capa anterior. Esto significa que la información fluye de forma unidireccional, sin retroalimentación \citep{abiodun2018state}. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{figuras/Ray/red-neuronal-prealimentada}
+	\includegraphics[width=0.7\linewidth]{figuras/capi 1/red-neuronal-prealimentada}
 	\caption{Red Neuronal Pre-Alimentada \citep{abiodun2018state}}
 	\label{fig:red-neuronal-prealimentada}
 \end{figure}
 Posteriormente, se desarrollaron las redes neuronales por retro propagación, como la presente en la figura \ref{fig:red-neuronal-retropropagacion}, que comparan la salida obtenida por la red con la salida deseada, y ajustan los pesos de las conexiones entre las neuronas de la red para reducir el error de predicción. La retro propagación se utiliza para calcular la contribución de cada peso en el error de la red, y así ajustarlos de manera adecuada \citep{abiodun2018state}.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\linewidth]{figuras/Ray/red-neuronal-retropropagación}
+	\includegraphics[width=0.6\linewidth]{figuras/capi 1/red-neuronal-retropropagación}
 	\caption{Red neuronal por retro-propagación \citep{abiodun2018state}}
 	\label{fig:red-neuronal-retropropagacion}
 \end{figure}
 Gracias a su gran versatilidad se pueden aplicar en una amplia variedad de campos y disciplinas para resolver problemas complejos de aprendizaje automático, como es el procesamiento del lenguaje natural, reconocimiento de voz e imágenes \citep{abiodun2018state}. Debido a la complejidad de sus modelos puede ser difícil su entendimiento, por lo que preferiblemente se utilizan en el contexto del reconocimiento de patrones, en la figura \ref{fig:red-neuronal-multicapa-compleja} se muestra un ejemplo de Red neuronal multicapa para el reconocimiento facial.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{figuras/Ray/red-neuronal-multicapa-compleja}
+	\includegraphics[width=0.7\linewidth]{figuras/capi 1/red-neuronal-multicapa-compleja}
 	\caption{Red neuronal multicapa compleja \citep{abiodun2018state}}
 	\label{fig:red-neuronal-multicapa-compleja}
 \end{figure}
@@ -79,7 +79,7 @@ Gracias a su gran versatilidad se pueden aplicar en una amplia variedad de campo
 Las Máquinas de Soporte Vectorial o Support Vector Machine (SVM) en inglés, son una clase de algoritmos lineales que se pueden usar para clasificación \citep{sammut2011encyclopedia}, cuyo objetivo es encontrar el hiperplano que mejor separa dos clases de datos en un espacio de alta dimensionalidad \citep{guenther2016support}. En la figura \ref{fig:ejemplos-de-posibles-hiperplanos-de-svm} se representa como el hiperplano H2 divide con mayor margen las clases que el hiperplano H1.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.4\linewidth]{"figuras/Ray/Ejemplos de posibles hiperplanos de SVM"}
+	\includegraphics[width=0.4\linewidth]{"figuras/capi 1/Ejemplos de posibles hiperplanos de SVM"}
 	\caption{Ejemplos de posibles hiperplanos de SVM \citep{sammut2011encyclopedia}}
 	\label{fig:ejemplos-de-posibles-hiperplanos-de-svm}
 \end{figure}
@@ -113,6 +113,17 @@ El preprocesamiento de datos ayuda a mejorar la calidad de los datos de entrada 
 \subsubsection*{Discretización}
 Este procedimiento transforma datos cuantitativos en datos cualitativos, es decir, atributos numéricos en atributos discretos o nominales con un número finito de intervalos, obteniendo una partición no superpuesta de un dominio continuo. Luego se establece una asociación entre cada intervalo con un valor numérico discreto. Una vez realizada la discretización, los datos pueden ser tratados como datos nominales durante cualquier proceso de minería de datos \citep{garcia2015data}, \citep{garcia2012survey}.
 
+%from you know where%
+La discretización se utiliza principalmente para dos propósitos:
+\begin{itemize}
+	\item Simplificar la información: La discretización reduce la complejidad de los datos continuos, ya que convierte los datos en un número finito de categorías discretas. Esto hace que los datos sean más fáciles de entender e interpretar.
+	\item Eliminar la sensibilidad a los valores atípicos: Al discretizar los datos, los valores atípicos se agrupan en una sola categoría discreta, lo que elimina su influencia en el análisis.
+\end{itemize}
+
+Existen varias técnicas de discretización, como la discretización por amplitud, la discretización por frecuencia, la discretización por densidad, entre otras. La técnica que se elige depende del tipo de datos y del objetivo del análisis. \\
+En la discretización por amplitud, los datos se dividen en un número específico de bins (contenedores) de igual amplitud. En la discretización por frecuencia, los datos se agrupan en bins de forma que cada bin contenga un número aproximadamente igual de observaciones. En la discretización por densidad, los datos se agrupan en bins de forma que cada bin contenga un número aproximadamente igual de densidad de observaciones. \\
+La elección de la técnica de discretización y el número de bins a utilizar depende del objetivo del análisis y de la distribución de los datos. Es importante tener en cuenta que la discretización puede introducir cierto grado de pérdida de información, ya que se pierde la precisión de los valores numéricos originales.
+
 
 \subsubsection*{Normalización}
 Este subepígrafe será desarrollado más adelante, durante la redacción de la tesis.
@@ -128,7 +139,7 @@ Para ahorrar tiempo y mejorar la precisión de los modelos de aprendizaje autom�
 CASH en conjunción con la automatización del pre-procesado de los datos, integran el problema general del AutoML, reflejado en la figura \ref{fig:desglose-de-los-subproblemas-de-automl}. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\linewidth]{"figuras/Ray/Desglose de los subproblemas de AutoML"}
+	\includegraphics[width=0.6\linewidth]{"figuras/capi 1/Desglose de los subproblemas de AutoML"}
 	\caption{Desglose de los subproblemas de AutoML \citep{zoller2021benchmark}}
 	\label{fig:desglose-de-los-subproblemas-de-automl}
 \end{figure} 
@@ -155,7 +166,7 @@ La herramienta de datos KNIME (\textit{Konstanz Information Miner}, por sus sigl
 Los flujos se componen de flechas y nodos que se pueden combinar entre sí. Los nodos contienen funcionalidades tales como: algoritmos de minería de datos, formas de conexión a los datos almacenados, preprocesamiento de datos, reportes, entre otros. Las flechas indican el orden de ejecución y el flujo de la información. En la figura \ref{fig:ejemploworkflow} se muestra un ejemplo de un flujo en KNIME para cargar y filtrar datos de una tabla, y posteriormente guardar los resultados en un fichero .csv. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\linewidth]{figuras/ejemplo_workflow}
+	\includegraphics[width=0.9\linewidth]{figuras/capi 1/ejemplo_workflow}
 	\caption{Ejemplo de flujo de trabajo en la herramienta KNIME.}
 	\label{fig:ejemploworkflow}
 \end{figure}
@@ -169,21 +180,32 @@ KNIME se diseñó en base a tres principios: modularidad, extensibilidad y ambie
 	\item	Ambiente de trabajo visual e interactivo: Los flujos de trabajo deben ser fáciles e interactivos para el usuario. Por tal motivo, se harán arrastrando los elementos al área de trabajo.
 \end{itemize}
 
-.................................
+Dado que se realiza la modificación de un componente en esta herramienta \citep{Carrazana2022}, se continuará el desarrollo en la misma.
 
-\section{Componente en KNIME de AutoML para el pre-procesado en tareas de clasificación}
-
-..............
-
+\section{Componente KNIME de AutoML para el pre-procesado en tareas de clasificación}
+AutoML en KNIME se refiere a la capacidad de la plataforma para automatizar el proceso de modelado de aprendizaje automático. Esto significa que los usuarios pueden cargar datos y permitir que la plataforma seleccione y optimice automáticamente el modelo que mejor se ajuste a los datos. Con tal objetivo, en \citep{Carrazana2022} se desarrolla un componente Componente KNIME de AutoML para el pre-procesado en tareas de clasificación. Este, a partir de un conjunto de datos y una columna objetivo, ejecuta diferentes flujos de pre-procesado, en aras de cumplir con los requisitos de los diferentes algoritmos de clasificación, siendo capaz de entrenarlos y probarlos, para posteriormente puntuar y graficar los resultados \citep{Carrazana2022}. En la figura \ref{fig:flujo-automl-componente} se muestra el flujo KNIME del componente AutoML Clasificación (pre-procesado).
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{"figuras/capi 1/flujo-automl-componente"}
+	\caption{Flujo KNIME del componente AutoML Clasificación (pre-procesado) \citep{Carrazana2022}}
+	\label{fig:flujo-automl-componente}
+\end{figure}
+Este componente está enfocado en el pre-procesado de datos, donde se desarrollaron subcomponentes enfocados en la realización de las tareas de procesamiento de datos numéricos, string, valores faltantes, y el ajuste de tipos de columna. Como se observa en la figura \ref{fig:flujo-automl-componente}, se aplican los algoritmos de clasificación ID3, C4.5, CART, Redes Neuronales por retro propagación (RProp), Redes Neuronales Probabilísticas (PNN) y Máquina de Soporte Vectorial (SVM). Cada uno de estos requiere un tipo de pre-procesado diferente, acorde a los tipos de datos con los que trabaja. \\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{"figuras/capi 1/pre-procesado-id3-ernesto"}
+	\caption{Flujo de pre-procesado para el algoritmo ID3 \citep{Carrazana2022}}
+	\label{fig:pre-procesado-id3-ernesto}
+\end{figure}
+No obstante hubo procesos que quedaron pendientes: la optimización de hiperparámetros y la automatización de algunas de las actividades esenciales en el pre-procesado, como la discretización y normalización de variables numéricas. Ambas pueden ser automatizadas acorde a la distribución que sigan los datos, sin embargo están configuradas de forma estática y no toman en cuenta lo anteriormente dicho. Por ejemplo, en la figura \ref{fig:pre-procesado-id3-ernesto} se muestra el nodo AutoBinner, empleado para la discretización, agrupando datos numéricos en intervalos (bins). De igual forma, la optimización de hiperparámetros no fue implementada en esta solución, siendo una de las tareas más importantes en AutoML para mejorar el rendimiento de los algoritmos empleados.
 
 \section{Bases de datos de prueba}
-...................
+Las bases de datos de prueba son conjuntos de datos creados para ayudar a los desarrolladores a probar y depurar aplicaciones de bases de datos sin tener que utilizar datos reales y confidenciales. Estas bases de datos de prueba contienen datos ficticios, pero siguen la estructura de una base de datos real, lo que permite a los desarrolladores probar la funcionalidad de la aplicación sin preocuparse por dañar datos importantes o comprometer la privacidad de los usuarios. \\
+Kaggle Datasets y UCI Machine Learning Repository son dos de los repositorios en línea más populares para conjuntos de datos de prueba y de aprendizaje automático. \\
+Kaggle Datasets es un sitio web de aprendizaje automático que ofrece una amplia variedad de conjuntos de datos de muestra, desde datos meteorológicos hasta datos de redes sociales. Los usuarios pueden buscar entre miles de conjuntos de datos y también pueden contribuir con sus propios conjuntos de datos. Kaggle también tiene una comunidad de científicos de datos y aprendizaje automático que pueden proporcionar comentarios y ayudar a los usuarios a mejorar sus modelos de aprendizaje automático. \\
+Por otro lado, el UCI Machine Learning Repository es un repositorio de conjuntos de datos de muestra para aprendizaje automático, minería de datos y otras aplicaciones de análisis de datos. El repositorio fue creado por la Universidad de California, Irvine y contiene una amplia gama de conjuntos de datos, desde reconocimiento de voz hasta predicción de precios de viviendas. Los usuarios pueden descargar los conjuntos de datos de forma gratuita y utilizarlos para probar y desarrollar sus modelos de aprendizaje automático. \\
+Ambos repositorios ofrecen una amplia variedad de conjuntos de datos, lo que los hace ideales para desarrolladores, estudiantes y profesionales de la ciencia de datos que buscan mejorar sus habilidades en el modelado de bases de datos y en la creación de modelos de aprendizaje automático precisos y efectivos. Por tal motivo, se emplearán ambos repositorios para la obtención de bases de datos para las pruebas que se realizarán más adelante.
 
-\subsection{Repositorio \textit{Kaggle}}
-..............
-
-\subsection{Repositorio \textit{UCI Machine Learning}}
-..............
 
 \section{Conclusiones parciales}
 
@@ -191,7 +213,18 @@ KNIME se diseñó en base a tres principios: modularidad, extensibilidad y ambie
 
 A partir de lo estudiado en este capítulo, se llega a las siguientes conclusiones:
 
-
+\begin{itemize}
+	\item El Aprendizaje Automático es una técnica que permite a las computadoras aprender a partir de datos, sin necesidad de ser programadas explícitamente.
+	\item El proceso de descubrimiento de conocimiento en bases de datos (KDD) es un proceso iterativo que consiste en varias etapas, incluyendo la selección de datos, la limpieza de datos, la transformación de datos y la minería de datos.
+	\item La Minería de Datos es el proceso de descubrir patrones y relaciones interesantes en grandes conjuntos de datos, utilizando técnicas de aprendizaje automático, estadísticas y visualización de datos. Algunas de las técnicas utilizadas en la Minería de Datos incluyen la clasificación, la agrupación, la regresión y la asociación.
+	\item La Clasificación es una técnica de aprendizaje automático que se utiliza para predecir la etiqueta o clase de un objeto a partir de un conjunto de características.
+	\item El AutoML se puede utilizar para mejorar la eficiencia y la precisión del proceso de modelado, reducir la necesidad de conocimientos especializados y permitir a los usuarios enfocarse en la interpretación de los resultados. Las etapas del AutoML incluyen la selección automática de algoritmos, el preprocesamiento de datos, la optimización de hiperparámetros y la evaluación automática del modelo.
+	\item El preprocesamiento de datos es una etapa crítica en el proceso de modelado, ya que los datos deben limpiarse, integrarse y transformarse antes de ser utilizados por los algoritmos de aprendizaje automático.
+	\item Algunas de las tareas comunes del preprocesado de datos incluyen la eliminación de valores atípicos, el manejo de datos faltantes, la discretización y la normalización de datos numéricos.
+	\item La discretización es una técnica utilizada para transformar datos numéricos en datos categóricos.
+	\item Los hiperparámetros son ajustes que se realizan en los algoritmos de aprendizaje automático para mejorar su rendimiento. La optimización de hiperparámetros implica encontrar la combinación óptima de valores para los hiperparámetros.
+	\item KNIME es una herramienta de minería de datos de código abierto que permite a los usuarios crear y ejecutar flujos de trabajo de análisis de datos.
+\end{itemize}
 
 
 %Una vez terminado el capítulo se arriban a las siguientes conclusiones:

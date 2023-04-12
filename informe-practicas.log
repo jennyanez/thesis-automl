@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.11)  9 APR 2023 20:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.11)  11 APR 2023 23:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1286,7 +1286,7 @@ LaTeX Info: Redefining \nameref on input line 128.
 \openout2 = `portada.aux'.
 
  (portada.tex
-<figuras/membrete-cujae-centrado.png, id=111, 202.356pt x 125.0271pt>
+<figuras/membrete-cujae-centrado.png, id=75, 202.356pt x 125.0271pt>
 File: figuras/membrete-cujae-centrado.png Graphic file (type png)
 <use figuras/membrete-cujae-centrado.png>
 Package pdftex.def Info: figuras/membrete-cujae-centrado.png  used on input lin
@@ -1368,23 +1368,22 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
+)
+\tf@toc=\write5
+\openout5 = `informe-practicas.toc'.
 
 [4
 
 
 
-])
-\tf@toc=\write5
-\openout5 = `informe-practicas.toc'.
-
- [5] (informe-practicas.lot
+] (informe-practicas.lot
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
 \tf@lot=\write6
 \openout6 = `informe-practicas.lot'.
 
- [6
+ [5
 
 ] (informe-practicas.lof
 LaTeX Info: Redefining \. on input line 1.
@@ -1393,13 +1392,12 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@lof=\write7
 \openout7 = `informe-practicas.lof'.
 
- [7
+ [6
 
 ]
 \openout2 = `introduccion.aux'.
 
-
-(introduccion.tex
+ (introduccion.tex
 
 Package natbib Warning: Citation `KNIME2023' on page 1 undefined on input line 
 6.
@@ -1485,12 +1483,12 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [7]
-<figuras/Ray/red-neuronal-prealimentada.png, id=337, 872.50969pt x 423.08063pt>
-
-File: figuras/Ray/red-neuronal-prealimentada.png Graphic file (type png)
-<use figuras/Ray/red-neuronal-prealimentada.png>
-Package pdftex.def Info: figuras/Ray/red-neuronal-prealimentada.png  used on in
-put line 59.
+<figuras/capi 1/red-neuronal-prealimentada.png, id=284, 872.50969pt x 423.08063
+pt>
+File: figuras/capi 1/red-neuronal-prealimentada.png Graphic file (type png)
+<use figuras/capi 1/red-neuronal-prealimentada.png>
+Package pdftex.def Info: figuras/capi 1/red-neuronal-prealimentada.png  used on
+ input line 59.
 (pdftex.def)             Requested size: 328.62788pt x 159.35205pt.
 LaTeX Info: Redefining \. on input line 62.
 LaTeX Info: Redefining \% on input line 62.
@@ -1504,19 +1502,21 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [8]
-<figuras/Ray/red-neuronal-retropropagación.png, id=353, 1026.83624pt x 569.879
-06pt>
-File: figuras/Ray/red-neuronal-retropropagación.png Graphic file (type png)
-<use figuras/Ray/red-neuronal-retropropagación.png>
-Package pdftex.def Info: figuras/Ray/red-neuronal-retropropagación.png  used o
-n input line 66.
+<figuras/capi 1/red-neuronal-retropropagación.png, id=300, 1026.83624pt x 569.
+87906pt>
+File: figuras/capi 1/red-neuronal-retropropagación.png Graphic file (type png)
+
+<use figuras/capi 1/red-neuronal-retropropagación.png>
+Package pdftex.def Info: figuras/capi 1/red-neuronal-retropropagación.png  use
+d on input line 66.
 (pdftex.def)             Requested size: 281.68513pt x 156.33026pt.
-<figuras/Ray/red-neuronal-multicapa-compleja.png, id=361, 632.3625pt x 214.5515
-6pt>
-File: figuras/Ray/red-neuronal-multicapa-compleja.png Graphic file (type png)
-<use figuras/Ray/red-neuronal-multicapa-compleja.png>
-Package pdftex.def Info: figuras/Ray/red-neuronal-multicapa-compleja.png  used 
-on input line 73.
+<figuras/capi 1/red-neuronal-multicapa-compleja.png, id=308, 632.3625pt x 214.5
+5156pt>
+File: figuras/capi 1/red-neuronal-multicapa-compleja.png Graphic file (type png
+)
+<use figuras/capi 1/red-neuronal-multicapa-compleja.png>
+Package pdftex.def Info: figuras/capi 1/red-neuronal-multicapa-compleja.png  us
+ed on input line 73.
 (pdftex.def)             Requested size: 328.62788pt x 111.49869pt.
 LaTeX Info: Redefining \. on input line 76.
 LaTeX Info: Redefining \% on input line 76.
@@ -1529,15 +1529,15 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
-[9 <./figuras/Ray/red-neuronal-prealimentada.png> <./figuras/Ray/red-neuronal-r
-etropropagación.png>]
-<figuras/Ray/Ejemplos de posibles hiperplanos de SVM.png, id=379, 274.02374pt x
- 222.07968pt>
-File: figuras/Ray/Ejemplos de posibles hiperplanos de SVM.png Graphic file (typ
-e png)
-<use figuras/Ray/Ejemplos de posibles hiperplanos de SVM.png>
-Package pdftex.def Info: figuras/Ray/Ejemplos de posibles hiperplanos de SVM.pn
-g  used on input line 82.
+[9 <./figuras/capi 1/red-neuronal-prealimentada.png> <./figuras/capi 1/red-neur
+onal-retropropagación.png>]
+<figuras/capi 1/Ejemplos de posibles hiperplanos de SVM.png, id=326, 274.02374p
+t x 222.07968pt>
+File: figuras/capi 1/Ejemplos de posibles hiperplanos de SVM.png Graphic file (
+type png)
+<use figuras/capi 1/Ejemplos de posibles hiperplanos de SVM.png>
+Package pdftex.def Info: figuras/capi 1/Ejemplos de posibles hiperplanos de SVM
+.png  used on input line 82.
 (pdftex.def)             Requested size: 187.78531pt x 152.19142pt.
 LaTeX Info: Redefining \. on input line 89.
 LaTeX Info: Redefining \% on input line 89.
@@ -1550,8 +1550,8 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
-[10 <./figuras/Ray/red-neuronal-multicapa-compleja.png> <./figuras/Ray/Ejemplos
- de posibles hiperplanos de SVM.png>]
+[10 <./figuras/capi 1/red-neuronal-multicapa-compleja.png> <./figuras/capi 1/Ej
+emplos de posibles hiperplanos de SVM.png>]
 LaTeX Info: Redefining \. on input line 103.
 LaTeX Info: Redefining \% on input line 103.
 
@@ -1576,16 +1576,28 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [12]
-<figuras/Ray/Desglose de los subproblemas de AutoML.png, id=442, 228.855pt x 86
-.57344pt>
-File: figuras/Ray/Desglose de los subproblemas de AutoML.png Graphic file (type
- png)
-<use figuras/Ray/Desglose de los subproblemas de AutoML.png>
-Package pdftex.def Info: figuras/Ray/Desglose de los subproblemas de AutoML.png
-  used on input line 131.
+LaTeX Info: Redefining \. on input line 137.
+LaTeX Info: Redefining \% on input line 137.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
+
+[13]
+<figuras/capi 1/Desglose de los subproblemas de AutoML.png, id=397, 228.855pt x
+ 86.57344pt>
+File: figuras/capi 1/Desglose de los subproblemas de AutoML.png Graphic file (t
+ype png)
+<use figuras/capi 1/Desglose de los subproblemas de AutoML.png>
+Package pdftex.def Info: figuras/capi 1/Desglose de los subproblemas de AutoML.
+png  used on input line 142.
 (pdftex.def)             Requested size: 281.68513pt x 106.5626pt.
-LaTeX Info: Redefining \. on input line 138.
-LaTeX Info: Redefining \% on input line 138.
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1595,18 +1607,19 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
-[13 <./figuras/Ray/Desglose de los subproblemas de AutoML.png>]
+[14 <./figuras/capi 1/Desglose de los subproblemas de AutoML.png>]
 
-Package natbib Warning: Citation `KNIME2023' on page 14 undefined on input line
- 154.
+Package natbib Warning: Citation `KNIME2023' on page 15 undefined on input line
+ 165.
 
-<figuras/ejemplo_workflow.jpg, id=479, 374.90062pt x 103.88812pt>
-File: figuras/ejemplo_workflow.jpg Graphic file (type jpg)
-<use figuras/ejemplo_workflow.jpg>
-Package pdftex.def Info: figuras/ejemplo_workflow.jpg  used on input line 158.
+<figuras/capi 1/ejemplo_workflow.jpg, id=432, 374.90062pt x 103.88812pt>
+File: figuras/capi 1/ejemplo_workflow.jpg Graphic file (type jpg)
+<use figuras/capi 1/ejemplo_workflow.jpg>
+Package pdftex.def Info: figuras/capi 1/ejemplo_workflow.jpg  used on input lin
+e 169.
 (pdftex.def)             Requested size: 422.52054pt x 117.09102pt.
-LaTeX Info: Redefining \. on input line 161.
-LaTeX Info: Redefining \% on input line 161.
+LaTeX Info: Redefining \. on input line 173.
+LaTeX Info: Redefining \% on input line 173.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1615,27 +1628,66 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
-[14]
+[15]
 
-Package natbib Warning: Citation `berthold2009knime' on page 15 undefined on in
-put line 163.
+Package natbib Warning: Citation `berthold2009knime' on page 16 undefined on in
+put line 174.
 
-LaTeX Info: Redefining \. on input line 169.
-LaTeX Info: Redefining \% on input line 169.
+<figuras/capi 1/flujo-automl-componente.png, id=448, 949.29657pt x 420.06938pt>
 
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+File: figuras/capi 1/flujo-automl-componente.png Graphic file (type png)
+<use figuras/capi 1/flujo-automl-componente.png>
+Package pdftex.def Info: figuras/capi 1/flujo-automl-componente.png  used on in
+put line 189.
+(pdftex.def)             Requested size: 375.57779pt x 166.19159pt.
+<figuras/capi 1/pre-procesado-id3-ernesto.png, id=454, 320.69812pt x 279.29344p
+t>
+File: figuras/capi 1/pre-procesado-id3-ernesto.png Graphic file (type png)
+<use figuras/capi 1/pre-procesado-id3-ernesto.png>
+Package pdftex.def Info: figuras/capi 1/pre-procesado-id3-ernesto.png  used on 
+input line 196.
+(pdftex.def)             Requested size: 187.78531pt x 163.54155pt.
 
-(fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
+Underfull \hbox (badness 10000) in paragraph at lines 186--199
 
-[15 <./figuras/ejemplo_workflow.jpg>]
-Overfull \hbox (1.26561pt too wide) in paragraph at lines 174--174
-[]\OT1/ptm/b/n/17.28 Componente en KNI-ME de Au-toML pa-ra el pre-procesado
  []
 
-)
+LaTeX Info: Redefining \. on input line 199.
+LaTeX Info: Redefining \% on input line 199.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
+
+[16 <./figuras/capi 1/ejemplo_workflow.jpg>]
+LaTeX Info: Redefining \. on input line 201.
+LaTeX Info: Redefining \% on input line 201.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
+
+[17 <./figuras/capi 1/flujo-automl-componente.png> <./figuras/capi 1/pre-proces
+ado-id3-ernesto.png>]
+LaTeX Info: Redefining \. on input line 217.
+LaTeX Info: Redefining \% on input line 217.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
+
+[18])
 LaTeX Info: Redefining \. on input line 183.
 LaTeX Info: Redefining \% on input line 183.
 
@@ -1647,10 +1699,10 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
-[16]
+[19]
 \openout2 = `conc.aux'.
 
- (conc.tex) [17
+ (conc.tex) [20
 
 
 
@@ -1659,13 +1711,13 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 ]
 \openout2 = `rec.aux'.
 
- (rec.tex) [18
+ (rec.tex) [21
 
 
 
 
 
-] (informe-practicas.bbl [19
+] (informe-practicas.bbl [22
 
 
 
@@ -1679,118 +1731,17 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
-[20]
+[23]
 \openout2 = `anexo.aux'.
 
  (anexo.tex
 Anexo A.
-<figuras/fases-crispdm-descritas.png, id=518, 813.0375pt x 420.06938pt>
-File: figuras/fases-crispdm-descritas.png Graphic file (type png)
-<use figuras/fases-crispdm-descritas.png>
-Package pdftex.def Info: figuras/fases-crispdm-descritas.png  used on input lin
-e 9.
-(pdftex.def)             Requested size: 445.9955pt x 230.42995pt.
-<figuras/superv (1).png, id=519, 626.34pt x 319.1925pt>
-File: figuras/superv (1).png Graphic file (type png)
-<use figuras/superv (1).png>
-Package pdftex.def Info: figuras/superv (1).png  used on input line 17.
-(pdftex.def)             Requested size: 469.47046pt x 239.2574pt.
-<figuras/superv (2).png, id=520, 628.59843pt x 182.18062pt>
-File: figuras/superv (2).png Graphic file (type png)
-<use figuras/superv (2).png>
-Package pdftex.def Info: figuras/superv (2).png  used on input line 18.
-(pdftex.def)             Requested size: 469.47046pt x 136.06247pt.
-[21
+) [24
 
 
 
 
- <./figuras/fases-crispdm-descritas.png>]
-<figuras/no-superv (1).png, id=526, 700.86844pt x 353.82187pt>
-File: figuras/no-superv (1).png Graphic file (type png)
-<use figuras/no-superv (1).png>
-Package pdftex.def Info: figuras/no-superv (1).png  used on input line 26.
-(pdftex.def)             Requested size: 469.47046pt x 237.01082pt.
-<figuras/no-superv (2).png, id=527, 703.12688pt x 330.48468pt>
-File: figuras/no-superv (2).png Graphic file (type png)
-<use figuras/no-superv (2).png>
-Package pdftex.def Info: figuras/no-superv (2).png  used on input line 27.
-(pdftex.def)             Requested size: 469.47046pt x 220.65707pt.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
-
-[22 <./figuras/superv (1).png> <./figuras/superv (2).png>]
-<figuras/Ray/Arbol de decision/Todas las variables/Histograma.jpg, id=534, 621.
-07031pt x 366.61969pt>
-File: figuras/Ray/Arbol de decision/Todas las variables/Histograma.jpg Graphic 
-file (type jpg)
-<use figuras/Ray/Arbol de decision/Todas las variables/Histograma.jpg>
-Package pdftex.def Info: figuras/Ray/Arbol de decision/Todas las variables/Hist
-ograma.jpg  used on input line 38.
-(pdftex.def)             Requested size: 375.57779pt x 221.7021pt.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
-
-[23 <./figuras/no-superv (1).png> <./figuras/no-superv (2).png>]
-<figuras/Ray/Arbol de decision/Grupo de datos Mejores Resultados/Histograma.jpg
-, id=541, 619.56468pt x 363.60844pt>
-File: figuras/Ray/Arbol de decision/Grupo de datos Mejores Resultados/Histogram
-a.jpg Graphic file (type jpg)
-<use figuras/Ray/Arbol de decision/Grupo de datos Mejores Resultados/Histograma
-.jpg>
-Package pdftex.def Info: figuras/Ray/Arbol de decision/Grupo de datos Mejores R
-esultados/Histograma.jpg  used on input line 45.
-(pdftex.def)             Requested size: 375.57779pt x 220.41376pt.
-<figuras/Ray/Bosque aleatorio/Todas las variables/Histograma.jpg, id=542, 622.5
-7594pt x 362.10281pt>
-File: figuras/Ray/Bosque aleatorio/Todas las variables/Histograma.jpg Graphic f
-ile (type jpg)
-<use figuras/Ray/Bosque aleatorio/Todas las variables/Histograma.jpg>
-Package pdftex.def Info: figuras/Ray/Bosque aleatorio/Todas las variables/Histo
-grama.jpg  used on input line 55.
-(pdftex.def)             Requested size: 375.57779pt x 218.44576pt.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
-
-[24 <./figuras/Ray/Arbol de decision/Todas las variables/Histograma.jpg> <./fig
-uras/Ray/Arbol de decision/Grupo de datos Mejores Resultados/Histograma.jpg>]
-<figuras/Ray/Bosque aleatorio/Variables importantes/Grafico de barra.jpg, id=54
-8, 621.82312pt x 362.10281pt>
-File: figuras/Ray/Bosque aleatorio/Variables importantes/Grafico de barra.jpg G
-raphic file (type jpg)
-<use figuras/Ray/Bosque aleatorio/Variables importantes/Grafico de barra.jpg>
-Package pdftex.def Info: figuras/Ray/Bosque aleatorio/Variables importantes/Gra
-fico de barra.jpg  used on input line 62.
-(pdftex.def)             Requested size: 375.57779pt x 218.71097pt.
-)
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
-
-[25 <./figuras/Ray/Bosque aleatorio/Todas las variables/Histograma.jpg> <./figu
-ras/Ray/Bosque aleatorio/Variables importantes/Grafico de barra.jpg>]
+]
 
 Package natbib Warning: There were undefined citations.
 
@@ -1800,29 +1751,29 @@ LaTeX Info: Redefining \% on input line 27.
  (resumen.aux) (abstrac.aux)
 (introduccion.aux) (cap1.aux) (conc.aux) (rec.aux) (anexo.aux))
 Package rerunfilecheck Info: File `informe-practicas.out' has not changed.
-(rerunfilecheck)             Checksum: 53091180EBDDC4CB99EA74744249C01F;5491.
+(rerunfilecheck)             Checksum: D208BDDCEBAD04624545F9D9E00107FB;3210.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 2 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20314 strings out of 478582
- 341256 string characters out of 2842928
- 687706 words of memory out of 3000000
- 37937 multiletter control sequences out of 15000+600000
- 505048 words of font info for 91 fonts, out of 8000000 for 9000
+ 20208 strings out of 478582
+ 336826 string characters out of 2842928
+ 685819 words of memory out of 3000000
+ 37857 multiletter control sequences out of 15000+600000
+ 503419 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,12n,106p,1208b,662s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 108i,12n,106p,1208b,608s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/Jennifer/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
 s/base/8r.enc}<C:/Users/Jennifer/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
 times/utmb8a.pfb><C:/Users/Jennifer/AppData/Local/Programs/MiKTeX/fonts/type1/u
 rw/times/utmbi8a.pfb><C:/Users/Jennifer/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/urw/times/utmr8a.pfb><C:/Users/Jennifer/AppData/Local/Programs/MiKTeX/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on informe-practicas.pdf (32 pages, 1570199 bytes).
+Output written on informe-practicas.pdf (30 pages, 1135624 bytes).
 PDF statistics:
- 600 PDF objects out of 1000 (max. 8388607)
- 122 named destinations out of 1000 (max. 500000)
- 297 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 545 PDF objects out of 1000 (max. 8388607)
+ 106 named destinations out of 1000 (max. 500000)
+ 190 words of extra memory for PDF output out of 10000 (max. 10000000)
 
