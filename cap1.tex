@@ -107,7 +107,7 @@ Tras un análisis del estado del arte acerca del proceso de AutoML \citep{tuggen
 \end{itemize}
 
 \subsection{Pre-procesado}
-Tal como se menciona anteriormente, una tarea importante en el proceso de aprendizaje automático es el pre-procesamiento de datos, que es el conjunto de técnicas utilizadas para preparar los datos de entrada antes de alimentarlos a un modelo de aprendizaje automático. Esta etapa es la equivalente a la fase de selección, limpieza y transformación del proceso de KDD, descrita brevemente en la sección \ref{kdd}. \\
+Una tarea importante en el proceso de aprendizaje automático es el pre-procesamiento de datos, que es el conjunto de técnicas utilizadas para preparar los datos de entrada antes de alimentarlos a un modelo de aprendizaje automático. Esta etapa es la equivalente a la fase de selección, limpieza y transformación del proceso de KDD, descrita brevemente en la sección \ref{kdd}. \\
 El preprocesamiento de datos ayuda a mejorar la calidad de los datos de entrada y puede mejorar el rendimiento del modelo. La automatización del preprocesamiento de datos a través de herramientas de AutoML puede mejorar la eficiencia del proceso y ayudar al personal especializado, o sin mucha experiencia en el campo, a trabajar de manera más efectiva. Unas de las técnicas de preprocesado de datos son la discretización y la normalización.
 
 \subsubsection*{Discretización}
@@ -120,8 +120,12 @@ La discretización se utiliza principalmente para dos propósitos:
 	\item Eliminar la sensibilidad a los valores atípicos: Al discretizar los datos, los valores atípicos se agrupan en una sola categoría discreta, lo que elimina su influencia en el análisis.
 \end{itemize}
 
-Existen varias técnicas de discretización, como la discretización por amplitud, la discretización por frecuencia, la discretización por densidad, entre otras. La técnica que se elige depende del tipo de datos y del objetivo del análisis. \\
-En la discretización por amplitud, los datos se dividen en un número específico de bins (contenedores) de igual amplitud. En la discretización por frecuencia, los datos se agrupan en bins de forma que cada bin contenga un número aproximadamente igual de observaciones. En la discretización por densidad, los datos se agrupan en bins de forma que cada bin contenga un número aproximadamente igual de densidad de observaciones. \\
+Existen varias técnicas de discretización, como la discretización por amplitud, la discretización por frecuencia, la discretización por densidad, entre otras. La técnica que se elige depende del tipo de datos y del objetivo del análisis. 
+\begin{itemize}
+	\item En la discretización por amplitud, los datos se dividen en un número específico de bins (contenedores) de igual amplitud.
+	\item  En la discretización por frecuencia, los datos se agrupan en bins de forma que cada bin contenga un número aproximadamente igual de observaciones.
+	\item  En la discretización por densidad, los datos se agrupan en bins de forma que cada bin contenga un número aproximadamente igual de densidad de observaciones.
+\end{itemize}
 La elección de la técnica de discretización y el número de bins a utilizar depende del objetivo del análisis y de la distribución de los datos. Es importante tener en cuenta que la discretización puede introducir cierto grado de pérdida de información, ya que se pierde la precisión de los valores numéricos originales.
 
 
