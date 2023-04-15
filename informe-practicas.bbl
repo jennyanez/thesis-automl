@@ -104,6 +104,13 @@ Jiawei~Han, Micheline~Kamber, Jian~Pei. 2011.
 \newblock {\em Data Mining. Concepts and Techniques (The Morgan Kaufmann Series
   in Data Management Systems)}. 3rd edn.
 
+\bibitem[\protect\citename{Kotsiantis \& Kanellopoulos,
+  }2006]{kotsiantis2006discretization}
+Kotsiantis, Sotiris, \& Kanellopoulos, Dimitris. 2006.
+\newblock Discretization techniques: A recent survey.
+\newblock {\em GESTS International Transactions on Computer Science and
+  Engineering}, {\bf 32}(1), 47--58.
+
 \bibitem[\protect\citename{Murphy, }2012]{murphy2012machine}
 Murphy, Kevin~P. 2012.
 \newblock {\em Machine learning: a probabilistic perspective}.
