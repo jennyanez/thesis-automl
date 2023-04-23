@@ -86,7 +86,7 @@ the art in AutoML. We also demonstrate the performance gains due to each of our
 contributions and derive insights into the effectiveness of the individual components
 of Auto-sklearn.},
   doi      = {.org/10.1007/978-3-030-05318-5_6},
-  file     = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/feurer-matthias-auto-sklearn-efficient-and-robust.pdf:PDF},
+  file     = {:Feurer2019 - Chapter 6 Auto Sklearn_ Efficient and Robust Automated Machine Learning.pdf:PDF;:liu1-2.pdf:PDF},
 }
 
 @Article{waring2020automated,
@@ -144,7 +144,7 @@ of Auto-sklearn.},
   publisher = {Springer},
   title     = {Data preprocessing in data mining},
   year      = {2015},
-  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/Data Preprocessing in Data Mining.pdf:PDF},
+  file      = {:garcia2015data - Data Preprocessing in Data Mining.pdf:PDF;:ACA-22-67.pdf:PDF},
 }
 
 @InProceedings{Carrazana2022,
@@ -374,6 +374,198 @@ cited cover the major theoretical issues and guide the researcher to interesting
 research directions and suggest possible combinations that have to be explored.},
   file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/discretization survey paper gests.pdf:PDF},
   publisher = {Citeseer},
+}
+
+@Article{liu2002discretization,
+  author    = {Liu, Huan and Hussain, Farhad and Tan, Chew Lim and Dash, Manoranjan},
+  journal   = {Data mining and knowledge discovery},
+  title     = {Discretization: An enabling technique},
+  year      = {2002},
+  pages     = {393--423},
+  volume    = {6},
+  abstract  = {Discrete values have important roles in data mining and knowledge discovery. They are about intervals
+of numbers which are more concise to represent and specify, easier to use and comprehend as they are closer to
+a knowledge-level representation than continuous values. Many studies show induction tasks can benefit from
+discretization: rules with discrete values are normally shorter and more understandable and discretization can
+lead to improved predictive accuracy. Furthermore, many induction algorithms found in the literature require
+discrete features. All these prompt researchers and practitioners to discretize continuous features before or during
+a machine learning or data mining task. There are numerous discretization methods available in the literature. It is
+time for us to examine these seemingly different methods for discretization and find out how different they really
+are, what are the key components of a discretization process, how we can improve the current level of research for
+new development as well as the use of existing methods. This paper aims at a systematic study of discretization
+methods with their history of development, effect on classification, and trade-off between speed and accuracy.
+Contributions of this paper are an abstract description summarizing existing discretization methods, a hierarchical
+framework to categorize the existing methods and pave the way for further development, concise discussions of
+representative discretization methods, extensive experiments and their analysis, and some guidelines as to how to
+choose a discretization method under various circumstances. We also identify some issues yet to solve and future
+research for discretization.},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/liu1-2.pdf:PDF},
+  keywords  = {discretization, continuous feature, data mining, classification},
+  publisher = {Springer},
+}
+
+@Article{FI1993,
+  author    = {U.M. Fayyad and K.B. Irani},
+  title     = {Multi-Interval Discretization of Continuous-Valued Attributes for Classification Learning},
+  year      = {1993},
+  pages     = {1022--1029},
+  booktitle = {13th International Joint Conference on Uncertainly in Artificial Intelligence({IJCAI93})},
+  city      = {Chambery},
+  country   = {France},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/fayyad1993.pdf:PDF},
+}
+
+@InProceedings{Bay2000,
+  author    = {Stephen D. Bay and Department of Information and Computer Science},
+  booktitle = {Proceedings of the sixth ACM SIGKDD international conference on Knowledge discovery and data mining},
+  title     = {Multivariate Discretization of Continuous Variables for Set Mining},
+  year      = {2000},
+  pages     = {315--319},
+  abstract  = {attribute-value (A-V) pairs with high predictive power, or
+Many algorithms in data mining can be formulated as a set contrast set mining [4, 5] where the goal is to nd sets that
+mining problem where the goal is to nd conjunctions (or represent large dierences in the probability distributions of
+disjunctions) of terms that meet user specied constraints. two or more groups.
+Set mining techniques have been largely designed for cat-
+egorical or discrete data where variables can only take on There has been much work devoted to speeding up search},
+  doi       = {doi:10.1145/347090.347159},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/347090.347159.pdf:PDF},
+}
+
+@InCollection{dougherty1995supervised,
+  author    = {Dougherty, James and Kohavi, Ron and Sahami, Mehran},
+  booktitle = {Machine learning proceedings 1995},
+  publisher = {Elsevier},
+  title     = {Supervised and unsupervised discretization of continuous features},
+  year      = {1995},
+  pages     = {194--202},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/disc.pdf:PDF},
+}
+
+@InProceedings{ismail2003empirical,
+  author       = {Ismail, Michael and Ciesielski, Victor},
+  booktitle    = {HIS},
+  title        = {An Empirical Investigation of the Impact of Discretization on Common Data Distributions.},
+  year         = {2003},
+  organization = {Citeseer},
+  pages        = {692--701},
+  file         = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/document.pdf:PDF},
+}
+
+@Article{gorski2005healpix,
+  author    = {Gorski, Krzysztof M and Hivon, Eric and Banday, Anthony J and Wandelt, Benjamin D and Hansen, Frode K and Reinecke, Mstvos and Bartelmann, Matthia},
+  journal   = {The Astrophysical Journal},
+  title     = {HEALPix: A framework for high-resolution discretization and fast analysis of data distributed on the sphere},
+  year      = {2005},
+  number    = {2},
+  pages     = {759},
+  volume    = {622},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/Górski_2005_ApJ_622_759.pdf:PDF},
+  publisher = {IOP Publishing},
+}
+
+@Article{hacibeyouglu2016comparison,
+  author  = {HACIBEYO{\u{G}}LU, Mehmet and IBRAHIM, Mohammed H},
+  journal = {International Journal of Intelligent Systems and Applications in Engineering},
+  title   = {Comparison of the effect of unsupervised and supervised discretization methods on classification process},
+  year    = {2016},
+  number  = {Special Issue-1},
+  pages   = {105--108},
+  volume  = {4},
+  file    = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/10.18201-ijisae.267490-234095.pdf:PDF},
+}
+
+@InProceedings{K1992,
+  author    = {R. Kerber},
+  booktitle = {National Conference on Artifical Intelligence American Association for Artificial Intelligence({AAAI\'92})},
+  title     = {ChiMerge: Discretization of Numeric Attributes},
+  year      = {1992},
+  pages     = {123--128},
+  city      = {San Jos\'e},
+  country   = {California USA},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/1992-Kerber-ChimErge-AAAI92.pdf:PDF},
+}
+
+@InProceedings{yang2002comparative,
+  author    = {Yang, Ying and Webb, Geoffrey I},
+  booktitle = {Proceedings of PKAW},
+  title     = {A comparative study of discretization methods for naive-bayes classifiers},
+  year      = {2002},
+  volume    = {2002},
+  abstract  = {Discretization is a popular approach to handling numeric
+attributes in machine learning. We argue that the requirements for effec-
+tive discretization differ between naive-Bayes learning and many other
+learning algorithms. We evaluate the effectiveness with naive-Bayes clas-
+sifiers of nine discretization methods, equal width discretization (EWD),
+equal frequency discretization (EFD), fuzzy discretization (FD), entropy
+minimization discretization (EMD), iterative discretization (ID), propor-
+tional k-interval discretization (PKID), lazy discretization (LD), non-
+disjoint discretization (NDD) and weighted proportional k-interval dis-
+cretization (WPKID). It is found that in general naive-Bayes classifiers
+trained on data preprocessed by LD, NDD or WPKID achieve lower
+classification error than those trained on data preprocessed by the other
+discretization methods. But LD can not scale to large data. This study
+leads to a new discretization method, weighted non-disjoint discretiza-
+tion (WNDD) that combines WPKID and NDD’s advantages. Our ex-
+periments show that among all the rival discretization methods, WNDD
+best helps naive-Bayes classifiers reduce average classification error.},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/YangWebb02a.pdf:PDF},
+}
+
+@InProceedings{gama1998dynamic,
+  author       = {Gama, Joao and Torgo, Luis and Soares, Carlos},
+  booktitle    = {Progress in Artificial Intelligence—IBERAMIA 98: 6th Ibero-American Conference on AI Lisbon, Portugal, October 5--9, 1998 Proceedings 6},
+  title        = {Dynamic discretization of continuous attributes},
+  year         = {1998},
+  organization = {Springer},
+  pages        = {160--169},
+  abstract     = {Discretization of continuous attributes is an important task
+for certain types of machine learning algorithms. Bayesian approaches,
+for instance, require assumptions about data distributions. Decision
+Trees, on the other hand, require sorting operations to deal with con-
+tinuous attributes, which largely increase learning times. This paper
+presents a new method of discretization, whose main characteristic is
+that it takes into account interdependencies between attributes. Detect-
+ing interdependencies can be seen as discovering redundant attributes.
+This means that our method performs attribute selection as a side effect
+of the discretization. Empirical evaluation on five benchmark datasets
+from UCI repository, using C4.5 and a naive Bayes, shows a consistent
+reduction of the features without loss of generalization accuracy.},
+  file         = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/gama-joão-dynamic-discretization-of-continuous.pdf:PDF},
+  keywords     = {Discretization, Feature Selection, Continuous Attributes},
+  ranking      = {rank4},
+  relevance    = {relevant},
+}
+
+@Article{mishra2019descriptive,
+  author    = {Mishra, Prabhaker and Pandey, Chandra M and Singh, Uttam and Gupta, Anshul and Sahu, Chinmoy and Keshri, Amit},
+  journal   = {Annals of cardiac anaesthesia},
+  title     = {Descriptive statistics and normality tests for statistical data},
+  year      = {2019},
+  number    = {1},
+  pages     = {67},
+  volume    = {22},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/ACA-22-67.pdf:PDF},
+  keywords  = {Biomedical research, descriptive statistics, numerical and visual methods, test of Gandhi Postgraduate Institute normality of Medical Sciences, Lucknow},
+  publisher = {Wolters Kluwer--Medknow Publications},
+}
+
+@Book{sheskin2020handbook,
+  author    = {Sheskin, David J},
+  publisher = {crc Press},
+  title     = {Handbook of parametric and nonparametric statistical procedures},
+  year      = {2020},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/sheskin-handbook-of-parametric-and-nonparametric.pdf:PDF},
+  journal   = {The American Statistician},
+  pages     = {374},
+}
+
+@InProceedings{ventura1995empirical,
+  author    = {Ventura, Dan and Martinez, Tony R},
+  booktitle = {Proceedings of the Tenth International Symposium on Computer and Information Sciences},
+  title     = {An empirical comparison of discretization methods},
+  year      = {1995},
+  pages     = {443--450},
+  file      = {:D\:/School/Informatica/4to Año/1er semestre/Practicas/bibliografia/ventura1995iscis.pdf:PDF},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
