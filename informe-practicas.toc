@@ -10,32 +10,32 @@
 \contentsline {subsubsection}{Clasificación con Support Vector Machine}{10}{section*.14}%
 \contentsline {section}{\numberline {1.4}\textit {AutoML}}{11}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Pre-procesado}{12}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Optimización de hiperparámetros}{14}{subsection.1.4.2}%
-\contentsline {section}{\numberline {1.5}Herramienta de minería de datos KNIME}{16}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Componente KNIME de AutoML para el pre-procesado en tareas de clasificación}{17}{section.1.6}%
+\contentsline {subsection}{\numberline {1.4.2}Optimización de hiperparámetros}{15}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Herramienta de minería de datos KNIME}{17}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Componente KNIME de AutoML para el pre-procesado en tareas de clasificación}{18}{section.1.6}%
 \contentsline {section}{\numberline {1.7}Bases de datos de prueba}{19}{section.1.7}%
 \contentsline {section}{\numberline {1.8}Conclusiones parciales}{20}{section.1.8}%
-\contentsline {chapter}{\numberline {2}Propuesta de modificación al componente de AutoML para pre-procesado}{21}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Subcomponente para la discretización}{21}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Descripción del subcomponente}{21}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Requisitos y restricciones del subcomponente}{21}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Modelación del subcomponente}{21}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}Componente para la optimización de hiperparámetros}{21}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Uso y configuración del componente AutoML Clasificación (Optimización de Hiperparámetros)}{22}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Requisitos y restricciones del componente AutoML Clasificación (Optimización de Hiperparámetros)}{23}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Modelación del componente AutoML Clasificación (Optimización de Hiperparámetros)}{24}{subsection.2.2.3}%
-\contentsline {subsubsection}{Selección de parámetros}{24}{section*.26}%
-\contentsline {subsection}{\numberline {2.2.4}Optimización de hiperparámetros para Rprop}{25}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Conclusiones parciales}{28}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Integración y validación de soluciones propuestas al componente de AutoML}{29}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Análisis de las bases de datos de prueba}{29}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Pruebas a los nuevos componentes}{29}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Casos de prueba al componente}{29}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Comparación de resultados}{29}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Conclusiones parciales}{29}{section.3.5}%
-\contentsline {chapter}{Conclusiones}{30}{section*.38}%
-\contentsline {chapter}{Recomendaciones}{31}{section*.40}%
-\contentsline {chapter}{Referencias bibliográficas}{32}{section*.42}%
-\contentsline {chapter}{\numberline {A}Anexos}{35}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Flujo KNIME del procesamiento de RProp con HPO}{35}{section.Alph1.1}%
-\contentsline {chapter}{Anexos}{35}{section*.44}%
+\contentsline {chapter}{\numberline {2}Propuesta de modificación al componente de AutoML para pre-procesado}{22}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Subcomponente para la discretización}{22}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Descripción del subcomponente}{22}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Requisitos y restricciones del subcomponente}{22}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Modelación del subcomponente}{22}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Componente para la optimización de hiperparámetros}{22}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Uso y configuración del componente AutoML Clasificación (Optimización de Hiperparámetros)}{23}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Requisitos y restricciones del componente AutoML Clasificación (Optimización de Hiperparámetros)}{24}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Modelación del componente AutoML Clasificación (Optimización de Hiperparámetros)}{25}{subsection.2.2.3}%
+\contentsline {subsubsection}{Selección de parámetros}{25}{section*.26}%
+\contentsline {subsection}{\numberline {2.2.4}Optimización de hiperparámetros para Rprop}{26}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Conclusiones parciales}{29}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Integración y validación de soluciones propuestas al componente de AutoML}{30}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Análisis de las bases de datos de prueba}{30}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Pruebas a los nuevos componentes}{30}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Casos de prueba al componente}{30}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Comparación de resultados}{30}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Conclusiones parciales}{30}{section.3.5}%
+\contentsline {chapter}{Conclusiones}{31}{section*.38}%
+\contentsline {chapter}{Recomendaciones}{32}{section*.40}%
+\contentsline {chapter}{Referencias bibliográficas}{33}{section*.42}%
+\contentsline {chapter}{\numberline {A}Anexos}{36}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Flujo KNIME del procesamiento de RProp con HPO}{36}{section.Alph1.1}%
+\contentsline {chapter}{Anexos}{36}{section*.44}%

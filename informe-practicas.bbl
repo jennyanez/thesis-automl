@@ -111,6 +111,12 @@ Kotsiantis, Sotiris, \& Kanellopoulos, Dimitris. 2006.
 \newblock {\em GESTS International Transactions on Computer Science and
   Engineering}, {\bf 32}(1), 47--58.
 
+\bibitem[\protect\citename{Kurgan \& Cios, }2004]{kurgan2004caim}
+Kurgan, Lukasz~A, \& Cios, Krzysztof~J. 2004.
+\newblock CAIM discretization algorithm.
+\newblock {\em IEEE transactions on Knowledge and Data Engineering}, {\bf
+  16}(2), 145--153.
+
 \bibitem[\protect\citename{Liu {\em et~al.}, }2002]{liu2002discretization}
 Liu, Huan, Hussain, Farhad, Tan, Chew~Lim, \& Dash, Manoranjan. 2002.
 \newblock Discretization: An enabling technique.
@@ -146,6 +152,12 @@ Waring, Jonathan, Lindvall, Charlotta, \& Umeton, Renato. 2020.
 \newblock Automated machine learning: Review of the state-of-the-art and
   opportunities for healthcare.
 \newblock {\em Artificial intelligence in medicine}, {\bf 104}, 101822.
+
+\bibitem[\protect\citename{Yang \& Webb, }2009]{yang2009discretization}
+Yang, Ying, \& Webb, Geoffrey~I. 2009.
+\newblock Discretization for naive-Bayes learning: managing discretization bias
+  and variance.
+\newblock {\em Machine learning}, {\bf 74}, 39--74.
 
 \bibitem[\protect\citename{Z{\"o}ller \& Huber, }2021]{zoller2021benchmark}
 Z{\"o}ller, Marc-Andr{\'e}, \& Huber, Marco~F. 2021.

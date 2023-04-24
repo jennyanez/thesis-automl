@@ -127,8 +127,11 @@ La identificación del mejor discretizador para cada situación es una tarea muy
 	\item El número de inconsistencias causadas por la discretización: no debe ser mucho mayor que el número de inconsistencias de los datos originales antes de la discretización.
 	\item Precisión predictiva: cómo la discretización ayuda a mejorar la precisión.
 \end{enumerate}
- En resumen, se necesitan al menos tres dimensiones: simplicidad, consistencia y precisión. Idealmente, el mejor resultado de discretización puede obtener la puntuación más alta en los tres departamentos. En realidad, puede no ser alcanzable o necesario. 
+ En resumen, se necesitan al menos tres dimensiones: simplicidad, consistencia y precisión. Idealmente, el mejor resultado de discretización puede obtener la puntuación más alta en los tres departamentos. En realidad, puede no ser alcanzable o necesario. \\
+ El agrupamiento (\textbf{binning}), es el método más simple para discretizar un atributo de valor continuo mediante la creación de un número específico de grupos (bins). Los bins se pueden crear con el mismo ancho (\textit{equal-width}) y la misma frecuencia (\textit{equal-frequency}). Cada bin está asociado con un valor discreto distinto. En \textit{equal-width}, el rango continuo de una característica se divide uniformemente en intervalos que tienen un ancho igual y cada intervalo representa un bin. En \textit{equal-frequency}, se coloca un número igual de valores continuos en cada bin \citep{liu2002discretization}, \citep{yang2009discretization}. Un método simple y similar a estos es el basado en cuantiles (quantiles-based), donde se producen bins correspondientes a una lista de probabilidades dada. El elemento más pequeño corresponde a una probabilidad de 0 y el más grande a una probabilidad de 1. \\
+ Otro algoritmo de discretización es CAIM. El objetivo del algoritmo CAIM es encontrar el número mínimo de intervalos discretos mientras se minimiza la pérdida de interdependencia de atributo de clase. El algoritmo utiliza información de interdependencia de atributo de clase como criterio para la discretización óptima \citep{kurgan2004caim}.
  
+
 
 \subsubsection*{Normalización}
 Este subepígrafe será desarrollado más adelante, durante la redacción de la tesis.
