@@ -159,6 +159,9 @@ Existen varias estrategias de HPO, algunas de las cuales son:
 	\item Optimización Bayesiana: Construye modelos probabilísticos para representar la función objetivo, que se actualiza después de cada iteración. Maneja espacios de búsqueda de alta dimensionalidad y no requiere tantas iteraciones como la búsqueda en cuadrícula o la búsqueda aleatoria para encontrar combinaciones de hiperparámetros de alto rendimiento \citep{hutter2019automated}, \citep{he2021automl}.
 	\item Optimización basada en gradiente: Emplea la información del gradiente para optimizar los hiperparámetros de manera iterativa. Genera una gran carga computacional y presenta la limitación de caer en mínimos locales \citep{zoller2021benchmark}.
 \end{itemize} 
+
+Para seleccionar los mejores valores de hiperparámetros, es necesario evaluar el rendimiento del modelo en datos que no se utilizaron para el entrenamiento. En este contexto, las técnicas de validación son una herramienta esencial para evaluar y comparar diferentes combinaciones de hiperparámetros. La validación cruzada es una de las técnicas más utilizadas, consiste en dividir el conjunto de datos en \textit{k-folds} o particiones y entrenar el modelo \textit{k} veces, utilizando una partición diferente para la validación y las \textit{k-1} particiones restantes para el entrenamiento. El rendimiento del modelo se evalúa en cada iteración utilizando la partición de validación \citep{hastie2009elements}. \\
+
 A pesar del incesante estudio vinculado al HPO, este sigue presentando en la actualidad diversos desafíos \citep{hutter2019automated}:
 \begin{itemize}
 	\item Costo computacional: la optimización de hiperparámetros puede ser muy costosa en términos de tiempo de cómputo y recursos de hardware, especialmente cuando se utiliza un espacio de hiperparámetros grande o se ejecutan muchas iteraciones de entrenamiento. Esto puede limitar la escalabilidad y la eficiencia de la HPO.
