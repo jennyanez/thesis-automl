@@ -111,6 +111,11 @@ Kotsiantis, Sotiris, \& Kanellopoulos, Dimitris. 2006.
 \newblock {\em GESTS International Transactions on Computer Science and
   Engineering}, {\bf 32}(1), 47--58.
 
+\bibitem[\protect\citename{Liu {\em et~al.}, }2002]{liu2002discretization}
+Liu, Huan, Hussain, Farhad, Tan, Chew~Lim, \& Dash, Manoranjan. 2002.
+\newblock Discretization: An enabling technique.
+\newblock {\em Data mining and knowledge discovery}, {\bf 6}, 393--423.
+
 \bibitem[\protect\citename{Murphy, }2012]{murphy2012machine}
 Murphy, Kevin~P. 2012.
 \newblock {\em Machine learning: a probabilistic perspective}.

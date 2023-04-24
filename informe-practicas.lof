@@ -9,5 +9,21 @@
 \contentsline {figure}{\numberline {1.7}{\ignorespaces Flujo KNIME del componente AutoML Clasificación (pre-procesado) \citep {Carrazana2022}\relax }}{18}{figure.caption.20}%
 \contentsline {figure}{\numberline {1.8}{\ignorespaces Flujo de pre-procesado para el algoritmo ID3 \citep {Carrazana2022}\relax }}{18}{figure.caption.21}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Componente AutoML Clasificación (Optimización de Hiperparámetros)}}{21}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Ejemplo de configuración del componente AutoML (Optimización de Hiperparámetros)}}{22}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Vista de la salida.}}{23}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Diagrama de flujo general del componente AutoML Clasificación (Optimización de Hiperparámetros)}}{24}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Diagrama de actividades de selección de parámetros}}{24}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Nodo Column Selection Configuration}}{25}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Nodo Single Selection Configuration}}{25}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Nodo Integer Configuration}}{25}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Nodos para entrenar y probar Redes Neuronales por retro propagación}}{26}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Diagrama de actividades para el procesamiento de RProp con HPO}}{26}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Nodos Parameter Optimization Loop Start y Parameter Optimization Loop End}}{26}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Configuración del nodo Parameter Optimization Loop Start}}{27}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Nodos X-Partitioner y X-Aggregator}}{27}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Nodo Scorer}}{27}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Nodo Table View}}{27}{figure.caption.37}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Flujo KNIME del procesamiento de RProp con HPO}}{35}{figure.caption.45}%

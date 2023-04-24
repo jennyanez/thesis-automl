@@ -12,6 +12,10 @@ A level-1 auxiliary file: introduccion.aux
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 A level-1 auxiliary file: cap1.aux
 Reallocating 'name_of_file' (item size: 1) to 9 items.
+A level-1 auxiliary file: cap2.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+A level-1 auxiliary file: cap3.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
 A level-1 auxiliary file: conc.aux
 Reallocating 'name_of_file' (item size: 1) to 8 items.
 A level-1 auxiliary file: rec.aux
@@ -28,45 +32,45 @@ Warning--empty booktitle in Carrazana2022
 Warning--empty journal in hernandeztecnicas
 Warning--empty booktitle in Lisandra2012
 Warning--empty publisher in Han2011
-You've used 24 entries,
+You've used 25 entries,
             2441 wiz_defined-function locations,
-            718 strings with 8685 characters,
-and the built_in function-call counts, 9321 in all, are:
-= -- 889
-> -- 381
-< -- 80
-+ -- 115
-- -- 111
-* -- 763
-:= -- 1572
-add.period$ -- 95
-call.type$ -- 24
-change.case$ -- 150
-chr.to.int$ -- 24
-cite$ -- 29
-duplicate$ -- 343
-empty$ -- 672
-format.name$ -- 134
-if$ -- 1903
+            727 strings with 8875 characters,
+and the built_in function-call counts, 9773 in all, are:
+= -- 932
+> -- 401
+< -- 83
++ -- 121
+- -- 117
+* -- 804
+:= -- 1646
+add.period$ -- 99
+call.type$ -- 25
+change.case$ -- 156
+chr.to.int$ -- 25
+cite$ -- 30
+duplicate$ -- 359
+empty$ -- 705
+format.name$ -- 140
+if$ -- 1993
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 33
-newline$ -- 121
-num.names$ -- 72
-pop$ -- 153
+missing$ -- 34
+newline$ -- 126
+num.names$ -- 75
+pop$ -- 158
 preamble$ -- 1
-purify$ -- 173
+purify$ -- 180
 quote$ -- 0
-skip$ -- 363
+skip$ -- 379
 stack$ -- 0
-substring$ -- 506
-swap$ -- 68
+substring$ -- 542
+swap$ -- 71
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 174
+type$ -- 182
 warning$ -- 5
-while$ -- 68
+while$ -- 72
 width$ -- 0
-write$ -- 296
+write$ -- 309
 (There were 7 warnings)
