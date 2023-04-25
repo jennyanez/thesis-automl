@@ -6,7 +6,7 @@
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Ejemplos de posibles hiperplanos de SVM \citep {sammut2011encyclopedia}\relax }}{10}{figure.caption.15}%
 \contentsline {figure}{\numberline {1.5}{\ignorespaces Desglose de los subproblemas de AutoML \citep {zoller2021benchmark}\relax }}{15}{figure.caption.18}%
 \contentsline {figure}{\numberline {1.6}{\ignorespaces Ejemplo de flujo de trabajo en la herramienta KNIME.\relax }}{17}{figure.caption.19}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Flujo KNIME del componente AutoML Clasificación (pre-procesado) \citep {Carrazana2022}\relax }}{19}{figure.caption.20}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Flujo KNIME del Componente AutoML Clasificación (pre-procesado) \citep {Carrazana2022}\relax }}{19}{figure.caption.20}%
 \contentsline {figure}{\numberline {1.8}{\ignorespaces Flujo de pre-procesado para el algoritmo ID3 \citep {Carrazana2022}\relax }}{19}{figure.caption.21}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Componente AutoML Clasificación (Optimización de Hiperparámetros)}}{22}{figure.caption.22}%

@@ -1,5 +1,9 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\citename{kni, }2023]{knime2023}
+ 2023 (Mar.).
+\newblock {\em KNIME Official Site}.
+
 \bibitem[\protect\citename{Abiodun {\em et~al.}, }2018]{abiodun2018state}
 Abiodun, Oludare~Isaac, Jantan, Aman, Omolara, Abiodun~Esther, Dada,
   Kemi~Victoria, Mohamed, Nachaat~AbdElatif, \& Arshad, Humaira. 2018.
@@ -10,10 +14,22 @@ Abiodun, Oludare~Isaac, Jantan, Aman, Omolara, Abiodun~Esther, Dada,
 Agrawal, Rakesh, Imielinski, Tomasz, \& Swami, Arun. 1993.
 \newblock Mining Association Rules between Sets of Items in Large Databases.
 
+\bibitem[\protect\citename{Berthold {\em et~al.}, }2009]{berthold2009knime}
+Berthold, Michael~R, Cebron, Nicolas, Dill, Fabian, Gabriel, Thomas~R,
+  K{\"o}tter, Tobias, Meinl, Thorsten, Ohl, Peter, Thiel, Kilian, \& Wiswedel,
+  Bernd. 2009.
+\newblock KNIME-the Konstanz information miner: version 2.0 and beyond.
+\newblock {\em AcM SIGKDD explorations Newsletter}, {\bf 11}(1), 26--31.
+
 \bibitem[\protect\citename{Bonaccorso, }2017]{bonaccorso2017machine}
 Bonaccorso, Giuseppe. 2017.
 \newblock {\em Machine learning algorithms}.
 \newblock Packt Publishing Ltd.
+
+\bibitem[\protect\citename{Bravo~Ilisástigui, }2012]{Lisandra2012}
+Bravo~Ilisástigui, Lisandra. 2012.
+\newblock PROPUESTA DE HERRAMIENTA PARA APLICAR MINERÍA DE DATOS EN ENTORNOS
+  COMPLEJOS.
 
 \bibitem[\protect\citename{Carrazana~Ruiz, }2022]{Carrazana2022}
 Carrazana~Ruiz, Ernesto. 2022.
@@ -83,11 +99,6 @@ Hern{\'a}ndez~Orallo, Jos{\'e}, {\em et~al.} 2004.
 Hutter, Frank, Kotthoff, Lars, \& Vanschoren, Joaquin. 2019.
 \newblock {\em Automated machine learning: methods, systems, challenges}.
 \newblock Springer Nature.
-
-\bibitem[\protect\citename{Ilastegui, }2012]{Lisandra2012}
-Ilastegui, Lisandra~Bravo. 2012.
-\newblock PROPUESTA DE HERRAMIENTA PARA APLICAR MINERÍA DE DATOS EN ENTORNOS
-  COMPLEJOS.
 
 \bibitem[\protect\citename{Javed Mehedi~Shamrat {\em et~al.},
   }2022]{javed2022performance}

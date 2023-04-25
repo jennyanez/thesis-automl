@@ -22,11 +22,11 @@ El componente propuesto, presente en la figura \ref{fig:automl-componente-hpo}, 
 	\item Puerto de entrada: recibe los datos de entrada en formato tabular.
 	\item Elementos de la configuración:
 	\begin{itemize}
-		\item Columna objetivo: presenta las columnas de tipos String que pueden fungir como Columna objetivo.
-		\item Estrategia de optimización de hiperparámetros: se selecciona la estrategia de optimización de hiperparámetros entre las disponibles (disponibles: Random Search, Bayesian Optimization (TPE), Brute Force y Hillclimbing).
-		\item Selección del número de subconjuntos de la validación cruzada: el valor introducido determina la cantidad de veces que se divide el conjunto de datos en subconjuntos de entrenamiento y prueba durante el proceso de validación.
+		\item Columna objetivo: presenta las columnas de tipo \textit{string} que pueden fungir como columna objetivo.
+		\item Estrategia de optimización de hiperparámetros: se selecciona la estrategia de optimización de hiperparámetros entre las disponibles (Random Search, Bayesian Optimization (TPE), Brute Force y Hillclimbing).
+		\item Selección del número de subconjuntos de la validación cruzada: el valor introducido determina la cantidad de veces que se divide el conjunto de datos en subconjuntos de entrenamiento y prueba, durante el proceso de validación.
 	\end{itemize}
-	\item Puerto de salida: tabla de hiperparámetros optimizados siguiendo la estrategia de optimización escogida.
+	\item Puerto de salida: tabla de hiperparámetros optimizados, siguiendo la estrategia de optimización escogida.
 \end{enumerate}
 
 \subsection{Uso y configuración del componente AutoML Clasificación (Optimización de Hiperparámetros)}
@@ -36,7 +36,7 @@ A continuación, se define la secuencia de pasos para el correcto funcionamiento
 	\item Proporcionar el conjunto de datos al puerto de entrada (el componente marcará error en este punto, pues la configuración es obligatoria).
 	\item Dar click derecho sobre el componente, seleccionar “Configure…”. 
 	\item Seleccionar la configuración deseada (como se observa en el ejemplo de la figura \ref{fig:config-automl-hpo}). 
-	\item Ejecutar el componente (Inicialmente el puerto de salida se encuentra vacío).
+	\item Ejecutar el componente (inicialmente el puerto de salida se encuentra vacío).
 	\item Dar click derecho sobre el componente y seleccionar “Interactive View: AutoML” (Fig3). 
 \end{enumerate}
 
@@ -58,19 +58,19 @@ A continuación, se define la secuencia de pasos para el correcto funcionamiento
 El componente propuesto debe cumplir los siguientes requisitos funcionales:
 
 \begin{itemize}
-	\item RF1: Seleccionar columna objetivo
-	\item RF2: Seleccionar estrategia de optimización de hiperparámetros.
-	\item RF3: Seleccionar cantidad de subconjuntos en la validación cruzada.
-	\item RF4: Optimizar hiperparámetros y entrenar datos para Redes Neuronales de Retro propagación.
-	\item RF5: Retornar tabla de hiperparámetros optimizados.
+	\item RF1: El componente debe permitir seleccionar columna objetivo
+	\item RF2: El componente debe permitir seleccionar estrategia de optimización de hiperparámetros.
+	\item RF3: El componente debe permitir seleccionar cantidad de subconjuntos en la validación cruzada.
+	\item RF4: El componente debe optimizar hiperparámetros y entrenar datos para Redes Neuronales de Retro propagación.
+	\item RF5: El componente debe retornar tabla de hiperparámetros optimizados.
 \end{itemize}
 
 El componente propuesto presenta las siguientes restricciones para su funcionamiento:
 
 \begin{itemize}
 	\item Los datos de entrada deben encontrarse en formato tabular.
-	\item La columna objetivo debe ser de tipo String.
-	\item Los datos de entrada deben ser de tipo numérico, menos la columna objetivo.
+	\item La columna objetivo debe ser de tipo \textit{string}.
+	\item Los datos de entrada deben ser de tipo numérico, a excepción de la columna objetivo.
 	\item Los datos numéricos deben estar previamente normalizados.
 \end{itemize}
 
@@ -84,12 +84,10 @@ El diagrama de flujo de la figura \ref{fig:diagrama-flujo-gral-comp-hpo} expone 
 	\label{fig:diagrama-flujo-gral-comp-hpo}
 \end{figure}
 
-La configuración de la selección de parámetros es el primer paso en el cual se crearán las variables que dictarán el comportamiento del flujo. Posteriormente se ejecuta la optimización de hiperparámetros para RProp, donde recoge los resultados en una tabla y luego los grafica.\\
-El flujo KNIME correspondiente se evidencia en el Anexo \ref{aped.flujo-hpo-rprop}.
+La configuración de la selección de parámetros es el primer paso, en el cual se crearán las variables que dictarán el comportamiento del flujo. Posteriormente, se ejecuta la optimización de hiperparámetros para RProp, donde recoge los resultados en una tabla y luego los grafica. El flujo KNIME correspondiente se evidencia en el Anexo \ref{aped.flujo-hpo-rprop}.
 
 \subsubsection{Selección de parámetros}
-Los parámetros que rigen el funcionamiento del componente propuesto brindan al usuario una mayor personalización de la optimización de hiperparámetros, pues le ofrece la libertad de configurar múltiples factores claves de esta etapa.\\
-El diagrama de actividades de la figura \ref{fig:diagrama-act-selecc-param-hpo} expone el flujo para la selección de parámetros.
+Los parámetros que rigen el funcionamiento del componente propuesto, brindan al usuario una mayor personalización de la optimización de hiperparámetros, pues le ofrece la libertad de configurar múltiples factores claves de esta etapa. El diagrama de actividades de la figura \ref{fig:diagrama-act-selecc-param-hpo} expone el flujo para la selección de parámetros.
 
 \begin{figure}[H]
 	\centering
@@ -101,33 +99,33 @@ El diagrama de actividades de la figura \ref{fig:diagrama-act-selecc-param-hpo} 
 La selección de parámetros se realiza con los siguientes nodos de configuración, presentes en el repositorio base:
 
 \begin{itemize}
-	\item Seleccionar columna objetivo: se emplea el nodo Column Selection Configuration (Figura \ref{fig:nodo-column-select-conf}), el cual recibe una tabla y devuelve el nombre de la columna seleccionada como variable de flujo. En este caso presenta la configuración adicional para solo mostrar las columnas de tipo String.
+	\item Seleccionar columna objetivo: se emplea el nodo \textit{Column Selection Configuration} (Figura \ref{fig:nodo-column-select-conf}), el cual recibe una tabla y devuelve el nombre de la columna seleccionada como variable de flujo. En este caso, presenta la configuración adicional para solo mostrar las columnas de tipo \textit{string}.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.15\linewidth]{"figuras/capi 2/nodo-column-select-conf"}
-		\caption[Nodo Column Selection Configuration]{Nodo Column Selection Configuration}
+		\caption[Nodo Column Selection Configuration]{Nodo \textit{Column Selection Configuration}}
 		\label{fig:nodo-column-select-conf}
 	\end{figure}
 	
-	\item Seleccionar estrategia de optimización de hiperparámetros: la selección de la estrategia se lleva a cabo empleando el nodo Single Selection Configuration (Figura \ref{fig:nodo-single-select-conf}). Devuelve la variable strategy con el valor seleccionado previamente.
+	\item Seleccionar estrategia de optimización de hiperparámetros: la selección de la estrategia se lleva a cabo empleando el nodo \textit{Single Selection Configuration} (Figura \ref{fig:nodo-single-select-conf}). Devuelve la variable \texttt{strategy} con el valor seleccionado previamente.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.15\linewidth]{"figuras/capi 2/nodo-single-select-conf"}
-		\caption[Nodo Single Selection Configuration]{Nodo Single Selection Configuration}
+		\caption[Nodo Single Selection Configuration]{Nodo \textit{Single Selection Configuration}}
 		\label{fig:nodo-single-select-conf}
 	\end{figure}
 	
-	\item Seleccionar número de subconjuntos en la validación cruzada: la selección de la cantidad de subconjuntos de partición de entrenamiento se lleva a cabo con el nodo Interger Configuration(Figura \ref{fig:nodo-int-conf}). El cual devuelve la variable de flujo resultante de la selección, en este caso presenta la configuración para limitar el rango entre 5 y 10.
+	\item Seleccionar número de subconjuntos en la validación cruzada: la selección de la cantidad de subconjuntos de partición de entrenamiento, se lleva a cabo con el nodo \textit{Integer Configuration} (Figura \ref{fig:nodo-int-conf}). Este devuelve la variable de flujo resultante de la selección, en este caso presenta la configuración para limitar el rango entre 5 y 10.
 \end{itemize}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.15\linewidth]{"figuras/capi 2/nodo-int-conf"}
-	\caption[Nodo Integer Configuration]{Nodo Integer Configuration}
+	\caption[Nodo Integer Configuration]{Nodo \textit{Integer Configuration}}
 	\label{fig:nodo-int-conf}
 \end{figure}
 
 \subsection{Optimización de hiperparámetros para Rprop}
-Las Redes Neuronales por retro-propagación necesitan que todos los valores sean de tipo numéricos normalizados. Para el entrenamiento y prueba de las Redes Neuronales por retro propagación se emplean los nodos RProp MLP Learner y MultiLayerPerceptron Predictor (Figura \ref{fig:nodos-rprop}) respectivamente.
+Las Redes Neuronales por Retro-propagación necesitan que todos los valores sean de tipo numéricos y estos se encuentren normalizados. Para el entrenamiento y prueba de las Redes Neuronales por Retro-propagación, se emplean los nodos \textit{RProp MLP Learner} y \textit{MultiLayerPerceptron Predictor} (Figura \ref{fig:nodos-rprop}) respectivamente.
 
 \begin{figure}[H]
 	\centering
@@ -136,7 +134,7 @@ Las Redes Neuronales por retro-propagación necesitan que todos los valores sean
 	\label{fig:nodos-rprop}
 \end{figure}
 
-El diagrama de actividades de la figura \ref{fig:diagrama-act-proc-rprop-hpo}, expone el flujo para el procesamiento necesario para la ejecución del algoritmo Redes Neuronales por retro-ropagación con optimización de hiperparámetros.
+El diagrama de actividades de la figura \ref{fig:diagrama-act-proc-rprop-hpo}, expone el flujo para el procesamiento necesario para la ejecución del algoritmo Redes Neuronales por Retro-ropagación, con optimización de hiperparámetros.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{"figuras/capi 2/diagrama-act-proc-rprop-hpo"}
@@ -146,42 +144,42 @@ El diagrama de actividades de la figura \ref{fig:diagrama-act-proc-rprop-hpo}, e
 
 Para llevar a cabo el procesamiento RProp se emplean los siguientes nodos: 
 \begin{itemize}
-	\item Ciclo para recorrer el rango de hiperparámetros: se emplean los nodos Parameter Optimization Loop Start y Parameter Optimization Loop End (Figura \ref{fig:nodos-param-opt-loop}), estos dos nodos permiten guardar todas las iteraciones realizadas por el algoritmo con las diferentes combinaciones de hiperparámetros. Para su configuración se eligieron como hiperparámetros el número de capas, la cantidad de neuronas y el número máximo de iteraciones (Figura \ref{fig:conf-nodo-param-loop}).
+	\item Ciclo para recorrer el rango de hiperparámetros: se emplean los nodos \textit{Parameter Optimization Loop Start} y \textit{Parameter Optimization Loop End} (Figura \ref{fig:nodos-param-opt-loop}). Ambos permiten guardar todas las iteraciones realizadas por el algoritmo con las diferentes combinaciones de hiperparámetros. Para su configuración, se eligieron como hiperparámetros el número de capas, la cantidad de neuronas y el número máximo de iteraciones (Figura \ref{fig:conf-nodo-param-loop}).
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\linewidth]{"figuras/capi 2/nodos-param-opt-loop"}
-		\caption[Nodos Parameter Optimization Loop Start y Parameter Optimization Loop End]{Nodos Parameter Optimization Loop Start y Parameter Optimization Loop End}
+		\caption[Nodos Parameter Optimization Loop Start y Parameter Optimization Loop End]{Nodos \textit{Parameter Optimization Loop Start} y \textit{Parameter Optimization Loop End}}
 		\label{fig:nodos-param-opt-loop}
 	\end{figure}
 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.6\linewidth]{"figuras/capi 2/conf-nodo-param-loop"}
-		\caption[Configuración del nodo Parameter Optimization Loop Start]{Configuración del nodo Parameter Optimization Loop Start}
+		\caption[Configuración del nodo Parameter Optimization Loop Start]{Configuración del nodo \textit{Parameter Optimization Loop Start}}
 		\label{fig:conf-nodo-param-loop}
 	\end{figure}
 	
-	\item Ciclo para dividir el conjunto de datos: se emplean los nodos X-Partitioner y X-Aggregator (Figura \ref{fig:nodos-cross-val}), para dividir el conjunto de datos en K particiones para realizar una validación cruzada, donde cada partición se utiliza como conjunto de prueba una vez y las otras K-1 particiones se utilizan como conjunto de entrenamiento.
+	\item Ciclo para dividir el conjunto de datos: se emplean los nodos \textit{X-Partitioner} y \textit{X-Aggregator} (Figura \ref{fig:nodos-cross-val}), para dividir el conjunto de datos en \textit{k} particiones y realizar una validación cruzada, donde cada partición se utiliza como conjunto de prueba una vez y las otras \textit{k-1} particiones se utilizan como conjunto de entrenamiento.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.4\linewidth]{"figuras/capi 2/nodos-cross-val"}
-		\caption[Nodos X-Partitioner y X-Aggregator]{Nodos X-Partitioner y X-Aggregator}
+		\caption[Nodos X-Partitioner y X-Aggregator]{Nodos \textit{X-Partitioner} y \textit{X-Aggregator}}
 		\label{fig:nodos-cross-val}
 	\end{figure}
 
-	\item Calcular la exactitud: se emplea el nodo Scorer (Figura \ref{fig:nodo-scorer}), el cual recibe la predicción y la columna objetivo en una tabla para la evaluación. 
+	\item Calcular la exactitud: se emplea el nodo \textit{Scorer} (Figura \ref{fig:nodo-scorer}), el cual recibe la predicción y la columna objetivo en una tabla para la evaluación. 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.15\linewidth]{"figuras/capi 2/nodo-scorer"}
-		\caption[Nodo Scorer]{Nodo Scorer}
+		\caption[Nodo Scorer]{Nodo \textit{Scorer}}
 		\label{fig:nodo-scorer}
 	\end{figure}
 	
-	\item Graficar: se emplea el nodo Table View (Fig13) capaz de visualizar la tabla de los hiperparámetros de mejor resultado.
+	\item Graficar: se emplea el nodo \textit{Table View} (Fig13), capaz de visualizar la tabla de los hiperparámetros con mejor resultado.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.15\linewidth]{"figuras/capi 2/nodo-table-view"}
-		\caption[Nodo Table View]{Nodo Table View}
+		\caption[Nodo Table View]{Nodo \textit{Table View}}
 		\label{fig:nodo-table-view}
 	\end{figure}
 	
