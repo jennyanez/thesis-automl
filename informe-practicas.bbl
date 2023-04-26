@@ -36,6 +36,13 @@ Carrazana~Ruiz, Ernesto. 2022.
 \newblock Componente KNIME de AutoML para pre-procesado en tareas de
   Clasificación.
 
+\bibitem[\protect\citename{Dougherty {\em et~al.},
+  }1995]{dougherty1995supervised}
+Dougherty, James, Kohavi, Ron, \& Sahami, Mehran. 1995.
+\newblock Supervised and unsupervised discretization of continuous features.
+\newblock {\em Pages  194--202 of:} {\em Machine learning proceedings 1995}.
+\newblock Elsevier.
+
 \bibitem[\protect\citename{Garcia {\em et~al.}, }2012]{garcia2012survey}
 Garcia, Salvador, Luengo, Julian, S{\'a}ez, Jos{\'e}~Antonio, Lopez, Victoria,
   \& Herrera, Francisco. 2012.
@@ -148,6 +155,14 @@ R, Praba, G, Darshan, T, Roshanraj, \& B, Surya. 2021.
 Sammut, Claude, \& Webb, Geoffrey~I. 2011.
 \newblock {\em Encyclopedia of machine learning}.
 \newblock Springer Science \& Business Media.
+
+\bibitem[\protect\citename{Torgo \& Gama, }1997]{torgo1997search}
+Torgo, Lu{\'\i}s, \& Gama, Jo{\~a}o. 1997.
+\newblock Search-based class discretization.
+\newblock {\em Pages  266--273 of:} {\em Machine Learning: ECML-97: 9th
+  European Conference on Machine Learning Prague, Czech Republic, April 23--25,
+  1997 Proceedings 9}.
+\newblock Springer.
 
 \bibitem[\protect\citename{Tuggener {\em et~al.}, }2019]{tuggener2019automated}
 Tuggener, Lukas, Amirian, Mohammadreza, Rombach, Katharina, L{\"o}rwald,

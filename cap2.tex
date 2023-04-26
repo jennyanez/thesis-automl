@@ -3,19 +3,52 @@
 
 
 \section{Subcomponente para la discretización}
-\subsection{Descripción del subcomponente}
-\subsection{Requisitos y restricciones del subcomponente}
+La discretización de variables numéricas se utiliza para convertir datos continuos en datos discretos, lo que permite que los algoritmos de aprendizaje automático puedan procesarlos y analizarlos adecuadamente. La discretización también puede mejorar la precisión de los modelos de aprendizaje automático al reducir el ruido en los datos y hacer que los patrones sean más fáciles de detectar. Para el algoritmo ID3, presente en el componente \textit{AutoML para pre-procesado (Clasificación)}, la discretización está implementada de forma estática. En aras de automatizar este proceso, se propone el componente \textit{Discretizer} (Figura \ref{fig:subcomp-disc}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.15\linewidth]{"figuras/capi 2/subcomp-disc"}
+	\caption[Componente Discretizer]{Componente \textit{Discretizer}}
+	\label{fig:subcomp-disc}
+\end{figure}
+
+El componente \textit{Discretizer} toma en su puerto de entrada los datos en formato tabular. Dichos datos, de tipo numéricos, son procesados por varios algoritmos de discretización y, como puerto de salida, se obtienen discretizados acorde al método de discretización con mejor precisión. Este proceso es descrito de forma detallada en el siguiente epígrafe.
+
+
 \subsection{Modelación del subcomponente}
+El diagrama de flujo de la figura \ref{fig:diagrama-flujo-discretizer} expone el flujo general del componente \textit{Discretizer}. El flujo KNIME correspondiente está presente en el anexo \ref{anex:flujo-disc-comp-id3}.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"figuras/capi 2/diagrama-flujo-discretizer"}
+	\caption[Diagrama de flujo general del subcomponente Discretizer]{Diagrama de flujo general del subcomponente Discretizer}
+	\label{fig:diagrama-flujo-discretizer}
+\end{figure}
 
+Para la discretización se emplean los nodos \textit{Auto-Binner} (Figura \ref{fig:auto-binner-nodo}) y \textit{CAIM Binner} (Figura \ref{fig:caim-binner-nodo}). El nodo \textit{Auto-Binner} contiene tres métodos de discretización: \textit{Equal-Width, Equal-Frequency} y \textit{Quantile-Based}; mientras el nodo \textit{CAIM Binner} contiene el método \textit{CAIM}. Para la elección de los \textit{k} intervalos, pueden emplearse varios métodos, como validación cruzada \cite{torgo1997search}; teniendo en cuenta el número de valores distintos observados en el conjunto de entrenamiento \citep{dougherty1995supervised}; o simplemente predefiniendo un valor. En este caso no se emplea uno en particular, sino que se predefinió que serían 10 intervalos, dado que el nodo \textit{Auto-Binner} funciona como caja negra y no permite realizar una experimentación como las mencionadas anteriormente. El nodo \textit{CAIM Binner} no requiere una configuración en específico, y para el método Quantile-Based se escogieron los cuantiles por defecto, es decir 0.0, 0.25, 0.5, 0.75 y 1.0.\\
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.15\linewidth]{"figuras/capi 2/auto-binner-nodo"}
+	\caption[Nodo Auto-Binner]{Nodo \textit{Auto-Binner}}
+	\label{fig:auto-binner-nodo}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.15\linewidth]{"figuras/capi 2/caim-binner-nodo"}
+	\caption[Nodo CAIM Binner]{Nodo \textit{CAIM Binner}}
+	\label{fig:caim-binner-nodo}
+\end{figure}
+
+Tras discretizar el conjunto de datos con cada método correspondiente, se aplica el algoritmo ID3 a cada uno de los datos resultantes, con el objetivo de compararlos en cuanto a precisión y Cohen's Kappa, y escoger el algoritmo con mejor desempeño. Los flujos KNIME correspondientes a la aplicación del algoritmo ID3 y la elección del mejor método de discretización, se encuentran en los anexos \ref{anex:flujo-discret-id3} y \ref{anex:flujo-comp-alg-id3-disc} respectivamente. 
 
 \section{Componente para la optimización de hiperparámetros}
 El componente propuesto, presente en la figura \ref{fig:automl-componente-hpo}, para la optimización de hiperparámetros, contiene la siguiente configuración:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.35\linewidth]{"figuras/capi 2/automl-componente-hpo"}
-	\caption[Componente AutoML Clasificación (Optimización de Hiperparámetros)]{Componente AutoML Clasificación (Optimización de Hiperparámetros)}
+	\caption[Componente AutoML Clasificación (Optimización de Hiperparámetros)]{Componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}}
 	\label{fig:automl-componente-hpo}
 \end{figure}
 \begin{enumerate}
@@ -30,7 +63,7 @@ El componente propuesto, presente en la figura \ref{fig:automl-componente-hpo}, 
 \end{enumerate}
 
 \subsection{Uso y configuración del componente AutoML Clasificación (Optimización de Hiperparámetros)}
-A continuación, se define la secuencia de pasos para el correcto funcionamiento del componente AutoML Clasificación (Optimización de Hiperparámetros):
+A continuación, se define la secuencia de pasos para el correcto funcionamiento del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}:
 
 \begin{enumerate}
 	\item Proporcionar el conjunto de datos al puerto de entrada (el componente marcará error en este punto, pues la configuración es obligatoria).
@@ -43,7 +76,7 @@ A continuación, se define la secuencia de pasos para el correcto funcionamiento
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{"figuras/capi 2/config-automl-hpo"}
-	\caption[Ejemplo de configuración del componente AutoML (Optimización de Hiperparámetros)]{Ejemplo de configuración del componente AutoML (Optimización de Hiperparámetros)}
+	\caption[Ejemplo de configuración del componente AutoML (Optimización de Hiperparámetros)]{Ejemplo de configuración del componente \textit{AutoML (Optimización de Hiperparámetros)}}
 	\label{fig:config-automl-hpo}
 \end{figure}
 
@@ -75,12 +108,12 @@ El componente propuesto presenta las siguientes restricciones para su funcionami
 \end{itemize}
 
 \subsection{Modelación del componente AutoML Clasificación (Optimización de Hiperparámetros)}
-El diagrama de flujo de la figura \ref{fig:diagrama-flujo-gral-comp-hpo} expone el flujo general del componente AutoML Clasificación (Optimización de Hiperparámetros).
+El diagrama de flujo de la figura \ref{fig:diagrama-flujo-gral-comp-hpo} expone el flujo general del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{"figuras/capi 2/diagrama-flujo-gral-comp-hpo"}
-	\caption[Diagrama de flujo general del componente AutoML Clasificación (Optimización de Hiperparámetros)]{Diagrama de flujo general del componente AutoML Clasificación (Optimización de Hiperparámetros)}
+	\caption[Diagrama de flujo general del componente AutoML Clasificación (Optimización de Hiperparámetros)]{Diagrama de flujo general del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}}
 	\label{fig:diagrama-flujo-gral-comp-hpo}
 \end{figure}
 
