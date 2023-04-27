@@ -1,9 +1,9 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Red Neuronal Pre-Alimentada \citep {abiodun2018state}\relax }}{9}{figure.caption.11}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Red neuronal por retro-propagación \citep {abiodun2018state}\relax }}{9}{figure.caption.12}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Red neuronal multicapa compleja \citep {abiodun2018state}\relax }}{10}{figure.caption.13}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Ejemplos de posibles hiperplanos de SVM \citep {sammut2011encyclopedia}\relax }}{10}{figure.caption.15}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Red Neuronal Pre-Alimentada \citep {abiodun2018state}\relax }}{8}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Red neuronal por retro-propagación \citep {abiodun2018state}\relax }}{8}{figure.caption.12}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Red neuronal multicapa compleja \citep {abiodun2018state}\relax }}{9}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Ejemplos de posibles hiperplanos de SVM \citep {sammut2011encyclopedia}\relax }}{9}{figure.caption.15}%
 \contentsline {figure}{\numberline {1.5}{\ignorespaces Desglose de los subproblemas de AutoML \citep {zoller2021benchmark}\relax }}{15}{figure.caption.18}%
 \contentsline {figure}{\numberline {1.6}{\ignorespaces Ejemplo de flujo de trabajo en la herramienta KNIME.\relax }}{17}{figure.caption.19}%
 \contentsline {figure}{\numberline {1.7}{\ignorespaces Flujo KNIME del Componente AutoML Clasificación (pre-procesado) \citep {Carrazana2022}\relax }}{19}{figure.caption.20}%

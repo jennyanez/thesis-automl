@@ -1,9 +1,5 @@
 \begin{thebibliography}{}
 
-\bibitem[\protect\citename{kni, }2023]{knime2023}
- 2023 (Mar.).
-\newblock {\em KNIME Official Site}.
-
 \bibitem[\protect\citename{Abiodun {\em et~al.}, }2018]{abiodun2018state}
 Abiodun, Oludare~Isaac, Jantan, Aman, Omolara, Abiodun~Esther, Dada,
   Kemi~Victoria, Mohamed, Nachaat~AbdElatif, \& Arshad, Humaira. 2018.
@@ -26,6 +22,14 @@ Bonaccorso, Giuseppe. 2017.
 \newblock {\em Machine learning algorithms}.
 \newblock Packt Publishing Ltd.
 
+\bibitem[\protect\citename{Borr{\`a}s {\em et~al.},
+  }2017]{borras2017clasificacion}
+Borr{\`a}s, J, Delegido, Jes{\'u}s, Pezzola, A, Pereira-Sandoval, M, Morassi,
+  G, \& Camps-Valls, G. 2017.
+\newblock Clasificaci{\'o}n de usos del suelo a partir de im{\'a}genes
+  Sentinel-2.
+\newblock {\em Revista de Teledetecci{\'o}n},  55--66.
+
 \bibitem[\protect\citename{Bravo~Ilisástigui, }2012]{Lisandra2012}
 Bravo~Ilisástigui, Lisandra. 2012.
 \newblock PROPUESTA DE HERRAMIENTA PARA APLICAR MINERÍA DE DATOS EN ENTORNOS
@@ -35,6 +39,15 @@ Bravo~Ilisástigui, Lisandra. 2012.
 Carrazana~Ruiz, Ernesto. 2022.
 \newblock Componente KNIME de AutoML para pre-procesado en tareas de
   Clasificación.
+
+\bibitem[\protect\citename{Dhankhad {\em et~al.},
+  }2018]{dhankhad2018supervised}
+Dhankhad, Sahil, Mohammed, Emad, \& Far, Behrouz. 2018.
+\newblock Supervised machine learning algorithms for credit card fraudulent
+  transaction detection: a comparative study.
+\newblock {\em Pages  122--125 of:} {\em 2018 IEEE international conference on
+  information reuse and integration (IRI)}.
+\newblock IEEE.
 
 \bibitem[\protect\citename{Dougherty {\em et~al.},
   }1995]{dougherty1995supervised}
@@ -122,6 +135,10 @@ Jiawei~Han, Micheline~Kamber, Jian~Pei. 2011.
 \newblock {\em Data Mining. Concepts and Techniques (The Morgan Kaufmann Series
   in Data Management Systems)}. 3rd edn.
 
+\bibitem[\protect\citename{KNIME, }2023]{knime2023}
+KNIME. 2023 (Mar.).
+\newblock {\em KNIME Official Site}.
+
 \bibitem[\protect\citename{Kotsiantis \& Kanellopoulos,
   }2006]{kotsiantis2006discretization}
 Kotsiantis, Sotiris, \& Kanellopoulos, Dimitris. 2006.
@@ -139,6 +156,14 @@ Kurgan, Lukasz~A, \& Cios, Krzysztof~J. 2004.
 Liu, Huan, Hussain, Farhad, Tan, Chew~Lim, \& Dash, Manoranjan. 2002.
 \newblock Discretization: An enabling technique.
 \newblock {\em Data mining and knowledge discovery}, {\bf 6}, 393--423.
+
+\bibitem[\protect\citename{M{\'e}ndez {\em et~al.}, }2007]{mendez2007sistemas}
+M{\'e}ndez, Jos{\'e}~R, Riverola, Florentino~Fdez, D{\'\i}az, Fernando, \&
+  Corchado, Juan~M. 2007.
+\newblock Sistemas inteligentes para la detecci{\'o}n y filtrado de correo
+  spam: una revisi{\'o}n.
+\newblock {\em Inteligencia Artificial. Revista Iberoamericana de Inteligencia
+  Artificial}, {\bf 11}(34), 63--81.
 
 \bibitem[\protect\citename{Murphy, }2012]{murphy2012machine}
 Murphy, Kevin~P. 2012.
