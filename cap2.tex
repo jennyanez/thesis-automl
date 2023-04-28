@@ -1,18 +1,18 @@
 \chapter{Propuesta de modificación al componente de AutoML para pre-procesado}\label{chap:2}
-
+En el presente capítulo se describirá la configuración del subcomponente para la discretización de los datos y del componente para la optimización de hiperparámetros, así como sus requisitos y restricciones. Adicionalmente, se muestran sus diseños con los principales nodos que permiten cada proceso.
 
 
 \section{Subcomponente para la discretización}
-La discretización de variables numéricas se utiliza para convertir datos continuos en datos discretos, lo que permite que los algoritmos de aprendizaje automático puedan procesarlos y analizarlos adecuadamente. La discretización también puede mejorar la precisión de los modelos de aprendizaje automático al reducir el ruido en los datos y hacer que los patrones sean más fáciles de detectar. Para el algoritmo ID3, presente en el componente \textit{AutoML para pre-procesado (Clasificación)}, la discretización está implementada de forma estática. En aras de automatizar este proceso, se propone el componente \textit{Discretizer} (Figura \ref{fig:subcomp-disc}).
+La discretización de variables numéricas se utiliza para convertir datos continuos en datos discretos, lo que permite que los algoritmos de aprendizaje automático puedan procesarlos y analizarlos adecuadamente. La discretización también puede mejorar la precisión de los modelos de aprendizaje automático al reducir el ruido en los datos y hacer que los patrones sean más fáciles de detectar. Para el algoritmo ID3, presente en el componente \textit{AutoML para pre-procesado (Clasificación)}, la discretización está implementada de forma estática. En aras de automatizar este proceso, se propone el subcomponente \textit{Discretizer} (Figura \ref{fig:subcomp-disc}).
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.15\linewidth]{"figuras/capi 2/subcomp-disc"}
-	\caption[Componente Discretizer]{Componente \textit{Discretizer}}
+	\caption[Subomponente Discretizer]{Subomponente \textit{Discretizer}}
 	\label{fig:subcomp-disc}
 \end{figure}
 
-El componente \textit{Discretizer} toma en su puerto de entrada los datos en formato tabular. Dichos datos, de tipo numéricos, son procesados por varios algoritmos de discretización y, como puerto de salida, se obtienen discretizados acorde al método de discretización con mejor precisión. Este proceso es descrito de forma detallada en el siguiente epígrafe.
+El subcomponente \textit{Discretizer} toma en su puerto de entrada los datos en formato tabular. Dichos datos, de tipo numéricos, son procesados por varios algoritmos de discretización y, como puerto de salida, se obtienen discretizados acorde al método de discretización con mejor precisión. Tiene una única restricción: no pueden tener valores perdidos como entrada. El funcionamiento del subcomponente es descrito de forma detallada en el siguiente epígrafe. 
 
 
 \subsection{Modelación del subcomponente}
@@ -25,7 +25,7 @@ El diagrama de flujo de la figura \ref{fig:diagrama-flujo-discretizer} expone el
 	\label{fig:diagrama-flujo-discretizer}
 \end{figure}
 
-Para la discretización se emplean los nodos \textit{Auto-Binner} (Figura \ref{fig:auto-binner-nodo}) y \textit{CAIM Binner} (Figura \ref{fig:caim-binner-nodo}). El nodo \textit{Auto-Binner} contiene tres métodos de discretización: \textit{Equal-Width, Equal-Frequency} y \textit{Quantile-Based}; mientras el nodo \textit{CAIM Binner} contiene el método \textit{CAIM}. Para la elección de los \textit{k} intervalos, pueden emplearse varios métodos, como validación cruzada \cite{torgo1997search}; teniendo en cuenta el número de valores distintos observados en el conjunto de entrenamiento \citep{dougherty1995supervised}; o simplemente predefiniendo un valor. En este caso no se emplea uno en particular, sino que se predefinió que serían 10 intervalos, dado que el nodo \textit{Auto-Binner} funciona como caja negra y no permite realizar una experimentación como las mencionadas anteriormente. El nodo \textit{CAIM Binner} no requiere una configuración en específico, y para el método Quantile-Based se escogieron los cuantiles por defecto, es decir 0.0, 0.25, 0.5, 0.75 y 1.0.\\
+Para la discretización se emplean los nodos \textit{Auto-Binner} (Figura \ref{fig:auto-binner-nodo}) y \textit{CAIM Binner} (Figura \ref{fig:caim-binner-nodo}). El nodo \textit{Auto-Binner} contiene tres métodos de discretización: \textit{Equal-Width, Equal-Frequency} y \textit{Quantile-Based}; mientras el nodo \textit{CAIM Binner} contiene el método \textit{CAIM}. Para la elección de los \textit{k} intervalos, pueden emplearse varios métodos, como validación cruzada (\cite{torgo1997search}); teniendo en cuenta el número de valores distintos observados en el conjunto de entrenamiento \citep{dougherty1995supervised}; o simplemente predefiniendo un valor. En este caso no se emplea uno en particular, sino que se predefinió que serían 10 intervalos, dado que el nodo \textit{Auto-Binner} funciona como caja negra y no permite realizar una experimentación como las mencionadas anteriormente. El nodo \textit{CAIM Binner} no requiere una configuración en específico, y para el método Quantile-Based se escogieron los cuantiles por defecto, es decir 0.0, 0.25, 0.5, 0.75 y 1.0.\\
 
 \begin{figure}[H]
 	\centering
@@ -219,5 +219,15 @@ Para llevar a cabo el procesamiento RProp se emplean los siguientes nodos:
 \end{itemize}
 
 \section{Conclusiones parciales}
+A partir de lo analizado en este capítulo, se arriba a las siguientes conclusiones:
+\begin{itemize}
+	\item Se obtiene el diseño de un subcomponente para la discretización de variables numéricas.
+	\item Para la discretización, se implementan los métodos Equal-Width, Equal-Frequency, Quantile-Based y CAIM.
+	\item La implementación de los métodos de discretización se realiza con los nodos nativos de KNIME \textit{Auto-Binner} y \textit{CAIM Binner}.
+	\item Se obtiene el diseño del componente AutoML Clasificación (Optimización de hiperparámetros).
+	\item Se describe el uso y  los diferentes requisitos y restricciones del componente AutoML Clasificación (Optimización de hiperparámetros).
+	\item Se define el rango de hiperparámetros (Iteraciones, capas y número de neuronas) del algoritmo Rprop.
+\end{itemize}
+
 \pagebreak
 

@@ -1,13 +1,187 @@
 \chapter{Integración y validación de soluciones propuestas al componente de AutoML}\label{chap:3}
+En este capítulo, se presentan las pruebas necesarias para validar el correcto funcionamiento del subcomponente \textit{Discretizer} y del \textit{Componente AutoML Clasificación (Optimización de Hiperparámetros)}, así como las pruebas de sus integraciones al \textit{Componente AutoML Clasificación (pre-procesado)}.
 
 \section{Análisis de las bases de datos de prueba}
+Las bases de datos a emplear fueron descargadas de los repositorios Kaggle Repository y UCI Machine Learning Repository. A continuación, se presenta una descripción de las mismas:
+\begin{itemize}
+	\item Base de datos 1 (BD1, Figura \ref{fig:bd1-loan-train}): presenta 614 instancias y 11 atributos, 6 de ellos de tipo \textit{string} y los restantes de tipo numérico. Esta base de datos se puede clasificar en función de dos columnas objetivo, donde una es multiclase y la otra binaria.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.55\linewidth]{"figuras/capi 3/bd1-loan-train"}
+		\caption{Vista preliminar de BD1}
+		\label{fig:bd1-loan-train}
+	\end{figure}
+	
+	\item Base de datos 2 (BD2, Figura \ref{fig:bd2-cancer-data}): presenta 569 instancias y 31 atributos, uno de ellos de tipo \textit{string} y los restantes de tipo numérico. La columna objetivo es de tipo binaria.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{"figuras/capi 3/bd2-cancer-data"}
+		\caption{Vista Preliminar de BD2}
+		\label{fig:bd2-cancer-data}
+	\end{figure}
 
-\section{Pruebas a los nuevos componentes}
+\item Base de datos 3 (BD3, Figura \ref{fig:bd3-kr-vs-kp}): presenta 3196 instancias y 37 atributos, todos son de tipo \textit{string}. La columna objetivo es de tipo binaria.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{"figuras/capi 3/bd3-kr-vs-kp"}
+	\caption{Vista preliminar de la BD3}
+	\label{fig:bd3-kr-vs-kp}
+\end{figure}
 
-\section{Casos de prueba al componente}
+\item Base de datos 4 (BD4, Fig10) presenta 743 instancias y 12 atributos, 7 de ellos de tipo String, el restante de tipo numérico. La columna objetivo es de tipo múltiple.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{"figuras/capi 3/bd4"}
+	\caption{Vista preliminar de la BD4}
+	\label{fig:bd4}
+\end{figure}
 
-\section{Comparación de resultados}
+\end{itemize}
+
+\section{Casos de prueba al subcomponente \textit{Discretizer}}
+En esta sección se presentan las pruebas al subcomponente \textit{Discretizer}, una vez integrado al \textit{Componente AutoML Clasificación (pre-procesado)}. No se realizan pruebas individuales, dado que depende de variables de flujo configuradas en el componente AutoML. \\
+Para la realización de las pruebas, se hace una copia del metanodo ID3, donde se realiza la integración del subcomponente \textit{Discretizer} (figura \ref{fig:integracion-comp-discretizer}) para comparar los resultados entre un conjunto de datos con una discretización predefinida, y uno con la discretización automatizada. Cabe destacar que el nodo \textit{AutoBinner}, donde se encuentra la discretización previamente configurada, el método empleado es \textit{equal-width} y la cantidad de bins es k = 5. \\
+El método de comparación para los algoritmos es el valor obtenido por la precisión del método de clasificación (accuracy), el valor del Cohen's Kappa y el del área bajo la curva ROC (AUC).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{"figuras/capi 3/integracion-comp-discretizer"}
+	\caption{Integración del subcomponente \textit{Discretizer}}
+	\label{fig:integracion-comp-discretizer}
+\end{figure}
+
+Para la BD1, se ejecuta el componente, donde el método de discretización que presenta mejores resultados es \textit{equal-width}, con \textit{accuracy} de 0.727 y un Cohen's Kappa de 0.39. Los resultados de la comparación de los métodos de discretización se encuentran en la figura \ref{fig:bd-loantrain-ranking}; así como la salida del subcomponente \textit{Discretizer} en la figura \ref{fig:bd-loantrain-salida-disc}. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{"figuras/capi 3/pruebas-jenn/bd-loan_train-ranking"}
+	\caption{Comparación de métodos de discretización para la BD1}
+	\label{fig:bd-loantrain-ranking}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.55\linewidth]{"figuras/capi 3/pruebas-jenn/bd-loan_train-salida-disc"}
+	\caption{Salida del sucomponente \textit{Discretizer} para la BD1}
+	\label{fig:bd-loantrain-salida-disc}
+\end{figure}
+
+Al ejecutarse el flujo completo, se obtiene como resultado que el algoritmo con la discretización automatizada (ID3 \#1) presenta mejores resultados, con un \textit{accuracy} de 0.744 y un Cohen's Kappa de 0.456; a diferencia del algoritmo ID3 con discretización predefinida (ID3), con \textit{accuracy} de 0.697 y Cohen's Kappa de 0.3372. Estos resultados se encuentran en la figura \ref{fig:bd-loantrain-result-barras}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\linewidth]{"figuras/capi 3/pruebas-jenn/bd-loan_train-result-barras"}
+	\caption{Comparación de los resultados de ambos algoritmos para la BD1}
+	\label{fig:bd-loantrain-result-barras}
+\end{figure}
+
+Para la BD2, se ejecuta el componente, donde el método de discretización que presenta mejores resultados es CAIM, con un \textit{accuracy} de 0.936 y un Cohen's Kappa de 0.865. Los resultados de la comparación de los métodos de discretización se encuentran en la figura \ref{fig:bd-cancerdata-ranking}; así como la salida del subcomponente \textit{Discretizer} en la figura \ref{fig:bd-cancerdata-salida-disc}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/pruebas-jenn/bd-cancer_data-ranking"}
+	\caption{Comparación de métodos de discretización para la BD2}
+	\label{fig:bd-cancerdata-ranking}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/pruebas-jenn/bd-cancer_data-salida-disc"}
+	\caption{Salida del subcomponente \textit{Discretizer} para la BD2}
+	\label{fig:bd-cancerdata-salida-disc}
+\end{figure}
+
+Al ejecutarse el flujo completo, una vez más el algoritmo con mejores resultados fue ID3 \# 1, donde el \textit{accuracy} alcanzó 0.9851, y el AUC un valor de 0.9797; a diferencia del algoritmo ID3 con 0.8818 y 0.9314, respectivamente. En la figura \ref{fig:bd-cancerdata-graficos} se muestran los resultados de las comparaciones entre los dos algoritmos de clasificación.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/pruebas-jenn/bd-cancer_data-graficos"}
+	\caption{Comparación de resultados entre ambos algoritmos para la BD2}
+	\label{fig:bd-cancerdata-graficos}
+\end{figure}
+
+La última prueba realizada es con el objetivo de validar la entrada al componente, dado que el nodo \textit{CAIM Binner} solamente admite valores numéricos. Por tanto, se emplea una base de datos que solamente contiene atributos de tipo \textit{string}, para comprobar que funciona la validación realizada. En el anexo \ref{anex:bd3-tipo-dato} se puede observar que todas las columnas son nominales, así como en la figura \ref{fig:bd-krvskp-salida} se comprueba la salida del subcomponente \textit{Discretizer} de la misma base de datos sin ninguna modificación.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/pruebas-jenn/bd-kr_vs_kp-salida"}
+	\caption{Salida el subcomponente \textit{Discretizer} para la BD3}
+	\label{fig:bd-krvskp-salida}
+\end{figure}
+
+\section{Casos de prueba del \textit{Componente AutoML (Optimización de Hiperparámetros)}}
+A continuación, se presenta el correcto funcionamiento del \textit{Componente AutoML (Optimización de Hiperparámetros)}, al suministrarle las bases de datos expuestas previamente. En cada caso, se muestra una comparación entre la aplicación del algoritmo Red neuronal por retro-propagación (RProp), con y sin la utilización del componente propuesto. En la figura \ref{fig:flujo-comp-algoritmos-hpo} se muestra el flujo creado para la comparación de los algoritmos.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/pruebas-ray/flujo-comp-algoritmos-hpo"}
+	\caption{Flujo para la comparación de algoritmos}
+	\label{fig:flujo-comp-algoritmos-hpo}
+\end{figure}
+
+\subsection{Pruebas individuales al \textit{Componente AutoML (Optimización de Hiperparámetros)}}
+Para la BD1 se ejecuta correctamente el componente. En la figura \ref{fig:eval-rend-modelo-bd1-hpo}, se muestra la evaluación del rendimiento del modelo en función de las clases positivas y negativas mediante el área bajo la curva (AUC) y la efectividad de clasificación (accuracy). En la figura \ref{fig:roc-bd1-hpo} se presenta una comparación de los modelos mediante una curva ROC.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/pruebas-ray/eval-rend-modelo-bd1-hpo"}
+	\caption{Evaluación del rendimiento del modelo con BD1}
+	\label{fig:eval-rend-modelo-bd1-hpo}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\linewidth]{"figuras/capi 3/pruebas-ray/roc-bd1-hpo"}
+	\caption{Curva ROC comparación de modelos con BD1}
+	\label{fig:roc-bd1-hpo}
+\end{figure}
+
+Como se evidencia en la figura \ref{fig:eval-rend-modelo-bd1-hpo}, el algoritmo optimizado (HPO RProp) presenta un AUC 0.75 y un \textit{accuracy} 0.82, mayor que el del algoritmo sin optimizar (RProp) con AUC 0.68 y \textit{accuracy} 0.78; lo que se traduce a que el modelo HPO RProp puede distinguir con mayor precisión entre las clases positivas y negativas, presentando mejor capacidad para clasificar correctamente los datos, con respecto a RProp. En la figura \ref{fig:roc-bd1-hpo}, se observa que HPO RProp llega más rápido al óptimo global, logrando un mejor rendimiento en menos tiempo de entrenamiento, o iteraciones, que el modelo representado por RProp. \\
+
+Para la BD2 se ejecuta correctamente el componente. En la figura \ref{fig:eval-rend-modelo-bd2-hpo}, se muestra la evaluación del rendimiento del modelo en función de las clases positivas y negativas mediante el AUC y el \textit{accuracy}. En la figura \ref{fig:roc-bd2-hpo}, se presenta una comparación de los modelos mediante una curva ROC.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/pruebas-ray/eval-rend-modelo-bd2-hpo"}
+	\caption{Evaluación del rendimiento del modelo para la BD1}
+	\label{fig:eval-rend-modelo-bd2-hpo}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\linewidth]{"figuras/capi 3/pruebas-ray/roc-bd2-hpo"}
+	\caption{Curva ROC de comparación de modelos para la BD2}
+	\label{fig:roc-bd2-hpo}
+\end{figure}
+
+Como se evidencia en la figura \ref{fig:eval-rend-modelo-bd2-hpo}, el algoritmo optimizado (HPO RProp) presenta un AUC 0.997 y un \textit{accuracy} 0.979, mayor que el del algoritmo sin optimizar (RProp), con AUC 0.994 y \textit{accuracy} 0.973. No obstante, la diferencia no es significativa, lo que se puede traducir a que el modelo HPO RProp y el modelo RProp tienen la misma capacidad para clasificar correctamente las muestras en términos generales. En la figura \ref{fig:roc-bd2-hpo}, se observa que HPO RProp llega más rápido al óptimo global, logrando un mejor rendimiento en menos tiempo de entrenamiento, o iteraciones, que el modelo representado por RProp.
+
+\subsection{Pruebas de integración al \textit{Componente AutoML Clasificación (pre-procesado)}}
+En la figura \ref{fig:integracion-comp-hpo} se presenta la correcta integración del \textit{Componente AutoML Clasificación (Optimización de Hiperparámetros)} al \textit{Componente AutoML Clasificación (pre-procesado)}. Se ejecuta una prueba con la BD4 (figura \ref{fig:eval-integ-bd2}) para validar el funcionamiento correcto de la integración.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/integracion-comp-hpo"}
+	\caption{Integración de ambos componentes.}
+	\label{fig:integracion-comp-hpo}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/pruebas-ray/eval-integ-bd2"}
+	\caption{Evaluación de la integración con la BD4}
+	\label{fig:eval-integ-bd2}
+\end{figure}
+
+En la figura \ref{fig:eval-integ-bd2} se aprecia que el componente integrado presenta un mayor \textit{accuracy} (0.42) y Cohen’s Kappa (0.14) con respecto al componente sin integrar, con un \textit{accuracy} de 0.36 y Cohen’s Kappa de 0.03. Por este motivo, se puede determinar que el componente con la integración presenta una mejor capacidad para clasificar correctamente los datos, así como una mayor consistencia en las respuestas de los evaluadores. En consecuencia, se puede tener una mayor confianza en los resultados.
+
 
 \section{Conclusiones parciales}
-
+Al terminar este capítulo, se llega a las siguientes conclusiones:
+\begin{itemize}
+	\item Las pruebas al subcomponente \textit{Discretizer} integrado al \textit{Componente AutoML Clasificación (pre-procesado)}, arrojaron mejores resultados con respecto al componente con una discretización previamente configurada.
+	\item El número de intervalos, tras ejecutar las pruebas al \textit{Componente AutoML Clasificación (pre-procesado)}, influyó en los resultados de la clasificación luego de emplear el mismo método de discretización (Equal-width).
+	\item Las pruebas individuales al \textit{Componente AutoML Clasificación (Optimización de Hiperparámetros)}, arrojaron mejores porcentajes de acierto con respecto al algoritmo no optimizado, demostrando su correcto funcionamiento.
+	\item La prueba de integración del \textit{Componente AutoML Clasificación (Optimización de Hiperparámetros)} al \textit{Componente AutoML Clasificación (pre-procesado)} fue satisfactoria.
+	\item Las pruebas realizadas al componente integrado demostraron una mejoría en la clasificación en comparación con el no integrado.
+\end{itemize}
 \pagebreak

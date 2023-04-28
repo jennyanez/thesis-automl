@@ -253,6 +253,7 @@ these trained models to be used in a production setting. typical stages of build
 }
 
 @Misc{knime2023,
+  author    = {KNIME},
   month     = mar,
   title     = {KNIME Official Site},
   year      = {2023},
