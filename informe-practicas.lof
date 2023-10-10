@@ -1,13 +1,13 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Red Neuronal Pre-Alimentada \citep {abiodun2018state}\relax }}{9}{figure.caption.11}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Red neuronal por retro-propagación \citep {abiodun2018state}\relax }}{9}{figure.caption.12}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Red neuronal multicapa compleja \citep {abiodun2018state}\relax }}{10}{figure.caption.13}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Ejemplos de posibles hiperplanos de SVM \citep {sammut2011encyclopedia}\relax }}{10}{figure.caption.15}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Desglose de los subproblemas de AutoML \citep {zoller2021benchmark}\relax }}{16}{figure.caption.18}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Ejemplo de flujo de trabajo en la herramienta KNIME.\relax }}{18}{figure.caption.19}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Flujo KNIME del Componente AutoML Clasificación (pre-procesado) \citep {Carrazana2022}\relax }}{20}{figure.caption.20}%
-\contentsline {figure}{\numberline {1.8}{\ignorespaces Flujo de pre-procesado para el algoritmo ID3 \citep {Carrazana2022}\relax }}{20}{figure.caption.21}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Red Neuronal Pre-Alimentada \citep {abiodun2018state}}}{9}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Red neuronal por retro-propagación \citep {abiodun2018state}}}{9}{figure.caption.12}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Red neuronal multicapa compleja \citep {abiodun2018state}}}{10}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Ejemplos de posibles hiperplanos de SVM \citep {sammut2011encyclopedia}}}{10}{figure.caption.15}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Desglose de los subproblemas de AutoML \citep {zoller2021benchmark}}}{16}{figure.caption.18}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Ejemplo de flujo de trabajo en la herramienta KNIME.}}{18}{figure.caption.19}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Flujo KNIME del Componente AutoML Clasificación (pre-procesado) \citep {Carrazana2022}}}{20}{figure.caption.20}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Flujo de pre-procesado para el algoritmo ID3 \citep {Carrazana2022}}}{20}{figure.caption.21}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Subomponente Discretizer}}{23}{figure.caption.22}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Diagrama de flujo general del subcomponente Discretizer}}{24}{figure.caption.23}%
@@ -29,28 +29,28 @@
 \contentsline {figure}{\numberline {2.18}{\ignorespaces Nodo Scorer}}{31}{figure.caption.40}%
 \contentsline {figure}{\numberline {2.19}{\ignorespaces Nodo Table View}}{31}{figure.caption.41}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Vista preliminar de BD1\relax }}{33}{figure.caption.42}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Vista Preliminar de BD2\relax }}{34}{figure.caption.43}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Vista preliminar de la BD3\relax }}{34}{figure.caption.44}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Vista preliminar de la BD4\relax }}{34}{figure.caption.45}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Integración del subcomponente \textit {Discretizer}\relax }}{35}{figure.caption.46}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Salida del sucomponente \textit {Discretizer} para la BD1\relax }}{36}{figure.caption.48}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Comparación de métodos de discretización para la BD1\relax }}{36}{figure.caption.47}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Comparación de los resultados de ambos algoritmos para la BD1\relax }}{36}{figure.caption.49}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Comparación de métodos de discretización para la BD2\relax }}{37}{figure.caption.50}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Salida del subcomponente \textit {Discretizer} para la BD2\relax }}{37}{figure.caption.51}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Comparación de resultados entre ambos algoritmos para la BD2\relax }}{38}{figure.caption.52}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Salida el subcomponente \textit {Discretizer} para la BD3\relax }}{38}{figure.caption.53}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Flujo para la comparación de algoritmos\relax }}{39}{figure.caption.54}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Evaluación del rendimiento del modelo con BD1\relax }}{39}{figure.caption.55}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Curva ROC comparación de modelos con BD1\relax }}{39}{figure.caption.56}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Evaluación del rendimiento del modelo para la BD1\relax }}{40}{figure.caption.57}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Curva ROC de comparación de modelos para la BD2\relax }}{40}{figure.caption.58}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Integración de ambos componentes.\relax }}{41}{figure.caption.59}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Evaluación de la integración con la BD4\relax }}{41}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Vista preliminar de BD1}}{33}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Vista Preliminar de BD2}}{34}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Vista preliminar de la BD3}}{34}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Vista preliminar de la BD4}}{34}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Integración del subcomponente \textit {Discretizer}}}{35}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Salida del sucomponente \textit {Discretizer} para la BD1}}{36}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Comparación de métodos de discretización para la BD1}}{36}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Comparación de los resultados de ambos algoritmos para la BD1}}{36}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Comparación de métodos de discretización para la BD2}}{37}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Salida del subcomponente \textit {Discretizer} para la BD2}}{37}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Comparación de resultados entre ambos algoritmos para la BD2}}{38}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Salida el subcomponente \textit {Discretizer} para la BD3}}{38}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Flujo para la comparación de algoritmos}}{39}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Evaluación del rendimiento del modelo con BD1}}{39}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Curva ROC comparación de modelos con BD1}}{39}{figure.caption.56}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Evaluación del rendimiento del modelo para la BD1}}{40}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Curva ROC de comparación de modelos para la BD2}}{40}{figure.caption.58}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Integración de ambos componentes.}}{41}{figure.caption.59}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Evaluación de la integración con la BD4}}{41}{figure.caption.60}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Flujo KNIME del procesamiento de RProp con HPO}}{48}{figure.caption.68}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Flujo KNIME de subcomponente para la discretización para el algoritmo ID3\relax }}{49}{figure.caption.69}%
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Flujo KNIME de la ejecución del método CAIM para la discretización orientada al algoritmo ID3\relax }}{49}{figure.caption.70}%
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Flujo KNIME para la comparación de métodos de discretización acorde al algoritmo ID3\relax }}{50}{figure.caption.71}%
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Columnas de tipo String en BD3\relax }}{52}{figure.caption.72}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Flujo KNIME de subcomponente para la discretización para el algoritmo ID3}}{49}{figure.caption.69}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Flujo KNIME de la ejecución del método CAIM para la discretización orientada al algoritmo ID3}}{49}{figure.caption.70}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Flujo KNIME para la comparación de métodos de discretización acorde al algoritmo ID3}}{50}{figure.caption.71}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Columnas de tipo String en BD3}}{52}{figure.caption.72}%
