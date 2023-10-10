@@ -40,6 +40,12 @@ Carrazana~Ruiz, Ernesto. 2022.
 \newblock Componente KNIME de AutoML para pre-procesado en tareas de
   Clasificación.
 
+\bibitem[\protect\citename{Coria {\em et~al.}, }2013]{coria2013mineria}
+Coria, Sergio, Orozco, Ivania, \& Luna, Juan. 2013.
+\newblock Minería de datos para perfilamiento de las brechas digital y
+  educativa de ciudades en censos de poblaci{\'o}n y vivienda.
+\newblock {\em de Cuerpos Acad{\'e}micos}, ~18.
+
 \bibitem[\protect\citename{Dhankhad {\em et~al.},
   }2018]{dhankhad2018supervised}
 Dhankhad, Sahil, Mohammed, Emad, \& Far, Behrouz. 2018.
@@ -139,13 +145,6 @@ Jiawei~Han, Micheline~Kamber, Jian~Pei. 2011.
 KNIME. 2023 (Mar.).
 \newblock {\em KNIME Official Site}.
 
-\bibitem[\protect\citename{Kotsiantis \& Kanellopoulos,
-  }2006]{kotsiantis2006discretization}
-Kotsiantis, Sotiris, \& Kanellopoulos, Dimitris. 2006.
-\newblock Discretization techniques: A recent survey.
-\newblock {\em GESTS International Transactions on Computer Science and
-  Engineering}, {\bf 32}(1), 47--58.
-
 \bibitem[\protect\citename{Kurgan \& Cios, }2004]{kurgan2004caim}
 Kurgan, Lukasz~A, \& Cios, Krzysztof~J. 2004.
 \newblock CAIM discretization algorithm.
@@ -180,6 +179,12 @@ Praba, R, Darshan, G, Roshanraj, T, \& Surya, B. 2021.
 Sammut, Claude, \& Webb, Geoffrey~I. 2011.
 \newblock {\em Encyclopedia of machine learning}.
 \newblock Springer Science \& Business Media.
+
+\bibitem[\protect\citename{Sturges, }1926]{sturges1926choice}
+Sturges, Herbert~A. 1926.
+\newblock The choice of a class interval.
+\newblock {\em Journal of the american statistical association}, {\bf 21}(153),
+  65--66.
 
 \bibitem[\protect\citename{Torgo \& Gama, }1997]{torgo1997search}
 Torgo, Lu{\'\i}s, \& Gama, Jo{\~a}o. 1997.

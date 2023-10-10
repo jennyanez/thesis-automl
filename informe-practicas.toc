@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {2.2.1}Uso y configuración del componente AutoML Clasificación (Optimización de Hiperparámetros)}{26}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Requisitos y restricciones del componente AutoML Clasificación (Optimización de Hiperparámetros)}{27}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Modelación del componente AutoML Clasificación (Optimización de Hiperparámetros)}{28}{subsection.2.2.3}%
-\contentsline {subsubsection}{Selección de parámetros}{28}{section*.30}%
+\contentsline {subsubsection}{Selección de parámetros}{28}{section*.32}%
 \contentsline {subsection}{\numberline {2.2.4}Optimización de hiperparámetros para Rprop}{29}{subsection.2.2.4}%
 \contentsline {section}{\numberline {2.3}Conclusiones parciales}{32}{section.2.3}%
 \contentsline {chapter}{\numberline {3}Integración y validación de soluciones propuestas al componente de AutoML}{33}{chapter.3}%
@@ -32,13 +32,13 @@
 \contentsline {subsection}{\numberline {3.3.1}Pruebas individuales al \textit {Componente AutoML (Optimización de Hiperparámetros)}}{39}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Pruebas de integración al \textit {Componente AutoML Clasificación (pre-procesado)}}{41}{subsection.3.3.2}%
 \contentsline {section}{\numberline {3.4}Conclusiones parciales}{42}{section.3.4}%
-\contentsline {chapter}{Conclusiones}{43}{section*.61}%
-\contentsline {chapter}{Recomendaciones}{44}{section*.63}%
-\contentsline {chapter}{Referencias bibliográficas}{45}{section*.65}%
+\contentsline {chapter}{Conclusiones}{43}{section*.63}%
+\contentsline {chapter}{Recomendaciones}{44}{section*.65}%
+\contentsline {chapter}{Referencias bibliográficas}{45}{section*.67}%
 \contentsline {chapter}{\numberline {A}Anexos}{48}{appendix.Alph1}%
 \contentsline {section}{\numberline {A.1}Flujo KNIME del procesamiento de RProp con HPO}{48}{section.Alph1.1}%
 \contentsline {section}{\numberline {A.2}Flujo KNIME de subcomponente para la discretización para el algoritmo ID3}{49}{section.Alph1.2}%
 \contentsline {section}{\numberline {A.3}Flujo KNIME de la ejecución del método CAIM para la discretización orientada al algoritmo ID3}{49}{section.Alph1.3}%
 \contentsline {section}{\numberline {A.4}Flujo KNIME para la comparación de métodos de discretización acorde al algoritmo ID3}{50}{section.Alph1.4}%
 \contentsline {section}{\numberline {A.5}Columnas de tipo String en BD3}{52}{section.Alph1.5}%
-\contentsline {chapter}{Anexos}{48}{section*.67}%
+\contentsline {chapter}{Anexos}{48}{section*.69}%

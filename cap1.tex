@@ -36,6 +36,8 @@ Basados en árboles de decisión existen otros algoritmos de clasificación como
 	\item ID3 (Iterative Dichotomiser 3): Basa su funcionamiento en la entropía y la ganancia de información. El árbol se construye iterativamente de arriba hacia abajo, eligiendo en cada caso el atributo con mayor ganancia de información, hasta que la información ganada sea cero o se haya llegado a todas las hojas \citep{javed2022performance}, \citep{gupta2017analysis}. Maneja datos nominales y no tolera valores faltantes.
 	\item C4.5 (Classification 4.5): Desarrollado con el objetivo de mejorar los defectos de ID3. Añade la poda, desestimando las ramas sin aportes, que reduce los errores al clasificar como resultado de un gran número de ramas en el modelo \citep{sammut2011encyclopedia}, \citep{javed2022performance}, \citep{gupta2017analysis}. Adicionalmente maneja valores faltantes y numéricos. 
 	\item CART (Classification and Regression Trees): Genera un árbol binario siguiendo el mismo enfoque entrópico que ID3, pero empleando el coeficiente de Gini como criterio de selección \citep{javed2022performance}, \citep{gupta2017analysis}. Es capaz de manejar datos faltantes, al igual que datos numéricos y nominales.
+	\item Random Forest:
+	....................
 \end{itemize}
 
 \subsubsection{Clasificación con Redes Neuronales}
@@ -113,14 +115,6 @@ El pre-procesamiento de datos ayuda a mejorar la calidad de los datos de entrada
 \subsubsection*{Discretización}
 Este procedimiento transforma datos cuantitativos en datos cualitativos, es decir, atributos numéricos en atributos discretos o nominales con un número finito de intervalos, obteniendo una partición no superpuesta de un dominio continuo. Luego se establece una asociación entre cada intervalo con un valor numérico discreto. Una vez realizada la discretización, los datos pueden ser tratados como datos nominales durante cualquier proceso de minería de datos \citep{garcia2015data}, \citep{garcia2012survey}.
 Es necesario realizar la discretización de variables porque, entre varios factores, muchos de los algoritmos de Aprendizaje Automático requieren el uso de valores nominales solamente, como es el caso de ID3, Redes Bayesianas y Apriori. Otras ventajas derivadas de la discretización son la reducción y simplificación de datos, agilizando el aprendizaje y arrojando resultados más precisos, compactos y breves; y se reduce el posible ruido presente en los datos \citep{garcia2012survey}. No obstante, cualquier proceso de discretización conlleva generalmente una pérdida de información, siendo la minimización de esta pérdida el objetivo principal de un discretizador.\\
-En general, los métodos de discretización pueden clasificarse como: supervisados o no supervisados, directos o incrementales, globales o locales, estáticos o dinámicos, de arriba hacia abajo o de abajo hacia arriba (top-down / bottom-up, respectivamente) \citep{garcia2012survey}, \citep{kotsiantis2006discretization}.
-\begin{itemize}
-	\item \textit{Supervisados vs. no supervisados:} Los discretizadores no supervisados no consideran la etiqueta de clase, mientras que los supervisados sí. La forma en que estos últimos consideran el atributo de clase depende de la interacción entre los atributos de entrada y las etiquetas de clase, y de las medidas heurísticas utilizadas para determinar los mejores puntos de corte (entropía, interdependencia, etc.).
-	\item \textit{Directos vs. incrementales:} Los métodos directos dividen el rango en \textit{k} intervalos simultáneamente (de igual ancho), y requieren una entrada adicional del usuario para determinar el número de intervalos. Los métodos incrementales comienzan con una discretización simple, y mejoran gradualmente, necesitando un criterio adicional para detener la discretización. 
-	\item \textit{Globales vs. locales:} La distinción entre los métodos de discretización globales y locales depende del momento en que se realiza la discretización, siendo los métodos globales superiores, ya que utilizan todo el dominio de valores de un atributo numérico para la discretización. Mientras, los métodos locales producen intervalos que se aplican a sub-particiones del espacio de instancias.
-	\item \textit{Estáticos vs. dinámicos:} La diferencia entre los métodos de discretización estática y dinámica depende de si el método tiene en cuenta las interacciones entre características. Los métodos estáticos, como la división en categorías, la partición basada en entropía y el algoritmo 1R, determinan el número de particiones para cada atributo de forma independiente de las demás características; mientras que los métodos dinámicos realizan una búsqueda a través del espacio de posibles \textit{k} particiones para todas las características simultáneamente, capturando interdependencias en la discretización de características.
-	\item \textit{Top-down vs. bottom-up:} Los métodos de arriba hacia abajo, consideran un intervalo grande que contiene todos los valores conocidos de una característica, y luego dividen este intervalo en subintervalos cada vez más pequeños, hasta que se alcanza un cierto criterio de detención, como el criterio de longitud mínima de descripción (MDL) o el número óptimo de intervalos. Por el contrario, los métodos de abajo hacia arriba, consideran inicialmente un número de intervalos determinado por los puntos de límite y combinan estos intervalos durante la ejecución, hasta un cierto punto de detención.
-\end{itemize}
 La identificación del mejor discretizador para cada situación es una tarea muy difícil de llevar a cabo. A pesar de la riqueza de la literatura, y aparte de la ausencia de una categorización completa de los discretizadores usando una notación unificada, hay pocos intentos de compararlos empíricamente. Esto se debe a que la evaluación de resultados es un tema complejo y depende de la necesidad del usuario en una aplicación en particular; además, la evaluación se puede hacer de muchas maneras. Existen tres dimensiones importantes según \citep{liu2002discretization}: 
 \begin{enumerate}
 	\item El número total de intervalos: intuitivamente, cuantos menos puntos de corte, mejor será el resultado de la discretización.
@@ -129,10 +123,28 @@ La identificación del mejor discretizador para cada situación es una tarea muy
 \end{enumerate}
  En resumen, se necesitan al menos tres dimensiones: simplicidad, consistencia y precisión. Idealmente, el mejor resultado de discretización puede obtener la puntuación más alta en los tres departamentos. En realidad, puede no ser alcanzable o necesario. \\
  El agrupamiento (\textbf{binning}), es el método más simple para discretizar un atributo de valor continuo mediante la creación de un número específico de grupos (bins). Los bins se pueden crear con el mismo ancho (\textit{equal-width}) y la misma frecuencia (\textit{equal-frequency}). Cada bin está asociado con un valor discreto distinto. En \textit{equal-width}, el rango continuo de una característica se divide uniformemente en intervalos que tienen un ancho igual, y cada intervalo representa un bin. En \textit{equal-frequency}, se coloca un número igual de valores continuos en cada bin \citep{liu2002discretization}, \citep{yang2009discretization}. Un método simple y similar a estos es el basado en cuantiles (\textit{quantiles-based}), donde se producen bins correspondientes a una lista de probabilidades dada. El elemento más pequeño corresponde a una probabilidad de 0 y el más grande a una probabilidad de 1. \\
+ Para la selección del número de bins, en esta investigación se sigue el esquema de \citep{coria2013mineria}, donde se utiliza la Regla de Sturges \citep{sturges1926choice}. Propuesta por Herbert Sturges en 1926 es una regla práctica para la selección del número de clases que se deben considerar al elaborar un histograma. Este número (\textit{k}) viene dado por la fórmula \ref{sturges}, donde \textit{n} es el tamaño de la muestra.
+ \begin{equation} \label{sturges}
+ 	k = 1 + \log_{2} n
+ \end{equation}
+ 
  Otro algoritmo de discretización es CAIM. El objetivo del algoritmo CAIM es encontrar el número mínimo de intervalos discretos mientras se minimiza la pérdida de interdependencia de atributo de clase. El algoritmo utiliza información de interdependencia de atributo de clase como criterio para la discretización óptima \citep{kurgan2004caim}.
  
 \subsubsection*{Normalización}
-Este subepígrafe será desarrollado más adelante, durante la redacción de la tesis.
+Las variables del conjunto de datos pueden variar en términos de magnitud, rango y unidad. Esto puede afectar negativamente el rendimiento de algoritmos como SVM y redes neuronales, que emplean, en su mayoría, datos numéricos. En aras de resolver este problema, se ejecuta la normalización. Esta consiste  en ajustar los valores de una variable para que estén dentro de un rango específico o sigan una distribución particular. Se realiza principalmente para garantizar que las diferencias en la escala de las variables no afecten negativamente el rendimiento de los algoritmos de aprendizaje automático y para facilitar la interpretación de los datos.\\
+Las técnicas para la normalización de los datos tratadas en esta investigación son \citep{garcia2012survey}:
+\begin{itemize}
+	\item Normalización Min-Max: Transforma los valores de una variable para que estén en un rango específico, generalmente entre 0 y 1.
+	\item Normalización Z-score (estandarización): Transforma los valores para que tengan una media de 0 y una desviación estándar de 1.
+	\item Normalización de Escala Decimal: Transforma los valores desplazando el punto decimal, usando una división de potencia de diez, de modo que el valor absoluto máximo sea siempre inferior a 1 después de la transformación.
+\end{itemize}
+Al igual que la discretización, la elección del mejor normalizador viene dada por las características de los datos y el algoritmo de aprendizaje automático que se vaya a emplear.
+
+\subsubsection*{Tratamiento de valores faltantes}
+..........
+
+\subsubsection*{Tratamiento de valores únicos}
+.........
 
 \subsection{Optimización de hiperparámetros}
 Cada sistema de aprendizaje automático tiene hiperparámetros, y la tarea básica de AutoML es automatizar el ajuste de estos, para maximizar el rendimiento del modelo en un conjunto de datos de prueba o validación \citep{hastie2009elements}. La optimización de hiperparámetros automatizada (HPO) tiene varios casos de uso importantes \citep{hutter2019automated}; puede
