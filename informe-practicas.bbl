@@ -10,6 +10,12 @@ Abiodun, Oludare~Isaac, Jantan, Aman, Omolara, Abiodun~Esther, Dada,
 Agrawal, Rakesh, Imielinski, Tomasz, \& Swami, Arun. 1993.
 \newblock Mining Association Rules between Sets of Items in Large Databases.
 
+\bibitem[\protect\citename{Batista \& Monard, }2003]{batista2003analysis}
+Batista, Gustavo~EAPA, \& Monard, Maria~Carolina. 2003.
+\newblock An analysis of four missing data treatment methods for supervised
+  learning.
+\newblock {\em Applied artificial intelligence}, {\bf 17}(5-6), 519--533.
+
 \bibitem[\protect\citename{Berthold {\em et~al.}, }2009]{berthold2009knime}
 Berthold, Michael~R, Cebron, Nicolas, Dill, Fabian, Gabriel, Thomas~R,
   K{\"o}tter, Tobias, Meinl, Thorsten, Ohl, Peter, Thiel, Kilian, \& Wiswedel,
@@ -164,6 +170,12 @@ M{\'e}ndez, Jos{\'e}~R, Riverola, Florentino~Fdez, D{\'\i}az, Fernando, \&
 \newblock {\em Inteligencia Artificial. Revista Iberoamericana de Inteligencia
   Artificial}, {\bf 11}(34), 63--81.
 
+\bibitem[\protect\citename{Misra \& Yadav, }2019]{misra2019impact}
+Misra, Puneet, \& Yadav, Arun~Singh. 2019.
+\newblock Impact of preprocessing methods on healthcare predictions.
+\newblock {\em In:} {\em Proceedings of 2nd International Conference on
+  Advanced Computing and Software Engineering (ICACSE)}.
+
 \bibitem[\protect\citename{Murphy, }2012]{murphy2012machine}
 Murphy, Kevin~P. 2012.
 \newblock {\em Machine learning: a probabilistic perspective}.
@@ -193,6 +205,12 @@ Torgo, Lu{\'\i}s, \& Gama, Jo{\~a}o. 1997.
   European Conference on Machine Learning Prague, Czech Republic, April 23--25,
   1997 Proceedings 9}.
 \newblock Springer.
+
+\bibitem[\protect\citename{Tsai \& Hu, }2022]{tsai2022empirical}
+Tsai, Chih-Fong, \& Hu, Ya-Han. 2022.
+\newblock Empirical comparison of supervised learning techniques for missing
+  value imputation.
+\newblock {\em Knowledge and Information Systems}, {\bf 64}(4), 1047--1075.
 
 \bibitem[\protect\citename{Tuggener {\em et~al.}, }2019]{tuggener2019automated}
 Tuggener, Lukas, Amirian, Mohammadreza, Rombach, Katharina, L{\"o}rwald,
