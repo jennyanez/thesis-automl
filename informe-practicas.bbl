@@ -10,6 +10,12 @@ Abiodun, Oludare~Isaac, Jantan, Aman, Omolara, Abiodun~Esther, Dada,
 Agrawal, Rakesh, Imielinski, Tomasz, \& Swami, Arun. 1993.
 \newblock Mining Association Rules between Sets of Items in Large Databases.
 
+\bibitem[\protect\citename{Avanzi {\em et~al.}, }2023]{avanzi2023machine}
+Avanzi, Benjamin, Taylor, Greg, Wang, Melantha, \& Wong, Bernard. 2023.
+\newblock Machine Learning with High-Cardinality Categorical Features in
+  Actuarial Applications.
+\newblock {\em arXiv preprint arXiv:2301.12710}.
+
 \bibitem[\protect\citename{Batista \& Monard, }2003]{batista2003analysis}
 Batista, Gustavo~EAPA, \& Monard, Maria~Carolina. 2003.
 \newblock An analysis of four missing data treatment methods for supervised
@@ -45,6 +51,28 @@ Bravo~Ilisástigui, Lisandra. 2012.
 Carrazana~Ruiz, Ernesto. 2022.
 \newblock Componente KNIME de AutoML para pre-procesado en tareas de
   Clasificación.
+
+\bibitem[\protect\citename{Casas, }2019]{casas2019data}
+Casas, Pablo. 2019.
+\newblock Data science live book.
+\newblock {\em Retrieved from: livebook. datascienceheroes. com}.
+
+\bibitem[\protect\citename{Cerda \& Varoquaux, }2020]{cerda2020encoding}
+Cerda, Patricio, \& Varoquaux, Ga{\"e}l. 2020.
+\newblock Encoding high-cardinality string categorical variables.
+\newblock {\em IEEE Transactions on Knowledge and Data Engineering}, {\bf
+  34}(3), 1164--1176.
+
+\bibitem[\protect\citename{Cerda {\em et~al.}, }2018]{cerda2018similarity}
+Cerda, Patricio, Varoquaux, Ga{\"e}l, \& K{\'e}gl, Bal{\'a}zs. 2018.
+\newblock Similarity encoding for learning with dirty categorical variables.
+\newblock {\em Machine Learning}, {\bf 107}(8-10), 1477--1494.
+
+\bibitem[\protect\citename{Chandrashekar \& Sahin,
+  }2014]{chandrashekar2014survey}
+Chandrashekar, Girish, \& Sahin, Ferat. 2014.
+\newblock A survey on feature selection methods.
+\newblock {\em Computers \& Electrical Engineering}, {\bf 40}(1), 16--28.
 
 \bibitem[\protect\citename{Coria {\em et~al.}, }2013]{coria2013mineria}
 Coria, Sergio, Orozco, Ivania, \& Luna, Juan. 2013.
@@ -127,6 +155,13 @@ Hern{\'a}ndez~Orallo, Jos{\'e}, {\em et~al.} 2004.
 \newblock {\em Introducci{\'o}n a la Miner{\'\i}a de Datos}.
 \newblock Biblioteca Hern{\'a}n Malo Gonz{\'a}lez.
 
+\bibitem[\protect\citename{Hooi {\em et~al.}, }2022]{hooi2022feature}
+Hooi, Eric Khoo~Jiun, Zainal, Anazida, Kassim, Mohamad~Nizam, \& Ayub, Zaily.
+  2022.
+\newblock {\em Feature Encoding For High Cardinality Categorical Variables
+  Using Entity Embeddings: A Case Study}.
+\newblock Tech. rept.
+
 \bibitem[\protect\citename{Hutter {\em et~al.}, }2019]{hutter2019automated}
 Hutter, Frank, Kotthoff, Lars, \& Vanschoren, Joaquin. 2019.
 \newblock {\em Automated machine learning: methods, systems, challenges}.
@@ -157,6 +192,15 @@ Kurgan, Lukasz~A, \& Cios, Krzysztof~J. 2004.
 \newblock {\em IEEE transactions on Knowledge and Data Engineering}, {\bf
   16}(2), 145--153.
 
+\bibitem[\protect\citename{Li {\em et~al.}, }2004]{li2004towards}
+Li, Dan, Deogun, Jitender, Spaulding, William, \& Shuart, Bill. 2004.
+\newblock Towards missing data imputation: a study of fuzzy k-means clustering
+  method.
+\newblock {\em Pages  573--579 of:} {\em Rough Sets and Current Trends in
+  Computing: 4th International Conference, RSCTC 2004, Uppsala, Sweden, June
+  1-5, 2004. Proceedings 4}.
+\newblock Springer.
+
 \bibitem[\protect\citename{Liu {\em et~al.}, }2002]{liu2002discretization}
 Liu, Huan, Hussain, Farhad, Tan, Chew~Lim, \& Dash, Manoranjan. 2002.
 \newblock Discretization: An enabling technique.
@@ -170,16 +214,26 @@ M{\'e}ndez, Jos{\'e}~R, Riverola, Florentino~Fdez, D{\'\i}az, Fernando, \&
 \newblock {\em Inteligencia Artificial. Revista Iberoamericana de Inteligencia
   Artificial}, {\bf 11}(34), 63--81.
 
-\bibitem[\protect\citename{Misra \& Yadav, }2019]{misra2019impact}
-Misra, Puneet, \& Yadav, Arun~Singh. 2019.
-\newblock Impact of preprocessing methods on healthcare predictions.
-\newblock {\em In:} {\em Proceedings of 2nd International Conference on
-  Advanced Computing and Software Engineering (ICACSE)}.
+\bibitem[\protect\citename{Moeyersoms \& Martens,
+  }2015]{moeyersoms2015including}
+Moeyersoms, Julie, \& Martens, David. 2015.
+\newblock Including high-cardinality attributes in predictive models: A case
+  study in churn prediction in the energy sector.
+\newblock {\em Decision support systems}, {\bf 72}, 72--81.
 
 \bibitem[\protect\citename{Murphy, }2012]{murphy2012machine}
 Murphy, Kevin~P. 2012.
 \newblock {\em Machine learning: a probabilistic perspective}.
 \newblock MIT press.
+
+\bibitem[\protect\citename{Patil {\em et~al.}, }2010]{patil2010missing}
+Patil, Bankat~M, Joshi, Ramesh~C, \& Toshniwal, Durga. 2010.
+\newblock Missing value imputation based on k-mean clustering with weighted
+  distance.
+\newblock {\em Pages  600--609 of:} {\em Contemporary Computing: Third
+  International Conference, IC3 2010, Noida, India, August 9-11, 2010.
+  Proceedings, Part I 3}.
+\newblock Springer.
 
 \bibitem[\protect\citename{Praba {\em et~al.}, }2021]{Praba2021}
 Praba, R, Darshan, G, Roshanraj, T, \& Surya, B. 2021.
@@ -220,6 +274,12 @@ Tuggener, Lukas, Amirian, Mohammadreza, Rombach, Katharina, L{\"o}rwald,
 \newblock {\em Pages  31--36 of:} {\em 2019 6th Swiss Conference on Data
   Science (SDS)}.
 \newblock IEEE.
+
+\bibitem[\protect\citename{Ventevogel, }2020]{ventevogel2020construction}
+Ventevogel, PC. 2020.
+\newblock {\em Construction of a proactive alert management model by using
+  artificial intelligence}.
+\newblock M.Phil. thesis, University of Twente.
 
 \bibitem[\protect\citename{Waring {\em et~al.}, }2020]{waring2020automated}
 Waring, Jonathan, Lindvall, Charlotta, \& Umeton, Renato. 2020.
