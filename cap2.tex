@@ -1,6 +1,13 @@
-\chapter{Propuesta de modificación al componente de AutoML para pre-procesado}\label{chap:2}
+\chapter{Propuesta de modificaciones al componente de AutoML para pre-procesado}\label{chap:2}
 En el presente capítulo se describirá la configuración del subcomponente para la discretización de los datos y del componente para la optimización de hiperparámetros, así como sus requisitos y restricciones. Adicionalmente, se muestran sus diseños con los principales nodos que permiten cada proceso.
 
+\section{Modelación de nueva versión del componente AutoML Clasificación (pre-procesado)}
+diagrama de flujo nuevo, con hpo
+
+\\
+.......
+
+organizar esto bien
 
 \section{Subcomponente para la discretización}
 La discretización de variables numéricas se utiliza para convertir datos continuos en datos discretos, lo que permite que los algoritmos de aprendizaje automático puedan procesarlos y analizarlos adecuadamente. La discretización también puede mejorar la precisión de los modelos de aprendizaje automático al reducir el ruido en los datos y hacer que los patrones sean más fáciles de detectar. Para el algoritmo ID3, presente en el componente \textit{AutoML para pre-procesado (Clasificación)}, la discretización está implementada de forma estática. En aras de automatizar este proceso, se propone el subcomponente \textit{Discretizer} (Figura \ref{fig:subcomp-disc}).
