@@ -31,45 +31,45 @@ Warning--empty booktitle in Carrazana2022
 Warning--empty journal in hernandeztecnicas
 Warning--empty institution in hooi2022feature
 Warning--empty publisher in Han2011
-You've used 47 entries,
+You've used 49 entries,
             2441 wiz_defined-function locations,
-            850 strings with 13198 characters,
-and the built_in function-call counts, 19485 in all, are:
-= -- 1898
-> -- 757
-< -- 163
-+ -- 231
-- -- 221
-* -- 1601
-:= -- 3182
-add.period$ -- 191
-call.type$ -- 47
-change.case$ -- 295
-chr.to.int$ -- 47
-cite$ -- 53
-duplicate$ -- 738
-empty$ -- 1416
-format.name$ -- 269
-if$ -- 4016
+            854 strings with 13285 characters,
+and the built_in function-call counts, 19756 in all, are:
+= -- 1921
+> -- 779
+< -- 168
++ -- 237
+- -- 227
+* -- 1625
+:= -- 3268
+add.period$ -- 200
+call.type$ -- 49
+change.case$ -- 308
+chr.to.int$ -- 49
+cite$ -- 55
+duplicate$ -- 739
+empty$ -- 1419
+format.name$ -- 279
+if$ -- 4047
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 53
-newline$ -- 240
-num.names$ -- 141
-pop$ -- 296
+missing$ -- 59
+newline$ -- 251
+num.names$ -- 147
+pop$ -- 305
 preamble$ -- 1
-purify$ -- 341
+purify$ -- 356
 quote$ -- 0
-skip$ -- 769
+skip$ -- 772
 stack$ -- 0
-substring$ -- 1216
-swap$ -- 182
-text.length$ -- 9
+substring$ -- 1174
+swap$ -- 168
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 356
+type$ -- 366
 warning$ -- 6
-while$ -- 155
+while$ -- 153
 width$ -- 0
-write$ -- 594
+write$ -- 620
 (There were 6 warnings)

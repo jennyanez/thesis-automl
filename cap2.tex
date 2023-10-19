@@ -1,14 +1,12 @@
 \chapter{Propuesta de modificaciones al componente de AutoML para pre-procesado}\label{chap:2}
-En el presente capítulo se describirá la configuración del subcomponente para la discretización de los datos y del componente para la optimización de hiperparámetros, así como sus requisitos y restricciones. Adicionalmente, se muestran sus diseños con los principales nodos que permiten cada proceso.
+En el presente capítulo, se propone una serie de modificaciones destinadas a mejorar el componente AutoML Clasificación (pre-procesado). Estas modificaciones se centran en el preprocesamiento de datos, incluyendo la automatización de tareas como la discretización, normalización y el tratamiento de valores únicos, valores de alta cardinalidad y valores faltantes. Además, se explorará la inclusión de técnicas de Optimización de Hiperparámetros (HPO) para encontrar configuraciones óptimas para los modelos. El enfoque principal de esta propuesta es la integración de estas dos facetas con el componente AutoML existente para clasificación. A lo largo de este capítulo, se describirá cómo estas modificaciones buscan mejorar la eficiencia y precisión del proceso de AutoML, creando modelos de clasificación más sólidos y adaptados a las necesidades específicas de los datos.
 
-\section{Modelación de nueva versión del componente AutoML Clasificación (pre-procesado)}
-diagrama de flujo nuevo, con hpo\\
+\section{Modificaciones en el pre-procesado}
+Con el fin de abordar las problemáticas presentadas en el epígrafe \ref{epig:componente-ernesto}, se llevaron a cabo una serie de modificaciones sustanciales en el proceso de pre-procesamiento de datos. Estas adaptaciones se centraron en la automatización de la discretización y normalización, así como en el tratamiento de valores únicos, valores de alta cardinalidad y valores faltantes. En lo que respecta a la discretización y normalización, se implementaron técnicas automatizadas para garantizar una uniformidad en la escala y distribución de los datos, lo que contribuye a mejorar la precisión del modelado. Para abordar los valores únicos y de alta cardinalidad, se desarrollaron estrategias específicas que permitieron una gestión más efectiva de estas categorías, evitando la pérdida de información esencial y reduciendo el riesgo de sobreajuste. Por último, se implementaron métodos especializados para tratar los valores faltantes, asegurando que los datos incompletos no comprometieran la calidad del análisis. En las secciones siguientes, se detalla el funcionamiento y modelado de estas modificaciones con mayor profundidad.
 
 
-organizar esto bien
-
-\section{Subcomponente para la discretización}
-La discretización de variables numéricas se utiliza para convertir datos continuos en datos discretos, lo que permite que los algoritmos de aprendizaje automático puedan procesarlos y analizarlos adecuadamente. La discretización también puede mejorar la precisión de los modelos de aprendizaje automático al reducir el ruido en los datos y hacer que los patrones sean más fáciles de detectar. Para el algoritmo ID3, presente en el componente \textit{AutoML para pre-procesado (Clasificación)}, la discretización está implementada de forma estática. En aras de automatizar este proceso, se propone el subcomponente \textit{Discretizer} (Figura \ref{fig:subcomp-disc}).
+\subsection{Discretización de variables numéricas} 
+La discretización de variables numéricas se utiliza para convertir datos continuos en datos discretos, lo que permite que los algoritmos de aprendizaje automático puedan procesarlos y analizarlos adecuadamente. La discretización también puede mejorar la precisión de los modelos de aprendizaje automático al reducir el ruido en los datos y hacer que los patrones sean más fáciles de detectar. En aras de automatizar este proceso, se propone el subcomponente \textit{Discretizer} (Figura \ref{fig:subcomp-disc}).
 
 \begin{figure}[H]
 	\centering
@@ -17,38 +15,105 @@ La discretización de variables numéricas se utiliza para convertir datos conti
 	\label{fig:subcomp-disc}
 \end{figure}
 
-El subcomponente \textit{Discretizer} toma en su puerto de entrada los datos en formato tabular. Dichos datos, de tipo numéricos, son procesados por varios algoritmos de discretización y, como puerto de salida, se obtienen discretizados acorde al método de discretización con mejor precisión. Tiene una única restricción: no pueden tener valores perdidos como entrada. El funcionamiento del subcomponente es descrito de forma detallada en el siguiente epígrafe. 
-
-
-\subsection{Modelación del subcomponente}
-El diagrama de flujo de la figura \ref{fig:diagrama-flujo-discretizer} expone el flujo general del componente \textit{Discretizer}. El flujo KNIME correspondiente está presente en el anexo \ref{anex:flujo-disc-comp-id3}.
+El subcomponente \textit{Discretizer} toma en su puerto de entrada los datos en formato tabular. Dichos datos, de tipo numéricos, son procesados por varios algoritmos de discretización y, como puerto de salida, se obtienen discretizados acorde al método de discretización con mejor precisión. Tiene una única restricción: no pueden tener valores perdidos como entrada. El diagrama de flujo de la figura \ref{fig:discretizacion} expone el flujo general del componente \textit{Discretizer}. El flujo KNIME correspondiente está presente en el anexo \ref{anex:flujo-disc-comp-id3}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{"figuras/capi 2/diagrama-flujo-discretizer"}
-	\caption[Diagrama de flujo general del subcomponente Discretizer]{Diagrama de flujo general del subcomponente Discretizer}
-	\label{fig:diagrama-flujo-discretizer}
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/preprocesado/discretizacion.drawio"}
+	\caption{Diagrama de flujo general de Discretizer}
+	\label{fig:discretizacion}
 \end{figure}
 
-Para la discretización se emplean los nodos \textit{Auto-Binner} (Figura \ref{fig:auto-binner-nodo}) y \textit{CAIM Binner} (Figura \ref{fig:caim-binner-nodo}). El nodo \textit{Auto-Binner} contiene tres métodos de discretización: \textit{Equal-Width, Equal-Frequency} y \textit{Quantile-Based}; mientras el nodo \textit{CAIM Binner} contiene el método \textit{CAIM}. Para la elección de los \textit{k} intervalos, pueden emplearse varios métodos, como validación cruzada (\cite{torgo1997search}); teniendo en cuenta el número de valores distintos observados en el conjunto de entrenamiento \citep{dougherty1995supervised}; o simplemente predefiniendo un valor. En este caso no se emplea uno en particular, sino que se predefinió que serían 10 intervalos, dado que el nodo \textit{Auto-Binner} funciona como caja negra y no permite realizar una experimentación como las mencionadas anteriormente. El nodo \textit{CAIM Binner} no requiere una configuración en específico, y para el método Quantile-Based se escogieron los cuantiles por defecto, es decir 0.0, 0.25, 0.5, 0.75 y 1.0.\\
+Para la discretización se emplean los nodos presentes en la figura \ref{fig:discretizacion-nodos}. El nodo \textit{Auto-Binner} contiene tres métodos de discretización: \textit{Equal-Width, Equal-Frequency} y \textit{Quantile-Based}; mientras el nodo \textit{CAIM Binner} contiene el método \textit{CAIM}. Para la elección de los \textit{k} intervalos se emplea la Regla de Sturges, descrita en la sección \ref{sub-epigrafe-disc}. El nodo \textit{CAIM Binner} no requiere una configuración en específico, y para el método Quantile-Based se escogieron los cuantiles por defecto, es decir 0.0, 0.25, 0.5, 0.75 y 1.0.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.15\linewidth]{"figuras/capi 2/auto-binner-nodo"}
-	\caption[Nodo Auto-Binner]{Nodo \textit{Auto-Binner}}
-	\label{fig:auto-binner-nodo}
+	\begin{subfigure}[b]{0.25\linewidth}
+		\centering
+		\includegraphics[width=0.5\linewidth]{"figuras/capi 2/auto-binner-nodo"}
+		\caption{Nodo \textit{Auto-Binner}}
+		\label{fig:auto-binner-nodo}
+	\end{subfigure}
+	\hspace{1.5cm}
+	\begin{subfigure}[b]{0.25\linewidth}
+		\centering
+		\includegraphics[width=0.5\linewidth]{"figuras/capi 2/caim-binner-nodo"}
+		\caption{Nodo \textit{CAIM Binner}}
+		\label{fig:caim-binner-nodo}
+	\end{subfigure}
+	\caption{Nodos empleados para la discretización}
+	\label{fig:discretizacion-nodos}
 \end{figure}
+
+Tras discretizar el conjunto de datos con cada método correspondiente, se aplica el modelo en cuestión a cada uno de los datos resultantes, con el objetivo de compararlos en cuanto a precisión y Cohen's Kappa, y escoger el algoritmo con mejor desempeño. 
+
+\subsection{Normalización de variables numéricas}
+La normalización son proporciones sin unidades de medida (adimensionales o invariantes de escala) que nos permiten poder comparar elementos de distintas variables y distintas unidades de medida. Esta es necesaria para cambiar los valores de las columnas numéricas del conjunto de datos para usar una escala común, sin distorsionar las diferencias en los intervalos de valores ni perder información. La normalización es fundamental para que algunos algoritmos modelen los datos correctamente. \\
+En KNIME es posible implementar la normalización a partir del nodo "Normalizer", presente en la FIGURA X. En este nodo se encuentran tres métodos para normalizar, a elección del usuario: Decimal Scaling, Z-Score y Min-Max. En aras de automatizar este proceso, se propone el subcomponente "Normalizer", de igual nombre al nodo nativo de KNIME, en donde se encuentra la comparación de los métodos anteriormente mencionados en función de un modelo predeterminado. En la figura \ref{fig:normalizacion} se presenta el diagrama de flujo de este subcomponente. 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.15\linewidth]{"figuras/capi 2/caim-binner-nodo"}
-	\caption[Nodo CAIM Binner]{Nodo \textit{CAIM Binner}}
-	\label{fig:caim-binner-nodo}
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/preprocesado/normalizacion.drawio"}
+	\caption{Diagrama de flujo para la normalización}
+	\label{fig:normalizacion}
 \end{figure}
 
-Tras discretizar el conjunto de datos con cada método correspondiente, se aplica el algoritmo ID3 a cada uno de los datos resultantes, con el objetivo de compararlos en cuanto a precisión y Cohen's Kappa, y escoger el algoritmo con mejor desempeño. Los flujos KNIME correspondientes a la aplicación del algoritmo ID3 y la elección del mejor método de discretización, se encuentran en los anexos \ref{anex:flujo-discret-id3} y \ref{anex:flujo-comp-alg-id3-disc} respectivamente. 
+Siguiendo el mismo esquema del subcomponente "Discretizer", tras aplicar la normalización con los distintos métodos ofrecidos por la herramienta KNIME, se aplica el algoritmo de aprendizaje automatico que requiere los datos normalizados y posteriormente, se realiza la evaluación del desempeño de cada uno, acorde a la precisión y el Cohen's Kappa. Luego de escoger el mejor, se devuelve la tabla con los datos normalizados.
 
-\section{Componente para la optimización de hiperparámetros}
+
+\subsection{Pre-procesado de variables de tipo \textit{string}}
+Los valores nominales únicos, o categorías con un solo ejemplo en una columna, pueden parecer insignificantes a primera vista, pero su correcto manejo es esencial para evitar posibles problemas de calidad de datos y garantizar la integridad de los análisis. Por otro lado, los valores de alta cardinalidad, aquellos que se repiten con frecuencia y pueden ser numerosos, son cruciales para comprender tendencias y patrones en los datos. El Componente AutoML  Clasificación (pre-procesado) poseía un tratamiento erróneo de estos valores, al eliminar las columnas nominales que superaban un umbral determinado de categorías distintas. 
+En aras de depurar estas inconsistencias, el diagrama de la figura \ref{fig:string-preprocs} muestra un nuevo flujo para el pre-procesado de String, donde la actividad de color amarillo expresa que se modifico la que anteriormente se encontraba en el componente; mientras que las actividades en verde reflejan las nuevas implementaciones.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\linewidth]{"figuras/capi 2/preprocesado/string preprocs.drawio"}
+	\caption{Diagrama de flujo para el pre-procesado de string}
+	\label{fig:string-preprocs}
+\end{figure}
+
+A continuación se exponen los cambios realizados al componente String preprocs:
+\begin{itemize}
+	\item Eliminar valores únicos por columna:  Se enmienda el error antes expuesto, al modificar el subcomponente "filtrar valores únicos", implementando la eliminación de las columnas donde mas del 80\% de los valores son únicos.
+	\item Reemplazar con otros: En este nuevo componente, los valores únicos en una columna que representan una minoría, son reemplazados por la categoría 'otros'.  Para ello, iterando por cada columna dentro de un ciclo, se calculan la frecuencia absoluta y relativa de cada atributo, y aquellos que representen menos del 1\% son los elegidos para la sustitución por la nueva categoría. 
+	\item Codificar con One-Hot Encoding: Para el tratamiento de valores con alta cardinalidad, se emplea la codificación One-Hot, utilizando el nodo One To Many. Para esto se escogen los atributos que por defecto tienen, como mínimo, 15 categorías distintas. Dado que esta técnica produce gran dimensionalidad, se utilizan para su reducción los métodos
+	\begin{enumerate}
+		\item Filtrar por varianza, utilizando el nodo Low Variance Filter, donde las columnas creadas con una varianza menor a 0.01 son eliminadas; y 
+		\item Filtrar por correlación,  utilizando el nodo Correlation Filter, donde las columnas con una correlación mayor a 0.9 son eliminadas.
+	\end{enumerate}
+\end{itemize}
+
+El flujo KNIME de los nuevos subcomponentes se encuentran en los ANEXOS X y Y.
+
+
+\subsection{Manejo de valores faltantes}
+El tratamiento de valores faltantes en conjuntos de datos es un paso crítico en la preparación y análisis de datos. La presencia de datos faltantes puede afectar significativamente la calidad y la fiabilidad de cualquier análisis o modelo que se derive de ellos. Adicionalmente, algunos algoritmos requieren que no existan valores faltantes para su funcionamiento. En aras de mejorar la imputacion de estos valores, se propone modificar el subcomponente 'Valores faltantes', cuyo diagrama de flujo se presenta en la figura \ref{fig:valores-faltantes}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/preprocesado/valores faltantes.drawio"}
+	\caption{Diagrama de flujo para el manejo de valores faltantes}
+	\label{fig:valores-faltantes}
+\end{figure}
+
+La imputación de valores faltantes ha sido cambiada, por los motivos expuestos en la sección \ref{secc:mv}. En la figura \ref{fig:mv-imputation} se presenta el diagrama de flujo de la nueva implementación para la sustitución de estos valores. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/preprocesado/mv imputation"}
+	\caption{Diagrama de flujo para la imputación de valores faltantes}
+	\label{fig:mv-imputation}
+\end{figure}
+
+Primeramente se aplican en paralelo las técnicas de imputación KNNI y KMI, al terminar se aplica el algoritmo de aprendizaje automático en cuestión con los datos imputados por cada método y, finalmente, se comparan los resultados acorde a las métricas Precisión y Cohen's Kappa para devolver los datos con la mejor sustitución. En el ANEXO X se muestra el flujo KNIME de estas estrategias. 
+
+
+
+\section{Componente AutoML Clasificación (Optimización de hiperparámetros)}
+Antes de explorar en detalle las adaptaciones realizadas en cada modelo, es fundamental presentar el Componente AutoML Clasificación (Optimización de hiperparámetros), con el objetivo de facilitar el entendimiento en los epígrafes posteriores. 
+
+\textbf{tooooodo lo que lleva con sus epígrafes y esa talla, esto es lo que estaba en las practicas}
+
 El componente propuesto, presente en la figura \ref{fig:automl-componente-hpo}, para la optimización de hiperparámetros, contiene la siguiente configuración:
 \begin{figure}[H]
 	\centering
@@ -162,7 +227,7 @@ La selección de parámetros se realiza con los siguientes nodos de configuraci�
 	\label{fig:nodo-int-conf}
 \end{figure}
 
-\subsection{Optimización de hiperparámetros para Rprop}
+\subsection{Optimización de hiperparámetros para RProp}
 Las Redes Neuronales por Retro-propagación necesitan que todos los valores sean de tipo numéricos y estos se encuentren normalizados. Para el entrenamiento y prueba de las Redes Neuronales por Retro-propagación, se emplean los nodos \textit{RProp MLP Learner} y \textit{MultiLayerPerceptron Predictor} (Figura \ref{fig:nodos-rprop}) respectivamente.
 
 \begin{figure}[H]
@@ -189,7 +254,7 @@ Para llevar a cabo el procesamiento RProp se emplean los siguientes nodos:
 		\caption[Nodos Parameter Optimization Loop Start y Parameter Optimization Loop End]{Nodos \textit{Parameter Optimization Loop Start} y \textit{Parameter Optimization Loop End}}
 		\label{fig:nodos-param-opt-loop}
 	\end{figure}
-
+	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.6\linewidth]{"figuras/capi 2/conf-nodo-param-loop"}
@@ -204,7 +269,7 @@ Para llevar a cabo el procesamiento RProp se emplean los siguientes nodos:
 		\caption[Nodos X-Partitioner y X-Aggregator]{Nodos \textit{X-Partitioner} y \textit{X-Aggregator}}
 		\label{fig:nodos-cross-val}
 	\end{figure}
-
+	
 	\item Calcular la exactitud: se emplea el nodo \textit{Scorer} (Figura \ref{fig:nodo-scorer}), el cual recibe la predicción y la columna objetivo en una tabla para la evaluación. 
 	\begin{figure}[H]
 		\centering
@@ -222,6 +287,119 @@ Para llevar a cabo el procesamiento RProp se emplean los siguientes nodos:
 	\end{figure}
 	
 \end{itemize}
+
+
+\subsection{Optimización de hiperparámetros para PNN}
+blablabla
+blablabla
+
+\subsection{Optimización de hiperparámetros para SVM}
+
+blablabla
+
+\subsection{Optimización de hiperparámetros para Random Forest}
+blablabla
+
+
+
+
+
+
+\section{Modelación de nueva versión del componente AutoML Clasificación}
+
+\begin{itemize}
+	\item componente de ernesto
+	\item diagrama nuevo
+	\item cambios hechos en la personalización: random forest, quitado lo de valores únicos por columna, agregar la estrategia de optimización
+\end{itemize}
+
+\subsection{Procesado de ID3}
+blablabla
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/modelos/procesado id3.drawio"}
+	\caption{Diagrama de flujo del procesamiento del modelo ID3}
+	\label{fig:procesado-id3}
+\end{figure}
+
+blablabla 
+
+
+
+\subsection{Procesado para C4.5 y CART}
+blablabla
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/modelos/procesado c4pt5.drawio"}
+	\caption{Diagrama de flujo del procesamiento del modelo C4.5}
+	\label{fig:procesado-c4pt5}
+\end{figure}
+
+blablabla
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/modelos/procesado cart.drawio"}
+	\caption{Diagrama de flujo del procesado de CART}
+	\label{fig:procesado-cart}
+\end{figure}
+
+blablabla
+
+\subsection{Procesamiento para Redes Neuronales por Retropropagación}
+blablabla
+
+ \begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/modelos/procesado rprop.drawio"}
+	\caption{Diagrama de flujo del procesamiento de RProp}
+	\label{fig:procesado-rprop}
+\end{figure}
+
+blablabla
+
+
+\subsection{Procesamiento para Redes Neuronales Probabilísticas}
+blablabla
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/modelos/procesado pnn.drawio"}
+	\caption{Diagrama de flujo para el procesado de PNN}
+	\label{fig:procesado-pnn}
+\end{figure}
+
+blablabla
+
+
+\subsection{Procesamiento para SVM}
+blablabla
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/modelos/procesado svm.drawio"}
+	\caption{Diagrama de flujo del procesamiento de SVM}
+	\label{fig:procesado-svm}
+\end{figure}
+
+blablabla
+
+
+
+\subsection{Procesamiento para Random Forest}
+
+blablabla
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/modelos/procesado rf.drawio"}
+	\caption{Diagrama de flujo del procesamiento de Random Forest}
+	\label{fig:procesado-rf}
+\end{figure}
+
+blablabla
+
 
 \section{Conclusiones parciales}
 A partir de lo analizado en este capítulo, se arriba a las siguientes conclusiones:

@@ -29,6 +29,12 @@ Berthold, Michael~R, Cebron, Nicolas, Dill, Fabian, Gabriel, Thomas~R,
 \newblock KNIME-the Konstanz information miner: version 2.0 and beyond.
 \newblock {\em AcM SIGKDD explorations Newsletter}, {\bf 11}(1), 26--31.
 
+\bibitem[\protect\citename{Bishop \& Nasrabadi, }2006]{bishop2006pattern}
+Bishop, Christopher~M, \& Nasrabadi, Nasser~M. 2006.
+\newblock {\em Pattern recognition and machine learning}.
+\newblock  Vol. 4.
+\newblock Springer.
+
 \bibitem[\protect\citename{Bonaccorso, }2017]{bonaccorso2017machine}
 Bonaccorso, Giuseppe. 2017.
 \newblock {\em Machine learning algorithms}.
@@ -88,13 +94,6 @@ Dhankhad, Sahil, Mohammed, Emad, \& Far, Behrouz. 2018.
 \newblock {\em Pages  122--125 of:} {\em 2018 IEEE international conference on
   information reuse and integration (IRI)}.
 \newblock IEEE.
-
-\bibitem[\protect\citename{Dougherty {\em et~al.},
-  }1995]{dougherty1995supervised}
-Dougherty, James, Kohavi, Ron, \& Sahami, Mehran. 1995.
-\newblock Supervised and unsupervised discretization of continuous features.
-\newblock {\em Pages  194--202 of:} {\em Machine learning proceedings 1995}.
-\newblock Elsevier.
 
 \bibitem[\protect\citename{Garcia {\em et~al.}, }2012]{garcia2012survey}
 Garcia, Salvador, Luengo, Julian, S{\'a}ez, Jos{\'e}~Antonio, Lopez, Victoria,
@@ -182,6 +181,12 @@ Jiawei~Han, Micheline~Kamber, Jian~Pei. 2011.
 \newblock {\em Data Mining. Concepts and Techniques (The Morgan Kaufmann Series
   in Data Management Systems)}. 3rd edn.
 
+\bibitem[\protect\citename{Joachims, }2002]{joachims2002learning}
+Joachims, Thorsten. 2002.
+\newblock {\em Learning to classify text using support vector machines}.
+\newblock  Vol. 668.
+\newblock Springer Science \& Business Media.
+
 \bibitem[\protect\citename{KNIME, }2023]{knime2023}
 KNIME. 2023 (Mar.).
 \newblock {\em KNIME Official Site}.
@@ -221,6 +226,12 @@ Moeyersoms, Julie, \& Martens, David. 2015.
   study in churn prediction in the energy sector.
 \newblock {\em Decision support systems}, {\bf 72}, 72--81.
 
+\bibitem[\protect\citename{Montavon {\em et~al.}, }2012]{montavon2012neural}
+Montavon, Gr{\'e}goire, Orr, Genevi{\`e}ve, \& M{\"u}ller, Klaus-Robert. 2012.
+\newblock {\em Neural networks: tricks of the trade}.
+\newblock  Vol. 7700.
+\newblock springer.
+
 \bibitem[\protect\citename{Murphy, }2012]{murphy2012machine}
 Murphy, Kevin~P. 2012.
 \newblock {\em Machine learning: a probabilistic perspective}.
@@ -246,19 +257,17 @@ Sammut, Claude, \& Webb, Geoffrey~I. 2011.
 \newblock {\em Encyclopedia of machine learning}.
 \newblock Springer Science \& Business Media.
 
+\bibitem[\protect\citename{Scholkopf \& Smola, }2018]{scholkopf2018learning}
+Scholkopf, Bernhard, \& Smola, Alexander~J. 2018.
+\newblock {\em Learning with kernels: support vector machines, regularization,
+  optimization, and beyond}.
+\newblock MIT press.
+
 \bibitem[\protect\citename{Sturges, }1926]{sturges1926choice}
 Sturges, Herbert~A. 1926.
 \newblock The choice of a class interval.
 \newblock {\em Journal of the american statistical association}, {\bf 21}(153),
   65--66.
-
-\bibitem[\protect\citename{Torgo \& Gama, }1997]{torgo1997search}
-Torgo, Lu{\'\i}s, \& Gama, Jo{\~a}o. 1997.
-\newblock Search-based class discretization.
-\newblock {\em Pages  266--273 of:} {\em Machine Learning: ECML-97: 9th
-  European Conference on Machine Learning Prague, Czech Republic, April 23--25,
-  1997 Proceedings 9}.
-\newblock Springer.
 
 \bibitem[\protect\citename{Tsai \& Hu, }2022]{tsai2022empirical}
 Tsai, Chih-Fong, \& Hu, Ya-Han. 2022.
