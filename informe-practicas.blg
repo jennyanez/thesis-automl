@@ -3,6 +3,14 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: informe-practicas.aux
 Reallocating 'name_of_file' (item size: 1) to 12 items.
 A level-1 auxiliary file: portada.aux
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+A level-1 auxiliary file: dec_autoria.aux
+Reallocating 'name_of_file' (item size: 1) to 18 items.
+A level-1 auxiliary file: opinion_tutor.aux
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+A level-1 auxiliary file: dedicatoria.aux
+Reallocating 'name_of_file' (item size: 1) to 20 items.
+A level-1 auxiliary file: agradecimientos.aux
 Reallocating 'name_of_file' (item size: 1) to 12 items.
 A level-1 auxiliary file: resumen.aux
 Reallocating 'name_of_file' (item size: 1) to 12 items.
@@ -31,45 +39,45 @@ Warning--empty booktitle in Carrazana2022
 Warning--empty journal in hernandeztecnicas
 Warning--empty institution in hooi2022feature
 Warning--empty publisher in Han2011
-You've used 49 entries,
+You've used 50 entries,
             2441 wiz_defined-function locations,
-            854 strings with 13285 characters,
-and the built_in function-call counts, 19756 in all, are:
-= -- 1921
-> -- 779
-< -- 168
-+ -- 237
-- -- 227
-* -- 1625
-:= -- 3268
-add.period$ -- 200
-call.type$ -- 49
-change.case$ -- 308
-chr.to.int$ -- 49
-cite$ -- 55
-duplicate$ -- 739
-empty$ -- 1419
-format.name$ -- 279
-if$ -- 4047
+            864 strings with 13441 characters,
+and the built_in function-call counts, 20140 in all, are:
+= -- 1960
+> -- 787
+< -- 171
++ -- 241
+- -- 229
+* -- 1658
+:= -- 3329
+add.period$ -- 204
+call.type$ -- 50
+change.case$ -- 314
+chr.to.int$ -- 50
+cite$ -- 56
+duplicate$ -- 755
+empty$ -- 1450
+format.name$ -- 282
+if$ -- 4123
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 59
-newline$ -- 251
-num.names$ -- 147
-pop$ -- 305
+missing$ -- 60
+newline$ -- 256
+num.names$ -- 150
+pop$ -- 309
 preamble$ -- 1
-purify$ -- 356
+purify$ -- 363
 quote$ -- 0
-skip$ -- 772
+skip$ -- 787
 stack$ -- 0
-substring$ -- 1174
-swap$ -- 168
+substring$ -- 1206
+swap$ -- 171
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 366
+type$ -- 374
 warning$ -- 6
-while$ -- 153
+while$ -- 157
 width$ -- 0
-write$ -- 620
+write$ -- 633
 (There were 6 warnings)
