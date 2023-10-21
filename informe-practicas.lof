@@ -10,7 +10,7 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Subcomponente Discretizer}}{31}{figure.caption.26}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Diagrama de flujo general de Discretizer}}{31}{figure.caption.27}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Nodos empleados para la discretización}}{32}{figure.caption.28}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Diagrama de flujo para el pre-procesado de string}}{32}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Diagrama de flujo para el pre-procesado de \textit {string}}}{32}{figure.caption.29}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Diagrama de flujo para el manejo de valores faltantes}}{33}{figure.caption.30}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Diagrama de flujo para la imputación de valores faltantes}}{33}{figure.caption.31}%
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Diagrama de flujo del pre-procesado para la codificación y normalización}}{34}{figure.caption.32}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.12)  20 OCT 2023 19:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.12)  21 OCT 2023 15:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1577,8 +1577,8 @@ File: figuras/capi 2/automl-componente-hpo.jpg Graphic file (type jpg)
 Package pdftex.def Info: figuras/capi 2/automl-componente-hpo.jpg  used on inpu
 t line 134.
 (pdftex.def)             Requested size: 164.31752pt x 75.2588pt.
-LaTeX Info: Redefining \. on input line 137.
-LaTeX Info: Redefining \% on input line 137.
+LaTeX Info: Redefining \. on input line 139.
+LaTeX Info: Redefining \% on input line 139.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1778,15 +1778,8 @@ File: figuras/capi 2/modelos/procesado cart.drawio.png Graphic file (type png)
 Package pdftex.def Info: figuras/capi 2/modelos/procesado cart.drawio.png  used
  on input line 311.
 (pdftex.def)             Requested size: 469.47046pt x 162.41838pt.
-<figuras/capi 2/modelos/procesado rf.drawio.png, id=1129, 4872.2025pt x 1508.63
-625pt>
-File: figuras/capi 2/modelos/procesado rf.drawio.png Graphic file (type png)
-<use figuras/capi 2/modelos/procesado rf.drawio.png>
-Package pdftex.def Info: figuras/capi 2/modelos/procesado rf.drawio.png  used o
-n input line 323.
-(pdftex.def)             Requested size: 469.47046pt x 145.34769pt.
-LaTeX Info: Redefining \. on input line 326.
-LaTeX Info: Redefining \% on input line 326.
+LaTeX Info: Redefining \. on input line 320.
+LaTeX Info: Redefining \% on input line 320.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1797,6 +1790,13 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [43 <./figuras/capi 2/modelos/procesado cart.drawio.png>]
+<figuras/capi 2/modelos/procesado rf.drawio.png, id=1134, 4872.2025pt x 1508.63
+625pt>
+File: figuras/capi 2/modelos/procesado rf.drawio.png Graphic file (type png)
+<use figuras/capi 2/modelos/procesado rf.drawio.png>
+Package pdftex.def Info: figuras/capi 2/modelos/procesado rf.drawio.png  used o
+n input line 323.
+(pdftex.def)             Requested size: 469.47046pt x 145.34769pt.
 <figuras/capi 2/modelos/procesado rprop.drawio.png, id=1136, 5670.18375pt x 157
 1.8725pt>
 File: figuras/capi 2/modelos/procesado rprop.drawio.png Graphic file (type png)
@@ -1832,8 +1832,8 @@ File: figuras/capi 2/modelos/procesado svm.drawio.png Graphic file (type png)
 Package pdftex.def Info: figuras/capi 2/modelos/procesado svm.drawio.png  used 
 on input line 357.
 (pdftex.def)             Requested size: 469.47046pt x 141.3731pt.
-LaTeX Info: Redefining \. on input line 370.
-LaTeX Info: Redefining \% on input line 370.
+LaTeX Info: Redefining \. on input line 367.
+LaTeX Info: Redefining \% on input line 367.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1845,8 +1845,8 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 [45 <./figuras/capi 2/modelos/procesado pnn.drawio.png> <./figuras/capi 2/model
 os/procesado svm.drawio.png>]
-LaTeX Info: Redefining \. on input line 377.
-LaTeX Info: Redefining \% on input line 377.
+LaTeX Info: Redefining \. on input line 375.
+LaTeX Info: Redefining \% on input line 375.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2325,10 +2325,10 @@ Package rerunfilecheck Info: File `informe-practicas.out' has not changed.
 ### simple group (level 1) entered at line 2 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 21465 strings out of 476331
- 386777 string characters out of 5787764
+ 21461 strings out of 476331
+ 386717 string characters out of 5787764
  1872660 words of memory out of 5000000
- 41033 multiletter control sequences out of 15000+600000
+ 41029 multiletter control sequences out of 15000+600000
  662271 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,12n,131p,2094b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2342,7 +2342,7 @@ pfb><C:/Users/Jenny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
 m/cmmi12.pfb><C:/Users/Jenny/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
 msfonts/cm/cmr12.pfb><C:/Users/Jenny/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmr8.pfb>
-Output written on informe-practicas.pdf (82 pages, 6375435 bytes).
+Output written on informe-practicas.pdf (82 pages, 6376050 bytes).
 PDF statistics:
  1494 PDF objects out of 1728 (max. 8388607)
  309 named destinations out of 1000 (max. 500000)
