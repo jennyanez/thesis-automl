@@ -74,12 +74,6 @@ Cerda, Patricio, Varoquaux, Ga{\"e}l, \& K{\'e}gl, Bal{\'a}zs. 2018.
 \newblock Similarity encoding for learning with dirty categorical variables.
 \newblock {\em Machine Learning}, {\bf 107}(8-10), 1477--1494.
 
-\bibitem[\protect\citename{Chandrashekar \& Sahin,
-  }2014]{chandrashekar2014survey}
-Chandrashekar, Girish, \& Sahin, Ferat. 2014.
-\newblock A survey on feature selection methods.
-\newblock {\em Computers \& Electrical Engineering}, {\bf 40}(1), 16--28.
-
 \bibitem[\protect\citename{Coria {\em et~al.}, }2013]{coria2013mineria}
 Coria, Sergio, Orozco, Ivania, \& Luna, Juan. 2013.
 \newblock Minería de datos para perfilamiento de las brechas digital y
@@ -94,11 +88,6 @@ Dhankhad, Sahil, Mohammed, Emad, \& Far, Behrouz. 2018.
 \newblock {\em Pages  122--125 of:} {\em 2018 IEEE international conference on
   information reuse and integration (IRI)}.
 \newblock IEEE.
-
-\bibitem[\protect\citename{Domingos, }2012]{domingos2012few}
-Domingos, Pedro. 2012.
-\newblock A few useful things to know about machine learning.
-\newblock {\em Communications of the ACM}, {\bf 55}(10), 78--87.
 
 \bibitem[\protect\citename{Garcia {\em et~al.}, }2012]{garcia2012survey}
 Garcia, Salvador, Luengo, Julian, S{\'a}ez, Jos{\'e}~Antonio, Lopez, Victoria,
@@ -192,6 +181,16 @@ Joachims, Thorsten. 2002.
 \newblock  Vol. 668.
 \newblock Springer Science \& Business Media.
 
+\bibitem[\protect\citename{Kasemtaweechok {\em et~al.},
+  }2021]{kasemtaweechok2021large}
+Kasemtaweechok, Chatchai, Pharkdepinyo, Patnaree, \& Doungmanee, Patimakorn.
+  2021.
+\newblock Large-Scale Instance Selection using Center of Principal Components.
+\newblock {\em Pages  157--160 of:} {\em 2021 Joint International Conference on
+  Digital Arts, Media and Technology with ECTI Northern Section Conference on
+  Electrical, Electronics, Computer and Telecommunication Engineering}.
+\newblock IEEE.
+
 \bibitem[\protect\citename{KNIME, }2023]{knime2023}
 KNIME. 2023 (Mar.).
 \newblock {\em KNIME Official Site}.
@@ -215,6 +214,13 @@ Li, Dan, Deogun, Jitender, Spaulding, William, \& Shuart, Bill. 2004.
 Liu, Huan, Hussain, Farhad, Tan, Chew~Lim, \& Dash, Manoranjan. 2002.
 \newblock Discretization: An enabling technique.
 \newblock {\em Data mining and knowledge discovery}, {\bf 6}, 393--423.
+
+\bibitem[\protect\citename{Mahmood {\em et~al.}, }2022]{mahmood2022accurate}
+Mahmood, Jawad, Luo, Ming, \& Rehman, Mudassar. 2022.
+\newblock An accurate detection of tool wear type in drilling process by
+  applying PCA and one-hot encoding to SSA-BLSTM model.
+\newblock {\em The International Journal of Advanced Manufacturing Technology},
+   1--20.
 
 \bibitem[\protect\citename{M{\'e}ndez {\em et~al.}, }2007]{mendez2007sistemas}
 M{\'e}ndez, Jos{\'e}~R, Riverola, Florentino~Fdez, D{\'\i}az, Fernando, \&

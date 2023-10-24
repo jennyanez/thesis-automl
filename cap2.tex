@@ -103,11 +103,7 @@ Por otro lado, los valores de alta cardinalidad, aquellos que se repiten con fre
 A continuación se exponen los cambios realizados al pre-procesado para la codificación y normalización:
 
 \begin{itemize}
-	\item Codificar con One-Hot Encoding: Para el tratamiento de valores con alta cardinalidad, se emplea la codificación One-Hot, utilizando el nodo \textit{One To Many}. Para esto se escogen los atributos que tienen como mínimo 15 categorías distintas. Dado que esta técnica produce gran dimensionalidad, se utilizan para su reducción los métodos
-	\begin{enumerate}
-		\item filtrar por varianza, utilizando el nodo \textit{Low Variance Filter}, donde las columnas creadas con una varianza menor a 0.01 son eliminadas; y 
-		\item filtrar por correlación, utilizando el nodo \textit{Correlation Filter}, donde las columnas con una correlación mayor a 0.9 son eliminadas.
-	\end{enumerate}
+	\item Codificar con One-Hot Encoding: Para el tratamiento de valores con alta cardinalidad, se emplea la codificación One-Hot, utilizando el nodo \textit{One To Many}. Para esto se escogen los atributos que tienen como mínimo 15 categorías distintas. Dado que esta técnica produce gran dimensionalidad, se utiliza para su reducción el método PCA.
 	\item Normalizar: En aras de automatizar este proceso, se propone el subcomponente \textit{Normalizer}, de igual nombre al nodo nativo de KNIME, en donde se encuentra el mismo para la ejecución de los métodos que contiene, en función de un modelo predeterminado. En la figura \ref{fig:normalizacion} se presenta el diagrama de flujo de este subcomponente. 
 \end{itemize}
 

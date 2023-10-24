@@ -157,8 +157,7 @@ En otras palabras, cada dimensión representa la ausencia o presencia de una cat
 	\caption{Ejemplo de One-Hot Encoding (también conocido como Dummy Encoding) para el atributo ZIP Code}
 	\label{fig:one-hot-ejemplo}
 \end{figure}
-Este método, aunque eficaz para atributos de baja cardinalidad, presenta la desventaja de generar una alta dimensionalidad, lo que puede ocasionar desafíos computacionales y estadísticos. Para evitarlo, es necesario aplicar reducción de dimensionalidad en la matriz de características resultante. Un enfoque natural es utilizar el Análisis de Componentes Principales (PCA), ya que captura el subespacio de máxima varianza. No obstante, esto puede generar un coste computacional alto. Sin embargo, existen otros métodos para la reducción de dimensionalidad menos costosos, como el filtrado por varianza \citep{domingos2012few} y por correlación \citep{chandrashekar2014survey}. \\
-La varianza es una medida estadística que proporciona información sobre cuán dispersos o agrupados están los valores en un conjunto de datos. La filtración por varianza se aplica para eliminar características que tienen una varianza muy baja o cercana a cero, ya que cuanto menor sea la varianza, más cerca estarán los datos entre sí. Las características con poca variabilidad no aportan información útil al modelo y, por lo tanto, pueden ser eliminadas. Por otra parte, la correlación es una medida estadística que describe la relación o asociación entre dos o más variables. Cuando dos variables están correlacionadas, significa que un cambio en una variable está relacionado de alguna manera con un cambio en la otra variable. Esto, en conjuntos de datos de alta dimensionalidad, puede generar redundancias. Para evitarlo, se pueden eliminar los atributos que representan una alta correlación. \\
+Este método, aunque eficaz para atributos de baja cardinalidad, presenta la desventaja de generar una alta dimensionalidad, lo que puede ocasionar desafíos computacionales y estadísticos. Para evitarlo, es necesario aplicar reducción de dimensionalidad en la matriz de características resultante. Un enfoque natural es utilizar el Análisis de Componentes Principales (PCA) \citep{mahmood2022accurate}, \citep{kasemtaweechok2021large} , donde la idea básica es encontrar un conjunto de transformaciones lineales de las variables originales que puedan describir la mayor parte de la varianza utilizando un número relativamente menor de variables \citep{garcia2015data}. Este enfoque permite la combinación de la esencia de los atributos originales para formar un nuevo subconjunto más pequeño de atributos. \\
  La reducción de la cardinalidad comprende las transformaciones aplicadas para obtener una representación reducida de los datos originales. Un ejemplo de reducción de cardinalidad es la introducción de un valor \textit{otros}, que se asigna a los valores que representan menos de un cierto umbral en el atributo \citep{casas2019data}. Esto es especialmente útil cuando muchos valores ocurren muy pocas veces \citep{ventevogel2020construction}.
 
 
@@ -267,9 +266,28 @@ En el campo de la clasificación, existen varios métodos de evaluación que se 
 Las bases de datos de prueba son conjuntos de datos creados para ayudar a los desarrolladores a probar y depurar aplicaciones de bases de datos, sin tener que utilizar datos reales y confidenciales. Estas bases de datos contienen datos ficticios, pero siguen la estructura de una base de datos real, lo que permite a los desarrolladores probar la funcionalidad de la aplicación sin preocuparse por dañar datos importantes o comprometer la privacidad de los usuarios. Kaggle Datasets\footnote{https://www.kaggle.com/datasets} y UCI Machine Learning Repository\footnote{https://archive.ics.uci.edu/datasets} son dos de los repositorios en línea más populares para conjuntos de datos de prueba y de aprendizaje automático. \\
 Kaggle Datasets es un sitio web de aprendizaje automático que ofrece una amplia variedad de conjuntos de datos de muestra, desde datos meteorológicos hasta datos de redes sociales. Los usuarios pueden buscar entre miles de conjuntos de datos y también pueden contribuir con los propios. Kaggle también tiene una comunidad de científicos de datos y aprendizaje automático, que pueden proporcionar comentarios y ayudar a los usuarios a mejorar sus modelos de aprendizaje automático. \\
 Por otro lado, el UCI Machine Learning Repository es un repositorio de conjuntos de datos de muestra para aprendizaje automático, minería de datos y otras aplicaciones de análisis de datos. El repositorio fue creado por la Universidad de California, Irvine, y contiene una amplia gama de conjuntos de datos, desde reconocimiento de voz hasta predicción de precios de viviendas. Los usuarios pueden descargar los conjuntos de datos de forma gratuita y utilizarlos para probar y desarrollar sus modelos de aprendizaje automático. \\
-Ambos repositorios ofrecen una amplia variedad de conjuntos de datos, lo que los hace ideales para desarrolladores, estudiantes y profesionales de la ciencia de datos que buscan mejorar sus habilidades en el modelado de bases de datos y en la creación de modelos de aprendizaje automático precisos y efectivos. Por tal motivo, se emplearán ambos repositorios para la obtención de bases de datos para las pruebas que se realizarán en este proyecto.
+Ambos repositorios ofrecen una amplia variedad de conjuntos de datos, lo que los hace ideales para desarrolladores, estudiantes y profesionales de la ciencia de datos que buscan mejorar sus habilidades en el modelado de bases de datos y en la creación de modelos de aprendizaje automático precisos y efectivos. Por tal motivo, se emplearán ambos repositorios para la obtención de bases de datos para las pruebas que se realizarán en esta investigación.
 
-\textbf{hablar de las bd que se van a emplear}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[H]
+	\centering
+	\begin{spacing}{1.2}
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{@{}ccccccc@{}}
+				\toprule
+				Base de datos   & \#Instancias & \begin{tabular}[c]{@{}c@{}}\#Atributos\\ (cuantitativos, cualitativos)\end{tabular} & Clases                                             & \% Clases                                                  & Valores perdidos & Alta cardinalidad \\ \midrule
+				Human resources & 19 158       & 14 (3, 11)                                                                          & \begin{tabular}[c]{@{}c@{}}yes \\  no\end{tabular} & \begin{tabular}[c]{@{}c@{}}24.93\%\\ 75.07\%\end{tabular} & si               & si                \\ \addlinespace[10pt]
+				Cancer data     & 569          & 32 (31, 1)                                                                          & \begin{tabular}[c]{@{}c@{}}M \\ B\end{tabular}     & \begin{tabular}[c]{@{}c@{}}37.26\%\\ 62.76\%\end{tabular} & no               & no                \\ \bottomrule
+			\end{tabular}%
+		}
+	\end{spacing}
+	\caption{Bases de datos empleadas en la experimentación}
+	\label{tab:bd-cap1}
+\end{table}
+
+La tabla \ref{tab:bd-cap1} resume las bases de datos empleados en este estudio. Muestra, para cada uno, el número de instancias (\#Instancias), la cantidad de atributos (\#Atributos), número de atributos cuantitativos y cualitativos, distribución de atributos de clase y la ausencia o presencia de valores perdidos y atributos con alta cardinalidad.
 
 \subsection{Métricas}
 Al comparar algoritmos de clasificación, hay varias métricas que se utilizan para evaluar y comparar su rendimiento \citep{geron2022hands}, \citep{hastie2009elements}. A continuación, se presentan algunas de las métricas más comunes, empleadas en esta investigación:

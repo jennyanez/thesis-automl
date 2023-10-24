@@ -41,43 +41,43 @@ Warning--empty institution in hooi2022feature
 Warning--empty publisher in Han2011
 You've used 50 entries,
             2441 wiz_defined-function locations,
-            864 strings with 13441 characters,
-and the built_in function-call counts, 20140 in all, are:
-= -- 1960
-> -- 787
-< -- 171
-+ -- 241
-- -- 229
-* -- 1658
-:= -- 3329
-add.period$ -- 204
+            861 strings with 13814 characters,
+and the built_in function-call counts, 20336 in all, are:
+= -- 1980
+> -- 799
+< -- 172
++ -- 243
+- -- 233
+* -- 1659
+:= -- 3352
+add.period$ -- 205
 call.type$ -- 50
-change.case$ -- 314
+change.case$ -- 313
 chr.to.int$ -- 50
 cite$ -- 56
-duplicate$ -- 755
-empty$ -- 1450
+duplicate$ -- 765
+empty$ -- 1464
 format.name$ -- 282
-if$ -- 4123
+if$ -- 4184
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 60
-newline$ -- 256
+newline$ -- 257
 num.names$ -- 150
-pop$ -- 309
+pop$ -- 310
 preamble$ -- 1
-purify$ -- 363
+purify$ -- 362
 quote$ -- 0
-skip$ -- 787
+skip$ -- 806
 stack$ -- 0
-substring$ -- 1206
-swap$ -- 171
-text.length$ -- 7
+substring$ -- 1217
+swap$ -- 183
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 374
 warning$ -- 6
-while$ -- 157
+while$ -- 159
 width$ -- 0
-write$ -- 633
+write$ -- 634
 (There were 6 warnings)
