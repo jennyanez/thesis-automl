@@ -1,4 +1,4 @@
-\chapter{Propuesta de modificaciones al componente de AutoML para pre-procesado}\label{chap:2}
+\chapter{Propuesta de modificaciones al componente AutoML para pre-procesado}\label{chap:2}
 En el presente capítulo, se propone una serie de modificaciones destinadas a mejorar el componente \emph{AutoML Clasificación (pre-procesado)}. Estas modificaciones se centran en el pre-procesamiento de datos, incluyendo la automatización de tareas como la discretización, normalización y el tratamiento de valores únicos, valores de alta cardinalidad y valores faltantes. Además, se explorará la inclusión de técnicas de Optimización de Hiperparámetros (HPO) para encontrar configuraciones óptimas para los modelos. El enfoque principal de esta propuesta es la integración de estas dos facetas con el componente AutoML existente para clasificación. A lo largo de este capítulo, se describirá cómo estas modificaciones buscan mejorar la eficiencia y precisión del proceso de AutoML, creando modelos de clasificación más sólidos y adaptados a las necesidades específicas de los datos.
 
 \section{Modificaciones en el pre-procesado}
@@ -6,15 +6,7 @@ Con el fin de abordar las problemáticas presentadas en el epígrafe \ref{epig:c
 
 
 \subsection{Discretización de variables numéricas} 
-La discretización de variables numéricas se utiliza para convertir datos continuos en datos discretos, lo que permite que los algoritmos de aprendizaje automático puedan procesarlos y analizarlos adecuadamente. La discretización también puede mejorar la precisión de los modelos de aprendizaje automático al reducir el ruido en los datos y hacer que los patrones sean más fáciles de detectar. En aras de automatizar este proceso, se propone el subcomponente \textit{Discretizer} (Figura \ref{fig:subcomp-disc}).
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.15\linewidth]{"figuras/capi 2/subcomp-disc"}
-	\caption[Subcomponente Discretizer]{Subcomponente \textit{Discretizer}}
-	\label{fig:subcomp-disc}
-\end{figure}
-
+La discretización de variables numéricas se utiliza para convertir datos continuos en datos discretos, lo que permite que los algoritmos de aprendizaje automático puedan procesarlos y analizarlos adecuadamente. La discretización también puede mejorar la precisión de los modelos de aprendizaje automático al reducir el ruido en los datos y hacer que los patrones sean más fáciles de detectar. En aras de automatizar este proceso, se propone el subcomponente \textit{Discretizer}. \\
 El subcomponente \textit{Discretizer} toma en su puerto de entrada los datos en formato tabular. Dichos datos, de tipo numéricos, son procesados por varios algoritmos de discretización y, como puerto de salida, se obtienen discretizados acorde al método de discretización con mejor precisión. Tiene una única restricción: no pueden tener valores perdidos como entrada. El diagrama de flujo de la figura \ref{fig:discretizacion} expone el flujo general del componente \textit{Discretizer}. El flujo KNIME correspondiente está presente en el anexo \ref{anex:flujo-disc-comp-id3}.
 
 \begin{figure}[H]
@@ -26,7 +18,7 @@ El subcomponente \textit{Discretizer} toma en su puerto de entrada los datos en 
 
 Para la discretización se emplean los nodos presentes en la figura \ref{fig:discretizacion-nodos}. El nodo \textit{Auto-Binner} contiene tres métodos de discretización: \textit{Equal-Width, Equal-Frequency} y \textit{Quantile-Based}; mientras el nodo \textit{CAIM Binner} contiene el método \textit{CAIM}. Para la elección de los \textit{k} intervalos se emplea la Regla de Sturges, descrita en la sección \ref{sub-epigrafe-disc}. El nodo \textit{CAIM Binner} no requiere una configuración en específico, y para el método Quantile-Based se escogieron los cuantiles por defecto, es decir 0.0, 0.25, 0.5, 0.75 y 1.0.
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\begin{subfigure}[b]{0.25\linewidth}
 		\centering
@@ -118,16 +110,13 @@ A continuación se exponen los cambios realizados al pre-procesado para la codif
 Siguiendo el mismo esquema del subcomponente \textit{Discretizer}, tras aplicar la normalización con los distintos métodos ofrecidos por la herramienta KNIME, se aplica el algoritmo de aprendizaje automático que requiere los datos normalizados y posteriormente, se realiza la evaluación del desempeño de cada uno, acorde a las métricas Precisión y Cohen's Kappa. Luego de escoger el mejor, se devuelve la tabla con los datos normalizados.
 
 
-
 \section{Componente AutoML Clasificación (Optimización de hiperparámetros)}
-Antes de explorar en detalle las adaptaciones realizadas en cada modelo, es fundamental presentar el componente \textit{AutoML Clasificación (Optimización de hiperparámetros)}, con el objetivo de facilitar el entendimiento en los epígrafes posteriores. 
+Antes de explorar en detalle las adaptaciones realizadas en cada modelo, es fundamental presentar un nuevo componente para la optimización de hiperparámetros, con el objetivo de facilitar el entendimiento en los epígrafes posteriores. \\
+Ajustar las configuraciones de un modelo es clave para lograr un rendimiento óptimo, lo que a su vez mejora la precisión y la eficacia de sus análisis. En este contexto, se propone el componente \textit{AutoML Clasificación (Optimización de hiperparámetros)},  presente en la figura \ref{fig:automl-componente-hpo}, conteniendo la siguiente configuración:
 
-\textbf{tooooodo lo que lleva con sus epígrafes, esto es lo que estaba en las practicas}
-
-El componente propuesto, presente en la figura \ref{fig:automl-componente-hpo}, para la optimización de hiperparámetros, contiene la siguiente configuración:
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.35\linewidth]{"figuras/capi 2/automl-componente-hpo"}
+	\includegraphics[width=0.35\linewidth]{"figuras/capi 2/hpo/automl-componente-hpo"}
 	\caption[Componente AutoML Clasificación (Optimización de Hiperparámetros)]{Componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}}
 	\label{fig:automl-componente-hpo}
 \end{figure}
@@ -135,13 +124,17 @@ El componente propuesto, presente en la figura \ref{fig:automl-componente-hpo}, 
 	\item Puerto de entrada: recibe los datos de entrada en formato tabular.
 	\item Elementos de la configuración:
 	\begin{itemize}
+		\item Selección de modelos: Lista de modelos a entrenar y optimizar disponibles (Redes Neuronales por Retropropagación, Redes Neuronales Probabilísticas, Random Forest y SVM).
+		\item Selección de porcentaje de la partición de entrenamiento: el valor introducido determina el factor en que se divide el conjunto de datos para entrenar y probar cada algoritmo, selección disponible en un rango de 1 a 99. 
 		\item Columna objetivo: presenta las columnas de tipo \textit{string} que pueden fungir como columna objetivo.
 		\item Estrategia de optimización de hiperparámetros: se selecciona la estrategia de optimización de hiperparámetros entre las disponibles (Random Search, Bayesian Optimization (TPE), Brute Force y Hillclimbing).
 		\item Selección del número de subconjuntos de la validación cruzada: el valor introducido determina la cantidad de veces que se divide el conjunto de datos en subconjuntos de entrenamiento y prueba, durante el proceso de validación.
 	\end{itemize}
-	\item Puerto de salida: tabla de hiperparámetros optimizados, siguiendo la estrategia de optimización escogida.
+	\item Puerto de salida: tabla de selección múltiple de modelos con hiperparámetros optimizados.
 \end{enumerate}
 
+\begin{comment}
+	
 \subsection{Uso y configuración del componente AutoML Clasificación (Optimización de Hiperparámetros)}
 A continuación, se define la secuencia de pasos para el correcto funcionamiento del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}:
 
@@ -167,6 +160,9 @@ A continuación, se define la secuencia de pasos para el correcto funcionamiento
 	\label{fig:automl-hpo-vista-salida}
 \end{figure}
 
+\end{comment}
+
+
 \subsection{Requisitos y restricciones del componente AutoML Clasificación (Optimización de Hiperparámetros)}
 El componente propuesto debe cumplir los siguientes requisitos funcionales:
 
@@ -174,8 +170,14 @@ El componente propuesto debe cumplir los siguientes requisitos funcionales:
 	\item RF1: El componente debe permitir seleccionar columna objetivo
 	\item RF2: El componente debe permitir seleccionar estrategia de optimización de hiperparámetros.
 	\item RF3: El componente debe permitir seleccionar cantidad de subconjuntos en la validación cruzada.
-	\item RF4: El componente debe optimizar hiperparámetros y entrenar datos para Redes Neuronales de Retro propagación.
-	\item RF5: El componente debe retornar tabla de hiperparámetros optimizados.
+	\item RF4: El componente debe permitir seleccionar uno o varios de los algoritmos listados.
+	\item RF5: El componente debe permitir seleccionar el porcentaje de la partición de entrenamiento.
+	\item RF6: El componente debe entrenar y optimizar hiperparámetros para Redes Neuronales de Retropropagación. 
+	\item RF7: El componente debe entrenar y optimizar hiperparámetros para Redes Neuronales Probabilísticas. 
+	\item RF8: El componente debe entrenar y optimizar hiperparámetros para SVM.
+	\item RF9: El componente debe entrenar y optimizar hiperparámetros para Random Forest.
+	\item RF10: El componente debe graficar los modelos seleccionados.
+	\item RF11: El componente debe retornar el modelo seleccionado por el usuario.
 \end{itemize}
 
 El componente propuesto presenta las siguientes restricciones para su funcionamiento:
@@ -183,7 +185,6 @@ El componente propuesto presenta las siguientes restricciones para su funcionami
 \begin{itemize}
 	\item Los datos de entrada deben encontrarse en formato tabular.
 	\item La columna objetivo debe ser de tipo \textit{string}.
-	\item Los datos de entrada deben ser de tipo numérico, a excepción de la columna objetivo.
 	\item Los datos numéricos deben estar previamente normalizados.
 \end{itemize}
 
@@ -192,19 +193,19 @@ El diagrama de flujo de la figura \ref{fig:diagrama-flujo-gral-comp-hpo} expone 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{"figuras/capi 2/diagrama-flujo-gral-comp-hpo"}
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/hpo/diagrama-flujo-gral-comp-hpo"}
 	\caption[Diagrama de flujo general del componente AutoML Clasificación (Optimización de Hiperparámetros)]{Diagrama de flujo general del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}}
 	\label{fig:diagrama-flujo-gral-comp-hpo}
 \end{figure}
 
-La configuración de la selección de parámetros es el primer paso, en el cual se crearán las variables que dictarán el comportamiento del flujo. Posteriormente, se ejecuta la optimización de hiperparámetros para RProp, donde recoge los resultados en una tabla y luego los grafica. El flujo KNIME correspondiente se evidencia en el Anexo \ref{aped.flujo-hpo-rprop}.
+En la fase inicial, se procede a la definición de la configuración de parámetros, durante la cual se especifican las variables determinantes que guiarán el flujo de ejecución del proceso. Luego, se procede con la optimización de los hiperparámetros de los modelos seleccionados por el usuario, lo que da como resultado la generación de los modelos que serán representados gráficamente. Según si la columna objetivo presenta múltiples clases o no, se realizan las representaciones gráficas de los modelos y se otorga al usuario la capacidad de elegir aquel que mejor concuerde con sus requisitos particulares.
 
-\subsubsection{Selección de parámetros}
+\subsubsection*{Selección de parámetros}
 Los parámetros que rigen el funcionamiento del componente propuesto, brindan al usuario una mayor personalización de la optimización de hiperparámetros, pues le ofrece la libertad de configurar múltiples factores claves de esta etapa. El diagrama de actividades de la figura \ref{fig:diagrama-act-selecc-param-hpo} expone el flujo para la selección de parámetros.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{"figuras/capi 2/diagrama-act-selecc-param-hpo"}
+	\includegraphics[width=0.7\linewidth]{"figuras/capi 2/hpo/diagrama-act-selecc-param-hpo"}
 	\caption[Diagrama de actividades de selección de parámetros]{Diagrama de actividades de selección de parámetros}
 	\label{fig:diagrama-act-selecc-param-hpo}
 \end{figure}
@@ -214,63 +215,89 @@ La selección de parámetros se realiza con los siguientes nodos de configuraci�
 \begin{itemize}
 	\item Seleccionar columna objetivo: se emplea el nodo \textit{Column Selection Configuration}, el cual recibe una tabla y devuelve el nombre de la columna seleccionada como variable de flujo. En este caso, presenta la configuración adicional para solo mostrar las columnas de tipo \textit{string}.
 	\item Seleccionar estrategia de optimización de hiperparámetros: la selección de la estrategia se lleva a cabo empleando el nodo \textit{Single Selection Configuration}. Devuelve la variable \texttt{strategy} con el valor seleccionado previamente.
-	\item Seleccionar número de subconjuntos en la validación cruzada: la selección de la cantidad de subconjuntos de partición de entrenamiento, se lleva a cabo con el nodo \textit{Integer Configuration}. Este devuelve la variable de flujo resultante de la selección, en este caso presenta la configuración para limitar el rango entre 5 y 10.
+	\item Seleccionar número de subconjuntos en la validación cruzada: la selección de la cantidad de subconjuntos de partición de entrenamiento se lleva a cabo con el nodo \textit{Integer Configuration}. Este devuelve la variable de flujo resultante de la selección, en este caso presenta la configuración para limitar el rango entre 5 y 10.  La selección de la partición de entrenamiento se lleva a cabo con el mismo nodo anteriormente mencionado.
+	\item Evaluar columna objetivo: se evalúa en clase binaria o multiclase la columna objetivo mediante los nodos listados en la \textbf{fig *** (Foto para anexos) }
+	\item Seleccionar modelo o modelos a optimizar: la selección se realiza mediante el nodo \textit{Multiple Selection Configuration}, el cual devuelve la variable \texttt{modelo} con la selección.
 \end{itemize}
 
-\subsection{Optimización de hiperparámetros para RProp}
-Las Redes Neuronales por Retro-propagación necesitan que todos los valores sean de tipo numéricos y estos se encuentren normalizados. Para el entrenamiento y prueba de las Redes Neuronales por Retro-propagación, se emplean los nodos \textit{RProp MLP Learner} y \textit{MultiLayerPerceptron Predictor} respectivamente.
-El diagrama de actividades de la figura \ref{fig:diagrama-act-proc-rprop-hpo}, expone el flujo para el procesamiento necesario para la ejecución del algoritmo Redes Neuronales por Retropropagación, con optimización de hiperparámetros.
+\subsubsection*{Optimización de hiperparámetros}
+El diagrama de flujo de la figura \ref{fig:optimizacion-a-resumen-2} expone el flujo general del apartado de optimización del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}.
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{"figuras/capi 2/diagrama-act-proc-rprop-hpo"}
-	\caption{Diagrama de actividades para el procesamiento de RProp con HPO}
-	\label{fig:diagrama-act-proc-rprop-hpo}
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/hpo/Optimizacion a resumen 2.14"}
+	\caption{Diagrama de flujo de la optimización de hiperparámetros}
+	\label{fig:optimizacion-a-resumen-2}
 \end{figure}
 
-Para llevar a cabo el procesamiento RProp se emplean los siguientes nodos: 
-\begin{itemize}
-	\item Ciclo para recorrer el rango de hiperparámetros: se emplean los nodos \textit{Parameter Optimization Loop Start} y \textit{Parameter Optimization Loop End} (Figura \ref{fig:nodos-param-opt-loop}). Ambos permiten guardar todas las iteraciones realizadas por el algoritmo con las diferentes combinaciones de hiperparámetros. Para su configuración, se eligieron como hiperparámetros el número de capas, la cantidad de neuronas y el número máximo de iteraciones (Figura \ref{fig:conf-nodo-param-loop}).
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.5\linewidth]{"figuras/capi 2/nodos-param-opt-loop"}
-		\caption[Nodos Parameter Optimization Loop Start y Parameter Optimization Loop End]{Nodos \textit{Parameter Optimization Loop Start} y \textit{Parameter Optimization Loop End}}
-		\label{fig:nodos-param-opt-loop}
-	\end{figure}
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.6\linewidth]{"figuras/capi 2/conf-nodo-param-loop"}
-		\caption[Configuración del nodo Parameter Optimization Loop Start]{Configuración del nodo \textit{Parameter Optimization Loop Start}}
-		\label{fig:conf-nodo-param-loop}
-	\end{figure}
-	
-	\item Ciclo para dividir el conjunto de datos: se emplean los nodos \textit{X-Partitioner} y \textit{X-Aggregator}, para dividir el conjunto de datos en \textit{k} particiones y realizar una validación cruzada, donde cada partición se utiliza como conjunto de prueba una vez y las otras \textit{k-1} particiones se utilizan como conjunto de entrenamiento.
-	\item Calcular la exactitud: se emplea el nodo \textit{Scorer}, el cual recibe la predicción y la columna objetivo en una tabla para la evaluación. 
-	\item Graficar: se emplea el nodo \textit{Table View}, capaz de visualizar la tabla de los hiperparámetros con mejor resultado.	
-\end{itemize}
+En la figura \ref{fig:optimizacion-a-resumen-2}, la optimización de hiperparámetros implica la iteración sistemática a través de un conjunto predefinido de hiperparámetros, evaluando exhaustivamente todas las combinaciones posibles. Este proceso se detiene una vez que se han evaluado todas las combinaciones. Cada iteración se somete a una validación cruzada, que implica la evaluación de los hiperparámetros en múltiples subconjuntos de prueba. La métrica de rendimiento (en este caso, la exactitud) se calcula para cada iteración de la validación cruzada, y se registra la iteración con la mayor exactitud. Finalmente, una vez que se han evaluado todas las combinaciones posibles, se devuelve la iteración del modelo que obtuvo la mejor exactitud. \\
+En KNIME es posible implementar el ciclo para comprobar las combinaciones de hiperparámetros mediante los nodos \textit{Parameter Optimization Loop Start} y \textit{Parameter Optmization Loop End}, los cuales permiten almacenar las iteraciones realizadas por el algoritmo con las diferentes combinaciones de hiperparámetros dentro de un rango previamente establecido. En el \textbf{anexo ****} se muestra el flujo correspondiente al funcionamiento genérico de un flujo de optimización.
+
+\subsubsection*{Graficar y seleccionar modelos}
+Una parte esencial de cualquier flujo de trabajo en KNIME es la etapa en la que se exploran, comparan y seleccionan los modelos. Esta fase se convierte en el núcleo de la toma de decisiones en la analítica de datos, ya que permite identificar cuál de los modelos propuestos se ajusta de manera óptima a los datos y objetivos.
+KNIME brinda herramientas para visualizar y evaluar el rendimiento de los modelos, lo que permite tomar decisiones informadas y seleccionar el modelo que mejor se adapte a las necesidades del usuario. En el proceso de modelado y selección, se emplean los nodos \textit{Binary Classification Inspector} y \textit{ROC Curve} para problemas de clasificación binaria \textbf{fig*} y, en cambio, se utilizan los nodos \textit{Bar Chart} y \textit{Table View} cuando se enfrentan problemas de clasificación multiclase \textbf{fig*. (Las figuras de anexo q serian flujos)}
+
+
+\subsection{Optimización de hiperparámetros para RProp}
+Para el entrenamiento y prueba de las Redes Neuronales por Retropropagación, se emplean los nodos \textit{RProp MLP Learner} y \textit{MultiLayerPerceptron Predictor}, donde se seleccionan los hiperparámetros a optimizar: número máximo de iteraciones, cantidad de neuronas y número de capas. El diagrama de actividades de la figura \ref{fig:optimizacion-rprop}, expone el flujo para el procesamiento necesario para la ejecución del algoritmo Redes Neuronales por Retropropagación, con optimización de hiperparámetros.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/hpo/Optimizacion RProp"}
+	\caption{Diagrama de flujo para la optimización de hiperparámetros de RProp}
+	\label{fig:optimizacion-rprop}
+\end{figure}
 
 
 \subsection{Optimización de hiperparámetros para PNN}
-blablabla
-blablabla
+En el contexto del algoritmo de Redes Neuronales Probabilísticas (PNN), se hacen uso de dos nodos: \textit{PNN Learner} y \textit{PNN Predictor}. Estos nodos son utilizados para configurar y ejecutar el algoritmo, y se enfocan en la selección y optimización de diversas variables críticas. En particular, se ajustan los siguientes hiperparámetros: el número máximo de épocas, theta minus y theta plus. Estos parámetros son esenciales para el rendimiento y la convergencia del algoritmo. El diagrama de actividades representado en la figura \ref{fig:optimizacion-pnn} proporciona una visualización estructurada del flujo de procesos y operaciones, necesarios para la ejecución del algoritmo de Redes Neuronales por Retropropagación con un enfoque específico en la optimización de hiperparámetros.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/hpo/Optimizacion PNN"}
+	\caption{Diagrama de flujo para la optimización de hiperparámetros de PNN}
+	\label{fig:optimizacion-pnn}
+\end{figure}
+
 
 \subsection{Optimización de hiperparámetros para SVM}
 
-blablabla
+Para la Máquina de Soporte Vectorial (SVM), se realiza la selección entre tres tipos distintos de kernels: el kernel polinómico, el kernel hiperbólico tangente y el kernel de base radial (RBF). Cada uno de estos kernels está caracterizado por dos hiperparámetros específicos, el bias y el gamma. El objetivo de esta selección es identificar el kernel que produce el mejor rendimiento en términos de precisión. \\
+El proceso se encuentra representado en un diagrama de flujo, como se ilustra en la figura \ref{fig:optimizacion-svm}. Este diagrama de flujo proporciona una visión general de cómo se lleva a cabo la optimización de SVM, detallando el flujo de decisiones y operaciones involucradas en la selección del kernel y sus hiperparámetros correspondientes.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/hpo/Optimizacion SVM"}
+	\caption{Diagrama de flujo para la optimización de hiperparámetros de SVM}
+	\label{fig:optimizacion-svm}
+\end{figure}
+
 
 \subsection{Optimización de hiperparámetros para Random Forest}
-blablabla
+En el marco de la implementación de Random Forest, se hacen uso de los nodos \textit{Random Forest Learner} y \textit{Random Forest Predictor}, donde se ajustan tres hiperparámetros clave: profundidad máxima, cantidad de modelos y tamaño mínimo del nodo. La figura \ref{fig:optimizacion-randomforest} brinda una representación organizada del flujo de procesos y operaciones necesarias para la ejecución de la optimización del algoritmo Random Forest.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/hpo/Optimizacion RandomForest"}
+	\caption{Diagrama de flujo para la optimización de hiperparámetros de Random Forest}
+	\label{fig:optimizacion-randomforest}
+\end{figure}
 
 
 \section{Modelación de nueva versión del componente AutoML Clasificación}
-El enfoque principal de esta propuesta es la integración de los subcomponentes desarrollados para el pre-procesado y el componente \textit{AutoML Clasificación (Optimización de hiperparámetros)} con el componente AutoML existente para clasificación, cuyo diagrama de flujo se presenta en la FIGURA X DIAGRAMA ERNESTO. \\
+El enfoque principal de esta propuesta es la integración de los subcomponentes desarrollados para el pre-procesado y el componente \textit{AutoML Clasificación (Optimización de hiperparámetros)} con el componente AutoML existente para clasificación, cuyo diagrama de flujo se presenta en la figura \ref{fig:diagrama-general-componente}. \\
 
-\textbf{FOTO DEL DIAGRAMA DE FLUJO DEL COMPONENTE} \\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{"figuras/capi 2/Diagrama General Componente"}
+	\caption{Diagrama de flujo de Componente AutoML (clasificación)}
+	\label{fig:diagrama-general-componente}
+\end{figure}
 
-Como se puede apreciar en la FIGURA X DIAGRAMA ERNESTO, se implementa un nuevo modelo para la clasificación: Random Forest. Además, se realizan cambios en la personalización del componente: la eliminación del umbral de valores únicos por columna y un nuevo campo para la elección de la estrategia de optimización que se utilizará para la optimización de hiperparámetros. Estos cambios se pueden observar en la FIGURA X PERSONALIZACION DEL COMPONENTE. \\
 
-\textbf{ FIGURA X PERSONALIZACION DEL COMPONENTE} \\
+Como se puede apreciar en la figura \ref{fig:diagrama-general-componente}, se implementa un nuevo modelo para la clasificación: Random Forest. Además, se realizan cambios en la personalización del componente: la eliminación del umbral de valores únicos por columna y un nuevo campo para la elección de la estrategia de optimización que se utilizará para la optimización de hiperparámetros. Estos cambios se pueden observar en la FIGURA X PERSONALIZACION DEL COMPONENTE. \\
+
+\textbf{FIGURA X PERSONALIZACION DEL COMPONENTE} \\
 
 Con el propósito de abordar la integración con las nuevas implementaciones, se discutirán detalladamente en las secciones siguientes.
 
@@ -289,7 +316,7 @@ Tal como se puede apreciar en la figura \ref{fig:procesado-id3}, simplemente se 
 \subsection{Procesado para C4.5}
 El algoritmo C4.5 puede ejecutar en KNIME a traves del nodo \textit{J48}. Este, al igual que Id3, forma parte de la extensión Weka y no permite la incorporación de la optimización de hiperparámetros. Las modificaciones efectuadas en el pre-procesado están presentes en el diagrama de flujo de la figura \ref{fig:procesado-c4pt5}.
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{"figuras/capi 2/modelos/procesado c4pt5.drawio"}
 	\caption{Diagrama de flujo del procesamiento del modelo C4.5}

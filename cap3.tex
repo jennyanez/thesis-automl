@@ -1,178 +1,129 @@
-\chapter{Integración y validación de soluciones propuestas al componente de AutoML}\label{chap:3}
-En este capítulo, se presentan las pruebas necesarias para validar el correcto funcionamiento del subcomponente \textit{Discretizer} y del \textit{Componente AutoML Clasificación (Optimización de Hiperparámetros)}, así como las pruebas de sus integraciones al \textit{Componente AutoML Clasificación (pre-procesado)}.
+\chapter{Validación de soluciones propuestas al componente de AutoML}\label{chap:3}
+En este capítulo .....
 
-\section{Análisis de las bases de datos de prueba}
-Las bases de datos a emplear fueron descargadas de los repositorios Kaggle Repository y UCI Machine Learning Repository. A continuación, se presenta una descripción de las mismas:
-\begin{itemize}
-	\item Base de datos 1 (BD1, Figura \ref{fig:bd1-loan-train}): presenta 614 instancias y 11 atributos, 6 de ellos de tipo \textit{string} y los restantes de tipo numérico. Esta base de datos se puede clasificar en función de dos columnas objetivo, donde una es multiclase y la otra binaria.
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.55\linewidth]{"figuras/capi 3/bd1-loan-train"}
-		\caption{Vista preliminar de BD1}
-		\label{fig:bd1-loan-train}
-	\end{figure}
-	
-	\item Base de datos 2 (BD2, Figura \ref{fig:bd2-cancer-data}): presenta 569 instancias y 31 atributos, uno de ellos de tipo \textit{string} y los restantes de tipo numérico. La columna objetivo es de tipo binaria.
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.6\linewidth]{"figuras/capi 3/bd2-cancer-data"}
-		\caption{Vista Preliminar de BD2}
-		\label{fig:bd2-cancer-data}
-	\end{figure}
 
-\item Base de datos 3 (BD3, Figura \ref{fig:bd3-kr-vs-kp}): presenta 3196 instancias y 37 atributos, todos son de tipo \textit{string}. La columna objetivo es de tipo binaria.
-\begin{figure}[H]
+\section{Pruebas de caja negra a subcomponentes para el pre-procesado}
+
+... muelita linda
+
+\subsection{Caso de prueba al subcomponente \textit{Discretizer}}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[H]
 	\centering
-	\includegraphics[width=0.6\linewidth]{"figuras/capi 3/bd3-kr-vs-kp"}
-	\caption{Vista preliminar de la BD3}
-	\label{fig:bd3-kr-vs-kp}
-\end{figure}
+	\begin{spacing}{1.3}
+	\resizebox{\columnwidth}{!}{%
+		\begin{tabular}{|llll|}
+			\hline
+			\multicolumn{4}{|l|}{Caso de prueba}                                                                                                                                                                                                                                                                                                                                                                                                                                         \\ \hline
+			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Objetivo de la \\ prueba\end{tabular}}    & \multicolumn{3}{l|}{Comprobar la efectividad de las transformaciones al discretizar las variables numéricas}                                                                                                                                                                                                                                                                     \\ \hline
+			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción de \\ la prueba\end{tabular}} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Se debe proporcionar una tabla con variables numéricas al componente \textit{Discretizer} y \\ evaluar la tabla resultante\end{tabular}}                                                                                                                                                                                                   \\ \hline
+			\multicolumn{1}{|l|}{Condiciones}                                                         & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}1. Debe estar presente la columna objetivo para la clasificación.\\ 2. La columna objetivo debe ser de tipo nominal.\end{tabular}}                                                                                                                                                                                                \\ \hline
+			\multicolumn{4}{|l|}{Combinaciones de valores de entrada}                                                                                                                                                                                                                                                                                                                                                                                                                    \\ \hline
+			\multicolumn{1}{|l|}{CP}                                                                  & \multicolumn{1}{l|}{Escenario}                                                                                     & \multicolumn{1}{l|}{Resultado esperado}                                                                                                 & Resultado real                                                                                                    \\ \hline
+			\multicolumn{1}{|l|}{CP1}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una \\ tabla con atributos\\ numéricos\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se discretizan los atributos \\ numéricos con cada método\end{tabular}}                  & \begin{tabular}[c]{@{}l@{}}Se discretizan los atributos \\ numéricos con cada método\end{tabular}                 \\ \hline
+			\multicolumn{1}{|l|}{CP2}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una\\ tabla con atributos\\ numéricos\end{tabular}}  & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se comparan los discretizadores \\ acorde al algoritmo de ML\end{tabular}}               & \begin{tabular}[c]{@{}l@{}}Se comparan los discretizadores \\ acorde al algoritmo de ML\end{tabular}              \\ \hline
+			\multicolumn{1}{|l|}{CP3}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una\\ tabla con atributos \\ numéricos\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se devuelven los datos \\ discretizados acorde a los \\ resultados del CP2\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se devuelven los datos\\ discretizados acorde a los \\ resultados del CP2\end{tabular} \\ \hline
+		\end{tabular}%
+	}
+	\end{spacing}
+	\caption{Caso de prueba al componente \textit{Discretizer}}
+	\label{tab:cp-disc}
+\end{table}
 
-\item Base de datos 4 (BD4, Fig10) presenta 743 instancias y 12 atributos, 7 de ellos de tipo String, el restante de tipo numérico. La columna objetivo es de tipo múltiple.
-\begin{figure}[H]
+
+
+\subsection{Caso de prueba al subcomponente \textit{String preprocs}}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[H]
 	\centering
-	\includegraphics[width=0.6\linewidth]{"figuras/capi 3/bd4"}
-	\caption{Vista preliminar de la BD4}
-	\label{fig:bd4}
-\end{figure}
+	\begin{spacing}{1.3}
+	\resizebox{\columnwidth}{!}{%
+		\begin{tabular}{|llll|}
+			\hline
+			\multicolumn{4}{|l|}{Caso de prueba}                                                                                                                                                                                                                                                                                                                                                                                                                                                                     \\ \hline
+			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Objetivo de la \\ prueba\end{tabular}}    & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Comprobar la efectividad de las transformaciones a las columnas de tipo \textit{string}\\ y evaluar la tabla resultante\end{tabular}}                                                                                                                                                                                                                                  \\ \hline
+			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción de \\ la prueba\end{tabular}} & \multicolumn{3}{l|}{Se debe proporcionar una tabla con atributos con valores únicos}                                                                                                                                                                                                                                                                                                                         \\ \hline
+			\multicolumn{1}{|l|}{Condiciones}                                                         & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}1. Solo se deben proporcionar columnas de tipo \textit{string}\\ 2. Debe estar presente una columna objetivo nominal para la clasificación\end{tabular}}                                                                                                                                                                                                                             \\ \hline
+			\multicolumn{4}{|l|}{Combinaciones de valores de entrada}                                                                                                                                                                                                                                                                                                                                                                                                                                                \\ \hline
+			\multicolumn{1}{|l|}{CP}                                                                  & \multicolumn{1}{l|}{Escenario}                                                                                                                                      & \multicolumn{1}{l|}{Resultado esperado}                                                                                      & Resultado real                                                                                          \\ \hline
+			\multicolumn{1}{|l|}{CP1}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una columna\\ con más del 80\% de valores \\ únicos\end{tabular}}                                     & \multicolumn{1}{l|}{La columna es eliminada}                                                                                 & La columna es eliminada                                                                                 \\ \hline
+			\multicolumn{1}{|l|}{CP2}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una columna\\ con varias categorías diferentes\\ donde existan valores sin \\ repetirse\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se reemplazan los valores \\ únicos por la categoría \\ 'other'\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se reemplazan los valores \\ únicos por la categoría\\  'other'\end{tabular} \\ \hline
+		\end{tabular}%
+	}
+	\end{spacing}
+	\caption{Caso de prueba al componente \textit{String preprocs}}
+	\label{tab:cp-string-preprocs}
+\end{table}
 
-\end{itemize}
+\subsection{Caso de prueba al subcomponente \textit{MV Imputation}}
 
-\section{Casos de prueba al subcomponente \textit{Discretizer}}
-En esta sección se presentan las pruebas al subcomponente \textit{Discretizer}, una vez integrado al \textit{Componente AutoML Clasificación (pre-procesado)}. No se realizan pruebas individuales, dado que depende de variables de flujo configuradas en el componente AutoML. \\
-Para la realización de las pruebas, se hace una copia del metanodo ID3, donde se realiza la integración del subcomponente \textit{Discretizer} (figura \ref{fig:integracion-comp-discretizer}) para comparar los resultados entre un conjunto de datos con una discretización predefinida, y uno con la discretización automatizada. Cabe destacar que el nodo \textit{AutoBinner}, donde se encuentra la discretización previamente configurada, el método empleado es \textit{equal-width} y la cantidad de bins es k = 5. \\
-El método de comparación para los algoritmos es el valor obtenido por la precisión del método de clasificación (accuracy), el valor del Cohen's Kappa y el del área bajo la curva ROC (AUC).
-\begin{figure}[H]
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[H]
 	\centering
-	\includegraphics[width=0.6\linewidth]{"figuras/capi 3/integracion-comp-discretizer"}
-	\caption{Integración del subcomponente \textit{Discretizer}}
-	\label{fig:integracion-comp-discretizer}
-\end{figure}
+	\begin{spacing}{1.3}
+	\resizebox{\columnwidth}{!}{%
+		\begin{tabular}{|llll|}
+			\hline
+			\multicolumn{4}{|l|}{Caso de prueba}                                                                                                                                                                                                                                                                                                                                                                                                                                 \\ \hline
+			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Objetivo de la \\ prueba\end{tabular}}    & \multicolumn{3}{l|}{Comprobar la efectividad en el tratamiento de valores faltantes en una tabla}                                                                                                                                                                                                                                                                        \\ \hline
+			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción de \\ la prueba\end{tabular}} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Se debe proporcionar una tabla con valores perdidos al componente \\ \textit{MV Imputation} y evaluar la tabla resultante\end{tabular}}                                                                                                                                                                                            \\ \hline
+			\multicolumn{1}{|l|}{Condiciones}                                                         & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}1. Debe estar presente la columna objetivo para la clasificación.\\ 2. La columna objetivo debe ser de tipo nominal.\end{tabular}}                                                                                                                                                                                        \\ \hline
+			\multicolumn{4}{|l|}{Combinaciones de valores de entrada}                                                                                                                                                                                                                                                                                                                                                                                                            \\ \hline
+			\multicolumn{1}{|l|}{CP}                                                                  & \multicolumn{1}{l|}{Escenario}                                                                                   & \multicolumn{1}{l|}{Resultado esperado}                                                                                              & Resultado real                                                                                                 \\ \hline
+			\multicolumn{1}{|l|}{CP1}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una \\ tabla con valores\\ faltantes\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se realiza la imputación de\\ valores faltantes con cada\\ método\end{tabular}}       & \begin{tabular}[c]{@{}l@{}}Se realiza la imputación de\\ valores faltantes con cada\\ método\end{tabular}      \\ \hline
+			\multicolumn{1}{|l|}{CP2}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una\\ tabla con valores\\ faltantes\end{tabular}}  & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se comparan los métodos \\ de imputación acorde al \\ algoritmo de ML\end{tabular}}   & \begin{tabular}[c]{@{}l@{}}Se comparan los métodos\\ de imputación acorde al\\ algoritmo de ML\end{tabular}    \\ \hline
+			\multicolumn{1}{|l|}{CP3}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una\\ tabla con valores\\ faltantes\end{tabular}}  & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se devuelven los valores\\ imputados acorde a los \\ resultados del CP2\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se devuelven los valores\\ imputados acorde a los\\ resultados del CP2\end{tabular} \\ \hline
+		\end{tabular}%
+	}
+	\end{spacing}
+	\caption{Caso de prueba al componente \textit{MV Imputation}}
+	\label{tab:cp-mv-imp}
+\end{table}
 
-Para la BD1, se ejecuta el componente, donde el método de discretización que presenta mejores resultados es \textit{equal-width}, con \textit{accuracy} de 0.727 y un Cohen's Kappa de 0.39. Los resultados de la comparación de los métodos de discretización se encuentran en la figura \ref{fig:bd-loantrain-ranking}; así como la salida del subcomponente \textit{Discretizer} en la figura \ref{fig:bd-loantrain-salida-disc}. 
+\subsection{Caso de prueba al subcomponente \textit{Codificar y normalizar}}
 
-\begin{figure}[H]
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[H]
 	\centering
-	\includegraphics[width=0.5\linewidth]{"figuras/capi 3/pruebas-jenn/bd-loan_train-ranking"}
-	\caption{Comparación de métodos de discretización para la BD1}
-	\label{fig:bd-loantrain-ranking}
-\end{figure}
+	\begin{spacing}{1.3}
+	\resizebox{\columnwidth}{!}{%
+		\begin{tabular}{|llll|}
+			\hline
+			\multicolumn{4}{|l|}{Caso de prueba}                                                                                                                                                                                                                                                                                                                                                                                                                                                     \\ \hline
+			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Objetivo de la\\ prueba\end{tabular}}     & \multicolumn{3}{l|}{Comprobar la efectividad de la codificación y la normalización en una tabla}                                                                                                                                                                                                                                                                                             \\ \hline
+			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción de \\ la prueba\end{tabular}} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Se debe proporcionar una tabla con valores nominales de alta cardinalidad\\ y numéricos al componente \textit{Codificar y normalizar} y evaluar la tabla resultante.\end{tabular}}     \\ \hline
+			\multicolumn{1}{|l|}{Condiciones}                                                         & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}1. Debe estar presente la columna objetivo para la clasificación.\\ 2. La columna objetivo debe ser de tipo nominal.\\ 3. Debe haber una columna con más de 15 categorías diferentes.\end{tabular}}                                                                                                                                           \\ \hline
+			\multicolumn{4}{|l|}{Combinaciones de valores de entrada}                                                                                                                                                                                                                                                                                                                                                                                                                                \\ \hline
+			\multicolumn{1}{|l|}{CP}                                                                  & \multicolumn{1}{l|}{Escenario}                                                                                                  & \multicolumn{1}{l|}{Resultado esperado}                                                                                                 & Resultado real                                                                                                   \\ \hline
+			\multicolumn{1}{|l|}{CP1}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una \\ tabla con valores\\ numéricos\end{tabular}}                & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se realiza la normalización\\ de los datos\end{tabular}}                                 & \begin{tabular}[c]{@{}l@{}}Se realiza la normalización\\ de los datos\end{tabular}                               \\ \hline
+			\multicolumn{1}{|l|}{CP2}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una\\ tabla con valores\\ numéricos\end{tabular}}                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se comparan los métodos\\ de normalización acorde\\ al algoritmo de ML\end{tabular}}     & \begin{tabular}[c]{@{}l@{}}Se comparan los métodos\\ de normalización acorde \\ al algoritmo de ML\end{tabular}  \\ \hline
+			\multicolumn{1}{|l|}{CP3}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una\\ tabla con valores\\ numéricos\end{tabular}}                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se devuelven los valores\\ normalizados acorde a los \\ resultados del CP2\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se devuelven los valores\\ normalizados acorde a los\\ resultados del CP2\end{tabular} \\ \hline
+			\multicolumn{1}{|l|}{CP4}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una\\ columna con más de 15 \\ categorías distintas\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se realiza la codificación \\ One-Hot a estos valores\end{tabular}}                      & \begin{tabular}[c]{@{}l@{}}Se realiza la codificación\\ One-Hot a estos valores\end{tabular}                     \\ \hline
+		\end{tabular}%
+	}
+	\end{spacing}
+	\caption{Caso de prueba al componente \textit{Codificar y normalizar}}
+	\label{tab:cp-codificarnorm}
+\end{table}
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.55\linewidth]{"figuras/capi 3/pruebas-jenn/bd-loan_train-salida-disc"}
-	\caption{Salida del sucomponente \textit{Discretizer} para la BD1}
-	\label{fig:bd-loantrain-salida-disc}
-\end{figure}
+\section{Pruebas de caja negra al componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}}
 
-Al ejecutarse el flujo completo, se obtiene como resultado que el algoritmo con la discretización automatizada (ID3 \#1) presenta mejores resultados, con un \textit{accuracy} de 0.744 y un Cohen's Kappa de 0.456; a diferencia del algoritmo ID3 con discretización predefinida (ID3), con \textit{accuracy} de 0.697 y Cohen's Kappa de 0.3372. Estos resultados se encuentran en la figura \ref{fig:bd-loantrain-result-barras}.
+\subsection{Caso de prueba para el modelo RProp}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.55\linewidth]{"figuras/capi 3/pruebas-jenn/bd-loan_train-result-barras"}
-	\caption{Comparación de los resultados de ambos algoritmos para la BD1}
-	\label{fig:bd-loantrain-result-barras}
-\end{figure}
+\subsection{Caso de prueba para el modelo PNN}
 
-Para la BD2, se ejecuta el componente, donde el método de discretización que presenta mejores resultados es CAIM, con un \textit{accuracy} de 0.936 y un Cohen's Kappa de 0.865. Los resultados de la comparación de los métodos de discretización se encuentran en la figura \ref{fig:bd-cancerdata-ranking}; así como la salida del subcomponente \textit{Discretizer} en la figura \ref{fig:bd-cancerdata-salida-disc}.
+\subsection{Caso de prueba para el modelo SVM}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/pruebas-jenn/bd-cancer_data-ranking"}
-	\caption{Comparación de métodos de discretización para la BD2}
-	\label{fig:bd-cancerdata-ranking}
-\end{figure}
+\subsection{Caso de prueba para el modelo Random Forest}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/pruebas-jenn/bd-cancer_data-salida-disc"}
-	\caption{Salida del subcomponente \textit{Discretizer} para la BD2}
-	\label{fig:bd-cancerdata-salida-disc}
-\end{figure}
+\section{Pruebas de integración al componente \textit{AutoML Clasificación (pre-procesado)}}
 
-Al ejecutarse el flujo completo, una vez más el algoritmo con mejores resultados fue ID3 \# 1, donde el \textit{accuracy} alcanzó 0.9851, y el AUC un valor de 0.9797; a diferencia del algoritmo ID3 con 0.8818 y 0.9314, respectivamente. En la figura \ref{fig:bd-cancerdata-graficos} se muestran los resultados de las comparaciones entre los dos algoritmos de clasificación.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/pruebas-jenn/bd-cancer_data-graficos"}
-	\caption{Comparación de resultados entre ambos algoritmos para la BD2}
-	\label{fig:bd-cancerdata-graficos}
-\end{figure}
-
-La última prueba realizada es con el objetivo de validar la entrada al componente, dado que el nodo \textit{CAIM Binner} solamente admite valores numéricos. Por tanto, se emplea una base de datos que solamente contiene atributos de tipo \textit{string}, para comprobar que funciona la validación realizada. En el anexo \ref{anex:bd3-tipo-dato} se puede observar que todas las columnas son nominales, así como en la figura \ref{fig:bd-krvskp-salida} se comprueba la salida del subcomponente \textit{Discretizer} de la misma base de datos sin ninguna modificación.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/pruebas-jenn/bd-kr_vs_kp-salida"}
-	\caption{Salida el subcomponente \textit{Discretizer} para la BD3}
-	\label{fig:bd-krvskp-salida}
-\end{figure}
-
-\section{Casos de prueba del \textit{Componente AutoML (Optimización de Hiperparámetros)}}
-A continuación, se presenta el correcto funcionamiento del \textit{Componente AutoML (Optimización de Hiperparámetros)}, al suministrarle las bases de datos expuestas previamente. En cada caso, se muestra una comparación entre la aplicación del algoritmo Red neuronal por retro-propagación (RProp), con y sin la utilización del componente propuesto. En la figura \ref{fig:flujo-comp-algoritmos-hpo} se muestra el flujo creado para la comparación de los algoritmos.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/pruebas-ray/flujo-comp-algoritmos-hpo"}
-	\caption{Flujo para la comparación de algoritmos}
-	\label{fig:flujo-comp-algoritmos-hpo}
-\end{figure}
-
-\subsection{Pruebas individuales al \textit{Componente AutoML (Optimización de Hiperparámetros)}}
-Para la BD1 se ejecuta correctamente el componente. En la figura \ref{fig:eval-rend-modelo-bd1-hpo}, se muestra la evaluación del rendimiento del modelo en función de las clases positivas y negativas mediante el área bajo la curva (AUC) y la efectividad de clasificación (accuracy). En la figura \ref{fig:roc-bd1-hpo} se presenta una comparación de los modelos mediante una curva ROC.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/pruebas-ray/eval-rend-modelo-bd1-hpo"}
-	\caption{Evaluación del rendimiento del modelo con BD1}
-	\label{fig:eval-rend-modelo-bd1-hpo}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.55\linewidth]{"figuras/capi 3/pruebas-ray/roc-bd1-hpo"}
-	\caption{Curva ROC comparación de modelos con BD1}
-	\label{fig:roc-bd1-hpo}
-\end{figure}
-
-Como se evidencia en la figura \ref{fig:eval-rend-modelo-bd1-hpo}, el algoritmo optimizado (HPO RProp) presenta un AUC 0.75 y un \textit{accuracy} 0.82, mayor que el del algoritmo sin optimizar (RProp) con AUC 0.68 y \textit{accuracy} 0.78; lo que se traduce a que el modelo HPO RProp puede distinguir con mayor precisión entre las clases positivas y negativas, presentando mejor capacidad para clasificar correctamente los datos, con respecto a RProp. En la figura \ref{fig:roc-bd1-hpo}, se observa que HPO RProp llega más rápido al óptimo global, logrando un mejor rendimiento en menos tiempo de entrenamiento, o iteraciones, que el modelo representado por RProp. \\
-
-Para la BD2 se ejecuta correctamente el componente. En la figura \ref{fig:eval-rend-modelo-bd2-hpo}, se muestra la evaluación del rendimiento del modelo en función de las clases positivas y negativas mediante el AUC y el \textit{accuracy}. En la figura \ref{fig:roc-bd2-hpo}, se presenta una comparación de los modelos mediante una curva ROC.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/pruebas-ray/eval-rend-modelo-bd2-hpo"}
-	\caption{Evaluación del rendimiento del modelo para la BD1}
-	\label{fig:eval-rend-modelo-bd2-hpo}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.55\linewidth]{"figuras/capi 3/pruebas-ray/roc-bd2-hpo"}
-	\caption{Curva ROC de comparación de modelos para la BD2}
-	\label{fig:roc-bd2-hpo}
-\end{figure}
-
-Como se evidencia en la figura \ref{fig:eval-rend-modelo-bd2-hpo}, el algoritmo optimizado (HPO RProp) presenta un AUC 0.997 y un \textit{accuracy} 0.979, mayor que el del algoritmo sin optimizar (RProp), con AUC 0.994 y \textit{accuracy} 0.973. No obstante, la diferencia no es significativa, lo que se puede traducir a que el modelo HPO RProp y el modelo RProp tienen la misma capacidad para clasificar correctamente las muestras en términos generales. En la figura \ref{fig:roc-bd2-hpo}, se observa que HPO RProp llega más rápido al óptimo global, logrando un mejor rendimiento en menos tiempo de entrenamiento, o iteraciones, que el modelo representado por RProp.
-
-\subsection{Pruebas de integración al \textit{Componente AutoML Clasificación (pre-procesado)}}
-En la figura \ref{fig:integracion-comp-hpo} se presenta la correcta integración del \textit{Componente AutoML Clasificación (Optimización de Hiperparámetros)} al \textit{Componente AutoML Clasificación (pre-procesado)}. Se ejecuta una prueba con la BD4 (figura \ref{fig:eval-integ-bd2}) para validar el funcionamiento correcto de la integración.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/integracion-comp-hpo"}
-	\caption{Integración de ambos componentes.}
-	\label{fig:integracion-comp-hpo}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"figuras/capi 3/pruebas-ray/eval-integ-bd2"}
-	\caption{Evaluación de la integración con la BD4}
-	\label{fig:eval-integ-bd2}
-\end{figure}
-
-En la figura \ref{fig:eval-integ-bd2} se aprecia que el componente integrado presenta un mayor \textit{accuracy} (0.42) y Cohen’s Kappa (0.14) con respecto al componente sin integrar, con un \textit{accuracy} de 0.36 y Cohen’s Kappa de 0.03. Por este motivo, se puede determinar que el componente con la integración presenta una mejor capacidad para clasificar correctamente los datos, así como una mayor consistencia en las respuestas de los evaluadores. En consecuencia, se puede tener una mayor confianza en los resultados.
 
 
 \section{Conclusiones parciales}
