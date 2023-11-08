@@ -39,9 +39,7 @@ Existen varios tipos de aprendizaje en Machine Learning, cada uno con sus propia
 	\item Aprendizaje semisupervisado: es una clase de técnicas de aprendizaje automático que hacen uso de ejemplos etiquetados y no etiquetados para aprender un modelo. Los ejemplos etiquetados se usan para aprender modelos de clase y los ejemplos no etiquetados se usan para refinar los límites entre clases \citep{Han2011}.
 \end{itemize}
 
-
 A medida que la cantidad de datos disponibles continúa creciendo exponencialmente, y la complejidad de los modelos de Machine Learning aumenta, surge una necesidad cada vez mayor de contar con herramientas y técnicas que permitan a los usuarios automatizar el proceso de construcción de modelos. Es aquí donde entra en juego el Aprendizaje Automático Automatizado.
-
 
 \begin{comment}
 En particular, una de las técnicas centrales del aprendizaje supervisado es la clasificación, mencionada anteriormente como una de las tareas de la minería de datos, que permite a los algoritmos asignar etiquetas a datos y reconocer patrones subyacentes. Esta habilidad de clasificar datos en categorías predefinidas se traduce en una amplia gama de aplicaciones, lo que demuestra su versatilidad en la resolución de problemas del mundo real.
@@ -49,9 +47,7 @@ En particular, una de las técnicas centrales del aprendizaje supervisado es la 
 
 %Texto... Es una buena práctica culminar (o iniciar) cada epígrafe con una referencia al que sigue (o precede) para dar fluidez a su lectura y no se vea como un \emph{copia y pega} sin ninguna relación.
          
-
 \section{\textit{AutoML}}
-
 El campo del Aprendizaje Automático Automatizado (AutoML), tiene como objetivo tomar decisiones de una manera automatizada, objetiva y basada en datos: el usuario simplemente proporciona datos y el sistema AutoML determina automáticamente el enfoque que funciona mejor para esta aplicación en particular \citep{hutter2019automated}. \\
 AutoML (Automated Machine Learning) es una técnica que tiene como objetivo automatizar todo o parte del proceso de Machine Learning, incluyendo la selección de algoritmos, la optimización de hiperparámetros, la selección de características y la evaluación del rendimiento del modelo \citep{he2021automl}, \citep{tuggener2019automated}. La relación entre AutoML y Machine Learning es que AutoML es una técnica que se utiliza para automatizar el proceso de Machine Learning, por tanto se utiliza para automatizar todo o parte del proceso de selección del mejor modelo de Machine Learning, para un conjunto de datos dado. La automatización del proceso de Machine Learning proporciona una solución eficiente y escalable para el análisis de grandes conjuntos de datos, lo que puede resultar en un ahorro significativo de tiempo y recursos para los profesionales de ciencia de datos e investigadores. \\ 
 Tras un análisis del estado del arte acerca del proceso de AutoML \citep{tuggener2019automated}, \citep{waring2020automated}, \citep{hutter2019automated}, \citep{he2021automl}, se pueden presentar como tareas principales las siguientes:
@@ -64,9 +60,188 @@ Tras un análisis del estado del arte acerca del proceso de AutoML \citep{tuggen
 	\item Interpretación del modelo: Consiste en analizar el modelo de aprendizaje automático para comprender cómo se toman las decisiones y qué variables son importantes para la predicción.
 \end{itemize}
 
-En el marco de la presente investigación, se aborda de manera exhaustiva el enfoque fundamental de AutoML, centrándonos en dos aspectos cruciales que se explorarán en los epígrafes posteriores. En particular, se explorarán con detalle el pre-procesado de datos, que se enfoca en la preparación y limpieza de conjuntos de datos, y la optimización de hiperparámetros (HPO), que se concentra en la búsqueda de configuraciones óptimas para los modelos. Estos temas esenciales constituyen la base de esta investigación y servirán como pilares para la posterior discusión y análisis de resultados en este estudio. \\
-En este contexto, es relevante mencionar que se establecerá una conexión crucial entre el AutoML y una plataforma  ampliamente empleada en este contexto, como lo es KNIME, un entorno de trabajo ampliamente utilizado en la comunidad científica y empresarial para la construcción y despliegue de flujos de trabajo de análisis de datos y aprendizaje automático. 
+En el marco de la presente investigación, se aborda de manera exhaustiva el enfoque fundamental de AutoML, centrándonos en dos aspectos cruciales que se explorarán en los epígrafes posteriores. En particular, se analizarán con detalle el pre-procesado de datos, que se enfoca en la preparación y limpieza de conjuntos de datos, y la optimización de hiperparámetros (HPO), que se concentra en la búsqueda de configuraciones óptimas para los modelos. Estos temas esenciales constituyen la base de esta investigación y servirán como pilares para la posterior discusión y análisis de resultados en este estudio. 
 
+\subsection{Pre-procesado} \label{epig:preprocesado}
+Una tarea importante en el proceso de AutoML es el pre-procesamiento de datos, siendo el conjunto de técnicas utilizadas para preparar los datos de entrada antes de alimentarlos a un modelo de aprendizaje automático. Esta etapa es la equivalente a la fase de selección, limpieza y transformación del proceso de KDD, descrita brevemente en la sección \ref{kdd}. \\
+El pre-procesamiento de datos ayuda a mejorar la calidad de los datos de entrada y puede mejorar el rendimiento del modelo. La automatización del pre-procesamiento de datos a través de herramientas de AutoML, puede mejorar la eficiencia del proceso y ayudar al personal especializado, o sin mucha experiencia en el campo, a trabajar de manera más efectiva. Entre las técnicas de pre-procesado de datos se encuentran la discretización, la normalización, el tratamiento de valores faltantes y de atributos de tipo \textit{string}.
+
+\subsubsection*{Discretización} \label{sub-epigrafe-disc}
+Este procedimiento transforma datos cuantitativos en datos cualitativos, es decir, atributos numéricos en atributos discretos o nominales con un número finito de intervalos, obteniendo una partición no superpuesta de un dominio continuo. Luego se establece una asociación entre cada intervalo con un valor numérico discreto. Una vez realizada la discretización, los datos pueden ser tratados como datos nominales durante cualquier proceso de minería de datos \citep{garcia2015data}, \citep{garcia2012survey}. \\
+Es necesario realizar la discretización de variables porque, entre varios factores, muchos de los algoritmos de Aprendizaje Automático requieren el uso de valores nominales solamente, como es el caso de ID3, Redes Bayesianas y Apriori. Otras ventajas derivadas de la discretización son la reducción y simplificación de datos, agilizando el aprendizaje y arrojando resultados más precisos, compactos y breves; y se reduce el posible ruido presente en los datos \citep{garcia2012survey}. No obstante, cualquier proceso de discretización conlleva generalmente una pérdida de información, siendo la minimización de esta pérdida el objetivo principal de un discretizador. \\
+La elección del número de bins o intervalos para la discretización de datos es un proceso importante en el análisis de datos cuantitativos. El número de bins determina cómo se agrupan los valores continuos en categorías o intervalos discretos y puede influir en la interpretación de los resultados. Normalmente, este número es a elección del usuario, a pesar de que no existe una regla única para determinar el número de bins. En la literatura se han encontrado otros métodos, como:
+\begin{itemize}
+	
+	\item Regla de Sturges \citep{coria2013mineria}: Propuesta por Herbert Sturges en 1926 \citep{sturges1926choice}, es una regla práctica para la selección del número de clases que se deben considerar al elaborar un histograma. Este número (\textit{k}) viene dado por la fórmula \ref{sturges}, donde \textit{n} es el tamaño de la muestra.
+	\begin{equation} \label{sturges}
+		k = 1 + \log_{2} n
+	\end{equation}
+	
+	\item Validación cruzada \citep{torgo1997search}: La idea básica es probar diferentes configuraciones de parámetros y elegir la que proporcione la mejor precisión estimada. Esta mejor configuración encontrada se utilizará luego en el algoritmo de aprendizaje en la evaluación real, utilizando un conjunto de pruebas independiente. En cuanto al componente de búsqueda, se utiliza el escalador de colinas (hill-climbing) junto con un parámetro de anticipación configurable para minimizar el conocido problema de los mínimos locales. Para la estrategia de validación se emplea la validación cruzada.
+	
+	\item Tamaño de la muestra \citep{dougherty1995supervised}: Se calcula k teniendo en cuenta el número de valores distintos observados en el conjunto de entrenamiento, utilizando
+	\begin{equation}
+		k = max(1, 2 * \log l )
+	\end{equation}
+	donde \textit{l} es el número de valores distintos observados para cada atributo.
+	
+\end{itemize}
+
+La identificación del mejor discretizador para cada situación es una tarea muy difícil de llevar a cabo. A pesar de la riqueza de la literatura, y aparte de la ausencia de una categorización completa de los discretizadores usando una notación unificada, hay pocos intentos de compararlos empíricamente. Esto se debe a que la evaluación de resultados es un tema complejo y depende de la necesidad del usuario en una aplicación en particular; además, la evaluación se puede hacer de muchas maneras. Existen tres dimensiones importantes según \citep{liu2002discretization}: 
+\begin{enumerate}
+	\item El número total de intervalos: intuitivamente, cuantos menos puntos de corte, mejor será el resultado de la discretización.
+	\item El número de inconsistencias causadas por la discretización: no debe ser mucho mayor que el número de inconsistencias de los datos originales antes de la discretización.
+	\item Precisión predictiva: cómo la discretización ayuda a mejorar la precisión.
+\end{enumerate}
+En resumen, se necesitan al menos tres dimensiones: simplicidad, consistencia y precisión. Idealmente, el mejor resultado de discretización puede obtener la puntuación más alta en los tres departamentos. En realidad, puede no ser alcanzable o necesario. Existen diversos algoritmos y enfoques utilizados para realizar esta conversión:
+
+\begin{itemize}
+	
+	\item Agrupamiento (binning): es el método más simple para discretizar un atributo de valor continuo mediante la creación de un número específico de grupos (bins). Los bins se pueden crear con el mismo ancho (\textit{equal-width}) o la misma frecuencia (\textit{equal-frequency}). Cada bin está asociado con un valor discreto distinto. En \textit{equal-width}, el rango continuo de una característica se divide uniformemente en intervalos que tienen un ancho igual, y cada intervalo representa un bin. En \textit{equal-frequency}, se coloca un número igual de valores continuos en cada bin \citep{liu2002discretization}, \citep{yang2009discretization}. 
+	
+	\item Basado en cuantiles (\textit{quantiles-based}): Un método simple y similar a los anteriores, donde se producen bins correspondientes a una lista de probabilidades dada. El elemento más pequeño corresponde a una probabilidad de 0 y el más grande a una probabilidad de 1. 
+	
+	\item CAIM (Clustering and Mutual Information): El objetivo es encontrar el número mínimo de intervalos discretos mientras se minimiza la pérdida de interdependencia de atributo de clase. El algoritmo utiliza información de interdependencia de atributo de clase como criterio para la discretización óptima \citep{kurgan2004caim}. 
+	
+\end{itemize}
+
+Existen otros métodos, que según el estudio realizado en \citep{garcia2012survey} son los más empleados, aparte de los mencionados anteriormente, como MDLP \citep{FI1993}, ID3 \citep{quinlan1993c}, ChiMerge \citep{K1992}, 1R \citep{holte1993very}, D2 \citep{catlett1991changing}, y Chi2 \citep{liu1997feature}. Sin embargo, en este contexto de investigación, es importante destacar que estos no serán empleados para la discretización de los atributos. La decisión se basa en la disponibilidad de implementaciones en KNIME de los métodos de agrupamiento, el basado en cuantiles (quantiles-based) y el algoritmo CAIM. Esta selección se realiza en consonancia con la revisión de la literatura y la investigación existente en el campo.
+
+\subsubsection*{Normalización}
+Las variables del conjunto de datos pueden variar en términos de magnitud, rango y unidad. Esto puede afectar negativamente el rendimiento de algoritmos, como SVM y redes neuronales, que emplean, en su mayoría, datos numéricos. En aras de resolver este problema, se realiza la normalización. Esta consiste  en ajustar los valores de una variable para que estén dentro de un rango específico o sigan una distribución particular. Se ejecuta principalmente para garantizar que las diferencias en la escala de las variables no afecten negativamente el rendimiento de los algoritmos de aprendizaje automático; y para facilitar la interpretación de los datos.\\
+Existen varias técnicas de normalización comunes, donde algunas de las más utilizadas son la normalización Min-Max, Z-Score y Escala Decimal \citep{garcia2012survey}. En la literatura se pueden encontrar otras técnicas, descritas a continuación:
+\begin{itemize}
+	\item Normalización Min-Max: Transforma los valores de una variable para que estén en un rango específico, generalmente entre 0 y 1. Desventaja: Es sensible a valores atípicos.
+	\item Normalización Z-score (estandarización): Transforma los valores para que tengan una media de 0 y una desviación estándar de 1. Desventaja: No escala los valores a un rango específico.
+	\item Normalización de Escala Decimal: Transforma los valores desplazando el punto decimal, usando una división de potencia de diez, de modo que el valor absoluto máximo sea siempre inferior a 1 después de la transformación. Desventaja: Puede llevar a una pérdida significativa de precisión en los valores pequeños. 
+	\item Normalización sólida \citep{polatgil2022investigation}: Este método es más útil especialmente cuando hay un valor atípico en los datos porque utiliza el valor mediano en lugar de la media y el rango de cuartiles en lugar del rango de valores. Sin embargo, la desventaja es que esta reducción de influencia de valores atípicos puede llevar a una pérdida de sensibilidad a la variabilidad de los datos.
+	\item Escalador de Máximo Absoluto (Max Abs): En este método cada característica de los datos se obtiene dividiendo su valor máximo absoluto \citep{polatgil2022investigation}. Desventaja: No escala los valores a un rango específico, lo que puede dificultar la interpretación.
+	\item Normalización AMZD: Propuesta en \citep{patro2015normalization} y similar a Min-Max, transforma los valores de datos de manera que tengan una representación en un rango de 0 y 1, con la diferencia de que funciona a nivel individual, lo que significa que se aplica a cada elemento de datos por separado; es independiente del tamaño del conjunto de datos; y
+	es independiente del número de dígitos en cada elemento de datos. Sin embargo,  presenta como desventaja que solo puede ser aplicada a datos enteros.
+\end{itemize}
+
+En el contexto de AutoML (Aprendizaje Automático Automatizado), donde se busca una automatización eficiente del proceso de construcción de modelos, es crucial identificar un normalizador que sea coherente con los algoritmos utilizados. Algunos algoritmos pueden ser más sensibles a la escala y la distribución de las variables que otros. Por lo tanto, en esta investigación se realizan experimentos para evaluar el rendimiento de los modelos con diferentes técnicas de normalización y se selecciona la que maximice la calidad de las predicciones. En el capítulo \ref{chap:2} se profundiza en esta tarea.
+
+\subsubsection*{Tratamiento de valores faltantes} \label{secc:mv}
+Los valores faltantes o perdidos son datos que no aparecen en la celda de la columna que les corresponde. Esto puede ocurrir por diversas razones, como errores en la recolección de datos, omisiones intencionales, fallos en la medición o simplemente porque no se disponía de información en el momento de la recopilación. Esto trae consigo varias dificultades: disminución de la eficacia, complicaciones en la gestión y análisis de datos; así como a resultados sesgados. Sin embargo, los datos incompletos son objeto de investigación debido a su influencia en la precisión de la clasificación. Normalmente, los valores perdidos pueden ser manejados de varios métodos \citep{garcia2015data}, \citep{ventevogel2020construction}:
+\begin{itemize}
+	\item Descartar los valores: Consiste en eliminar por completo los registros que contienen valores faltantes. Descartar completamente un atributo es un enfoque que se puede utilizar cuando se observan muchos valores perdidos para el mismo. Una regla general es que si faltan más del 60-70\% de los valores, es mejor eliminar el atributo \citep{ventevogel2020construction}. Sin embargo, este método puede resultar en la pérdida de información valiosa y reducir el tamaño de la muestra.
+	\item Imputación mediante muestreo: Este enfoque es más adecuado para funciones no categóricas. Al aplicarlo, se utilizan procedimientos de máxima verosimilitud para estimar los parámetros de la porción completa de los datos. Utilizando estos parámetros, los valores perdidos se completan mediante muestreo de esta distribución estimada.
+	\item Imputación múltiple: Implica reemplazar los valores faltantes por un valor constante, como la media, la mediana o la moda de la variable en cuestión. Este enfoque es útil cuando los valores faltantes son aleatorios y no se espera que sigan un patrón específico. Para datos faltantes más complejos, es posible utilizar modelos predictivos para estimar los valores perdidos. Esto puede incluir regresiones, árboles de decisión o métodos de Machine Learning más avanzados.
+\end{itemize}
+En el contexto de este análisis, nos enfocamos en este último método. Existe una amplia familia de métodos de imputación, desde técnicas de imputación simples como sustitución de medias, KNN, etc.; a aquellos que analizan las relaciones entre atributos tales como: basados en SVM, basados en clustering, regresiones logísticas, procedimientos de máxima verosimilitud e imputación múltiple. En esta investigación se emplean los métodos KNN y K-Means para la imputación de estos valores, dado que en KNIME se tiene la posibilidad de implementarlos y en la literatura se ha demostrado que son robustos para esta tarea \citep{tsai2022empirical}, \citep{batista2003analysis}, \citep{patil2010missing}, \citep{li2004towards}.\\
+K-Vecinos Más Cercanos (K-Nearest Neighborst o KNN) es un algoritmo de aprendizaje supervisado, que se utiliza comúnmente para la imputación de valores faltantes en conjuntos de datos. La idea básica es encontrar las \textit{k} observaciones más cercanas a la observación con el valor faltante, y utilizar los valores de esas observaciones para estimar el valor faltante. \\
+Por otra parte, K-Medias (K-Means) es un algoritmo de aprendizaje no supervisado que se utiliza para la agrupación de datos. Se puede usar como parte de un enfoque más amplio para la imputación, por ejemplo, para agrupar observaciones similares y luego imputar valores faltantes dentro de cada grupo utilizando técnicas específicas, como la imputación de la media o la mediana del grupo.
+
+\subsubsection*{Tratamiento de atributos de alta cardinalidad}\label{alta-cardinalidad}
+Los atributos categóricos, en contraste con los atributos numéricos, representan categorías o etiquetas. Se dividen en dos tipos principales: nominales, que representan categorías sin orden específico (como colores o países), y ordinales, que muestran un orden jerárquico (como niveles educativos). En muchos conjuntos de datos, es común encontrarse con atributos categóricos que presentan una alta cardinalidad. La cardinalidad de un atributo categórico esta definida por el número de valores distintos que un atributo puede tomar \citep{moeyersoms2015including}. Las variables categóricas de alta cardinalidad son variables para las cuales el número de niveles diferentes es grande en relación con el tamaño de la muestra de un conjunto de datos. \\
+Estos atributos presentan desafíos significativos en el análisis de datos y requieren un manejo cuidadoso. Uno de los problemas clave que se enfrentan es la complejidad computacional, ya que una gran cantidad de categorías puede aumentar el tiempo de procesamiento y el consumo de memoria. Además, pueden llevar a problemas de sobreajuste en modelos de aprendizaje automático y dificultar la interpretación de resultados. Por ejemplo, en un país existen muchos importadores y exportadores diferentes. Al entrenar un modelo de aprendizaje automático, este tipo de datos no son útiles, ya que dificulta la generalización del modelo, pero con un método de codificación adecuado, se ha demostrado que estas características mejoran el rendimiento del modelo de clasificación \citep{hooi2022feature}, \citep{cerda2020encoding}. Para abordar estos problemas, existen varias estrategias, como el agrupamiento semántico, que consiste en identificar grupos significativos desde el punto de vista semántico \citep{cerda2018similarity}; y distintos métodos de codificación, como One-Hot, Target, Peso de Evidencia (WOE) y Radio Supervisado. \\
+One-Hot Encoding transforma una característica categórica de \textit{q} categorías únicas en representaciones numéricas, construyendo \textit{q} atributos binarios, uno para cada categoría; \citep{avanzi2023machine}. En el ejemplo de la figura \ref{fig:one-hot-ejemplo}, los códigos ZIP de clientes individuales (C1, C2, etc.) se transforman utilizando este método, donde se crea una variable  para cada código ZIP. \\
+En otras palabras, cada dimensión representa la ausencia o presencia de una categoría dada. En \citep{hooi2022feature} se realizan pruebas para comparar el desempeño de varias técnicas de codificación con respecto a algoritmos de Aprendizaje Automático, como SVM, árboles de decisión y redes neuronales, lo cual, con respecto al codificador One-Hot, se obtuvieron muy buenos resultados. \\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{"figuras/capi 1/one-hot-ejemplo"}
+	\caption{Ejemplo de One-Hot Encoding (también conocido como Dummy Encoding) para el atributo ZIP Code}
+	\label{fig:one-hot-ejemplo}
+\end{figure}
+Este método, aunque eficaz para atributos de baja cardinalidad, presenta la desventaja de generar una alta dimensionalidad, lo que puede ocasionar desafíos computacionales y estadísticos. Para evitarlo, es necesario aplicar reducción de dimensionalidad en la matriz de características resultante. Un enfoque natural es utilizar el Análisis de Componentes Principales (PCA) \citep{mahmood2022accurate}, \citep{kasemtaweechok2021large} , donde la idea básica es encontrar un conjunto de transformaciones lineales de las variables originales que puedan describir la mayor parte de la varianza utilizando un número relativamente menor de variables \citep{garcia2015data}. Este enfoque permite la combinación de la esencia de los atributos originales para formar un nuevo subconjunto más pequeño de atributos. \\
+La reducción de la cardinalidad comprende las transformaciones aplicadas para obtener una representación reducida de los datos originales. Un ejemplo de reducción de cardinalidad es la introducción de un valor \textit{otros}, que se asigna a los valores que representan menos de un cierto umbral en el atributo \citep{casas2019data}. Esto es especialmente útil cuando muchos valores ocurren muy pocas veces \citep{ventevogel2020construction}.
+
+\subsection{Optimización de hiperparámetros} \label{epig:hpo}
+La optimización de hiperparámetros es un componente esencial en el campo del aprendizaje automático. En el proceso de entrenar modelos, los hiperparámetros desempeñan un papel crítico al influir en el rendimiento y la capacidad de generalización de un algoritmo. La tarea de optimizar estos hiperparámetros implica encontrar la combinación óptima que maximice la eficiencia, precisión y rendimiento de un modelo en un conjunto de datos de prueba o validación  \citep{hastie2009elements}. La optimización de hiperparámetros automatizada (HPO) tiene varios casos de uso importantes  \citep{hutter2019automated}; puede
+\begin{itemize}
+	\item reducir el esfuerzo humano necesario para aplicar el aprendizaje automático. Particularmente importante en el contexto de AutoML,
+	\item mejorar el rendimiento de los algoritmos de aprendizaje automático (adaptándolos al problema en cuestión), y
+	\item mejorar la reproducibilidad y equidad de los estudios científicos.
+\end{itemize}
+Para ahorrar tiempo y mejorar la precisión de los modelos de aprendizaje automático, se combina la selección de algoritmos y la optimización de hiperparámetros en un solo proceso, denominado Selección de Algoritmos y Optimización de Hiperparámetros Combinados (\textit{CASH}, por sus siglas en inglés) \citep{tuggener2019automated}. CASH, en conjunción con la automatización del pre-procesado de los datos, integran el problema general del AutoML, reflejado en la figura \ref{fig:desglose-de-los-subproblemas-de-automl}. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{"figuras/capi 1/Desglose de los subproblemas de AutoML"}
+	\caption{Desglose de los subproblemas de AutoML \citep{zoller2021benchmark}}
+	\label{fig:desglose-de-los-subproblemas-de-automl}
+\end{figure} 
+
+Encontrar los valores óptimos para estos hiperparámetros es crucial para obtener resultados precisos y generalizables. Para lograr esto, existen diversas estrategias de optimización de hiperparámetros que permiten explorar eficientemente el espacio de búsqueda y encontrar las mejores configuraciones.  A continuación, se examinan algunas de estas estrategias:
+
+\begin{itemize}
+	\item Búsqueda aleatoria: Selecciona valores de forma aleatoria dentro de un rango definido. No garantiza encontrar los mejores valores posibles, y puede requerir numerosas iteraciones para encontrar un conjunto de hiperparámetros que proporcione un rendimiento óptimo \citep{geron2022hands},\citep{zoller2021benchmark}.
+	\item Búsqueda voraz: Prueba todas las combinaciones posibles de valores de los hiperparámetros dentro de un rango definido. Presenta una alta demanda computacional, imposible de manejar a medida que escalan los sistemas y las bases de datos \citep{zoller2021benchmark}.
+	\item Búsqueda en cuadrícula: Prueba cada combinación de valores de hiperparámetros y selecciona la combinación que haya dado el mejor rendimiento. Puede ser computacionalmente costoso si el espacio de búsqueda y el número de hiperparámetros es grande \citep{he2021automl}.
+	\item Optimización Bayesiana: Construye modelos probabilísticos para representar la función objetivo, que se actualiza después de cada iteración. Maneja espacios de búsqueda de alta dimensionalidad, y no requiere tantas iteraciones, como la búsqueda en cuadrícula o la búsqueda aleatoria, para encontrar combinaciones de hiperparámetros de alto rendimiento \citep{hutter2019automated}, \citep{he2021automl}.
+	\item Optimización basada en gradiente: Emplea la información del gradiente para optimizar los hiperparámetros de manera iterativa. Genera una gran carga computacional y presenta la limitación de caer en mínimos locales \citep{zoller2021benchmark}.
+\end{itemize} 
+
+Una vez identificadas las variables clave del modelo, es crucial evaluar su rendimiento de manera sólida y confiable. Encontrar los valores óptimos de hiperparámetros es crucial para lograr un modelo eficaz. En este contexto, las estrategias de validación desempeñan un papel esencial, ya que permiten evaluar y comparar diferentes combinaciones de hiperparámetros de manera sistemática y eficiente, garantizando que el modelo esté bien ajustado. En la literatura se encuentran estrategias de validación, como:
+
+\begin{itemize}
+	\item Validación cruzada: Implica dividir el conjunto de datos en múltiples subconjuntos, entrenando y evaluando el modelo en diferentes particiones para estimar su capacidad de generalización. Esta estrategia permite determinar cómo se comporta el modelo con diferentes combinaciones de datos de entrenamiento y prueba, lo que es especialmente importante cuando se trata de la selección de hiperparámetros y la evaluación de su impacto en el rendimiento \citep{hastie2009elements}, \citep{bishop2006pattern}.
+	\item Validación holdout: En esta estrategia, se divide el conjunto de datos en tres partes: un conjunto de entrenamiento, un conjunto de validación y un conjunto de prueba. El conjunto de entrenamiento se utiliza para ajustar los hiperparámetros, el conjunto de validación se utiliza para seleccionar los mejores hiperparámetros y el conjunto de prueba se utiliza para evaluar el rendimiento final del modelo. Esta estrategia es útil cuando se dispone de suficientes datos y se desea tener una evaluación más realista del rendimiento del modelo \citep{bishop2006pattern}.
+	\item Validación escalonada: Esta estrategia es similar a la validación holdout, pero se realiza en múltiples etapas. El conjunto de datos se divide en varios conjuntos, y se realiza un proceso iterativo en el que se entrena y se evalúa el modelo utilizando diferentes combinaciones de hiperparámetros. Esto permite obtener una evaluación más robusta del rendimiento del modelo y reducir el sesgo introducido por una única partición de los datos \citep{hastie2009elements}.
+	\item Validación Bootstrap: En esta estrategia, se generan múltiples muestras de entrenamiento mediante muestreo con reemplazo de los datos originales. Luego, se entrena y evalúa el modelo para cada muestra y se promedian los resultados. Esto permite tener una estimación del rendimiento del modelo en el conjunto de datos original \citep{davison1997bootstrap}.
+\end{itemize}
+La elección de la estrategia adecuada depende del tamaño del conjunto de datos, la complejidad del modelo y la disponibilidad de recursos computacionales. Es importante seleccionar la estrategia que mejor se ajuste a las necesidades específicas del problema y los datos. \\
+A pesar del incesante estudio vinculado al HPO, este sigue presentando en la actualidad diversos desafíos \citep{hutter2019automated}:
+\begin{itemize}
+	\item Costo computacional: la optimización de hiperparámetros puede ser muy costosa en términos de tiempo de cómputo y recursos de hardware, especialmente cuando se utiliza un espacio de hiperparámetros grande o se ejecutan muchas iteraciones de entrenamiento. Esto puede limitar la escalabilidad y la eficiencia de la HPO.
+	\item Generalización del modelo: la optimización de hiperparámetros puede resultar en un modelo altamente ajustado, que no generaliza bien a nuevos datos. Se torna complejo cuando las bases de datos poseen múltiples tipos de datos.
+	\item Complejidad del espacio de hiperparámetros: el espacio de hiperparámetros puede ser muy complejo y estar altamente interconectado, lo que dificulta la exploración y la selección de los hiperparámetros adecuados.
+\end{itemize}
+
+Entre las aplicaciones de HPO, se pueden encontrar dos ejemplos destacados en la literatura. En primer lugar, \citep{hernandeztecnicas} aplica HPO en SVM y bosques aleatorios para predecir enfermedades cardiovasculares. En segundo lugar, \citep{waring2020automated} aborda el desarrollo del problema de HPO en redes neuronales en un contexto de análisis de salud.
+
+\begin{comment}
+	
+	
+	\section{Clasificación}
+	En el uso común, la palabra clasificación significa colocar las cosas en categorías, agruparlas de alguna manera útil. El ser humano generalmente hace esto porque las cosas en un grupo, llamado \textit{clase} en aprendizaje automático, comparten características comunes \citep{sammut2011encyclopedia}. \\
+	En aprendizaje automático, la clasificación se utiliza para identificar a qué clase o categoría pertenece una determinada observación o registro, basándose en un conjunto de características o variables. En esta tarea, se utiliza un algoritmo para construir un modelo predictivo que asigne una etiqueta de clase a cada observación en función de sus características. Este modelo se entrena utilizando un conjunto de datos etiquetados previamente, y luego se aplica a nuevos datos para hacer predicciones \citep{sammut2011encyclopedia}. En las siguientes secciones se describen los algoritmos empleados en el componente AutoML Clasificación (pre-procesado).
+	
+	\subsubsection{Clasificación con Árboles de Decisión}
+	La clasificación con árboles de decisión es un método popular en la minería de datos y en el aprendizaje automático supervisado, utilizado para predecir la clase o categoría de un objeto o registro. Los Árboles de Decisión son unos de los modelos más populares, su representación es de fácil entendimiento, incluso por personas no afines al área, pues su construcción en sencilla: las hojas toman los valores objetivos, mientras los atributos y sus posibles valores conforman los nodos y ramas respectivamente \citep{sammut2011encyclopedia}. \\
+	Basados en árboles de decisión existen otros algoritmos de clasificación como: ID3, C4.5 y CART. Cada uno de ellos fue desarrollado como una versión mejorada del anterior, pero todos tienen una alta eficiencia y tiempos de ejecución reducidos, lo que los hace igualmente populares en la actualidad \citep{javed2022performance}. Por otra parte, el algoritmo Bosque Aleatorio (mejor conocido como Random Forest, por su traducción al inglés), se basa en la idea de combinar múltiples árboles de decisión para mejorar la precisión y la capacidad de generalización del modelo. Se comparan y analizan en \citep{gupta2017analysis}, donde se arrojan sus principales características:
+	\begin{itemize}
+		\item ID3 (Iterative Dichotomiser 3): Basa su funcionamiento en la entropía y la ganancia de información. El árbol se construye iterativamente de arriba hacia abajo, eligiendo en cada caso el atributo con mayor ganancia de información, hasta que la información ganada sea cero o se haya llegado a todas las hojas \citep{javed2022performance}, \citep{gupta2017analysis}. Maneja datos nominales y no tolera valores faltantes.
+		\item C4.5 (Classification 4.5): Desarrollado con el objetivo de mejorar los defectos de ID3. Añade la poda, desestimando las ramas sin aportes, que reduce los errores al clasificar como resultado de un gran número de ramas en el modelo \citep{sammut2011encyclopedia}, \citep{javed2022performance}, \citep{gupta2017analysis}. Adicionalmente maneja valores faltantes y numéricos. 
+		\item CART (Classification and Regression Trees): Genera un árbol binario siguiendo el mismo enfoque entrópico que ID3, pero empleando el coeficiente de Gini como criterio de selección \citep{javed2022performance}, \citep{gupta2017analysis}. Es capaz de manejar datos faltantes, al igual que datos numéricos y nominales.
+		\item Random Forest: Es un algoritmo de aprendizaje automático en el que se construye un conjunto de árboles de decisión para realizar predicciones. Cada árbol se entrena con un subconjunto aleatorio de datos y características, y luego se combina su salida para obtener una predicción más robusta y precisa. Reduce el sobreajuste y mejora la generalización al promediar múltiples modelos \citep{gupta2017analysis}.
+	\end{itemize}
+	
+	\subsubsection{Clasificación con Redes Neuronales}
+	Las redes neuronales o redes neuronales artificiales, son algoritmos de aprendizaje basados en una vaga analogía de cómo funciona el cerebro humano. El aprendizaje se logra ajustando los pesos en las conexiones entre nodos, que son análogas a las sinapsis y las neuronas \citep{sammut2011encyclopedia}. \\
+	Las primeras redes neuronales conocidas como pre-alimentadas, como la de la figura \ref{fig:red-neuronal-prealimentada}, se caracterizan por tener una arquitectura en la que cada capa de neuronas está conectada completamente con la capa siguiente, pero no con la capa anterior. Esto significa que la información fluye de forma unidireccional, sin retroalimentación \citep{abiodun2018state}. 
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{figuras/capi 1/red-neuronal-prealimentada}
+		\caption{Red Neuronal Pre-Alimentada \citep{abiodun2018state}}
+		\label{fig:red-neuronal-prealimentada}
+	\end{figure}
+	Posteriormente, se desarrollaron las redes neuronales por retro-propagación, como la presente en la figura \ref{fig:red-neuronal-retropropagacion}, que comparan la salida obtenida por la red con la salida deseada, y ajustan los pesos de las conexiones entre las neuronas de la red para reducir el error de predicción. La retro-propagación se utiliza para calcular la contribución de cada peso en el error de la red, y así ajustarlos de manera adecuada \citep{abiodun2018state}.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{figuras/capi 1/red-neuronal-retropropagación}
+		\caption{Red neuronal por retro-propagación \citep{abiodun2018state}}
+		\label{fig:red-neuronal-retropropagacion}
+	\end{figure}
+	Gracias a su gran versatilidad se pueden aplicar en una amplia variedad de campos y disciplinas para resolver problemas complejos de aprendizaje automático, como es el procesamiento del lenguaje natural, reconocimiento de voz e imágenes \citep{abiodun2018state}. Debido a la complejidad de sus modelos puede ser difícil su entendimiento, por lo que preferiblemente se utilizan en el contexto del reconocimiento de patrones.
+	
+	\subsubsection{Clasificación con Support Vector Machine}
+	Las Máquinas de Soporte Vectorial (Support Vector Machine o SVM, en inglés), son una clase de algoritmos lineales que se pueden emplear para la clasificación \citep{sammut2011encyclopedia}, cuyo objetivo es encontrar el hiperplano que mejor separa dos clases de datos en un espacio de alta dimensionalidad \citep{guenther2016support}. En la figura \ref{fig:ejemplos-de-posibles-hiperplanos-de-svm} se representa como el hiperplano H2 divide con mayor margen las clases que el hiperplano H1.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.4\linewidth]{"figuras/capi 1/Ejemplos de posibles hiperplanos de SVM"}
+		\caption{Ejemplos de posibles hiperplanos de SVM \citep{sammut2011encyclopedia}}
+		\label{fig:ejemplos-de-posibles-hiperplanos-de-svm}
+	\end{figure}
+	Uno de los desafíos de SVM en problemas de clasificación de múltiples clases es cómo manejar la predicción de estas. En este contexto, existen dos enfoques principales:
+	\begin{itemize}
+		\item Uno contra uno (One-vs-One): Durante la fase de predicción, cada clasificador binario vota por la clase que cree que es correcta y la clase con el mayor número de votos se selecciona como la clase final para el punto de datos dado. Este enfoque presenta la ventaja de que cada clasificador binario solo necesita ser entrenado en un subconjunto de los datos, lo que puede ser útil cuando hay grandes conjuntos de datos. Es más resistente a desequilibrios en la distribución de clases que otros enfoques de SVM \citep{guenther2016support}.
+		\item Uno contra todos (One-vs-All): Entrena un clasificador binario para cada clase posible, donde el conjunto de datos de una clase se considera positivo y los datos de las otras clases se consideran negativos. Durante la fase de predicción, cada clasificador binario vota por su clase correspondiente y la clase con la mayor puntuación se selecciona como la clase final para el punto de datos dado. Fácil de implementar y puede funcionar bien en conjuntos de datos pequeños, pero puede ser menos preciso en conjuntos de datos grandes y complejos \citep{guenther2016support}.
+	\end{itemize}
+	Agregar que existen otros dos enfoques: Clasificación jerárquica (Hierarchical classification) y Clasificación por parejas (Pairwise classification). Cada uno de estos tiene sus propias ventajas y desventajas, y la elección de uno de ellos dependerá del tipo de datos y del problema que se esté tratando de resolver. Es importante mencionar que la clasificación es solo una de las muchas técnicas utilizadas en el Aprendizaje  Automático. 
+	
+\end{comment}
 
 \section{Herramienta de minería de datos KNIME}
 
@@ -150,7 +325,7 @@ Tras analizar de forma independiente cada uno de estas implementaciones, en la t
 		\end{spacing}
 \end{table}
 
-Resulta evidente que lo mas factible es continuar el desarrollo del componente AutoML Clasificación (pre-procesado), para lo cual se propone la automatización total del pre-procesado de los datos y la implementación de la optimización de hiperparámetros como parte esencial para mejorar el rendimiento de los modelos de aprendizaje automático, ahorrar tiempo y recursos, aumentar la robustez, adaptarse a cambios en los datos y avanzar en la investigación y el desarrollo de algoritmos. A lo largo de los próximos epígrafes, se abordarán en profundidad las tareas previamente mencionadas. \\
+Resulta evidente que lo mas factible es continuar el desarrollo del componente AutoML Clasificación (pre-procesado), para lo cual se propone la automatización total del pre-procesado de los datos y la implementación de la optimización de hiperparámetros como parte esencial para mejorar el rendimiento de los modelos de aprendizaje automático, ahorrar tiempo y recursos, aumentar la robustez, adaptarse a cambios en los datos y avanzar en la investigación y el desarrollo de algoritmos.\\
 Durante el transcurso de esta investigación, el componente AutoML de KNIME fue actualizado, a la fecha del 20 de octubre de 2023 \citep{KNIME2023-11}. Estas actualizaciones incluyen algunas mejoras, donde la más relevante es el acceso a los flujos implementados y su modificación. No obstante, tras analizar a más detalle el funcionamiento del componente, se encuentra que se mantiene la predeterminación de las tareas de AutoML. Por ejemplo, la estrategia de optimización de hiperparámetros está establecida a Búsqueda Aleatoria, y para cambiar esta configuración, la única posibilidad es que el usuario se adentre en los flujos implementados; siendo el mismo problema en la etapa del pre-procesado con las actividades de discretización, normalización y manejo de valores faltantes. Por otra parte, el pre-procesado específico de cada algoritmo no se toma en cuenta, lo cual es fundamental en la etapa de preparación de los datos. Asimismo, no se incluyen hiperparámetros que si se toman en cuenta en el desarrollo de esta investigación.
 
 
@@ -163,172 +338,7 @@ Durante el transcurso de esta investigación, el componente AutoML de KNIME fue 
 \end{comment}
 
 
-\section{Pre-procesado} \label{epig:preprocesado}
-Una tarea importante en el proceso de AutoML es el pre-procesamiento de datos, siendo el conjunto de técnicas utilizadas para preparar los datos de entrada antes de alimentarlos a un modelo de aprendizaje automático. Esta etapa es la equivalente a la fase de selección, limpieza y transformación del proceso de KDD, descrita brevemente en la sección \ref{kdd}. \\
-El pre-procesamiento de datos ayuda a mejorar la calidad de los datos de entrada y puede mejorar el rendimiento del modelo. La automatización del pre-procesamiento de datos a través de herramientas de AutoML, puede mejorar la eficiencia del proceso y ayudar al personal especializado, o sin mucha experiencia en el campo, a trabajar de manera más efectiva. Entre las técnicas de pre-procesado de datos se encuentran la discretización, la normalización, el tratamiento de valores faltantes y de atributos de tipo \textit{string}.
 
-\subsubsection*{Discretización} \label{sub-epigrafe-disc}
-Este procedimiento transforma datos cuantitativos en datos cualitativos, es decir, atributos numéricos en atributos discretos o nominales con un número finito de intervalos, obteniendo una partición no superpuesta de un dominio continuo. Luego se establece una asociación entre cada intervalo con un valor numérico discreto. Una vez realizada la discretización, los datos pueden ser tratados como datos nominales durante cualquier proceso de minería de datos \citep{garcia2015data}, \citep{garcia2012survey}. \\
-Es necesario realizar la discretización de variables porque, entre varios factores, muchos de los algoritmos de Aprendizaje Automático requieren el uso de valores nominales solamente, como es el caso de ID3, Redes Bayesianas y Apriori. Otras ventajas derivadas de la discretización son la reducción y simplificación de datos, agilizando el aprendizaje y arrojando resultados más precisos, compactos y breves; y se reduce el posible ruido presente en los datos \citep{garcia2012survey}. No obstante, cualquier proceso de discretización conlleva generalmente una pérdida de información, siendo la minimización de esta pérdida el objetivo principal de un discretizador. \\
-La elección del número de bins o intervalos para la discretización de datos es un proceso importante en el análisis de datos cuantitativos. El número de bins determina cómo se agrupan los valores continuos en categorías o intervalos discretos y puede influir en la interpretación de los resultados. Normalmente, este número es a elección del usuario, a pesar de que no existe una regla única para determinar el número de bins. En la literatura se han encontrado otros métodos, como:
-\begin{itemize}
-
-	\item Regla de Sturges \citep{coria2013mineria}: Propuesta por Herbert Sturges en 1926 \citep{sturges1926choice}, es una regla práctica para la selección del número de clases que se deben considerar al elaborar un histograma. Este número (\textit{k}) viene dado por la fórmula \ref{sturges}, donde \textit{n} es el tamaño de la muestra.
-	\begin{equation} \label{sturges}
-		k = 1 + \log_{2} n
-	\end{equation}
-
-	\item Validación cruzada \citep{torgo1997search}: La idea básica es probar diferentes configuraciones de parámetros y elegir la que proporcione la mejor precisión estimada. Esta mejor configuración encontrada se utilizará luego en el algoritmo de aprendizaje en la evaluación real, utilizando un conjunto de pruebas independiente. En cuanto al componente de búsqueda, se utiliza el escalador de colinas (hill-climbing) junto con un parámetro de anticipación configurable para minimizar el conocido problema de los mínimos locales. Para la estrategia de validación se emplea la validación cruzada.
-
-	\item Tamaño de la muestra \citep{dougherty1995supervised}: Se calcula k teniendo en cuenta el número de valores distintos observados en el conjunto de entrenamiento, utilizando
-	\begin{equation}
-		k = max(1, 2 * \log l )
-	\end{equation}
-	 donde \textit{l} es el número de valores distintos observados para cada atributo.
-
-\end{itemize}
-
-La identificación del mejor discretizador para cada situación es una tarea muy difícil de llevar a cabo. A pesar de la riqueza de la literatura, y aparte de la ausencia de una categorización completa de los discretizadores usando una notación unificada, hay pocos intentos de compararlos empíricamente. Esto se debe a que la evaluación de resultados es un tema complejo y depende de la necesidad del usuario en una aplicación en particular; además, la evaluación se puede hacer de muchas maneras. Existen tres dimensiones importantes según \citep{liu2002discretization}: 
-\begin{enumerate}
-	\item El número total de intervalos: intuitivamente, cuantos menos puntos de corte, mejor será el resultado de la discretización.
-	\item El número de inconsistencias causadas por la discretización: no debe ser mucho mayor que el número de inconsistencias de los datos originales antes de la discretización.
-	\item Precisión predictiva: cómo la discretización ayuda a mejorar la precisión.
-\end{enumerate}
-En resumen, se necesitan al menos tres dimensiones: simplicidad, consistencia y precisión. Idealmente, el mejor resultado de discretización puede obtener la puntuación más alta en los tres departamentos. En realidad, puede no ser alcanzable o necesario. Existen diversos algoritmos y enfoques utilizados para realizar esta conversión:
-
-\begin{itemize}
-	
-	\item Agrupamiento (binning): es el método más simple para discretizar un atributo de valor continuo mediante la creación de un número específico de grupos (bins). Los bins se pueden crear con el mismo ancho (\textit{equal-width}) o la misma frecuencia (\textit{equal-frequency}). Cada bin está asociado con un valor discreto distinto. En \textit{equal-width}, el rango continuo de una característica se divide uniformemente en intervalos que tienen un ancho igual, y cada intervalo representa un bin. En \textit{equal-frequency}, se coloca un número igual de valores continuos en cada bin \citep{liu2002discretization}, \citep{yang2009discretization}. 
-	
-	\item Basado en cuantiles (\textit{quantiles-based}): Un método simple y similar a los anteriores, donde se producen bins correspondientes a una lista de probabilidades dada. El elemento más pequeño corresponde a una probabilidad de 0 y el más grande a una probabilidad de 1. 
-	
-	\item CAIM (Clustering and Mutual Information): El objetivo es encontrar el número mínimo de intervalos discretos mientras se minimiza la pérdida de interdependencia de atributo de clase. El algoritmo utiliza información de interdependencia de atributo de clase como criterio para la discretización óptima \citep{kurgan2004caim}. 
-	
-\end{itemize}
-
-Existen otros métodos, que según el estudio realizado en \citep{garcia2012survey} son los más empleados, aparte de los mencionados anteriormente, como MDLP \citep{FI1993}, ID3 \citep{quinlan1993c}, ChiMerge \citep{K1992}, 1R \citep{holte1993very}, D2 \citep{catlett1991changing}, y Chi2 \citep{liu1997feature}. Sin embargo, en este contexto de investigación, es importante destacar que estos no serán empleados para la discretización de los atributos. La decisión se basa en la disponibilidad de implementaciones en KNIME de los métodos de agrupamiento, el basado en cuantiles (quantiles-based) y el algoritmo CAIM. Esta selección se realiza en consonancia con la revisión de la literatura y la investigación existente en el campo.
-
-\subsubsection*{Normalización}
-Las variables del conjunto de datos pueden variar en términos de magnitud, rango y unidad. Esto puede afectar negativamente el rendimiento de algoritmos, como SVM y redes neuronales, que emplean, en su mayoría, datos numéricos. En aras de resolver este problema, se realiza la normalización. Esta consiste  en ajustar los valores de una variable para que estén dentro de un rango específico o sigan una distribución particular. Se ejecuta principalmente para garantizar que las diferencias en la escala de las variables no afecten negativamente el rendimiento de los algoritmos de aprendizaje automático; y para facilitar la interpretación de los datos.\\
-Existen varias técnicas de normalización comunes, donde algunas de las más utilizadas son la normalización Min-Max, Z-Score y Escala Decimal \citep{garcia2012survey}. En la literatura se pueden encontrar otras técnicas, descritas a continuación:
-\begin{itemize}
-	\item Normalización Min-Max: Transforma los valores de una variable para que estén en un rango específico, generalmente entre 0 y 1. Desventaja: Es sensible a valores atípicos.
-	\item Normalización Z-score (estandarización): Transforma los valores para que tengan una media de 0 y una desviación estándar de 1. Desventaja: No escala los valores a un rango específico.
-	\item Normalización de Escala Decimal: Transforma los valores desplazando el punto decimal, usando una división de potencia de diez, de modo que el valor absoluto máximo sea siempre inferior a 1 después de la transformación. Desventaja: Puede llevar a una pérdida significativa de precisión en los valores pequeños. 
-	\item Normalización sólida \citep{polatgil2022investigation}: Este método es más útil especialmente cuando hay un valor atípico en los datos porque utiliza el valor mediano en lugar de la media y el rango de cuartiles en lugar del rango de valores. Sin embargo, la desventaja es que esta reducción de influencia de valores atípicos puede llevar a una pérdida de sensibilidad a la variabilidad de los datos.
-	\item Escalador de Máximo Absoluto (Max Abs): En este método cada característica de los datos se obtiene dividiendo su valor máximo absoluto \citep{polatgil2022investigation}. Desventaja: No escala los valores a un rango específico, lo que puede dificultar la interpretación.
-	\item Normalización AMZD: Propuesta en \citep{patro2015normalization} y similar a Min-Max, transforma los valores de datos de manera que tengan una representación en un rango de 0 y 1, con la diferencia de que funciona a nivel individual, lo que significa que se aplica a cada elemento de datos por separado; es independiente del tamaño del conjunto de datos; y
-	es independiente del número de dígitos en cada elemento de datos. Sin embargo,  presenta como desventaja que solo puede ser aplicada a datos enteros.
-\end{itemize}
-
- En el contexto de AutoML (Aprendizaje Automático Automatizado), donde se busca una automatización eficiente del proceso de construcción de modelos, es crucial identificar un normalizador que sea coherente con los algoritmos utilizados. Algunos algoritmos pueden ser más sensibles a la escala y la distribución de las variables que otros. Por lo tanto, en esta investigación se realizan experimentos para evaluar el rendimiento de los modelos con diferentes técnicas de normalización y se selecciona la que maximice la calidad de las predicciones. En el capítulo \ref{chap:2} se profundiza en esta tarea.
- 
-\subsubsection*{Tratamiento de valores faltantes} \label{secc:mv}
-Los valores faltantes o perdidos son datos que no aparecen en la celda de la columna que les corresponde. Esto puede ocurrir por diversas razones, como errores en la recolección de datos, omisiones intencionales, fallos en la medición o simplemente porque no se disponía de información en el momento de la recopilación. Esto trae consigo varias dificultades: disminución de la eficacia, complicaciones en la gestión y análisis de datos; así como a resultados sesgados. Sin embargo, los datos incompletos son objeto de investigación debido a su influencia en la precisión de la clasificación. Normalmente, los valores perdidos pueden ser manejados de varios métodos \citep{garcia2015data}, \citep{ventevogel2020construction}:
-\begin{itemize}
-	\item Descartar los valores: Consiste en eliminar por completo los registros que contienen valores faltantes. Descartar completamente un atributo es un enfoque que se puede utilizar cuando se observan muchos valores perdidos para el mismo. Una regla general es que si faltan más del 60-70\% de los valores, es mejor eliminar el atributo \citep{ventevogel2020construction}. Sin embargo, este método puede resultar en la pérdida de información valiosa y reducir el tamaño de la muestra.
-	\item Imputación mediante muestreo: Este enfoque es más adecuado para funciones no categóricas. Al aplicarlo, se utilizan procedimientos de máxima verosimilitud para estimar los parámetros de la porción completa de los datos. Utilizando estos parámetros, los valores perdidos se completan mediante muestreo de esta distribución estimada.
-	\item Imputación múltiple: Implica reemplazar los valores faltantes por un valor constante, como la media, la mediana o la moda de la variable en cuestión. Este enfoque es útil cuando los valores faltantes son aleatorios y no se espera que sigan un patrón específico. Para datos faltantes más complejos, es posible utilizar modelos predictivos para estimar los valores perdidos. Esto puede incluir regresiones, árboles de decisión o métodos de Machine Learning más avanzados.
-\end{itemize}
-En el contexto de este análisis, nos enfocamos en este último método. Existe una amplia familia de métodos de imputación, desde técnicas de imputación simples como sustitución de medias, KNN, etc.; a aquellos que analizan las relaciones entre atributos tales como: basados en SVM, basados en clustering, regresiones logísticas, procedimientos de máxima verosimilitud e imputación múltiple. En esta investigación se emplean los métodos KNN y K-Means para la imputación de estos valores, dado que en KNIME se tiene la posibilidad de implementarlos y en la literatura se ha demostrado que son robustos para esta tarea \citep{tsai2022empirical}, \citep{batista2003analysis}, \citep{patil2010missing}, \citep{li2004towards}.\\
-K-Vecinos Más Cercanos (K-Nearest Neighborst o KNN) es un algoritmo de aprendizaje supervisado, que se utiliza comúnmente para la imputación de valores faltantes en conjuntos de datos. La idea básica es encontrar las \textit{k} observaciones más cercanas a la observación con el valor faltante, y utilizar los valores de esas observaciones para estimar el valor faltante. \\
-Por otra parte, K-Medias (K-Means) es un algoritmo de aprendizaje no supervisado que se utiliza para la agrupación de datos. Se puede usar como parte de un enfoque más amplio para la imputación, por ejemplo, para agrupar observaciones similares y luego imputar valores faltantes dentro de cada grupo utilizando técnicas específicas, como la imputación de la media o la mediana del grupo.
-
-\subsubsection*{Tratamiento de atributos de alta cardinalidad}\label{alta-cardinalidad}
-Los atributos categóricos, en contraste con los atributos numéricos, representan categorías o etiquetas. Se dividen en dos tipos principales: nominales, que representan categorías sin orden específico (como colores o países), y ordinales, que muestran un orden jerárquico (como niveles educativos). En muchos conjuntos de datos, es común encontrarse con atributos categóricos que presentan una alta cardinalidad. La cardinalidad de un atributo categórico esta definida por el número de valores distintos que un atributo puede tomar \citep{moeyersoms2015including}. Las variables categóricas de alta cardinalidad son variables para las cuales el número de niveles diferentes es grande en relación con el tamaño de la muestra de un conjunto de datos. \\
-Estos atributos presentan desafíos significativos en el análisis de datos y requieren un manejo cuidadoso. Uno de los problemas clave que se enfrentan es la complejidad computacional, ya que una gran cantidad de categorías puede aumentar el tiempo de procesamiento y el consumo de memoria. Además, pueden llevar a problemas de sobreajuste en modelos de aprendizaje automático y dificultar la interpretación de resultados. Por ejemplo, en un país existen muchos importadores y exportadores diferentes. Al entrenar un modelo de aprendizaje automático, este tipo de datos no son útiles, ya que dificulta la generalización del modelo, pero con un método de codificación adecuado, se ha demostrado que estas características mejoran el rendimiento del modelo de clasificación \citep{hooi2022feature}, \citep{cerda2020encoding}. Para abordar estos problemas, existen varias estrategias, como el agrupamiento semántico, que consiste en identificar grupos significativos desde el punto de vista semántico \citep{cerda2018similarity}; y distintos métodos de codificación, como One-Hot, Target, Peso de Evidencia (WOE) y Radio Supervisado. \\
-One-Hot Encoding transforma una característica categórica de \textit{q} categorías únicas en representaciones numéricas, construyendo \textit{q} atributos binarios, uno para cada categoría; \citep{avanzi2023machine}. En el ejemplo de la figura \ref{fig:one-hot-ejemplo}, los códigos ZIP de clientes individuales (C1, C2, etc.) se transforman utilizando este método, donde se crea una variable  para cada código ZIP. \\
-En otras palabras, cada dimensión representa la ausencia o presencia de una categoría dada. En \citep{hooi2022feature} se realizan pruebas para comparar el desempeño de varias técnicas de codificación con respecto a algoritmos de Aprendizaje Automático, como SVM, árboles de decisión y redes neuronales, lo cual, con respecto al codificador One-Hot, se obtuvieron muy buenos resultados. \\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{"figuras/capi 1/one-hot-ejemplo"}
-	\caption{Ejemplo de One-Hot Encoding (también conocido como Dummy Encoding) para el atributo ZIP Code}
-	\label{fig:one-hot-ejemplo}
-\end{figure}
-Este método, aunque eficaz para atributos de baja cardinalidad, presenta la desventaja de generar una alta dimensionalidad, lo que puede ocasionar desafíos computacionales y estadísticos. Para evitarlo, es necesario aplicar reducción de dimensionalidad en la matriz de características resultante. Un enfoque natural es utilizar el Análisis de Componentes Principales (PCA) \citep{mahmood2022accurate}, \citep{kasemtaweechok2021large} , donde la idea básica es encontrar un conjunto de transformaciones lineales de las variables originales que puedan describir la mayor parte de la varianza utilizando un número relativamente menor de variables \citep{garcia2015data}. Este enfoque permite la combinación de la esencia de los atributos originales para formar un nuevo subconjunto más pequeño de atributos. \\
-La reducción de la cardinalidad comprende las transformaciones aplicadas para obtener una representación reducida de los datos originales. Un ejemplo de reducción de cardinalidad es la introducción de un valor \textit{otros}, que se asigna a los valores que representan menos de un cierto umbral en el atributo \citep{casas2019data}. Esto es especialmente útil cuando muchos valores ocurren muy pocas veces \citep{ventevogel2020construction}.
-
-\section{Optimización de hiperparámetros} \label{epig:hpo}
-La optimización de hiperparámetros es un componente esencial en el campo del aprendizaje automático. En el proceso de entrenar modelos, los hiperparámetros desempeñan un papel crítico al influir en el rendimiento y la capacidad de generalización de un algoritmo. La tarea de optimizar estos hiperparámetros implica encontrar la combinación óptima que maximice la eficiencia, precisión y rendimiento de un modelo en un conjunto de datos de prueba o validación  \citep{hastie2009elements}. La optimización de hiperparámetros automatizada (HPO) tiene varios casos de uso importantes  \citep{hutter2019automated}; puede
-\begin{itemize}
-	\item reducir el esfuerzo humano necesario para aplicar el aprendizaje automático. Particularmente importante en el contexto de AutoML,
-	\item mejorar el rendimiento de los algoritmos de aprendizaje automático (adaptándolos al problema en cuestión), y
-	\item mejorar la reproducibilidad y equidad de los estudios científicos.
-\end{itemize}
-Para ahorrar tiempo y mejorar la precisión de los modelos de aprendizaje automático, se combina la selección de algoritmos y la optimización de hiperparámetros en un solo proceso, denominado Selección de Algoritmos y Optimización de Hiperparámetros Combinados (\textit{CASH}, por sus siglas en inglés) \citep{tuggener2019automated}. \\
-CASH, en conjunción con la automatización del pre-procesado de los datos, integran el problema general del AutoML, reflejado en la figura \ref{fig:desglose-de-los-subproblemas-de-automl}. 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{"figuras/capi 1/Desglose de los subproblemas de AutoML"}
-	\caption{Desglose de los subproblemas de AutoML \citep{zoller2021benchmark}}
-	\label{fig:desglose-de-los-subproblemas-de-automl}
-\end{figure} 
-Existen varias estrategias de HPO, algunas de las cuales son:
-\begin{itemize}
-	\item Búsqueda aleatoria: Selecciona valores de forma aleatoria dentro de un rango definido. No garantiza encontrar los mejores valores posibles, y puede requerir numerosas iteraciones para encontrar un conjunto de hiperparámetros que proporcione un rendimiento óptimo \citep{geron2022hands},\citep{zoller2021benchmark}.
-	\item Búsqueda voraz: Prueba todas las combinaciones posibles de valores de los hiperparámetros dentro de un rango definido. Presenta una alta demanda computacional, imposible de manejar a medida que escalan los sistemas y las bases de datos \citep{zoller2021benchmark}.
-	\item Búsqueda en cuadrícula: Prueba cada combinación de valores de hiperparámetros y selecciona la combinación que haya dado el mejor rendimiento. Puede ser computacionalmente costoso si el espacio de búsqueda y el número de hiperparámetros es grande \citep{he2021automl}.
-	\item Optimización Bayesiana: Construye modelos probabilísticos para representar la función objetivo, que se actualiza después de cada iteración. Maneja espacios de búsqueda de alta dimensionalidad, y no requiere tantas iteraciones, como la búsqueda en cuadrícula o la búsqueda aleatoria, para encontrar combinaciones de hiperparámetros de alto rendimiento \citep{hutter2019automated}, \citep{he2021automl}.
-	\item Optimización basada en gradiente: Emplea la información del gradiente para optimizar los hiperparámetros de manera iterativa. Genera una gran carga computacional y presenta la limitación de caer en mínimos locales \citep{zoller2021benchmark}.
-\end{itemize} 
-
-Una vez identificadas las variables clave del modelo, es crucial evaluar su rendimiento de manera sólida y confiable. En este contexto, las técnicas de validación son una herramienta esencial para evaluar y comparar diferentes combinaciones de hiperparámetros. Para lograr esto, una técnica esencial es la validación cruzada. La validación cruzada implica dividir el conjunto de datos en múltiples subconjuntos, entrenando y evaluando el modelo en diferentes particiones para estimar su capacidad de generalización. Esta estrategia nos permite determinar cómo se comporta el modelo con diferentes combinaciones de datos de entrenamiento y prueba, lo que es especialmente importante cuando se trata de la selección de hiperparámetros y la evaluación de su impacto en el rendimiento \citep{hastie2009elements}. \\
-A pesar del incesante estudio vinculado al HPO, este sigue presentando en la actualidad diversos desafíos \citep{hutter2019automated}:
-\begin{itemize}
-	\item Costo computacional: la optimización de hiperparámetros puede ser muy costosa en términos de tiempo de cómputo y recursos de hardware, especialmente cuando se utiliza un espacio de hiperparámetros grande o se ejecutan muchas iteraciones de entrenamiento. Esto puede limitar la escalabilidad y la eficiencia de la HPO.
-	\item Generalización del modelo: la optimización de hiperparámetros puede resultar en un modelo altamente ajustado, que no generaliza bien a nuevos datos. Se torna complejo cuando las bases de datos poseen múltiples tipos de datos.
-	\item Complejidad del espacio de hiperparámetros: el espacio de hiperparámetros puede ser muy complejo y estar altamente interconectado, lo que dificulta la exploración y la selección de los hiperparámetros adecuados.
-\end{itemize}
-
-Entre las aplicaciones de HPO, se pueden encontrar dos ejemplos destacados en la literatura. En primer lugar, \citep{hernandeztecnicas} aplica HPO en SVM y bosques aleatorios para predecir enfermedades cardiovasculares. En segundo lugar, \citep{waring2020automated} aborda el desarrollo del problema de HPO en redes neuronales en un contexto de análisis de salud.
-
-
-\section{Clasificación}
-En el uso común, la palabra clasificación significa colocar las cosas en categorías, agruparlas de alguna manera útil. El ser humano generalmente hace esto porque las cosas en un grupo, llamado \textit{clase} en aprendizaje automático, comparten características comunes \citep{sammut2011encyclopedia}. \\
-En aprendizaje automático, la clasificación se utiliza para identificar a qué clase o categoría pertenece una determinada observación o registro, basándose en un conjunto de características o variables. En esta tarea, se utiliza un algoritmo para construir un modelo predictivo que asigne una etiqueta de clase a cada observación en función de sus características. Este modelo se entrena utilizando un conjunto de datos etiquetados previamente, y luego se aplica a nuevos datos para hacer predicciones \citep{sammut2011encyclopedia}. En las siguientes secciones se describen los algoritmos empleados en el componente AutoML Clasificación (pre-procesado).
-
-\subsubsection{Clasificación con Árboles de Decisión}
-La clasificación con árboles de decisión es un método popular en la minería de datos y en el aprendizaje automático supervisado, utilizado para predecir la clase o categoría de un objeto o registro. Los Árboles de Decisión son unos de los modelos más populares, su representación es de fácil entendimiento, incluso por personas no afines al área, pues su construcción en sencilla: las hojas toman los valores objetivos, mientras los atributos y sus posibles valores conforman los nodos y ramas respectivamente \citep{sammut2011encyclopedia}. \\
-Basados en árboles de decisión existen otros algoritmos de clasificación como: ID3, C4.5 y CART. Cada uno de ellos fue desarrollado como una versión mejorada del anterior, pero todos tienen una alta eficiencia y tiempos de ejecución reducidos, lo que los hace igualmente populares en la actualidad \citep{javed2022performance}. Por otra parte, el algoritmo Bosque Aleatorio (mejor conocido como Random Forest, por su traducción al inglés), se basa en la idea de combinar múltiples árboles de decisión para mejorar la precisión y la capacidad de generalización del modelo. Se comparan y analizan en \citep{gupta2017analysis}, donde se arrojan sus principales características:
-\begin{itemize}
-	\item ID3 (Iterative Dichotomiser 3): Basa su funcionamiento en la entropía y la ganancia de información. El árbol se construye iterativamente de arriba hacia abajo, eligiendo en cada caso el atributo con mayor ganancia de información, hasta que la información ganada sea cero o se haya llegado a todas las hojas \citep{javed2022performance}, \citep{gupta2017analysis}. Maneja datos nominales y no tolera valores faltantes.
-	\item C4.5 (Classification 4.5): Desarrollado con el objetivo de mejorar los defectos de ID3. Añade la poda, desestimando las ramas sin aportes, que reduce los errores al clasificar como resultado de un gran número de ramas en el modelo \citep{sammut2011encyclopedia}, \citep{javed2022performance}, \citep{gupta2017analysis}. Adicionalmente maneja valores faltantes y numéricos. 
-	\item CART (Classification and Regression Trees): Genera un árbol binario siguiendo el mismo enfoque entrópico que ID3, pero empleando el coeficiente de Gini como criterio de selección \citep{javed2022performance}, \citep{gupta2017analysis}. Es capaz de manejar datos faltantes, al igual que datos numéricos y nominales.
-	\item Random Forest: Es un algoritmo de aprendizaje automático en el que se construye un conjunto de árboles de decisión para realizar predicciones. Cada árbol se entrena con un subconjunto aleatorio de datos y características, y luego se combina su salida para obtener una predicción más robusta y precisa. Reduce el sobreajuste y mejora la generalización al promediar múltiples modelos \citep{gupta2017analysis}.
-\end{itemize}
-
-\subsubsection{Clasificación con Redes Neuronales}
-Las redes neuronales o redes neuronales artificiales, son algoritmos de aprendizaje basados en una vaga analogía de cómo funciona el cerebro humano. El aprendizaje se logra ajustando los pesos en las conexiones entre nodos, que son análogas a las sinapsis y las neuronas \citep{sammut2011encyclopedia}. \\
-Las primeras redes neuronales conocidas como pre-alimentadas, como la de la figura \ref{fig:red-neuronal-prealimentada}, se caracterizan por tener una arquitectura en la que cada capa de neuronas está conectada completamente con la capa siguiente, pero no con la capa anterior. Esto significa que la información fluye de forma unidireccional, sin retroalimentación \citep{abiodun2018state}. 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{figuras/capi 1/red-neuronal-prealimentada}
-	\caption{Red Neuronal Pre-Alimentada \citep{abiodun2018state}}
-	\label{fig:red-neuronal-prealimentada}
-\end{figure}
-Posteriormente, se desarrollaron las redes neuronales por retro-propagación, como la presente en la figura \ref{fig:red-neuronal-retropropagacion}, que comparan la salida obtenida por la red con la salida deseada, y ajustan los pesos de las conexiones entre las neuronas de la red para reducir el error de predicción. La retro-propagación se utiliza para calcular la contribución de cada peso en el error de la red, y así ajustarlos de manera adecuada \citep{abiodun2018state}.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{figuras/capi 1/red-neuronal-retropropagación}
-	\caption{Red neuronal por retro-propagación \citep{abiodun2018state}}
-	\label{fig:red-neuronal-retropropagacion}
-\end{figure}
-Gracias a su gran versatilidad se pueden aplicar en una amplia variedad de campos y disciplinas para resolver problemas complejos de aprendizaje automático, como es el procesamiento del lenguaje natural, reconocimiento de voz e imágenes \citep{abiodun2018state}. Debido a la complejidad de sus modelos puede ser difícil su entendimiento, por lo que preferiblemente se utilizan en el contexto del reconocimiento de patrones.
-
-\subsubsection{Clasificación con Support Vector Machine}
-Las Máquinas de Soporte Vectorial (Support Vector Machine o SVM, en inglés), son una clase de algoritmos lineales que se pueden emplear para la clasificación \citep{sammut2011encyclopedia}, cuyo objetivo es encontrar el hiperplano que mejor separa dos clases de datos en un espacio de alta dimensionalidad \citep{guenther2016support}. En la figura \ref{fig:ejemplos-de-posibles-hiperplanos-de-svm} se representa como el hiperplano H2 divide con mayor margen las clases que el hiperplano H1.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.4\linewidth]{"figuras/capi 1/Ejemplos de posibles hiperplanos de SVM"}
-	\caption{Ejemplos de posibles hiperplanos de SVM \citep{sammut2011encyclopedia}}
-	\label{fig:ejemplos-de-posibles-hiperplanos-de-svm}
-\end{figure}
-Uno de los desafíos de SVM en problemas de clasificación de múltiples clases es cómo manejar la predicción de estas. En este contexto, existen dos enfoques principales:
-\begin{itemize}
-	\item Uno contra uno (One-vs-One): Durante la fase de predicción, cada clasificador binario vota por la clase que cree que es correcta y la clase con el mayor número de votos se selecciona como la clase final para el punto de datos dado. Este enfoque presenta la ventaja de que cada clasificador binario solo necesita ser entrenado en un subconjunto de los datos, lo que puede ser útil cuando hay grandes conjuntos de datos. Es más resistente a desequilibrios en la distribución de clases que otros enfoques de SVM \citep{guenther2016support}.
-	\item Uno contra todos (One-vs-All): Entrena un clasificador binario para cada clase posible, donde el conjunto de datos de una clase se considera positivo y los datos de las otras clases se consideran negativos. Durante la fase de predicción, cada clasificador binario vota por su clase correspondiente y la clase con la mayor puntuación se selecciona como la clase final para el punto de datos dado. Fácil de implementar y puede funcionar bien en conjuntos de datos pequeños, pero puede ser menos preciso en conjuntos de datos grandes y complejos \citep{guenther2016support}.
-\end{itemize}
-Agregar que existen otros dos enfoques: Clasificación jerárquica (Hierarchical classification) y Clasificación por parejas (Pairwise classification). Cada uno de estos tiene sus propias ventajas y desventajas, y la elección de uno de ellos dependerá del tipo de datos y del problema que se esté tratando de resolver. Es importante mencionar que la clasificación es solo una de las muchas técnicas utilizadas en el Aprendizaje  Automático. 
 
 \section{Métodos para la evaluación en clasificación}
 En el campo de la clasificación, existen varios métodos de evaluación que se utilizan para comparar diferentes algoritmos o enfoques en esta tarea. Estos métodos ayudan a medir el rendimiento y la eficacia de los modelos de clasificación, así como a tomar decisiones informadas sobre cuál es el mejor enfoque para una tarea específica. Cuando se trabaja en problemas de clasificación con atributos numéricos, es fundamental contar con una base de datos de prueba adecuada. Una buena base de datos debe ser representativa de los datos del mundo real, y contener una variedad de instancias y etiquetas de clase para evaluar el rendimiento de los algoritmos de clasificación.

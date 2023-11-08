@@ -1,11 +1,11 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces Comparativa de las implementaciones para AutoML en KNIME}}{16}{table.caption.14}%
-\contentsline {table}{\numberline {1.2}{\ignorespaces Bases de datos empleadas en la experimentación}}{31}{table.caption.27}%
+\contentsline {table}{\numberline {1.1}{\ignorespaces Comparativa de las implementaciones para AutoML en KNIME}}{26}{table.caption.20}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces Bases de datos empleadas en la experimentación}}{28}{table.caption.21}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Caso de prueba al componente \textit {Discretizer}}}{55}{table.caption.54}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Caso de prueba al componente \textit {String preprocs}}}{56}{table.caption.57}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Caso de prueba al componente \textit {MV Imputation}}}{57}{table.caption.60}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces Caso de prueba al componente \textit {Codificar y normalizar}}}{59}{table.caption.63}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Caso de prueba al componente \textit {Discretizer}}}{52}{table.caption.48}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Caso de prueba al componente \textit {String preprocs}}}{53}{table.caption.51}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Caso de prueba al componente \textit {MV Imputation}}}{54}{table.caption.54}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Caso de prueba al componente \textit {Codificar y normalizar}}}{56}{table.caption.57}%
 \addvspace {10\p@ }

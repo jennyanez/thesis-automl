@@ -5,59 +5,55 @@
 \contentsline {subsection}{\numberline {1.1.1}Minería de Datos}{6}{subsection.1.1.1}%
 \contentsline {section}{\numberline {1.2}Aprendizaje Automático}{7}{section.1.2}%
 \contentsline {section}{\numberline {1.3}\textit {AutoML}}{9}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Herramienta de minería de datos KNIME}{10}{section.1.4}%
-\contentsline {section}{\numberline {1.5}\textit {AutoML} en KNIME}{12}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Extensión H2O.ai}{12}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}Componente AutoML KNIME}{13}{subsection.1.5.2}%
-\contentsline {subsection}{\numberline {1.5.3}Componente KNIME de AutoML Clasificación (pre-procesado)}{14}{subsection.1.5.3}%
-\contentsline {subsection}{\numberline {1.5.4}Análisis comparativo de implementaciones para AutoML en KNIME}{16}{subsection.1.5.4}%
-\contentsline {section}{\numberline {1.6}Pre-procesado}{17}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Optimización de hiperparámetros}{24}{section.1.7}%
-\contentsline {section}{\numberline {1.8}Clasificación}{26}{section.1.8}%
-\contentsline {subsubsection}{Clasificación con Árboles de Decisión}{26}{section*.21}%
-\contentsline {subsubsection}{Clasificación con Redes Neuronales}{27}{section*.22}%
-\contentsline {subsubsection}{Clasificación con Support Vector Machine}{28}{section*.25}%
-\contentsline {section}{\numberline {1.9}Métodos para la evaluación en clasificación}{30}{section.1.9}%
-\contentsline {subsection}{\numberline {1.9.1}Bases de datos de prueba}{30}{subsection.1.9.1}%
-\contentsline {subsection}{\numberline {1.9.2}Métricas}{31}{subsection.1.9.2}%
-\contentsline {section}{\numberline {1.10}Conclusiones parciales}{32}{section.1.10}%
-\contentsline {chapter}{\numberline {2}Propuesta de modificaciones al componente AutoML para pre-procesado}{34}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Modificaciones en el pre-procesado}{34}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Discretización de variables numéricas}{35}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Pre-procesado de variables de tipo \textit {string}}{36}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Manejo de valores faltantes}{36}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Codificación y normalización}{37}{subsection.2.1.4}%
-\contentsline {section}{\numberline {2.2}Componente AutoML Clasificación (Optimización de hiperparámetros)}{39}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Requisitos y restricciones del componente AutoML Clasificación (Optimización de Hiperparámetros)}{42}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Modelación del componente AutoML Clasificación (Optimización de Hiperparámetros)}{43}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Optimización de hiperparámetros para RProp}{46}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Optimización de hiperparámetros para PNN}{46}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Optimización de hiperparámetros para SVM}{47}{subsection.2.2.5}%
-\contentsline {subsection}{\numberline {2.2.6}Optimización de hiperparámetros para Random Forest}{47}{subsection.2.2.6}%
-\contentsline {section}{\numberline {2.3}Modelación de nueva versión del componente AutoML Clasificación}{48}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Procesado de ID3}{49}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Procesado para C4.5}{49}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Procesado para CART}{50}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Procesamiento para Random Forest}{51}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}Procesamiento para Redes Neuronales por Retropropagación}{51}{subsection.2.3.5}%
-\contentsline {subsection}{\numberline {2.3.6}Procesamiento para Redes Neuronales Probabilísticas}{52}{subsection.2.3.6}%
-\contentsline {subsection}{\numberline {2.3.7}Procesamiento para SVM}{52}{subsection.2.3.7}%
-\contentsline {section}{\numberline {2.4}Conclusiones parciales}{53}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Validación de Soluciones Propuestas al Componente de AutoML}{54}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Pruebas de caja negra a subcomponentes para el pre-procesado}{54}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Caso de prueba al subcomponente \textit {Discretizer}}{54}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Caso de prueba al subcomponente \textit {String preprocs}}{56}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Caso de prueba al subcomponente \textit {MV Imputation}}{57}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Caso de prueba al subcomponente \textit {Codificar y normalizar}}{58}{subsection.3.1.4}%
-\contentsline {section}{\numberline {3.2}Pruebas de caja negra al componente \textit {AutoML Clasificación (Optimización de Hiperparámetros)}}{60}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Caso de prueba para el modelo RProp}{60}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Caso de prueba para el modelo PNN}{60}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Caso de prueba para el modelo SVM}{60}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Caso de prueba para el modelo Random Forest}{60}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}Pruebas de integración al componente \textit {AutoML Clasificación (pre-procesado)}}{60}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Conclusiones parciales}{60}{section.3.4}%
-\contentsline {chapter}{Conclusiones}{62}{section*.68}%
-\contentsline {chapter}{Recomendaciones}{63}{section*.70}%
-\contentsline {chapter}{Referencias bibliográficas}{64}{section*.72}%
-\contentsline {chapter}{\numberline {A}Anexos}{69}{appendix.Alph1}%
-\contentsline {chapter}{Anexos}{69}{section*.74}%
+\contentsline {subsection}{\numberline {1.3.1}Pre-procesado}{10}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Optimización de hiperparámetros}{17}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Herramienta de minería de datos KNIME}{20}{section.1.4}%
+\contentsline {section}{\numberline {1.5}\textit {AutoML} en KNIME}{21}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Extensión H2O.ai}{22}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Componente AutoML KNIME}{22}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Componente KNIME de AutoML Clasificación (pre-procesado)}{23}{subsection.1.5.3}%
+\contentsline {subsection}{\numberline {1.5.4}Análisis comparativo de implementaciones para AutoML en KNIME}{25}{subsection.1.5.4}%
+\contentsline {section}{\numberline {1.6}Métodos para la evaluación en clasificación}{27}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Bases de datos de prueba}{27}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Métricas}{28}{subsection.1.6.2}%
+\contentsline {section}{\numberline {1.7}Conclusiones parciales}{29}{section.1.7}%
+\contentsline {chapter}{\numberline {2}Propuesta de modificaciones al componente AutoML para pre-procesado}{31}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Modificaciones en el pre-procesado}{31}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Discretización de variables numéricas}{32}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Pre-procesado de variables de tipo \textit {string}}{33}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Manejo de valores faltantes}{33}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Codificación y normalización}{34}{subsection.2.1.4}%
+\contentsline {section}{\numberline {2.2}Componente AutoML Clasificación (Optimización de hiperparámetros)}{36}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Requisitos y restricciones del componente AutoML Clasificación (Optimización de Hiperparámetros)}{39}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Modelación del componente AutoML Clasificación (Optimización de Hiperparámetros)}{40}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Optimización de hiperparámetros para RProp}{43}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Optimización de hiperparámetros para PNN}{43}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Optimización de hiperparámetros para SVM}{44}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}Optimización de hiperparámetros para Random Forest}{44}{subsection.2.2.6}%
+\contentsline {section}{\numberline {2.3}Modelación de nueva versión del componente AutoML Clasificación}{45}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Procesado de ID3}{46}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Procesado para C4.5}{46}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Procesado para CART}{47}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Procesamiento para Random Forest}{48}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Procesamiento para Redes Neuronales por Retropropagación}{48}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Procesamiento para Redes Neuronales Probabilísticas}{49}{subsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.3.7}Procesamiento para SVM}{49}{subsection.2.3.7}%
+\contentsline {section}{\numberline {2.4}Conclusiones parciales}{50}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Validación de Soluciones Propuestas al Componente de AutoML}{51}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Pruebas de caja negra a subcomponentes para el pre-procesado}{51}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Caso de prueba al subcomponente \textit {Discretizer}}{51}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Caso de prueba al subcomponente \textit {String preprocs}}{53}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Caso de prueba al subcomponente \textit {MV Imputation}}{54}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Caso de prueba al subcomponente \textit {Codificar y normalizar}}{55}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}Pruebas de caja negra al componente \textit {AutoML Clasificación (Optimización de Hiperparámetros)}}{57}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Caso de prueba para el modelo RProp}{57}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Caso de prueba para el modelo PNN}{57}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Caso de prueba para el modelo SVM}{57}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Caso de prueba para el modelo Random Forest}{57}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Pruebas de integración al componente \textit {AutoML Clasificación (pre-procesado)}}{57}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Conclusiones parciales}{57}{section.3.4}%
+\contentsline {chapter}{Conclusiones}{59}{section*.62}%
+\contentsline {chapter}{Recomendaciones}{60}{section*.64}%
+\contentsline {chapter}{Referencias bibliográficas}{61}{section*.66}%
+\contentsline {chapter}{\numberline {A}Anexos}{66}{appendix.Alph1}%
+\contentsline {chapter}{Anexos}{66}{section*.68}%

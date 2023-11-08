@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\citename{dav, }1997]{davison1997bootstrap}
+ 1997.
+\newblock {\em Bootstrap methods and their application}.
+\newblock Cambridge university press.
+
 \bibitem[\protect\citename{Abiodun {\em et~al.}, }2018]{abiodun2018state}
 Abiodun, Oludare~Isaac, Jantan, Aman, Omolara, Abiodun~Esther, Dada,
   Kemi~Victoria, Mohamed, Nachaat~AbdElatif, \& Arshad, Humaira. 2018.
@@ -28,6 +33,12 @@ Berthold, Michael~R, Cebron, Nicolas, Dill, Fabian, Gabriel, Thomas~R,
   Bernd. 2009.
 \newblock KNIME-the Konstanz information miner: version 2.0 and beyond.
 \newblock {\em AcM SIGKDD explorations Newsletter}, {\bf 11}(1), 26--31.
+
+\bibitem[\protect\citename{Bishop \& Nasrabadi, }2006]{bishop2006pattern}
+Bishop, Christopher~M, \& Nasrabadi, Nasser~M. 2006.
+\newblock {\em Pattern recognition and machine learning}.
+\newblock  Vol. 4.
+\newblock Springer.
 
 \bibitem[\protect\citename{Bonaccorso, }2017]{bonaccorso2017machine}
 Bonaccorso, Giuseppe. 2017.
