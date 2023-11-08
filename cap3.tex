@@ -1,116 +1,215 @@
-\chapter{Validación de soluciones propuestas al componente de AutoML}\label{chap:3}
-En este capítulo .....
-
+\chapter{Validación de Soluciones Propuestas al Componente de AutoML}\label{chap:3}
+El presente capítulo se adentra en la fase crucial de validación de las soluciones propuestas en el capítulo \ref{chap:2}. Durante el transcurso de este, se llevará a cabo una evaluación exhaustiva de las soluciones propuestas, centrándose en la comparación de los resultados obtenidos con y sin estas modificaciones. Se analizarán métricas de rendimiento, tiempos de ejecución y la capacidad del sistema para adaptarse a diferentes conjuntos de datos y necesidades específicas de clasificación. En última instancia, este capitulo constituirá un pilar fundamental en la evaluación de las contribuciones presentadas en esta tesis, demostrando la efectividad y utilidad de las soluciones propuestas en el contexto del AutoML para la clasificación.
 
 \section{Pruebas de caja negra a subcomponentes para el pre-procesado}
-
-... muelita linda
+En pos de validar el correcto funcionamiento de las soluciones propuestas en el capítulo \ref{chap:2}, a continuación se presentan las pruebas realizadas a cada componente y, por último, a la integración de los mismos con el componente \textit{AutoML Clasificación (pre-procesado)}. Para ello se emplean las bases de datos descritas en la tabla \ref{tab:bd-cap1}.
 
 \subsection{Caso de prueba al subcomponente \textit{Discretizer}}
+
+Para la realización de esta prueba se diseña el caso de prueba de la tabla \ref{tab:cp-disc}. Para esta prueba en particular se utiliza la base de datos \textsc{Cancer Data} y el modelo ID3. Se emplea esta base de datos dado que la mayoría de sus atributos son numéricos, por tanto todos serán discretizados.
 
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
 \begin{table}[H]
 	\centering
-	\begin{spacing}{1.3}
-	\resizebox{\columnwidth}{!}{%
-		\begin{tabular}{|llll|}
-			\hline
-			\multicolumn{4}{|l|}{Caso de prueba}                                                                                                                                                                                                                                                                                                                                                                                                                                         \\ \hline
-			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Objetivo de la \\ prueba\end{tabular}}    & \multicolumn{3}{l|}{Comprobar la efectividad de las transformaciones al discretizar las variables numéricas}                                                                                                                                                                                                                                                                     \\ \hline
-			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción de \\ la prueba\end{tabular}} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Se debe proporcionar una tabla con variables numéricas al componente \textit{Discretizer} y \\ evaluar la tabla resultante\end{tabular}}                                                                                                                                                                                                   \\ \hline
-			\multicolumn{1}{|l|}{Condiciones}                                                         & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}1. Debe estar presente la columna objetivo para la clasificación.\\ 2. La columna objetivo debe ser de tipo nominal.\end{tabular}}                                                                                                                                                                                                \\ \hline
-			\multicolumn{4}{|l|}{Combinaciones de valores de entrada}                                                                                                                                                                                                                                                                                                                                                                                                                    \\ \hline
-			\multicolumn{1}{|l|}{CP}                                                                  & \multicolumn{1}{l|}{Escenario}                                                                                     & \multicolumn{1}{l|}{Resultado esperado}                                                                                                 & Resultado real                                                                                                    \\ \hline
-			\multicolumn{1}{|l|}{CP1}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una \\ tabla con atributos\\ numéricos\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se discretizan los atributos \\ numéricos con cada método\end{tabular}}                  & \begin{tabular}[c]{@{}l@{}}Se discretizan los atributos \\ numéricos con cada método\end{tabular}                 \\ \hline
-			\multicolumn{1}{|l|}{CP2}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una\\ tabla con atributos\\ numéricos\end{tabular}}  & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se comparan los discretizadores \\ acorde al algoritmo de ML\end{tabular}}               & \begin{tabular}[c]{@{}l@{}}Se comparan los discretizadores \\ acorde al algoritmo de ML\end{tabular}              \\ \hline
-			\multicolumn{1}{|l|}{CP3}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una\\ tabla con atributos \\ numéricos\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se devuelven los datos \\ discretizados acorde a los \\ resultados del CP2\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se devuelven los datos\\ discretizados acorde a los \\ resultados del CP2\end{tabular} \\ \hline
-		\end{tabular}%
-	}
-	\end{spacing}
 	\caption{Caso de prueba al componente \textit{Discretizer}}
 	\label{tab:cp-disc}
+	\begin{spacing}{1.15}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|llll|}
+			\hline
+			\multicolumn{4}{|l|}{Caso de prueba}                                                                                                                                                                                                                                                                                                                                                                                                                                       \\ \hline
+			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Objetivo de la \\ prueba\end{tabular}}    & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Comprobar la efectividad de las transformaciones al discretizar las variables \\ numéricas\end{tabular}}                                                                                                                                                                                                                                                                  \\ \hline
+			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción de \\ la prueba\end{tabular}} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Se debe proporcionar una tabla con variables numéricas al componente \\ \textit{Discretizer} y evaluar la tabla resultante\end{tabular}}                                                                                                                                                                                                 \\ \hline
+			\multicolumn{1}{|l|}{Condiciones}                                                         & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}1. Debe estar presente la columna objetivo para la clasificación.\\ 2. La columna objetivo debe ser de tipo nominal.\end{tabular}}                                                                                                                                                                                              \\ \hline
+			\multicolumn{4}{|l|}{Combinaciones de valores de entrada}                                                                                                                                                                                                                                                                                                                                                                                                                  \\ \hline
+			\multicolumn{1}{|l|}{CP}                                                                  & \multicolumn{1}{l|}{Escenario}                                                                                   & \multicolumn{1}{l|}{Resultado esperado}                                                                                                 & Resultado real                                                                                                    \\ \hline
+			\multicolumn{1}{|l|}{CP1}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una tabla\\ con atributos numéricos\end{tabular}}  & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se comparan los \\ discretizadores acorde al \\algoritmo de ML\end{tabular}}               & \begin{tabular}[c]{@{}l@{}}Se comparan los \\discretizadores  acorde al \\ algoritmo de ML\end{tabular}              \\ \hline
+			\multicolumn{1}{|l|}{CP2}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una tabla \\ con atributos numéricos\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se devuelven los datos \\ discretizados  acorde a \\los resultados del CP1\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se devuelven los datos \\ discretizados acorde a \\ los resultados del CP1\end{tabular} \\ \hline
+		\end{tabular}%
+	}
+\end{spacing}
 \end{table}
+
+En la figura \ref{fig:comparacion-disc} se presentan los resultados del CP1, donde el mejor discretizador resulta ser CAIM con 0.953 de precisión y 0.903 de Cohen's Kappa, siendo unos resultados notables para una base de datos desbalanceada. Para el CP2, se presenta en la figura \ref{fig:salida-discret} una vista previa de la tabla de salida del componente \textit{Discretizer} con los datos discretizados.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{"figuras/capi 3/pruebas-jenn/comparacion-disc"}
+	\caption{Resultados del CP1 de \textit{Discretizer}}
+	\label{fig:comparacion-disc}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{"figuras/capi 3/pruebas-jenn/salida-discret"}
+	\caption{Vista previa de la salida del componente \textit{Discretizer}}
+	\label{fig:salida-discret}
+\end{figure}
 
 
 
 \subsection{Caso de prueba al subcomponente \textit{String preprocs}}
 
+Para la realización de esta prueba se diseña el caso de prueba de la tabla \ref{tab:cp-string-preprocs}. Para esta prueba en particular se crea la base de datos de la figura \ref{fig:bd-string-preprocs}, dado que solamente se realizan transformaciones en los datos. La columna 1 se emplea para el CP1, así como la columna 2 para el CP2. La columna 3 es utilizada para comprobar el correcto funcionamiento del componente con una columna objetivo.
+
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
 \begin{table}[H]
 	\centering
-	\begin{spacing}{1.3}
+	\caption{Caso de prueba al componente \textit{String preprocs}}
+	\begin{spacing}{1.15}
 	\resizebox{\columnwidth}{!}{%
 		\begin{tabular}{|llll|}
 			\hline
 			\multicolumn{4}{|l|}{Caso de prueba}                                                                                                                                                                                                                                                                                                                                                                                                                                                                     \\ \hline
-			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Objetivo de la \\ prueba\end{tabular}}    & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Comprobar la efectividad de las transformaciones a las columnas de tipo \textit{string}\\ y evaluar la tabla resultante\end{tabular}}                                                                                                                                                                                                                                  \\ \hline
+			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Objetivo de la \\ prueba\end{tabular}}    & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Comprobar la efectividad de las transformaciones a las columnas de tipo \textit{string} y evaluar \\ la tabla resultante\end{tabular}}                                                                                                                                                                                                                                  \\ \hline
 			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción de \\ la prueba\end{tabular}} & \multicolumn{3}{l|}{Se debe proporcionar una tabla con atributos con valores únicos}                                                                                                                                                                                                                                                                                                                         \\ \hline
 			\multicolumn{1}{|l|}{Condiciones}                                                         & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}1. Solo se deben proporcionar columnas de tipo \textit{string}\\ 2. Debe estar presente una columna objetivo nominal para la clasificación\end{tabular}}                                                                                                                                                                                                                             \\ \hline
 			\multicolumn{4}{|l|}{Combinaciones de valores de entrada}                                                                                                                                                                                                                                                                                                                                                                                                                                                \\ \hline
 			\multicolumn{1}{|l|}{CP}                                                                  & \multicolumn{1}{l|}{Escenario}                                                                                                                                      & \multicolumn{1}{l|}{Resultado esperado}                                                                                      & Resultado real                                                                                          \\ \hline
-			\multicolumn{1}{|l|}{CP1}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una columna\\ con más del 80\% de valores \\ únicos\end{tabular}}                                     & \multicolumn{1}{l|}{La columna es eliminada}                                                                                 & La columna es eliminada                                                                                 \\ \hline
-			\multicolumn{1}{|l|}{CP2}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una columna\\ con varias categorías diferentes\\ donde existan valores sin \\ repetirse\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se reemplazan los valores \\ únicos por la categoría \\ 'other'\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se reemplazan los valores \\ únicos por la categoría\\  'other'\end{tabular} \\ \hline
+			\multicolumn{1}{|l|}{CP1}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una columna con\\ más del 80\% de valores únicos \end{tabular}}                                     & \multicolumn{1}{l|}{La columna es eliminada}                                                                                 & La columna es eliminada                                                                                 \\ \hline
+			\multicolumn{1}{|l|}{CP2}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una columna\\ con varias categorías diferentes\\ donde existan valores únicos \end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se reemplazan los valores \\ únicos por la categoría \\ 'other'\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se reemplazan los valores \\ únicos por la categoría\\  'other'\end{tabular} \\ \hline
 		\end{tabular}%
 	}
 	\end{spacing}
-	\caption{Caso de prueba al componente \textit{String preprocs}}
 	\label{tab:cp-string-preprocs}
 \end{table}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.3\linewidth]{"figuras/capi 3/pruebas-jenn/bd-string-preprocs"}
+	\caption{Base de datos empleada para las pruebas del componente String-preprocs}
+	\label{fig:bd-string-preprocs}
+\end{figure}
+
+En la figura \ref{fig:resultado-cp1-string-prep} se muestra el resultado del CP1, con el objetivo de filtrar los valores únicos. Como se observa, la columna 1 es eliminada. Por otra parte, en la figura \ref{fig:resultado-cp2-string-prep} se muestra el resultado del CP2, con el objetivo de sutituir los valores únicos de una columna por la categoría 'other'. Se puede observar que en la columna 2, los últimos valores que anteriormente eran únicos, ahora fueron sustituidos.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\centering
+		\includegraphics[width=0.45\linewidth]{"figuras/capi 3/pruebas-jenn/resultado-cp1-string-prep"}
+		\caption{Resultado del CP1, para la eliminación de valores únicos}
+		\label{fig:resultado-cp1-string-prep}
+	\end{subfigure}
+	\hspace{0.5cm}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\centering
+		\includegraphics[width=0.45\linewidth]{"figuras/capi 3/pruebas-jenn/resultado-cp2-string-prep"}
+		\caption{Resultado del CP2, para la sustitución por la categoría 'other'}
+		\label{fig:resultado-cp2-string-prep}
+	\end{subfigure}
+	\caption{Resultados de los casos de prueba del componente \textit{String preprocs}}
+	\label{fig:resultado-cp-string-preprocs}
+\end{figure}
+
+
 \subsection{Caso de prueba al subcomponente \textit{MV Imputation}}
+Para la realización de esta prueba se diseña el caso de prueba de la tabla \ref{tab:cp-mv-imp}. Para esta prueba se emplea la base de datos \textsc{Census income} y el algoritmo C4.5. Se escoge esta base de datos 
 
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
 \begin{table}[H]
 	\centering
-	\begin{spacing}{1.3}
+	\caption{Caso de prueba al componente \textit{MV Imputation}}
+	\label{tab:cp-mv-imp}
+	\begin{spacing}{1.15}
 	\resizebox{\columnwidth}{!}{%
 		\begin{tabular}{|llll|}
 			\hline
 			\multicolumn{4}{|l|}{Caso de prueba}                                                                                                                                                                                                                                                                                                                                                                                                                                 \\ \hline
-			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Objetivo de la \\ prueba\end{tabular}}    & \multicolumn{3}{l|}{Comprobar la efectividad en el tratamiento de valores faltantes en una tabla}                                                                                                                                                                                                                                                                        \\ \hline
-			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción de \\ la prueba\end{tabular}} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Se debe proporcionar una tabla con valores perdidos al componente \\ \textit{MV Imputation} y evaluar la tabla resultante\end{tabular}}                                                                                                                                                                                            \\ \hline
+			\multicolumn{1}{|l|}{Objetivo de la prueba}   & \multicolumn{3}{l|}{Comprobar la efectividad en el tratamiento de valores faltantes en una tabla}                                                                                                                                                                                                                                                                        \\ \hline
+			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción de \\ la prueba\end{tabular}} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Se debe proporcionar una tabla con valores perdidos al componente \textit{MV Imputation} \\  y evaluar la tabla resultante\end{tabular}}                                                                                                                                                                                            \\ \hline
 			\multicolumn{1}{|l|}{Condiciones}                                                         & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}1. Debe estar presente la columna objetivo para la clasificación.\\ 2. La columna objetivo debe ser de tipo nominal.\end{tabular}}                                                                                                                                                                                        \\ \hline
 			\multicolumn{4}{|l|}{Combinaciones de valores de entrada}                                                                                                                                                                                                                                                                                                                                                                                                            \\ \hline
 			\multicolumn{1}{|l|}{CP}                                                                  & \multicolumn{1}{l|}{Escenario}                                                                                   & \multicolumn{1}{l|}{Resultado esperado}                                                                                              & Resultado real                                                                                                 \\ \hline
-			\multicolumn{1}{|l|}{CP1}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una \\ tabla con valores\\ faltantes\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se realiza la imputación de\\ valores faltantes con cada\\ método\end{tabular}}       & \begin{tabular}[c]{@{}l@{}}Se realiza la imputación de\\ valores faltantes con cada\\ método\end{tabular}      \\ \hline
-			\multicolumn{1}{|l|}{CP2}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una\\ tabla con valores\\ faltantes\end{tabular}}  & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se comparan los métodos \\ de imputación acorde al \\ algoritmo de ML\end{tabular}}   & \begin{tabular}[c]{@{}l@{}}Se comparan los métodos\\ de imputación acorde al\\ algoritmo de ML\end{tabular}    \\ \hline
-			\multicolumn{1}{|l|}{CP3}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una\\ tabla con valores\\ faltantes\end{tabular}}  & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se devuelven los valores\\ imputados acorde a los \\ resultados del CP2\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se devuelven los valores\\ imputados acorde a los\\ resultados del CP2\end{tabular} \\ \hline
+			\multicolumn{1}{|l|}{CP1}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una tabla\\  con valores faltantes\end{tabular}}  & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se comparan los métodos \\ de imputación acorde al \\ algoritmo de ML\end{tabular}}   & \begin{tabular}[c]{@{}l@{}}Se comparan los métodos\\ de imputación acorde al\\ algoritmo de ML\end{tabular}    \\ \hline
+			\multicolumn{1}{|l|}{CP2}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una tabla\\  con valores faltantes \end{tabular}}  & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se devuelven los valores\\ imputados acorde a los \\ resultados del CP1\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se devuelven los valores\\ imputados acorde a los\\ resultados del CP1\end{tabular} \\ \hline
 		\end{tabular}%
 	}
 	\end{spacing}
-	\caption{Caso de prueba al componente \textit{MV Imputation}}
-	\label{tab:cp-mv-imp}
 \end{table}
 
+En la figura \ref{fig:comparacion-mvi} se muestran los resultados del CP1, donde el mejor método de imputación para esta base de datos con este algoritmo es KMI, con una precisión de 0.848 y Cohen's Kappa de 0.557. Para el CP2 se presenta en la figura \ref{fig:resultado-cp2-mvi} una vista previa de la tabla de salida del componente \textit{MV Imputation} con los datos imputados. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{"figuras/capi 3/pruebas-jenn/comparacion-mvi"}
+	\caption{Resultados del CP1 del componente \textit{MV Imputation}}
+	\label{fig:comparacion-mvi}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{"figuras/capi 3/pruebas-jenn/resultado-cp2-mvi"}
+	\caption{Resultado del CP2 del componente \textit{MV Imputation}}
+	\label{fig:resultado-cp2-mvi}
+\end{figure}
+
+
 \subsection{Caso de prueba al subcomponente \textit{Codificar y normalizar}}
+Para la realización de esta prueba se diseña el caso de prueba de la tabla \ref{tab:cp-codificarnorm}. Para esta prueba se emplea la base de datos \textsc{Human Resources} y el algoritmo SVM. 
 
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
 \begin{table}[H]
 	\centering
-	\begin{spacing}{1.3}
+	\caption{Caso de prueba al componente \textit{Codificar y normalizar}}
+	\label{tab:cp-codificarnorm}
+	\begin{spacing}{1.15}
 	\resizebox{\columnwidth}{!}{%
 		\begin{tabular}{|llll|}
 			\hline
 			\multicolumn{4}{|l|}{Caso de prueba}                                                                                                                                                                                                                                                                                                                                                                                                                                                     \\ \hline
-			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Objetivo de la\\ prueba\end{tabular}}     & \multicolumn{3}{l|}{Comprobar la efectividad de la codificación y la normalización en una tabla}                                                                                                                                                                                                                                                                                             \\ \hline
-			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción de \\ la prueba\end{tabular}} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Se debe proporcionar una tabla con valores nominales de alta cardinalidad\\ y numéricos al componente \textit{Codificar y normalizar} y evaluar la tabla resultante.\end{tabular}}     \\ \hline
+			\multicolumn{1}{|l|}{Objetivo de la prueba}  & \multicolumn{3}{l|}{Comprobar la efectividad de la codificación y la normalización en una tabla}                                                                                                                                                                                                                                                                                             \\ \hline
+			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción de la \\  prueba\end{tabular}} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Se debe proporcionar una tabla con valores nominales de alta cardinalidad y numéricos \\ al componente \textit{Codificar y normalizar} y evaluar la tabla resultante.\end{tabular}}     \\ \hline
 			\multicolumn{1}{|l|}{Condiciones}                                                         & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}1. Debe estar presente la columna objetivo para la clasificación.\\ 2. La columna objetivo debe ser de tipo nominal.\\ 3. Debe haber una columna con más de 15 categorías diferentes.\end{tabular}}                                                                                                                                           \\ \hline
 			\multicolumn{4}{|l|}{Combinaciones de valores de entrada}                                                                                                                                                                                                                                                                                                                                                                                                                                \\ \hline
 			\multicolumn{1}{|l|}{CP}                                                                  & \multicolumn{1}{l|}{Escenario}                                                                                                  & \multicolumn{1}{l|}{Resultado esperado}                                                                                                 & Resultado real                                                                                                   \\ \hline
-			\multicolumn{1}{|l|}{CP1}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una \\ tabla con valores\\ numéricos\end{tabular}}                & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se realiza la normalización\\ de los datos\end{tabular}}                                 & \begin{tabular}[c]{@{}l@{}}Se realiza la normalización\\ de los datos\end{tabular}                               \\ \hline
-			\multicolumn{1}{|l|}{CP2}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una\\ tabla con valores\\ numéricos\end{tabular}}                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se comparan los métodos\\ de normalización acorde\\ al algoritmo de ML\end{tabular}}     & \begin{tabular}[c]{@{}l@{}}Se comparan los métodos\\ de normalización acorde \\ al algoritmo de ML\end{tabular}  \\ \hline
-			\multicolumn{1}{|l|}{CP3}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una\\ tabla con valores\\ numéricos\end{tabular}}                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se devuelven los valores\\ normalizados acorde a los \\ resultados del CP2\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se devuelven los valores\\ normalizados acorde a los\\ resultados del CP2\end{tabular} \\ \hline
-			\multicolumn{1}{|l|}{CP4}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una\\ columna con más de 15 \\ categorías distintas\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se realiza la codificación \\ One-Hot a estos valores\end{tabular}}                      & \begin{tabular}[c]{@{}l@{}}Se realiza la codificación\\ One-Hot a estos valores\end{tabular}                     \\ \hline
+			\multicolumn{1}{|l|}{CP1}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una tabla \\ con valores numéricos\end{tabular}}                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se comparan los métodos\\ de normalización acorde\\ al algoritmo de ML\end{tabular}}     & \begin{tabular}[c]{@{}l@{}}Se comparan los métodos\\ de normalización acorde \\ al algoritmo de ML\end{tabular}  \\ \hline
+			\multicolumn{1}{|l|}{CP2}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una tabla \\ con valores numéricos\end{tabular}}                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se devuelven los valores\\ normalizados acorde a los \\ resultados del CP2\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se devuelven los valores\\ normalizados acorde a los\\ resultados del CP1\end{tabular} \\ \hline
+			\multicolumn{1}{|l|}{CP3}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una columna  \\  con más de 15 categorías \\ distintas\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se realiza la codificación \\ One-Hot a estos valores\end{tabular}}                      & \begin{tabular}[c]{@{}l@{}}Se realiza la codificación\\ One-Hot a estos valores\end{tabular}                     \\ \hline
 		\end{tabular}%
 	}
 	\end{spacing}
-	\caption{Caso de prueba al componente \textit{Codificar y normalizar}}
-	\label{tab:cp-codificarnorm}
 \end{table}
+
+En la figura \ref{fig:comparacion-norm} se muestran los resultados del CP1, donde el mejor método para la normalización para esta base de datos con este algoritmo es Z-Score, con una precisión de 0.777 y Cohen's Kappa de 0.335. Para el CP2, se presenta en la figura \ref{fig:norm-cp1} una vista previa de la tabla de salida  del componente \textit{Normalizer} con los datos normalizados.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{"figuras/capi 3/pruebas-jenn/comparacion-norm"}
+	\caption{Resultados del CP1 del componente Codificar y Normalizar}
+	\label{fig:comparacion-norm}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{"figuras/capi 3/pruebas-jenn/norm-cp1"}
+	\caption{Vista previa de la salida del componente Normalizer}
+	\label{fig:norm-cp1}
+\end{figure}
+
+
+
+Por otra parte, para el CP3, se muestra en la figura \ref{fig:categorias-a-codificar} las categorías con más de 15 valores distintos a las que se les aplica el método One-Hot Encoding. En la figura \ref{fig:resultado-cp3-codif-norm}, se muestra una vista previa de la salida del componente \textit{One-Hot Encoding}, siendo el resultado del caso de prueba en cuestión. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{"figuras/capi 3/pruebas-jenn/categorias-a-codificar"}
+	\caption{Categorías a codificar}
+	\label{fig:categorias-a-codificar}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{"figuras/capi 3/pruebas-jenn/resultado-cp3-codif-norm"}
+	\caption{Vista previa de la salida del componente \textit{Codificar y Normalizar}}
+	\label{fig:resultado-cp3-codif-norm}
+\end{figure}
+
 
 \section{Pruebas de caja negra al componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}}
 

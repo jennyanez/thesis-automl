@@ -29,12 +29,6 @@ Berthold, Michael~R, Cebron, Nicolas, Dill, Fabian, Gabriel, Thomas~R,
 \newblock KNIME-the Konstanz information miner: version 2.0 and beyond.
 \newblock {\em AcM SIGKDD explorations Newsletter}, {\bf 11}(1), 26--31.
 
-\bibitem[\protect\citename{Bishop \& Nasrabadi, }2006]{bishop2006pattern}
-Bishop, Christopher~M, \& Nasrabadi, Nasser~M. 2006.
-\newblock {\em Pattern recognition and machine learning}.
-\newblock  Vol. 4.
-\newblock Springer.
-
 \bibitem[\protect\citename{Bonaccorso, }2017]{bonaccorso2017machine}
 Bonaccorso, Giuseppe. 2017.
 \newblock {\em Machine learning algorithms}.
@@ -63,6 +57,13 @@ Casas, Pablo. 2019.
 \newblock Data science live book.
 \newblock {\em Retrieved from: livebook. datascienceheroes. com}.
 
+\bibitem[\protect\citename{Catlett, }1991]{catlett1991changing}
+Catlett, Jason. 1991.
+\newblock On changing continuous attributes into ordered discrete attributes.
+\newblock {\em Pages  164--178 of:} {\em Machine Learning—EWSL-91: European
+  Working Session on Learning Porto, Portugal, March 6--8, 1991 Proceedings 5}.
+\newblock Springer.
+
 \bibitem[\protect\citename{Cerda \& Varoquaux, }2020]{cerda2020encoding}
 Cerda, Patricio, \& Varoquaux, Ga{\"e}l. 2020.
 \newblock Encoding high-cardinality string categorical variables.
@@ -88,6 +89,19 @@ Dhankhad, Sahil, Mohammed, Emad, \& Far, Behrouz. 2018.
 \newblock {\em Pages  122--125 of:} {\em 2018 IEEE international conference on
   information reuse and integration (IRI)}.
 \newblock IEEE.
+
+\bibitem[\protect\citename{Dougherty {\em et~al.},
+  }1995]{dougherty1995supervised}
+Dougherty, James, Kohavi, Ron, \& Sahami, Mehran. 1995.
+\newblock Supervised and unsupervised discretization of continuous features.
+\newblock {\em Pages  194--202 of:} {\em Machine learning proceedings 1995}.
+\newblock Elsevier.
+
+\bibitem[\protect\citename{Fayyad \& Irani, }1993]{FI1993}
+Fayyad, U.M., \& Irani, K.B. 1993.
+\newblock Multi-Interval Discretization of Continuous-Valued Attributes for
+  Classification Learning.
+\newblock  1022--1029.
 
 \bibitem[\protect\citename{Garcia {\em et~al.}, }2012]{garcia2012survey}
 Garcia, Salvador, Luengo, Julian, S{\'a}ez, Jos{\'e}~Antonio, Lopez, Victoria,
@@ -148,6 +162,12 @@ Hern{\'a}ndez~Orallo, Jos{\'e}, {\em et~al.} 2004.
 \newblock {\em Introducci{\'o}n a la Miner{\'\i}a de Datos}.
 \newblock Biblioteca Hern{\'a}n Malo Gonz{\'a}lez.
 
+\bibitem[\protect\citename{Holte, }1993]{holte1993very}
+Holte, Robert~C. 1993.
+\newblock Very simple classification rules perform well on most commonly used
+  datasets.
+\newblock {\em Machine learning}, {\bf 11}, 63--90.
+
 \bibitem[\protect\citename{Hooi {\em et~al.}, }2022]{hooi2022feature}
 Hooi, Eric Khoo~Jiun, Zainal, Anazida, Kassim, Mohamad~Nizam, \& Ayub, Zaily.
   2022.
@@ -191,15 +211,34 @@ Kasemtaweechok, Chatchai, Pharkdepinyo, Patnaree, \& Doungmanee, Patimakorn.
   Electrical, Electronics, Computer and Telecommunication Engineering}.
 \newblock IEEE.
 
-\bibitem[\protect\citename{KNIME, }2023]{knime2023}
-KNIME. 2023 (Mar.).
+\bibitem[\protect\citename{Kerber, }1992]{K1992}
+Kerber, R. 1992.
+\newblock ChiMerge: Discretization of Numeric Attributes.
+\newblock {\em Pages  123--128 of:} {\em National Conference on Artifical
+  Intelligence American Association for Artificial Intelligence({AAAI\'92})}.
+
+\bibitem[\protect\citename{KNIME, }2023a]{KNIME2023-11}
+KNIME. 2023a (Nov.).
+\newblock {\em AutoML KNIME}.
+\newblock Visitado el 5 de noviembre del 2023.
+
+\bibitem[\protect\citename{KNIME, }2023b]{knime2023}
+KNIME. 2023b (Mar.).
 \newblock {\em KNIME Official Site}.
+\newblock Visitado el 10 de marzo de 2023.
 
 \bibitem[\protect\citename{Kurgan \& Cios, }2004]{kurgan2004caim}
 Kurgan, Lukasz~A, \& Cios, Krzysztof~J. 2004.
 \newblock CAIM discretization algorithm.
 \newblock {\em IEEE transactions on Knowledge and Data Engineering}, {\bf
   16}(2), 145--153.
+
+\bibitem[\protect\citename{LeDell \& Poirier, }2020]{ledell2020h2o}
+LeDell, Erin, \& Poirier, Sebastien. 2020.
+\newblock H2o automl: Scalable automatic machine learning.
+\newblock {\em In:} {\em Proceedings of the AutoML Workshop at ICML},  vol.
+  2020.
+\newblock ICML.
 
 \bibitem[\protect\citename{Li {\em et~al.}, }2004]{li2004towards}
 Li, Dan, Deogun, Jitender, Spaulding, William, \& Shuart, Bill. 2004.
@@ -209,6 +248,12 @@ Li, Dan, Deogun, Jitender, Spaulding, William, \& Shuart, Bill. 2004.
   Computing: 4th International Conference, RSCTC 2004, Uppsala, Sweden, June
   1-5, 2004. Proceedings 4}.
 \newblock Springer.
+
+\bibitem[\protect\citename{Liu \& Setiono, }1997]{liu1997feature}
+Liu, Huan, \& Setiono, Rudy. 1997.
+\newblock Feature selection via discretization.
+\newblock {\em IEEE Transactions on knowledge and Data Engineering}, {\bf
+  9}(4), 642--645.
 
 \bibitem[\protect\citename{Liu {\em et~al.}, }2002]{liu2002discretization}
 Liu, Huan, Hussain, Farhad, Tan, Chew~Lim, \& Dash, Manoranjan. 2002.
@@ -237,12 +282,6 @@ Moeyersoms, Julie, \& Martens, David. 2015.
   study in churn prediction in the energy sector.
 \newblock {\em Decision support systems}, {\bf 72}, 72--81.
 
-\bibitem[\protect\citename{Montavon {\em et~al.}, }2012]{montavon2012neural}
-Montavon, Gr{\'e}goire, Orr, Genevi{\`e}ve, \& M{\"u}ller, Klaus-Robert. 2012.
-\newblock {\em Neural networks: tricks of the trade}.
-\newblock  Vol. 7700.
-\newblock springer.
-
 \bibitem[\protect\citename{Murphy, }2012]{murphy2012machine}
 Murphy, Kevin~P. 2012.
 \newblock {\em Machine learning: a probabilistic perspective}.
@@ -257,28 +296,46 @@ Patil, Bankat~M, Joshi, Ramesh~C, \& Toshniwal, Durga. 2010.
   Proceedings, Part I 3}.
 \newblock Springer.
 
+\bibitem[\protect\citename{Patro \& Sahu, }2015]{patro2015normalization}
+Patro, SGOPAL, \& Sahu, Kishore~Kumar. 2015.
+\newblock Normalization: A preprocessing stage.
+\newblock {\em arXiv preprint arXiv:1503.06462}.
+
+\bibitem[\protect\citename{Polatgil, }2022]{polatgil2022investigation}
+Polatgil, Mesut. 2022.
+\newblock Investigation of the effect of normalization methods on ANFIS
+  success: forestfire and diabets datasets.
+\newblock {\em Int. J. Inf. Technol. Comput. Sci}, {\bf 14}, 1--8.
+
 \bibitem[\protect\citename{Praba {\em et~al.}, }2021]{Praba2021}
 Praba, R, Darshan, G, Roshanraj, T, \& Surya, B. 2021.
 \newblock Study On Machine Learning Algorithms.
 \newblock {\em International Journal of Scientific Research in Computer
   Science, Engineering and Information Technology}, 07, 67--72.
 
+\bibitem[\protect\citename{Quinlan, }1993]{quinlan1993c}
+Quinlan, J~Ross. 1993.
+\newblock C 4.5: Programs for machine learning.
+\newblock {\em The Morgan Kaufmann Series in Machine Learning}.
+
 \bibitem[\protect\citename{Sammut \& Webb, }2011]{sammut2011encyclopedia}
 Sammut, Claude, \& Webb, Geoffrey~I. 2011.
 \newblock {\em Encyclopedia of machine learning}.
 \newblock Springer Science \& Business Media.
-
-\bibitem[\protect\citename{Scholkopf \& Smola, }2018]{scholkopf2018learning}
-Scholkopf, Bernhard, \& Smola, Alexander~J. 2018.
-\newblock {\em Learning with kernels: support vector machines, regularization,
-  optimization, and beyond}.
-\newblock MIT press.
 
 \bibitem[\protect\citename{Sturges, }1926]{sturges1926choice}
 Sturges, Herbert~A. 1926.
 \newblock The choice of a class interval.
 \newblock {\em Journal of the american statistical association}, {\bf 21}(153),
   65--66.
+
+\bibitem[\protect\citename{Torgo \& Gama, }1997]{torgo1997search}
+Torgo, Lu{\'\i}s, \& Gama, Jo{\~a}o. 1997.
+\newblock Search-based class discretization.
+\newblock {\em Pages  266--273 of:} {\em Machine Learning: ECML-97: 9th
+  European Conference on Machine Learning Prague, Czech Republic, April 23--25,
+  1997 Proceedings 9}.
+\newblock Springer.
 
 \bibitem[\protect\citename{Tsai \& Hu, }2022]{tsai2022empirical}
 Tsai, Chih-Fong, \& Hu, Ya-Han. 2022.

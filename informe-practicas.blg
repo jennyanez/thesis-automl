@@ -36,48 +36,49 @@ Database file #1: bibliografia-pp2.bib
 Warning--empty booktitle in Agrawal1519
 Warning--empty booktitle in Lisandra2012
 Warning--empty booktitle in Carrazana2022
+Warning--empty journal in FI1993
 Warning--empty journal in hernandeztecnicas
 Warning--empty institution in hooi2022feature
 Warning--empty publisher in Han2011
-You've used 50 entries,
+You've used 59 entries,
             2441 wiz_defined-function locations,
-            861 strings with 13814 characters,
-and the built_in function-call counts, 20336 in all, are:
-= -- 1980
-> -- 799
-< -- 172
-+ -- 243
-- -- 233
-* -- 1659
-:= -- 3352
-add.period$ -- 205
-call.type$ -- 50
-change.case$ -- 313
-chr.to.int$ -- 50
-cite$ -- 56
-duplicate$ -- 765
-empty$ -- 1464
-format.name$ -- 282
-if$ -- 4184
-int.to.chr$ -- 1
+            914 strings with 15360 characters,
+and the built_in function-call counts, 24419 in all, are:
+= -- 2413
+> -- 889
+< -- 207
++ -- 268
+- -- 257
+* -- 1950
+:= -- 3955
+add.period$ -- 244
+call.type$ -- 59
+change.case$ -- 370
+chr.to.int$ -- 58
+cite$ -- 66
+duplicate$ -- 946
+empty$ -- 1794
+format.name$ -- 321
+if$ -- 5076
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 60
-newline$ -- 257
-num.names$ -- 150
-pop$ -- 310
+missing$ -- 65
+newline$ -- 305
+num.names$ -- 177
+pop$ -- 364
 preamble$ -- 1
-purify$ -- 362
+purify$ -- 428
 quote$ -- 0
-skip$ -- 806
+skip$ -- 992
 stack$ -- 0
-substring$ -- 1217
-swap$ -- 183
-text.length$ -- 9
+substring$ -- 1541
+swap$ -- 250
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 374
-warning$ -- 6
-while$ -- 159
+type$ -- 450
+warning$ -- 7
+while$ -- 198
 width$ -- 0
-write$ -- 634
-(There were 6 warnings)
+write$ -- 752
+(There were 7 warnings)
