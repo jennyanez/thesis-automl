@@ -1,16 +1,5 @@
 \begin{thebibliography}{}
 
-\bibitem[\protect\citename{dav, }1997]{davison1997bootstrap}
- 1997.
-\newblock {\em Bootstrap methods and their application}.
-\newblock Cambridge university press.
-
-\bibitem[\protect\citename{Abiodun {\em et~al.}, }2018]{abiodun2018state}
-Abiodun, Oludare~Isaac, Jantan, Aman, Omolara, Abiodun~Esther, Dada,
-  Kemi~Victoria, Mohamed, Nachaat~AbdElatif, \& Arshad, Humaira. 2018.
-\newblock State-of-the-art in artificial neural network applications: A survey.
-\newblock {\em Heliyon}, {\bf 4}(11), e00938.
-
 \bibitem[\protect\citename{Agrawal {\em et~al.}, }1993]{Agrawal1519}
 Agrawal, Rakesh, Imielinski, Tomasz, \& Swami, Arun. 1993.
 \newblock Mining Association Rules between Sets of Items in Large Databases.
@@ -92,6 +81,11 @@ Coria, Sergio, Orozco, Ivania, \& Luna, Juan. 2013.
   educativa de ciudades en censos de poblaci{\'o}n y vivienda.
 \newblock {\em de Cuerpos Acad{\'e}micos}, ~18.
 
+\bibitem[\protect\citename{Davison \& Hinkley, }1997]{davison1997bootstrap}
+Davison, Anthony~Christopher, \& Hinkley, David~Victor. 1997.
+\newblock {\em Bootstrap methods and their application}.
+\newblock Cambridge university press.
+
 \bibitem[\protect\citename{Dhankhad {\em et~al.},
   }2018]{dhankhad2018supervised}
 Dhankhad, Sahil, Mohammed, Emad, \& Far, Behrouz. 2018.
@@ -132,11 +126,6 @@ G{\'e}ron, Aur{\'e}lien. 2022.
 \newblock {\em Hands-on machine learning with Scikit-Learn, Keras, and
   TensorFlow}.
 \newblock " O'Reilly Media, Inc.".
-
-\bibitem[\protect\citename{Guenther \& Schonlau, }2016]{guenther2016support}
-Guenther, Nick, \& Schonlau, Matthias. 2016.
-\newblock Support vector machines.
-\newblock {\em The Stata Journal}, {\bf 16}(4), 917--937.
 
 \bibitem[\protect\citename{Gupta {\em et~al.}, }2017]{gupta2017analysis}
 Gupta, Bhumika, Rawat, Aditya, Jain, Akshay, Arora, Arpit, \& Dhami, Naresh.
@@ -191,16 +180,6 @@ Hutter, Frank, Kotthoff, Lars, \& Vanschoren, Joaquin. 2019.
 \newblock {\em Automated machine learning: methods, systems, challenges}.
 \newblock Springer Nature.
 
-\bibitem[\protect\citename{Javed Mehedi~Shamrat {\em et~al.},
-  }2022]{javed2022performance}
-Javed Mehedi~Shamrat, FM, Ranjan, Rumesh, Hasib, Khan~Md, Yadav, Amit, \&
-  Siddique, Abdul~Hasib. 2022.
-\newblock Performance evaluation among ID3, C4.5, and CART Decision Tree
-  Algorithm.
-\newblock {\em Pages  127--142 of:} {\em Pervasive Computing and Social
-  Networking: Proceedings of ICPCSN 2021}.
-\newblock Springer.
-
 \bibitem[\protect\citename{Jiawei~Han, }2011]{Han2011}
 Jiawei~Han, Micheline~Kamber, Jian~Pei. 2011.
 \newblock {\em Data Mining. Concepts and Techniques (The Morgan Kaufmann Series
@@ -243,6 +222,17 @@ Kurgan, Lukasz~A, \& Cios, Krzysztof~J. 2004.
 \newblock CAIM discretization algorithm.
 \newblock {\em IEEE transactions on Knowledge and Data Engineering}, {\bf
   16}(2), 145--153.
+
+\bibitem[\protect\citename{Lakshmanan {\em et~al.},
+  }2021]{lakshmanan2021practical}
+Lakshmanan, Valliappa, G{\"o}rner, Martin, \& Gillard, Ryan. 2021.
+\newblock {\em Practical machine learning for computer vision}.
+\newblock " O'Reilly Media, Inc.".
+
+\bibitem[\protect\citename{Lall \& Sharma, }1996]{lall1996nearest}
+Lall, Upmanu, \& Sharma, Ashish. 1996.
+\newblock A nearest neighbor bootstrap for resampling hydrologic time series.
+\newblock {\em Water resources research}, {\bf 32}(3), 679--693.
 
 \bibitem[\protect\citename{LeDell \& Poirier, }2020]{ledell2020h2o}
 LeDell, Erin, \& Poirier, Sebastien. 2020.
@@ -293,6 +283,12 @@ Moeyersoms, Julie, \& Martens, David. 2015.
   study in churn prediction in the energy sector.
 \newblock {\em Decision support systems}, {\bf 72}, 72--81.
 
+\bibitem[\protect\citename{Montavon {\em et~al.}, }2012]{montavon2012neural}
+Montavon, Gr{\'e}goire, Orr, Genevi{\`e}ve, \& M{\"u}ller, Klaus-Robert. 2012.
+\newblock {\em Neural networks: tricks of the trade}.
+\newblock  Vol. 7700.
+\newblock springer.
+
 \bibitem[\protect\citename{Murphy, }2012]{murphy2012machine}
 Murphy, Kevin~P. 2012.
 \newblock {\em Machine learning: a probabilistic perspective}.
@@ -334,6 +330,12 @@ Sammut, Claude, \& Webb, Geoffrey~I. 2011.
 \newblock {\em Encyclopedia of machine learning}.
 \newblock Springer Science \& Business Media.
 
+\bibitem[\protect\citename{Scholkopf \& Smola, }2018]{scholkopf2018learning}
+Scholkopf, Bernhard, \& Smola, Alexander~J. 2018.
+\newblock {\em Learning with kernels: support vector machines, regularization,
+  optimization, and beyond}.
+\newblock MIT press.
+
 \bibitem[\protect\citename{Sturges, }1926]{sturges1926choice}
 Sturges, Herbert~A. 1926.
 \newblock The choice of a class interval.
@@ -369,6 +371,11 @@ Ventevogel, PC. 2020.
   artificial intelligence}.
 \newblock M.Phil. thesis, University of Twente.
 
+\bibitem[\protect\citename{Wahba, }1975]{wahba1975smoothing}
+Wahba, Grace. 1975.
+\newblock Smoothing noisy data with spline functions.
+\newblock {\em Numerische mathematik}, {\bf 24}(5), 383--393.
+
 \bibitem[\protect\citename{Waring {\em et~al.}, }2020]{waring2020automated}
 Waring, Jonathan, Lindvall, Charlotta, \& Umeton, Renato. 2020.
 \newblock Automated machine learning: Review of the state-of-the-art and
@@ -380,6 +387,19 @@ Yang, Ying, \& Webb, Geoffrey~I. 2009.
 \newblock Discretization for naive-Bayes learning: managing discretization bias
   and variance.
 \newblock {\em Machine learning}, {\bf 74}, 39--74.
+
+\bibitem[\protect\citename{Zhang {\em et~al.}, }2017]{zhang2017efficient}
+Zhang, Shichao, Li, Xuelong, Zong, Ming, Zhu, Xiaofeng, \& Wang, Ruili. 2017.
+\newblock Efficient kNN classification with different numbers of nearest
+  neighbors.
+\newblock {\em IEEE transactions on neural networks and learning systems}, {\bf
+  29}(5), 1774--1785.
+
+\bibitem[\protect\citename{Zhang \& Song, }2019]{zhang2014predicting}
+Zhang, Xueying, \& Song, Qinbao. 2019.
+\newblock Predicting the number of nearest neighbors for the k-NN
+  classification algorithm.
+\newblock {\em Intelligent Data Analysis}, {\bf 18}(3), 449--464.
 
 \bibitem[\protect\citename{Z{\"o}ller \& Huber, }2021]{zoller2021benchmark}
 Z{\"o}ller, Marc-Andr{\'e}, \& Huber, Marco~F. 2021.

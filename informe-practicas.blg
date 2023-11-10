@@ -33,8 +33,6 @@ Reallocating 'name_of_file' (item size: 1) to 17 items.
 Reallocating 'name_of_file' (item size: 1) to 10 items.
 A level-1 auxiliary file: anexo.aux
 Database file #1: bibliografia-pp2.bib
-Warning--to sort, need author, editor, or key in davison1997bootstrap
-Warning--empty author and editor in davison1997bootstrap
 Warning--empty booktitle in Agrawal1519
 Warning--empty booktitle in Lisandra2012
 Warning--empty booktitle in Carrazana2022
@@ -42,45 +40,45 @@ Warning--empty journal in FI1993
 Warning--empty journal in hernandeztecnicas
 Warning--empty institution in hooi2022feature
 Warning--empty publisher in Han2011
-You've used 61 entries,
+You've used 65 entries,
             2441 wiz_defined-function locations,
-            921 strings with 15551 characters,
-and the built_in function-call counts, 25035 in all, are:
-= -- 2474
-> -- 903
-< -- 211
-+ -- 272
-- -- 261
-* -- 2000
-:= -- 4055
-add.period$ -- 253
-call.type$ -- 61
-change.case$ -- 382
-chr.to.int$ -- 60
-cite$ -- 71
-duplicate$ -- 972
-empty$ -- 1847
-format.name$ -- 328
-if$ -- 5205
+            944 strings with 16053 characters,
+and the built_in function-call counts, 26466 in all, are:
+= -- 2623
+> -- 961
+< -- 228
++ -- 290
+- -- 277
+* -- 2119
+:= -- 4311
+add.period$ -- 269
+call.type$ -- 65
+change.case$ -- 410
+chr.to.int$ -- 64
+cite$ -- 72
+duplicate$ -- 1015
+empty$ -- 1933
+format.name$ -- 354
+if$ -- 5482
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 68
-newline$ -- 316
-num.names$ -- 180
-pop$ -- 378
+missing$ -- 76
+newline$ -- 336
+num.names$ -- 195
+pop$ -- 408
 preamble$ -- 1
-purify$ -- 442
+purify$ -- 474
 quote$ -- 0
-skip$ -- 1013
+skip$ -- 1058
 stack$ -- 0
-substring$ -- 1564
-swap$ -- 254
-text.length$ -- 14
+substring$ -- 1640
+swap$ -- 255
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 462
-warning$ -- 9
-while$ -- 200
+type$ -- 488
+warning$ -- 7
+while$ -- 212
 width$ -- 0
-write$ -- 777
-(There were 9 warnings)
+write$ -- 828
+(There were 7 warnings)
