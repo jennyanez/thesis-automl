@@ -1,11 +1,39 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces Comparativa de las implementaciones para AutoML en KNIME}}{27}{table.caption.20}%
-\contentsline {table}{\numberline {1.2}{\ignorespaces Bases de datos empleadas en la experimentación}}{29}{table.caption.21}%
+\contentsline {table}{\numberline {1.1}{\ignorespaces Comparativa de las implementaciones para \textit {AutoML} en KNIME}}{27}{table.caption.19}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces \textit {Datasets} empleados en la experimentación}}{29}{table.1.2}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Caso de prueba al componente \textit {Discretizer}}}{58}{table.caption.53}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Caso de prueba al componente \textit {String preprocs}}}{59}{table.caption.56}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Caso de prueba al componente \textit {MV Imputation}}}{60}{table.caption.59}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces Caso de prueba al componente \textit {Codificar y normalizar}}}{62}{table.caption.62}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Caso de prueba al componente \textit {Discretizer}}}{60}{table.caption.52}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Caso de prueba al componente \textit {String preprocs}}}{61}{table.caption.55}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Caso de prueba al componente \textit {MV Imputation}}}{62}{table.caption.58}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Caso de prueba al componente \textit {Codificar y normalizar}}}{64}{table.caption.61}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Caso de prueba al componente \textit {AutoML Clasificación (Optimización de Hiperparámetros)}}}{66}{table.caption.66}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces Resultados del desempeño de los modelos para el \textit {dataset} \textsc {Cancer Data}}}{67}{table.3.6}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces Resultados del desempeño de los modelos para el \textit {dataset} \textsc {Academic Success}}}{68}{table.3.7}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces Resultados del desempeño de los modelos para el \textit {dataset} \textsc {Dry Bean}}}{68}{table.3.8}%
+\contentsline {table}{\numberline {3.9}{\ignorespaces Resultados del desempeño de los modelos para el \textit {dataset} \textsc {Airline Passenger Satisfaction}}}{71}{table.3.9}%
+\contentsline {table}{\numberline {3.10}{\ignorespaces Resultados del desempeño de los modelos para el \textit {dataset} \textsc {Human Resources}}}{72}{table.3.10}%
+\contentsline {table}{\numberline {3.11}{\ignorespaces Resultados del desempeño de los modelos para el \textit {dataset} \textsc {Water Quality and Potability}}}{73}{table.3.11}%
+\contentsline {table}{\numberline {3.12}{\ignorespaces Resultados del desempeño de los modelos para el \textit {dataset} \textsc {Dry Bean}}}{74}{table.3.12}%
+\contentsline {table}{\numberline {3.13}{\ignorespaces Resultados del desempeño de los modelos para el \textit {dataset} \textsc {Fetal Health}}}{75}{table.3.13}%
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {\~N.1}{\ignorespaces Métodos de normalización utilizados en cada \textit {dataset} para cada modelo}}{105}{table.caption.100}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {O.1}{\ignorespaces Métodos de discretización utilizados en cada \textit {dataset} para cada modelo}}{106}{table.caption.101}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {P.1}{\ignorespaces Métodos de imputación de valores faltantes utilizados en cada \textit {dataset} para cada modelo}}{108}{table.caption.102}%

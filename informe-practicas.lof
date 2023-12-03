@@ -1,46 +1,76 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplo de One-Hot Encoding (también conocido como Dummy Encoding) para el atributo ZIP Code}}{18}{figure.caption.17}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Desglose de los subproblemas de AutoML \citep {zoller2021benchmark}}}{19}{figure.caption.18}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Ejemplo de flujo de trabajo en la herramienta KNIME.}}{22}{figure.caption.19}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplo de codificación One-Hot (también conocido como \textit {Dummy Encoding}) para el atributo ZIP Code}}{18}{figure.caption.16}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Desglose de los subproblemas de AutoML \citep {zoller2021benchmark}}}{19}{figure.caption.17}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Ejemplo de flujo de trabajo en la herramienta KNIME.}}{22}{figure.caption.18}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagrama de flujo general de Discretizer}}{33}{figure.caption.22}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Nodos empleados para la discretización}}{34}{figure.caption.23}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagrama de flujo para el pre-procesado de \textit {string}}}{35}{figure.caption.24}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Vista previa de flujo KNIME para el filtrado de valores únicos}}{35}{figure.caption.25}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Vista previa de flujo KNIME para el reemplazo por 'other'}}{36}{figure.caption.26}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Diagrama de flujo para el manejo de valores faltantes}}{36}{figure.caption.27}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Diagrama de flujo para la imputación de valores faltantes}}{36}{figure.caption.28}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Vista previa de flujo KNIME para kNNI}}{38}{figure.caption.29}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Vista previa de flujo KNIME para kMI}}{38}{figure.caption.30}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Diagrama de flujo del pre-procesado para la codificación y normalización}}{39}{figure.caption.31}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Vista previa de flujo KNIME para codificacion One-Hot}}{40}{figure.caption.32}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Diagrama de flujo para la normalización}}{40}{figure.caption.33}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Componente AutoML Clasificación (Optimización de Hiperparámetros)}}{42}{figure.caption.34}%
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Diagrama de flujo general del componente AutoML Clasificación (Optimización de Hiperparámetros)}}{44}{figure.caption.35}%
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Diagrama de actividades de selección de parámetros}}{44}{figure.caption.37}%
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Diagrama de flujo de la optimización de hiperparámetros}}{45}{figure.caption.39}%
-\contentsline {figure}{\numberline {2.17}{\ignorespaces Diagrama de flujo para la optimización de hiperparámetros de RProp}}{47}{figure.caption.41}%
-\contentsline {figure}{\numberline {2.18}{\ignorespaces Diagrama de flujo para la optimización de hiperparámetros de PNN}}{47}{figure.caption.42}%
-\contentsline {figure}{\numberline {2.19}{\ignorespaces Diagrama de flujo para la optimización de hiperparámetros de SVM}}{49}{figure.caption.43}%
-\contentsline {figure}{\numberline {2.20}{\ignorespaces Diagrama de flujo para la optimización de hiperparámetros de Random Forest}}{50}{figure.caption.44}%
-\contentsline {figure}{\numberline {2.21}{\ignorespaces Diagrama de flujo de Componente AutoML (clasificación)}}{51}{figure.caption.45}%
-\contentsline {figure}{\numberline {2.22}{\ignorespaces Diagrama de flujo del procesamiento del modelo ID3}}{51}{figure.caption.46}%
-\contentsline {figure}{\numberline {2.23}{\ignorespaces Diagrama de flujo del procesamiento del modelo C4.5}}{52}{figure.caption.47}%
-\contentsline {figure}{\numberline {2.24}{\ignorespaces Diagrama de flujo del procesado de CART}}{53}{figure.caption.48}%
-\contentsline {figure}{\numberline {2.25}{\ignorespaces Diagrama de flujo del procesamiento de Random Forest}}{53}{figure.caption.49}%
-\contentsline {figure}{\numberline {2.26}{\ignorespaces Diagrama de flujo del procesamiento de RProp}}{54}{figure.caption.50}%
-\contentsline {figure}{\numberline {2.27}{\ignorespaces Diagrama de flujo para el procesado de PNN}}{54}{figure.caption.51}%
-\contentsline {figure}{\numberline {2.28}{\ignorespaces Diagrama de flujo del procesamiento de SVM}}{55}{figure.caption.52}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagrama de flujo general de \textit {Discretizer}}}{34}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Nodos empleados para la discretización}}{35}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagrama de flujo para el pre-procesado de \textit {string}}}{36}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Vista previa de flujo KNIME para el filtrado de valores únicos}}{36}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Vista previa de flujo KNIME para el reemplazo por '\textit {other}'}}{37}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Diagrama de flujo para el manejo de valores faltantes}}{37}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Diagrama de flujo para la imputación de valores faltantes}}{38}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Vista previa de flujo KNIME para kNNI}}{39}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Vista previa de flujo KNIME para kMI}}{39}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Diagrama de flujo del pre-procesado para la codificación y normalización}}{40}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Vista previa de flujo KNIME para la codificación One-Hot}}{41}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Diagrama de flujo para la normalización}}{41}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Componente AutoML Clasificación (Optimización de Hiperparámetros)}}{43}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Diagrama de flujo general del componente AutoML Clasificación (Optimización de Hiperparámetros)}}{45}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Diagrama de actividades de selección de parámetros}}{45}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Diagrama de flujo de la optimización de hiperparámetros}}{46}{figure.caption.38}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Diagrama de flujo para la optimización de hiperparámetros de RProp}}{48}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Diagrama de flujo para la optimización de hiperparámetros de PNN}}{49}{figure.caption.41}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Diagrama de flujo para la optimización de hiperparámetros de SVM}}{50}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Diagrama de flujo para la optimización de hiperparámetros de Random Forest}}{51}{figure.caption.43}%
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Diagrama de flujo de Componente AutoML (Clasificación)}}{52}{figure.caption.44}%
+\contentsline {figure}{\numberline {2.22}{\ignorespaces Diagrama de flujo del procesamiento del modelo ID3}}{53}{figure.caption.45}%
+\contentsline {figure}{\numberline {2.23}{\ignorespaces Diagrama de flujo del procesamiento del modelo C4.5}}{53}{figure.caption.46}%
+\contentsline {figure}{\numberline {2.24}{\ignorespaces Diagrama de flujo del procesado de CART}}{54}{figure.caption.47}%
+\contentsline {figure}{\numberline {2.25}{\ignorespaces Diagrama de flujo del procesamiento de Random Forest}}{55}{figure.caption.48}%
+\contentsline {figure}{\numberline {2.26}{\ignorespaces Diagrama de flujo del procesamiento de RProp}}{55}{figure.caption.49}%
+\contentsline {figure}{\numberline {2.27}{\ignorespaces Diagrama de flujo para el procesado de PNN}}{56}{figure.caption.50}%
+\contentsline {figure}{\numberline {2.28}{\ignorespaces Diagrama de flujo del procesamiento de SVM}}{56}{figure.caption.51}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Resultados del CP1 de \textit {Discretizer}}}{58}{figure.caption.54}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Vista previa de la salida del componente \textit {Discretizer}}}{58}{figure.caption.55}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Base de datos empleada para las pruebas del componente String-preprocs}}{59}{figure.caption.57}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Resultados de los casos de prueba del componente \textit {String preprocs}}}{60}{figure.caption.58}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Resultados del CP1 del componente \textit {MV Imputation}}}{61}{figure.caption.60}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Resultado del CP2 del componente \textit {MV Imputation}}}{61}{figure.caption.61}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Resultados del CP1 del componente Codificar y Normalizar}}{62}{figure.caption.63}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Vista previa de la salida del componente Normalizer}}{62}{figure.caption.64}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Categorías a codificar}}{63}{figure.caption.65}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Vista previa de la salida del componente \textit {Codificar y Normalizar}}}{63}{figure.caption.66}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Resultados del CP1 de \textit {Discretizer}}}{60}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Vista previa de la salida del componente \textit {Discretizer}}}{60}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Conjunto de datos empleado para las pruebas del componente \textit {String-preprocs}}}{61}{figure.caption.56}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Resultados de los casos de prueba del componente \textit {String preprocs}}}{62}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Resultados del CP1 del componente \textit {MV Imputation}}}{63}{figure.caption.59}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Resultado del CP2 del componente \textit {MV Imputation}}}{63}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Resultados del CP1 del componente Codificar y Normalizar}}{64}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Vista previa de la salida del componente Normalizer}}{64}{figure.caption.63}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Categorías a codificar}}{65}{figure.caption.64}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Vista previa de la salida del componente \textit {Codificar y Normalizar}}}{65}{figure.caption.65}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Flujo KNIME para la configuración del componente \textit {AutoML Clasificación (pre-procesado)}}}{91}{figure.caption.86}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Flujo KNIME para la evaluación de la columna objetivo en el componente\textit { AutoML Clasificación (Optimización de Hiperparámetros)}}}{92}{figure.caption.87}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Flujo KNIME para graficar cuando la columna objetivo es binaria en el componente\textit { AutoML Clasificación (Optimización de Hiperparámetros)}}}{93}{figure.caption.88}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Flujo KNIME para graficar cuando la columna objetivo es multiclase en el componente\textit { AutoML Clasificación (Optimización de Hiperparámetros)}}}{94}{figure.caption.89}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {E.1}{\ignorespaces Ejemplo de flujo KNIME para la HPO con el modelo RProp}}{95}{figure.caption.90}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {F.1}{\ignorespaces Ejemplo de configuración del nodo \textit {Parameter Optimization Loop Start} para la \textit {HPO} del modelo RProp}}{96}{figure.caption.91}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {G.1}{\ignorespaces Ejemplo de evaluación de modelos para la \textit {HPO} para el modelo SVM}}{97}{figure.caption.92}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {H.1}{\ignorespaces Flujo KNIME del componente \textit {Discretizer}}}{98}{figure.caption.93}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {I.1}{\ignorespaces Flujo KNIME para la discretización\textit { Equal-Frequency} en el modelo ID3}}{99}{figure.caption.94}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {J.1}{\ignorespaces Flujo KNIME del componente \textit {MV Imputation}}}{100}{figure.caption.95}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {K.1}{\ignorespaces Flujo KNIME del componente \textit {Normalizer}}}{101}{figure.caption.96}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {L.1}{\ignorespaces Flujo KNIME para la normalización \textit {Decimal Scaling} en el modelo PNN}}{102}{figure.caption.97}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {M.1}{\ignorespaces Flujo KNIME del componente \textit {AutoML Clasificación}}}{103}{figure.caption.98}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {N.1}{\ignorespaces Flujo KNIME de la integración de los componentes al modelo PNN}}{104}{figure.caption.99}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
 \addvspace {10\p@ }

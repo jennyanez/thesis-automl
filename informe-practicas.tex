@@ -40,6 +40,7 @@
 \usepackage{comment}
 \usepackage{array}
 
+ 
 \usepackage{vmargin}
 \setmargins {2.5cm}       % margen izquierdo
 {1.5cm}                        % margen superior
@@ -129,11 +130,16 @@
 \makeindex 
 
 \renewcommand{\baselinestretch}{1.2}
+
 \begin{document}
 	\pagenumbering{roman}	
 	\renewcommand{\listtablename}{Índice de tablas}
 	\renewcommand{\tablename}{Tabla}
 	\renewcommand{\bibname}{Referencias bibliográficas}
+	
+	\renewcommand{\appendixname}{Anexos}
+	\renewcommand{\appendixtocname}{Anexos}
+	\renewcommand{\appendixpagename}{Anexos}
 	
 %	esto es para que las listas anidadas salgan con numeros
 	\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
@@ -146,10 +152,12 @@
 	\thispagestyle{empty} 
 	
  	\include{portada}
-	\include{dec_autoria}
-	\include{opinion_tutor}
+ 	\include{dec_autoria}
+ 	\include{frase_inicial}
+%	\include{opinion_tutor}
 	\include{dedicatoria}
 	\include{agradecimientos}
+	\include{agradecimientos-2}
 	\include{resumen}
 	\include{abstrac}
 	
@@ -217,7 +225,7 @@
 	
 	\cleardoublepage
 	\phantomsection
-	\addcontentsline{toc}{chapter}{Anexos}
+%	\addcontentsline{toc}{chapter}{Anexos}
 	\fancyhf{}
 	\lhead[\thepage]{\textbf{Anexos}}
 	\rhead[\textbf{Anexos}]{\thepage}

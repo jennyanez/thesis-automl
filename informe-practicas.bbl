@@ -3,12 +3,14 @@
 \bibitem[\protect\citename{Agrawal {\em et~al.}, }1993]{Agrawal1519}
 Agrawal, Rakesh, Imielinski, Tomasz, \& Swami, Arun. 1993.
 \newblock Mining Association Rules between Sets of Items in Large Databases.
+\newblock {\em Pages  207--216 of:} {\em Proceedings of the 1993 ACM SIGMOD
+  international conference on Management of data}.
 
 \bibitem[\protect\citename{Avanzi {\em et~al.}, }2023]{avanzi2023machine}
 Avanzi, Benjamin, Taylor, Greg, Wang, Melantha, \& Wong, Bernard. 2023.
 \newblock Machine Learning with High-Cardinality Categorical Features in
   Actuarial Applications.
-\newblock {\em arXiv preprint arXiv:2301.12710}.
+\newblock {\em arXiv e-prints}.
 
 \bibitem[\protect\citename{Batista \& Monard, }2003]{batista2003analysis}
 Batista, Gustavo~EAPA, \& Monard, Maria~Carolina. 2003.
@@ -44,18 +46,17 @@ Borr{\`a}s, J, Delegido, Jes{\'u}s, Pezzola, A, Pereira-Sandoval, M, Morassi,
 
 \bibitem[\protect\citename{Bravo~Ilisástigui, }2012]{Lisandra2012}
 Bravo~Ilisástigui, Lisandra. 2012.
-\newblock PROPUESTA DE HERRAMIENTA PARA APLICAR MINERÍA DE DATOS EN ENTORNOS
-  COMPLEJOS.
+\newblock {\em PROPUESTA DE HERRAMIENTA PARA APLICAR MINERÍA DE DATOS EN
+  ENTORNOS COMPLEJOS.}
+\newblock M.Phil. thesis, Universidad Tecnológica de La Habana José Antonio
+  Echeverría CUJAE.
 
 \bibitem[\protect\citename{Carrazana~Ruiz, }2022]{Carrazana2022}
 Carrazana~Ruiz, Ernesto. 2022.
-\newblock Componente KNIME de AutoML para pre-procesado en tareas de
-  Clasificación.
-
-\bibitem[\protect\citename{Casas, }2019]{casas2019data}
-Casas, Pablo. 2019.
-\newblock Data science live book.
-\newblock {\em Retrieved from: livebook. datascienceheroes. com}.
+\newblock {\em Componente KNIME de AutoML para pre-procesado en tareas de
+  Clasificación}.
+\newblock M.Phil. thesis, Universidad Tecnológica de La Habana José Antonio
+  Echeverría CUJAE.
 
 \bibitem[\protect\citename{Catlett, }1991]{catlett1991changing}
 Catlett, Jason. 1991.
@@ -79,12 +80,12 @@ Cerda, Patricio, Varoquaux, Ga{\"e}l, \& K{\'e}gl, Bal{\'a}zs. 2018.
 Coria, Sergio, Orozco, Ivania, \& Luna, Juan. 2013.
 \newblock Minería de datos para perfilamiento de las brechas digital y
   educativa de ciudades en censos de poblaci{\'o}n y vivienda.
-\newblock {\em de Cuerpos Acad{\'e}micos}, ~18.
+\newblock {\em Cuerpos Acad{\'e}micos}, ~18.
 
 \bibitem[\protect\citename{Davison \& Hinkley, }1997]{davison1997bootstrap}
 Davison, Anthony~Christopher, \& Hinkley, David~Victor. 1997.
 \newblock {\em Bootstrap methods and their application}.
-\newblock Cambridge university press.
+\newblock Cambridge University Press.
 
 \bibitem[\protect\citename{Dhankhad {\em et~al.},
   }2018]{dhankhad2018supervised}
@@ -103,10 +104,11 @@ Dougherty, James, Kohavi, Ron, \& Sahami, Mehran. 1995.
 \newblock Elsevier.
 
 \bibitem[\protect\citename{Fayyad \& Irani, }1993]{FI1993}
-Fayyad, U.M., \& Irani, K.B. 1993.
-\newblock Multi-Interval Discretization of Continuous-Valued Attributes for
-  Classification Learning.
-\newblock  1022--1029.
+Fayyad, Usama~M, \& Irani, Keki~B. 1993.
+\newblock Multi-interval discretization of continuous-valued attributes for
+  classification learning.
+\newblock {\em Pages  1022--1029 of:} {\em Ijcai},  vol. 93.
+\newblock Citeseer.
 
 \bibitem[\protect\citename{Garcia {\em et~al.}, }2012]{garcia2012survey}
 Garcia, Salvador, Luengo, Julian, S{\'a}ez, Jos{\'e}~Antonio, Lopez, Victoria,
@@ -125,7 +127,7 @@ Garc{\'\i}a, Salvador, Luengo, Juli{\'a}n, \& Herrera, Francisco. 2015.
 G{\'e}ron, Aur{\'e}lien. 2022.
 \newblock {\em Hands-on machine learning with Scikit-Learn, Keras, and
   TensorFlow}.
-\newblock " O'Reilly Media, Inc.".
+\newblock O'Reilly Media, Inc.
 
 \bibitem[\protect\citename{Gupta {\em et~al.}, }2017]{gupta2017analysis}
 Gupta, Bhumika, Rawat, Aditya, Jain, Akshay, Arora, Arpit, \& Dhami, Naresh.
@@ -134,6 +136,11 @@ Gupta, Bhumika, Rawat, Aditya, Jain, Akshay, Arora, Arpit, \& Dhami, Naresh.
   data mining.
 \newblock {\em International Journal of Computer Applications}, {\bf 163}(8),
   15--19.
+
+\bibitem[\protect\citename{Han {\em et~al.}, }2011]{Han2011}
+Han, Jiawei, Pei, Jian, \& Tong, Hanghang. 2011.
+\newblock {\em Data mining: concepts and techniques}. 3rd edn.
+\newblock Morgan Kaufmann.
 
 \bibitem[\protect\citename{Hastie {\em et~al.}, }2009]{hastie2009elements}
 Hastie, Trevor, Tibshirani, Robert, Friedman, Jerome~H, \& Friedman, Jerome~H.
@@ -155,6 +162,7 @@ Hern{\'a}ndez, Eduardo S{\'a}nchez-Jim{\'e}nez~Yasm{\'\i}n, \&
 \newblock T{\'e}cnicas de Optimizaci{\'o}n de Hiperpar{\'a}metros en Modelos de
   Aprendizaje Autom{\'a}tico para Predicci{\'o}n de Enfermedades
   Cardiovasculares.
+\newblock {\em Centro Nacional de Investigación y Desarrollo Tecnológico}.
 
 \bibitem[\protect\citename{Hern{\'a}ndez~Orallo {\em et~al.},
   }2004]{orallo2004}
@@ -171,19 +179,16 @@ Holte, Robert~C. 1993.
 \bibitem[\protect\citename{Hooi {\em et~al.}, }2022]{hooi2022feature}
 Hooi, Eric Khoo~Jiun, Zainal, Anazida, Kassim, Mohamad~Nizam, \& Ayub, Zaily.
   2022.
-\newblock {\em Feature Encoding For High Cardinality Categorical Variables
-  Using Entity Embeddings: A Case Study}.
-\newblock Tech. rept.
+\newblock Feature Encoding For High Cardinality Categorical Variables Using
+  Entity Embeddings: A Case Study in Customs Fraud Detection.
+\newblock {\em Pages  1--5 of:} {\em 2022 International Conference on Cyber
+  Resilience (ICCR)}.
+\newblock IEEE.
 
 \bibitem[\protect\citename{Hutter {\em et~al.}, }2019]{hutter2019automated}
 Hutter, Frank, Kotthoff, Lars, \& Vanschoren, Joaquin. 2019.
 \newblock {\em Automated machine learning: methods, systems, challenges}.
 \newblock Springer Nature.
-
-\bibitem[\protect\citename{Jiawei~Han, }2011]{Han2011}
-Jiawei~Han, Micheline~Kamber, Jian~Pei. 2011.
-\newblock {\em Data Mining. Concepts and Techniques (The Morgan Kaufmann Series
-  in Data Management Systems)}. 3rd edn.
 
 \bibitem[\protect\citename{Joachims, }2002]{joachims2002learning}
 Joachims, Thorsten. 2002.
@@ -227,12 +232,12 @@ Kurgan, Lukasz~A, \& Cios, Krzysztof~J. 2004.
   }2021]{lakshmanan2021practical}
 Lakshmanan, Valliappa, G{\"o}rner, Martin, \& Gillard, Ryan. 2021.
 \newblock {\em Practical machine learning for computer vision}.
-\newblock " O'Reilly Media, Inc.".
+\newblock O'Reilly Media, Inc.
 
 \bibitem[\protect\citename{Lall \& Sharma, }1996]{lall1996nearest}
 Lall, Upmanu, \& Sharma, Ashish. 1996.
 \newblock A nearest neighbor bootstrap for resampling hydrologic time series.
-\newblock {\em Water resources research}, {\bf 32}(3), 679--693.
+\newblock {\em Water Resources Research}, {\bf 32}(3), 679--693.
 
 \bibitem[\protect\citename{LeDell \& Poirier, }2020]{ledell2020h2o}
 LeDell, Erin, \& Poirier, Sebastien. 2020.
@@ -281,18 +286,18 @@ M{\'e}ndez, Jos{\'e}~R, Riverola, Florentino~Fdez, D{\'\i}az, Fernando, \&
 Moeyersoms, Julie, \& Martens, David. 2015.
 \newblock Including high-cardinality attributes in predictive models: A case
   study in churn prediction in the energy sector.
-\newblock {\em Decision support systems}, {\bf 72}, 72--81.
+\newblock {\em Decision Support Systems}, {\bf 72}, 72--81.
 
 \bibitem[\protect\citename{Montavon {\em et~al.}, }2012]{montavon2012neural}
 Montavon, Gr{\'e}goire, Orr, Genevi{\`e}ve, \& M{\"u}ller, Klaus-Robert. 2012.
 \newblock {\em Neural networks: tricks of the trade}.
 \newblock  Vol. 7700.
-\newblock springer.
+\newblock Springer.
 
 \bibitem[\protect\citename{Murphy, }2012]{murphy2012machine}
 Murphy, Kevin~P. 2012.
 \newblock {\em Machine learning: a probabilistic perspective}.
-\newblock MIT press.
+\newblock MIT Press.
 
 \bibitem[\protect\citename{Patil {\em et~al.}, }2010]{patil2010missing}
 Patil, Bankat~M, Joshi, Ramesh~C, \& Toshniwal, Durga. 2010.
@@ -322,7 +327,7 @@ Praba, R, Darshan, G, Roshanraj, T, \& Surya, B. 2021.
 
 \bibitem[\protect\citename{Quinlan, }1993]{quinlan1993c}
 Quinlan, J~Ross. 1993.
-\newblock C 4.5: Programs for machine learning.
+\newblock C4.5: Programs for machine learning.
 \newblock {\em The Morgan Kaufmann Series in Machine Learning}.
 
 \bibitem[\protect\citename{Sammut \& Webb, }2011]{sammut2011encyclopedia}
@@ -334,7 +339,7 @@ Sammut, Claude, \& Webb, Geoffrey~I. 2011.
 Scholkopf, Bernhard, \& Smola, Alexander~J. 2018.
 \newblock {\em Learning with kernels: support vector machines, regularization,
   optimization, and beyond}.
-\newblock MIT press.
+\newblock MIT Press.
 
 \bibitem[\protect\citename{Sturges, }1926]{sturges1926choice}
 Sturges, Herbert~A. 1926.

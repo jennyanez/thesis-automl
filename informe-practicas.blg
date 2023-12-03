@@ -5,12 +5,10 @@ Reallocating 'name_of_file' (item size: 1) to 12 items.
 A level-1 auxiliary file: portada.aux
 Reallocating 'name_of_file' (item size: 1) to 16 items.
 A level-1 auxiliary file: dec_autoria.aux
-Reallocating 'name_of_file' (item size: 1) to 18 items.
-A level-1 auxiliary file: opinion_tutor.aux
-Reallocating 'name_of_file' (item size: 1) to 16 items.
-A level-1 auxiliary file: dedicatoria.aux
 Reallocating 'name_of_file' (item size: 1) to 20 items.
 A level-1 auxiliary file: agradecimientos.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: agradecimientos-2.aux
 Reallocating 'name_of_file' (item size: 1) to 12 items.
 A level-1 auxiliary file: resumen.aux
 Reallocating 'name_of_file' (item size: 1) to 12 items.
@@ -33,52 +31,60 @@ Reallocating 'name_of_file' (item size: 1) to 17 items.
 Reallocating 'name_of_file' (item size: 1) to 10 items.
 A level-1 auxiliary file: anexo.aux
 Database file #1: bibliografia-pp2.bib
-Warning--empty booktitle in Agrawal1519
-Warning--empty booktitle in Lisandra2012
-Warning--empty booktitle in Carrazana2022
-Warning--empty journal in FI1993
-Warning--empty journal in hernandeztecnicas
-Warning--empty institution in hooi2022feature
-Warning--empty publisher in Han2011
-You've used 65 entries,
+Warning--can't use both author and editor fields in bishop2006pattern
+Warning--can't use both author and editor fields in bonaccorso2017machine
+Warning--can't use both author and editor fields in davison1997bootstrap
+Warning--can't use both author and editor fields in garcia2015data
+Warning--can't use both author and editor fields in geron2022hands
+Warning--can't use both author and editor fields in Han2011
+Warning--can't use both author and editor fields in hastie2009elements
+Warning--can't use both author and editor fields in orallo2004
+Warning--can't use both author and editor fields in hutter2019automated
+Warning--can't use both author and editor fields in joachims2002learning
+Warning--can't use both author and editor fields in lakshmanan2021practical
+Warning--can't use both author and editor fields in montavon2012neural
+Warning--can't use both author and editor fields in murphy2012machine
+Warning--can't use both author and editor fields in sammut2011encyclopedia
+Warning--can't use both author and editor fields in scholkopf2018learning
+You've used 64 entries,
             2441 wiz_defined-function locations,
-            944 strings with 16053 characters,
-and the built_in function-call counts, 26466 in all, are:
-= -- 2623
-> -- 961
-< -- 228
-+ -- 290
-- -- 277
-* -- 2119
-:= -- 4311
-add.period$ -- 269
-call.type$ -- 65
-change.case$ -- 410
-chr.to.int$ -- 64
-cite$ -- 72
-duplicate$ -- 1015
-empty$ -- 1933
-format.name$ -- 354
-if$ -- 5482
+            945 strings with 16056 characters,
+and the built_in function-call counts, 26664 in all, are:
+= -- 2647
+> -- 962
+< -- 227
++ -- 291
+- -- 278
+* -- 2171
+:= -- 4306
+add.period$ -- 272
+call.type$ -- 64
+change.case$ -- 404
+chr.to.int$ -- 63
+cite$ -- 79
+duplicate$ -- 1021
+empty$ -- 1949
+format.name$ -- 353
+if$ -- 5535
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 76
-newline$ -- 336
-num.names$ -- 195
-pop$ -- 408
+missing$ -- 74
+newline$ -- 338
+num.names$ -- 192
+pop$ -- 380
 preamble$ -- 1
-purify$ -- 474
+purify$ -- 467
 quote$ -- 0
-skip$ -- 1058
+skip$ -- 1065
 stack$ -- 0
-substring$ -- 1640
-swap$ -- 255
-text.length$ -- 13
+substring$ -- 1677
+swap$ -- 287
+text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 488
-warning$ -- 7
-while$ -- 212
+type$ -- 480
+warning$ -- 15
+while$ -- 216
 width$ -- 0
-write$ -- 828
-(There were 7 warnings)
+write$ -- 833
+(There were 15 warnings)

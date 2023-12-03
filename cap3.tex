@@ -1,12 +1,12 @@
-\chapter{Validación de Soluciones Propuestas al Componente de AutoML}\label{chap:3}
-El presente capítulo se adentra en la fase crucial de validación de las soluciones propuestas en el capítulo \ref{chap:2}. Durante el transcurso de este, se llevará a cabo una evaluación exhaustiva de las soluciones propuestas, centrándose en la comparación de los resultados obtenidos con y sin estas modificaciones. Se analizarán métricas de rendimiento, tiempos de ejecución y la capacidad del sistema para adaptarse a diferentes conjuntos de datos y necesidades específicas de clasificación. En última instancia, este capitulo constituirá un pilar fundamental en la evaluación de las contribuciones presentadas en esta tesis, demostrando la efectividad y utilidad de las soluciones propuestas en el contexto del AutoML para la clasificación.
+\chapter{Validación de soluciones propuestas al componente para \textit{AutoML}}\label{chap:3}
+El presente capítulo se adentra en la fase crucial de validación de las soluciones propuestas en el Capítulo \ref{chap:2}. Durante el transcurso de este, se llevará a cabo una evaluación de las soluciones propuestas, centrándose en la comparación de los resultados obtenidos con y sin estas modificaciones. Se analizarán métricas de rendimiento y la capacidad del sistema para adaptarse a diferentes conjuntos de datos y necesidades específicas de clasificación. En última instancia, este capítulo constituirá un pilar fundamental en la evaluación de las contribuciones presentadas en esta tesis, demostrando la efectividad y utilidad de las soluciones propuestas en el contexto del \textit{AutoML} para la clasificación.
 
 \section{Pruebas de caja negra a subcomponentes para el pre-procesado}
-En pos de validar el correcto funcionamiento de las soluciones propuestas en el capítulo \ref{chap:2}, a continuación se presentan las pruebas realizadas a cada componente y, por último, a la integración de los mismos con el componente \textit{AutoML Clasificación (pre-procesado)}. Para ello se emplean las bases de datos descritas en la tabla \ref{tab:bd-cap1}.
+En pos de validar el correcto funcionamiento de las soluciones propuestas en el Capítulo \ref{chap:2}, a continuación se presentan las pruebas realizadas a cada componente y a la integración de los mismos con el componente \textit{AutoML Clasificación (pre-procesado)}. Para ello se emplean los conjuntos de datos descritos en la Tabla \ref{tab:bd-cap1}.
 
-\subsection{Caso de prueba al subcomponente \textit{Discretizer}}
+\subsection{Caso de prueba al componente \textit{Discretizer}}
 
-Para la realización de esta prueba se diseña el caso de prueba de la tabla \ref{tab:cp-disc}. Para esta prueba en particular se utiliza la base de datos \textsc{Cancer Data} y el modelo ID3. Se emplea esta base de datos dado que la mayoría de sus atributos son numéricos, por tanto todos serán discretizados.
+Para la realización de esta prueba se diseña el caso de prueba de la Tabla \ref{tab:cp-disc}. Para esta se utiliza el \textit{dataset} \textsc{Cancer Data} y el modelo ID3. Se emplea este conjunto de datos dado que la mayoría de sus atributos son numéricos, por tanto, todos serán discretizados.
 
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
@@ -31,7 +31,7 @@ Para la realización de esta prueba se diseña el caso de prueba de la tabla \re
 \end{spacing}
 \end{table}
 
-En la figura \ref{fig:comparacion-disc} se presentan los resultados del CP1, donde el mejor discretizador resulta ser CAIM con 0.953 de precisión y 0.903 de Cohen's Kappa, siendo unos resultados notables para una base de datos desbalanceada. Para el CP2, se presenta en la figura \ref{fig:salida-discret} una vista previa de la tabla de salida del componente \textit{Discretizer} con los datos discretizados.
+En la Figura \ref{fig:comparacion-disc} se presentan los resultados del CP1, donde el mejor discretizador resulta ser CAIM con 0.953 de exactitud y 0.903 de Cohen's Kappa, siendo unos resultados notables para un conjunto de datos desbalanceado. Para el CP2, se presenta en la Figura \ref{fig:salida-discret} una vista previa de la tabla de salida del componente \textit{Discretizer} con los datos discretizados.
 
 \begin{figure}[H]
 	\centering
@@ -49,9 +49,9 @@ En la figura \ref{fig:comparacion-disc} se presentan los resultados del CP1, don
 
 
 
-\subsection{Caso de prueba al subcomponente \textit{String preprocs}}
+\subsection{Caso de prueba al componente \textit{String preprocs}}
 
-Para la realización de esta prueba se diseña el caso de prueba de la tabla \ref{tab:cp-string-preprocs}. Para esta prueba en particular se crea la base de datos de la figura \ref{fig:bd-string-preprocs}, dado que solamente se realizan transformaciones en los datos. La columna 1 se emplea para el CP1, así como la columna 2 para el CP2. La columna 3 es utilizada para comprobar el correcto funcionamiento del componente con una columna objetivo.
+Para la realización de esta prueba se diseña el caso de prueba de la Tabla \ref{tab:cp-string-preprocs}. Para esta, en particular, se crea el conjunto de datos de la Figura \ref{fig:bd-string-preprocs}, dado que solamente se realizan transformaciones en los datos. La columna 1 se emplea para el CP1, así como la columna 2 para el CP2. La columna 3 es utilizada para comprobar el correcto funcionamiento del componente con una columna objetivo.
 
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
@@ -69,7 +69,7 @@ Para la realización de esta prueba se diseña el caso de prueba de la tabla \re
 			\multicolumn{4}{|l|}{Combinaciones de valores de entrada}                                                                                                                                                                                                                                                                                                                                                                                                                                                \\ \hline
 			\multicolumn{1}{|l|}{CP}                                                                  & \multicolumn{1}{l|}{Escenario}                                                                                                                                      & \multicolumn{1}{l|}{Resultado esperado}                                                                                      & Resultado real                                                                                          \\ \hline
 			\multicolumn{1}{|l|}{CP1}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una columna con\\ más del 80\% de valores únicos \end{tabular}}                                     & \multicolumn{1}{l|}{La columna es eliminada}                                                                                 & La columna es eliminada                                                                                 \\ \hline
-			\multicolumn{1}{|l|}{CP2}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una columna\\ con varias categorías diferentes\\ donde existan valores únicos \end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se reemplazan los valores \\ únicos por la categoría \\ 'other'\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se reemplazan los valores \\ únicos por la categoría\\  'other'\end{tabular} \\ \hline
+			\multicolumn{1}{|l|}{CP2}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una columna\\ con varias categorías diferentes\\ donde existan valores únicos \end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se reemplazan los valores \\ únicos por la categoría \\ '\textit{other}'\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se reemplazan los valores \\ únicos por la categoría\\  '\textit{other}'\end{tabular} \\ \hline
 		\end{tabular}%
 	}
 	\end{spacing}
@@ -79,11 +79,11 @@ Para la realización de esta prueba se diseña el caso de prueba de la tabla \re
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.3\linewidth]{"figuras/capi 3/pruebas-jenn/bd-string-preprocs"}
-	\caption{Base de datos empleada para las pruebas del componente String-preprocs}
+	\caption{Conjunto de datos empleado para las pruebas del componente \textit{String-preprocs}}
 	\label{fig:bd-string-preprocs}
 \end{figure}
 
-En la figura \ref{fig:resultado-cp1-string-prep} se muestra el resultado del CP1, con el objetivo de filtrar los valores únicos. Como se observa, la columna 1 es eliminada. Por otra parte, en la figura \ref{fig:resultado-cp2-string-prep} se muestra el resultado del CP2, con el objetivo de sutituir los valores únicos de una columna por la categoría 'other'. Se puede observar que en la columna 2, los últimos valores que anteriormente eran únicos, ahora fueron sustituidos.
+En la Figura \ref{fig:resultado-cp1-string-prep} se muestra el resultado del CP1, con el objetivo de filtrar los valores únicos. Como se observa, la columna 1 es eliminada. Por otra parte, en la Figura \ref{fig:resultado-cp2-string-prep} se muestra el resultado del CP2, con el objetivo de sustituir los valores únicos de una columna por la categoría '\textit{other}'. Se puede observar que en la columna 2, los últimos valores que anteriormente eran únicos, ahora fueron sustituidos.
 
 \begin{figure}[H]
 	\centering
@@ -97,7 +97,7 @@ En la figura \ref{fig:resultado-cp1-string-prep} se muestra el resultado del CP1
 	\begin{subfigure}[b]{0.45\linewidth}
 		\centering
 		\includegraphics[width=0.45\linewidth]{"figuras/capi 3/pruebas-jenn/resultado-cp2-string-prep"}
-		\caption{Resultado del CP2, para la sustitución por la categoría 'other'}
+		\caption{Resultado del CP2, para la sustitución por la categoría '\textit{other}'}
 		\label{fig:resultado-cp2-string-prep}
 	\end{subfigure}
 	\caption{Resultados de los casos de prueba del componente \textit{String preprocs}}
@@ -105,8 +105,8 @@ En la figura \ref{fig:resultado-cp1-string-prep} se muestra el resultado del CP1
 \end{figure}
 
 
-\subsection{Caso de prueba al subcomponente \textit{MV Imputation}}
-Para la realización de esta prueba se diseña el caso de prueba de la tabla \ref{tab:cp-mv-imp}. Para esta prueba se emplea la base de datos \textsc{Census income} y el algoritmo C4.5. Se escoge esta base de datos 
+\subsection{Caso de prueba al componente \textit{MV Imputation}}
+Para la realización de esta prueba se diseña el caso de prueba de la Tabla \ref{tab:cp-mv-imp}. Para esta se emplea el conjunto de datos \textsc{Census income} y el algoritmo C4.5. Se escoge este \textit{dataset} debido a que posee gran cantidad de valores perdidos.
 
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
@@ -131,7 +131,7 @@ Para la realización de esta prueba se diseña el caso de prueba de la tabla \re
 	\end{spacing}
 \end{table}
 
-En la figura \ref{fig:comparacion-mvi} se muestran los resultados del CP1, donde el mejor método de imputación para esta base de datos con este algoritmo es KMI, con una precisión de 0.848 y Cohen's Kappa de 0.557. Para el CP2 se presenta en la figura \ref{fig:resultado-cp2-mvi} una vista previa de la tabla de salida del componente \textit{MV Imputation} con los datos imputados. 
+En la Figura \ref{fig:comparacion-mvi} se muestran los resultados del CP1, donde el mejor método de imputación para este conjunto de datos con este algoritmo es kMI, con una exactitud de 0.848 y Cohen's Kappa de 0.557. Para el CP2, se presenta en la Figura \ref{fig:resultado-cp2-mvi} una vista previa de la tabla de salida del componente \textit{MV Imputation} con los datos imputados. 
 
 \begin{figure}[H]
 	\centering
@@ -148,8 +148,8 @@ En la figura \ref{fig:comparacion-mvi} se muestran los resultados del CP1, donde
 \end{figure}
 
 
-\subsection{Caso de prueba al subcomponente \textit{Codificar y normalizar}}
-Para la realización de esta prueba se diseña el caso de prueba de la tabla \ref{tab:cp-codificarnorm}. Para esta prueba se emplea la base de datos \textsc{Human Resources} y el algoritmo SVM. 
+\subsection{Caso de prueba al componente \textit{Codificar y normalizar}}
+Para la realización de esta prueba se diseña el caso de prueba de la Tabla \ref{tab:cp-codificarnorm}. Para esta se emplea el conjunto de datos \textsc{Human Resources} y el algoritmo SVM. Se selecciona este \textit{dataset} debido a que posee dos columnas con alta cardinalidad y una gran cantidad de valores cuantitativos.
 
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
@@ -175,7 +175,7 @@ Para la realización de esta prueba se diseña el caso de prueba de la tabla \re
 	\end{spacing}
 \end{table}
 
-En la figura \ref{fig:comparacion-norm} se muestran los resultados del CP1, donde el mejor método para la normalización para esta base de datos con este algoritmo es Z-Score, con una precisión de 0.777 y Cohen's Kappa de 0.335. Para el CP2, se presenta en la figura \ref{fig:norm-cp1} una vista previa de la tabla de salida  del componente \textit{Normalizer} con los datos normalizados.
+En la Figura \ref{fig:comparacion-norm} se muestran los resultados del CP1, donde el mejor método para la normalización para este conjunto de datos con este algoritmo es Z-Score, con una precisión de 0.777 y Cohen's Kappa de 0.335. Para el CP2, se presenta en la Figura \ref{fig:norm-cp1} una vista previa de la tabla de salida del componente \textit{Normalizer} con los datos normalizados.
 
 \begin{figure}[H]
 	\centering
@@ -194,7 +194,7 @@ En la figura \ref{fig:comparacion-norm} se muestran los resultados del CP1, dond
 
 
 
-Por otra parte, para el CP3, se muestra en la figura \ref{fig:categorias-a-codificar} las categorías con más de 15 valores distintos a las que se les aplica el método One-Hot Encoding. En la figura \ref{fig:resultado-cp3-codif-norm}, se muestra una vista previa de la salida del componente \textit{One-Hot Encoding}, siendo el resultado del caso de prueba en cuestión. 
+Por otra parte, para el CP3, se muestra en la Figura \ref{fig:categorias-a-codificar} las categorías con más de 15 valores distintos a las que se les aplica el método \textit{One-Hot Encoding}. En la Figura \ref{fig:resultado-cp3-codif-norm}, se muestra una vista previa de la salida del componente \textit{One-Hot Encoding}, siendo el resultado del caso de prueba en cuestión. 
 
 \begin{figure}[H]
 	\centering
@@ -213,25 +213,521 @@ Por otra parte, para el CP3, se muestra en la figura \ref{fig:categorias-a-codif
 
 \section{Pruebas de caja negra al componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}}
 
-\subsection{Caso de prueba para el modelo RProp}
-
-\subsection{Caso de prueba para el modelo PNN}
-
-\subsection{Caso de prueba para el modelo SVM}
-
-\subsection{Caso de prueba para el modelo Random Forest}
-
-\section{Pruebas de integración al componente \textit{AutoML Clasificación (pre-procesado)}}
+Con el propósito de validar el correcto funcionamiento de las soluciones propuestas en el Capítulo \ref{chap:2}, se exponen a continuación las pruebas y experimentos llevados a cabo al componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}. Este proceso se ejecuta utilizando los conjuntos de datos detallados en la Tabla \ref{tab:bd-cap1}. Para desarrollar la presente prueba de funcionalidad, se ha diseñado el caso de prueba conforme a las especificaciones detalladas en la Tabla \ref{tab:cp-comp-hpo}. \\
+Las pruebas a cada modelo se dividen en tres experimentos. Estos se ejecutan utilizando tres conjuntos de datos diversos para abordar la variabilidad en las características y distribuciones de los datos. Los resultados de los experimentos se derivan de la comparación de los modelos optimizados con los modelos nativos de KNIME, mediante las métricas \textit{Accuracy}, Cohen’s Kappa y AUC-ROC.
 
 
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[H]
+	\centering
+	\caption{Caso de prueba al componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}}
+	\label{tab:cp-comp-hpo}
+	\begin{spacing}{1.15}
+		
+
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|llll|}
+			\hline
+			\multicolumn{4}{|l|}{Caso de prueba}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               \\ \hline
+			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Objetivo de la\\ prueba\end{tabular}}     & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Comprobar el correcto funcionamiento de la optimización de hiperparámetros \\ del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}.\end{tabular}}                                                                                                                                                                                                                                                      \\ \hline
+			\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción de \\ la prueba\end{tabular}} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Se debe proporcionar una base de datos y evaluar el correcto funcionamiento \\ de los algoritmos.\end{tabular}}                                                                                                                                                                                                                                                                                                         \\ \hline
+			\multicolumn{1}{|l|}{Condiciones}                                                         & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}1. Debe estar presente la columna objetivo para la clasificación.\\ 2. La columna objetivo debe ser de tipo nominal.\end{tabular}}                                                                                                                                                                                                                                                                                      \\ \hline
+			\multicolumn{4}{|l|}{Combinaciones de valores de entrada}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          \\ \hline
+			\multicolumn{1}{|l|}{CP}                                                                  & \multicolumn{1}{l|}{Escenario}                                                                                                                                                  & \multicolumn{1}{l|}{Resultado esperado}                                                                                                             & Resultado real                                                                                                                 \\ \hline
+			\multicolumn{1}{|l|}{CP1}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una base \\ de datos  y se ejecuta el \\ componente con la selección \\ del modelo RProp.\end{tabular}}        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se ejecuta todo el flujo \\ RProp del componente \\ de manera correcta.\end{tabular}}                & \begin{tabular}[c]{@{}l@{}}Se ejecuta todo el flujo\\  RProp del componente \\ de manera correcta.\end{tabular}                \\ \hline
+			\multicolumn{1}{|l|}{CP2}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una base\\ de datos y se ejecuta el \\ componente con la selección\\ del modelo RProp.\end{tabular}}           & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente\\ la optimización de \\ hiperparámetros de \\ RProp.\end{tabular}}          & \begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ la optimización de \\ hiperparámetros de \\ RProp.\end{tabular}         \\ \hline
+			\multicolumn{1}{|l|}{CP3}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una base \\ de datos y se ejecuta el \\ componente con la selección \\ del modelo PNN.\end{tabular}}           & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se ejecuta todo el flujo \\ PNN del componente \\ de manera correcta.\end{tabular}}                  & \begin{tabular}[c]{@{}l@{}}Se ejecuta todo el flujo \\ PNN del componente \\ de manera correcta.\end{tabular}                  \\ \hline
+			\multicolumn{1}{|l|}{CP4}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una base \\ de datos y se ejecuta el \\ componente con la selección \\ del modelo PNN.\end{tabular}}           & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ la optimización de \\ hiperparámetros de PNN.\end{tabular}}              & \begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ la optimización de \\ hiperparámetros de PNN.\end{tabular}              \\ \hline
+			\multicolumn{1}{|l|}{CP5}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una base \\ de datos y se ejecuta el \\ componente con la selección \\ del modelo SVM.\end{tabular}}           & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se ejecuta todo el flujo \\ SVM del componente \\ de manera correcta.\end{tabular}}                  & \begin{tabular}[c]{@{}l@{}}Se ejecuta todo el flujo \\ SVM del componente \\ de manera correcta.\end{tabular}                  \\ \hline
+			\multicolumn{1}{|l|}{CP6}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una base \\ de datos y se ejecuta el \\ componente con la selección \\ del modelo SVM.\end{tabular}}           & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ la optimización de \\ hiperparámetros de SVM.\end{tabular}}              & \begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ la optimización de \\ hiperparámetros de SVM.\end{tabular}              \\ \hline
+			\multicolumn{1}{|l|}{CP7}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una base \\ de datos y se ejecuta el \\ componente con la selección \\ del modelo Random Forest.\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se ejecuta todo el flujo \\ Random Forest del \\ componente de manera \\ correcta.\end{tabular}}     & \begin{tabular}[c]{@{}l@{}}Se ejecuta todo el flujo \\ Random Forest del \\ componente de manera \\ correcta.\end{tabular}     \\ \hline
+			\multicolumn{1}{|l|}{CP8}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una base \\ de datos y se ejecuta el \\ componente con la selección \\ del modelo Random Forest.\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ la optimización de \\ hiperparámetros de \\ Random Forest.\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ la optimización de \\ hiperparámetros de \\ Random Forest.\end{tabular} \\ \hline
+		\end{tabular}%
+	}
+		\end{spacing}
+\end{table}
+
+A continuación, se detallan los experimentos realizados para evaluar el rendimiento de los modelos RProp, PNN, SVM y Random Forest del componente \textit{AutoML (Optimización de hiperparámetros)}.
+
+\subsection{Experimento I}
+Para la realización de este experimento se emplea el conjunto de datos \textsc{Cancer Data}. Este es escogido debido a su preponderancia de atributos numéricos, el desbalance en su distribución, y su naturaleza de clase binaria. Para más detalles, consultar la Tabla \ref{tab:bd-cap1}. \\
+En la Tabla \ref{tab:res-exp-1-hpo} se muestran los resultados acordes a las métricas \textit{Accuracy}, Cohen’s Kappa y AUC-ROC.
+
+% \usepackage{array}
+% \usepackage{longtable}
+% \usepackage{booktabs}
+
+
+\begin{longtable}{>{\centering\hspace{0pt}}m{0.285\linewidth}>{\centering\hspace{0pt}}m{0.175\linewidth}>{\centering\hspace{0pt}}m{0.273\linewidth}>{\centering\arraybackslash\hspace{0pt}}m{0.183\linewidth}} 
+	\caption{Resultados del desempeño de los modelos para el \textit{dataset} \textsc{Cancer Data}\label{tab:res-exp-1-hpo}}\\ 
+	\toprule
+	& \multicolumn{3}{>{\centering\arraybackslash\hspace{0pt}}m{0.631\linewidth}}{\textbf{Métricas}}  \endfirsthead 
+	\cmidrule{2-4}
+	\textbf{\textbf{Modelo}} & \textbf{Accuracy} & \textbf{Cohen's Kappa} & \textbf{AUC-ROC}                                   \\ 
+	\midrule
+	RProp                    & 0.9473            & 0.8880                 & 0.994                                              \\
+	\textbf{RProp'}          & 0.9766            & 0.9506                 & 0.997                                              \\ 
+	\hline \addlinespace[3pt]
+	PNN                      & \underline{0.9181}            & \underline{0.8322}                 & 0.986                                              \\
+	\textbf{PNN'}            & 0.9590            & 0.9143                 & 0.991                                              \\ 
+	\hline  \addlinespace[3pt]
+	SVM                      & 0.9415            & 0.8737                 & 0.977                                              \\
+	\textbf{SVM'}            & 0.9707            & 0.9374                 & 0.987                                              \\ 
+	\hline  \addlinespace[3pt]
+	Random Forest            & 0.9298            & 0.8549                 & \underline{0.976 }                                             \\
+	\textbf{Random Forest'}  & \textbf{0.9894}          & \textbf{0.9773 }                & \textbf{1}                                                  \\
+	\bottomrule
+\end{longtable}
+
+\begin{minipage}{15cm}
+	\small {\footnotesize Nota 1: Los modelos resaltados en \textbf{negrita} son los del nuevo componente.} \\
+	\small {\footnotesize Nota 2: Las métricas resaltadas en \textbf{negrita} indican el valor más alto, así como las \underline{subrayadas} indican el valor más bajo.}
+\end{minipage}
+
+\subsection{Experimento II}
+Para la ejecución de este experimento se emplea el conjunto de datos \textsc{Academic Success}, de naturaleza multiclase, desbalanceada en su distribución y predominio de atributos numéricos. Para más detalles, consultar la Tabla \ref{tab:bd-cap1}. \\
+En la Tabla \ref{tab:res-exp-2-hpo} se muestran los resultados acordes a las métricas \textit{Accuracy} y Cohen’s Kappa.
+
+\pagebreak
+
+% \usepackage{array}
+% \usepackage{longtable}
+% \usepackage{booktabs}
+
+
+\begin{longtable}{>{\centering\hspace{0pt}}m{0.352\linewidth}>{\centering\hspace{0pt}}m{0.217\linewidth}>{\centering\arraybackslash\hspace{0pt}}m{0.337\linewidth}} 
+	\caption{Resultados del desempeño de los modelos para el \textit{dataset} \textsc{Academic Success}\label{tab:res-exp-2-hpo}}\\ 
+	\toprule
+	& \multicolumn{2}{>{\centering\arraybackslash\hspace{0pt}}m{0.554\linewidth}}{\textbf{Métricas}}  \endfirsthead 
+	\cmidrule{2-3}
+	\textbf{\textbf{Modelo}} & \textbf{Accuracy} & \textbf{Cohen's Kappa}                                                      \\ 
+	\midrule
+	RProp                    & 0.7582            & 0.5892                                                                      \\
+	\textbf{RProp'}          & 0.7748            & 0.6125                                                                      \\ 
+	\hline \addlinespace[3pt]
+	PNN                      & 0.5037            & 0.2264                                                                      \\
+	\textbf{PNN'}            & 0.6731            & 0.4311                                                                      \\ 
+	\hline \addlinespace[3pt]
+	SVM                      & \underline{0.4525}            & \underline{0.0306   }                                                                   \\
+	\textbf{SVM'}            & 0.7462            & 0.5510                                                                      \\ 
+	\hline \addlinespace[3pt]
+	Random Forest            & 0.7680            & 0.6068                                                                      \\
+	\textbf{Random Forest'}  & \textbf{0.8983}            & \textbf{0.8304}                                                                      \\
+	\bottomrule
+\end{longtable}
+
+\begin{minipage}{15cm}
+	\small {\footnotesize Nota 1: Los modelos resaltados en \textbf{negrita} son los del nuevo componente.} \\
+	\small {\footnotesize Nota 2: Las métricas resaltadas en \textbf{negrita} indican el valor más alto, así como las \underline{subrayadas} indican el valor más bajo.}
+\end{minipage}
+
+
+\subsection{Experimento III}
+Para la ejecución de este experimento se emplea el conjunto de datos \textsc{Dry Bean}, el cual presenta un balance en su distribución y su columna objetivo es multiclase. Para más detalles, consultar la Tabla \ref{tab:bd-cap1}. \\
+En la Tabla \ref{tab:res-exp-3-hpo} se muestran los resultados acordes a las métricas \textit{Accuracy} y Cohen’s Kappa.
+
+
+% \usepackage{array}
+% \usepackage{longtable}
+% \usepackage{booktabs}
+
+
+\begin{longtable}{>{\centering\hspace{0pt}}m{0.352\linewidth}>{\centering\hspace{0pt}}m{0.217\linewidth}>{\centering\arraybackslash\hspace{0pt}}m{0.337\linewidth}}
+	\caption{Resultados del desempeño de los modelos para el \textit{dataset} \textsc{Dry Bean}\label{tab:res-exp-3-hpo}}\\ 
+	\toprule
+	& \multicolumn{2}{>{\centering\arraybackslash\hspace{0pt}}m{0.554\linewidth}}{\textbf{Métricas}}  \endfirsthead 
+	\cmidrule{2-3}
+	\textbf{\textbf{Modelo}} & \textbf{Accuracy} & \textbf{Cohen's Kappa}                                                      \\ 
+	\midrule
+	RProp                    & 0.8786            & 0.8530                                                                      \\
+	\textbf{RProp'}          & 0.9026            & 0.8818                                                                      \\ 
+	\hline \addlinespace[3pt]
+	PNN                      & 0.8711            & 0.8933                                                                      \\
+	\textbf{PNN'}            & \textbf{1}                 & \textbf{1}                                                                           \\ 
+	\hline \addlinespace[3pt]
+	SVM                      & \underline{0.7133}            & \underline{0.6528}                                                                      \\
+	\textbf{SVM'}            & 0.9333            & 0.9196                                                                      \\ 
+	\hline \addlinespace[3pt]
+	Random Forest            & 0.9080            & 0.8888                                                                      \\
+	\textbf{Random Forest'}  & 0.9760            & 0.9710                                                                      \\
+	\bottomrule
+\end{longtable}
+
+\begin{minipage}{15cm}
+	\small {\footnotesize Nota 1: Los modelos resaltados en \textbf{negrita} son los del nuevo componente.} \\
+	\small {\footnotesize Nota 2: Las métricas resaltadas en \textbf{negrita} indican el valor más alto, así como las \underline{subrayadas} indican el valor más bajo.}
+\end{minipage}
+
+\subsection{Análisis de los resultados obtenidos}
+A continuación, se examinan los resultados de los experimentos realizados, centrándose en la evaluación del rendimiento de cada modelo de clasificación a través de las métricas \textit{Accuracy}, Cohen's Kappa y AUC-ROC. El objetivo es analizar detalladamente los resultados obtenidos para cada modelo, identificar tendencias observadas y obtener una comprensión más profunda de su efectividad en estos conjuntos de datos. Este análisis proporcionará una visión más clara de cómo cada modelo aborda los desafíos específicos de los conjuntos de datos utilizados en la experimentación.
+
+
+\subsubsection*{Modelo RProp}
+En el estudio de los resultados comparativos de los tres experimentos realizados entre el modelo RProp nativo y el modelo RProp del componente, se destacan algunas tendencias en las métricas evaluadas. \\
+En los experimentos I, II, III, en términos generales, el componente desarrollado clasifica mejor las instancias (aunque no sea un aumento sustancial) y presenta mejor concordancia entre las predicciones del modelo y las etiquetas reales, en comparación con el modelo nativo; el cual presenta predicciones competitivas en los tres experimentos, pero la falta de consistencia en las métricas claves sugiere una menor confiabilidad en su desempeño.
+
+\subsubsection*{Modelo PNN}
+Al estudiar los resultados comparativos de los tres experimentos realizados entre el modelo PNN nativo y el modelo PNN del componente, emergen ciertas tendencias en las métricas evaluadas. \\
+El componente demuestra en los experimentos I, II, III una superioridad consistente en la exactitud, demostrando su mejor capacidad de clasificar. Esta superioridad es reforzada por un incremento en Cohen's Kappa y AUC-ROC, indicando una mayor concordancia entre predicciones y etiquetas reales. En el experimento II, se representa la mayor diferencia con un crecimiento de 0.17 en \textit{accuracy} y en 0.21 en el Cohen's Kappa.
+
+\subsubsection*{Modelo SVM}
+El análisis comparativo entre los modelos SVM, basado en los resultados de los tres experimentos, revela de manera consistente un rendimiento superior del componente en todas las métricas evaluadas: \textit{accuracy}, Cohen's Kappa y AUC-ROC. Este aumento se plasma con más consistencia en el experimento II, donde se destaca el modelo del componente, llegando a diferenciarse por un 0.22 de \textit{accuracy} y un 0.52 de Cohen's Kappa, evidenciando la mejora de la optimización de hiperparámetros.
+
+\subsubsection*{Modelo Random Forest}
+Al analizar los tres experimentos del modelo Random Forest, en términos generales, el modelo del componente aumenta su rendimiento, en cuanto a precisión y concordancia entre estas, resaltando el experimento II, con aumento de 0.13 de \textit{accuracy} y 0.23 de Cohen's Kappa, lo que resulta significativo, pues enfatiza su robustez y fiabilidad con respecto al modelo nativo. En los experimentos I y II, se logra competitividad entre los resultados, pero el modelo del componente resulta ganador en las tres métricas.
+
+
+\section{Pruebas de integración al componente \textit{AutoML Clasificación}}
+
+La integración de distintos flujos y componentes desempeña un papel crucial para asegurar el funcionamiento cohesivo de un componente KNIME. La funcionalidad de estas integraciones se convierte en un aspecto esencial que impacta directamente la experiencia de \textit{AutoML} del usuario y la eficiencia de los modelos en su conjunto. 
+
+\begin{comment}
+	
+En este contexto, la aplicación de casos de prueba específicos se vuelve imperativa para evaluar la robustez y la efectividad de estas integraciones.  En esta discusión, se exploran detalladamente casos de prueba de funcionalidad que han sido diseñados para evaluar la integración de subcomponentes para el pre-procesado y del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}, con el componente \textit{AutoML Clasificación (pre-procesado)} (Tabla \ref{tab:cp-integracion}), brindando una visión integral de cómo estas pruebas contribuyen a garantizar un rendimiento óptimo. 
+	
+	
+	% Please add the following required packages to your document preamble:
+	% \usepackage{graphicx}
+	\begin{table}[H]
+		\centering
+		\caption{Caso de prueba al componente \textit{AutoML Clasificación} tras su integración}
+		\label{tab:cp-integracion}
+		\begin{spacing}{1.15}
+			\resizebox{\textwidth}{!}{%
+				\begin{tabular}{|llll|}
+					\hline
+					\multicolumn{4}{|l|}{Caso de prueba}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               \\ \hline
+					\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Objetivo de la\\ prueba\end{tabular}}     & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Verificar la correcta integración de los subcomponentes para el pre-procesado y del\\ componente AutoML Clasificación (Optimización de Hiperparámetros) con el\\ componente AutoML Clasificación (pre-procesado).\end{tabular}}                                                                                                                                                                                         \\ \hline
+					\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción de \\ la prueba\end{tabular}} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Se debe proporcionar una base de datos y evaluar el correcto funcionamiento del\\ componente tras la integracion.\end{tabular}}                                                                                                                                                                                                                                                                                         \\ \hline
+					\multicolumn{1}{|l|}{Condiciones}                                                         & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}1. Debe estar presente la columna objetivo para la clasificación.\\ 2. La columna objetivo debe ser de tipo nominal.\end{tabular}}                                                                                                                                                                                                                                                                                      \\ \hline
+					\multicolumn{4}{|l|}{Combinaciones de valores de entrada}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          \\ \hline
+					\multicolumn{1}{|l|}{CP}                                                                  & \multicolumn{1}{l|}{Escenario}                                                                                                                                                  & \multicolumn{1}{l|}{Resultado esperado}                                                                                                             & Resultado real                                                                                                                 \\ \hline
+					\multicolumn{1}{|l|}{CP1}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una tabla \\ con atributos numéricos.\end{tabular}}                                                               & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ el subcomponente\\ Discretizer.\end{tabular}}                            & \begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ el subcomponente\\ Discretizer.\end{tabular}                            \\ \hline
+					\multicolumn{1}{|l|}{CP2}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una tabla\\ on atributos con valores \\ únicos\end{tabular}}                                                      & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ el subcomponente String\\ preprocs.\end{tabular}}                        & \begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ el subcomponente String \\ preprocs.\end{tabular}                       \\ \hline
+					\multicolumn{1}{|l|}{CP3}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una tabla \\ con valores perdidos\end{tabular}}                                                                   & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ el subcomponente \\ MV Imputation.\end{tabular}}                         & \begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ el subcomponente \\ MV Imputation.\end{tabular}                         \\ \hline
+					\multicolumn{1}{|l|}{CP4}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se proporciona una tabla\\ con valores nominales de \\ alta cardinalidad y \\ atributos numéricos\end{tabular}}                  & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ el subcomponente \\ Codificar y normalizar.\end{tabular}}                & \begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ el subcomponente \\ Codificar y normalizar.\end{tabular}                \\ \hline
+					\multicolumn{1}{|l|}{CP5}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se le proporciona una base \\ de datos y se ejecuta el \\ componente con la selección \\ del modelo RProp.\end{tabular}}         & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ la optimización de \\ hiperparámetros de\\ RProp.\end{tabular}}          & \begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente\\  la optimización de \\ hiperparámetros de\\ RProp.\end{tabular}          \\ \hline
+					\multicolumn{1}{|l|}{CP6}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se le proporciona una base \\ de datos y se ejecuta el \\ componente con la selección \\ del modelo PNN.\end{tabular}}           & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ la optimización de \\ hiperparámetros de PNN.\end{tabular}}              & \begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ la optimización de \\ hiperparámetros de PNN.\end{tabular}              \\ \hline
+					\multicolumn{1}{|l|}{CP7}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se le proporciona una base \\ de datos y se ejecuta el \\ componente con la selección \\ del modelo SVM.\end{tabular}}           & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ la optimización de \\ hiperparámetros de SVM.\end{tabular}}              & \begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ la optimización de \\ hiperparámetros de SVM.\end{tabular}              \\ \hline
+					\multicolumn{1}{|l|}{CP8}                                                                 & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se le proporciona una base \\ de datos y se ejecuta el \\ componente con la selección \\ del modelo Random Forest.\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ la optimización de \\ hiperparámetros de \\ Random Forest.\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se ejecuta correctamente \\ la optimización de \\ hiperparámetros de \\ Random Forest.\end{tabular} \\ \hline
+				\end{tabular}%
+			}
+		\end{spacing}
+	\end{table}
+
+Cada caso de prueba se diseñó para evaluar específicamente la integración de subcomponentes para el pre-procesado y el componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)} con el componente \textit{AutoML Clasificación (pre-procesado)}.
+\end{comment}
+
+ Para la realización de las pruebas, se emplean cinco conjuntos de datos distintos, lo que permite una comprensión detallada del comportamiento del componente en diferentes escenarios. Se opta por utilizar los \textit{datasets} \textsc{airline}, \textsc{human resources}, \textsc{potability}, \textsc{fetal health} y  \textsc{dry bean}. \\
+Las pruebas de cada modelo se dividen en cinco experimentos, empleando un conjunto de datos distinto para cada uno. Se realizan comparaciones entre los modelos del componente \textit{AutoML Clasificación (pre-procesado)} y el componente \textit{AutoML Clasificación}, siendo este último la integración resultante del anterior con los componentes de pre-procesado y el componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}, desarrollados en esta investigación. Con este objetivo, se dividen los conjuntos de datos en conjuntos de entrenamiento y prueba, con un 70\% para el entrenamiento y 30\% para prueba. Además, se establece un umbral del 60\% para el límite de valores faltantes, en el caso de los modelos que contienen la optimización de hiperparámetros, se seleccionan 5 \textit{k-folds} para la validación cruzada y la estrategia para la optimización de hiperparámetros seleccionada es 'Optimización Bayesiana'. Para la evaluación de cada prueba se decide emplear las métricas Exactitud, Cohen's Kappa y AUC-ROC, debido a que muestran el comportamiento de los modelos de manera general, sin importar la distribución de la columna objetivo. A continuación, se presenta un desglose del comportamiento de cada modelo dentro de cada conjunto de datos.
+
+\subsection{Experimento \textsc{I} }
+Para la realización de este experimento se emplea el conjunto de datos \textsc{Airline Passenger Satisfaction}. Este es escogido debido a que su columna objetivo es binaria, la que presenta un balance en la distribución de clases; hay presencia de valores perdidos y un desbalance en la distribución de los tipos de atributos donde predominan los de tipo cuantitativos. Para más detalles, consultar la Tabla \ref{tab:bd-cap1}. \\
+En la Tabla \ref{tab:res-airline} se muestran los resultados acorde a las métricas \textit{Accuracy}, Cohen's Kappa y AUC-ROC.
+
+% \usepackage{array}
+% \usepackage{longtable}
+% \usepackage{booktabs}
+
+
+\begin{longtable}{>{\centering\hspace{0pt}}m{0.28\linewidth}>{\centering\hspace{0pt}}m{0.17\linewidth}>{\centering\hspace{0pt}}m{0.27\linewidth}>{\centering\arraybackslash\hspace{0pt}}m{0.18\linewidth}}
+	\caption{Resultados del desempeño de los modelos para el \textit{dataset} \textsc{Airline Passenger Satisfaction}\label{tab:res-airline}} \\
+	\toprule
+	& \multicolumn{3}{>{\centering\arraybackslash\hspace{0pt}}m{0.64\linewidth}}{\textbf{Métricas}}  \\
+		\cmidrule[\heavyrulewidth]{2-4}
+	\textbf{\textbf{Modelo}} & \textbf{Accuracy} & \textbf{Cohen's Kappa} & \textbf{AUC-ROC}                                   \\ 
+	\midrule
+	\endfirsthead 
+	\toprule
+	\textbf{\textbf{Modelo}} & \textbf{Accuracy} & \textbf{Cohen's Kappa} & \textbf{AUC-ROC}                                   \\ 
+	\midrule
+	\endhead
+	\hline \multicolumn{4}{r}{\textit{Continúa en la siguiente página}} \\
+	\endfoot
+	\bottomrule
+	\endlastfoot
+	ID3                      & 0.9115            & 0.8195                 & 0.9088                                             \\
+	\textbf{ID3'}            & 0.9344            & 0.8662                 & 0.9516                                             \\
+	\hline \addlinespace[3pt]
+	C4.5                     & 0.9505            & 0.8991                 & 0.9720                                             \\
+	\textbf{C4.5'}           & 0.9511            & 0.9007                 & 0.9867                                             \\
+	\hline \addlinespace[3pt]
+	CART                     & 0.9541            & 0.9063                 & 0.9890                                             \\
+	\textbf{CART'}           & 0.9541            & 0.9063                 & 0.9890                                             \\
+	\hline \addlinespace[3pt]
+	RProp                    & 0.8973            & 0.7879                 & 0.9478                                               \\
+	\textbf{RProp'}          & 0.9326            & 0.8625                 & 0.9813                                               \\
+	\hline \addlinespace[3pt]
+	PNN                      & 0.8146              & 0.6165                   & 0.8975                                               \\
+	\textbf{PNN'}            & 0.8781              & 0.7479                   & 0.9420                                               \\
+	\hline \addlinespace[3pt]
+	SVM                      & \underline{0.5379}              & \underline{0.1157}                   & \underline{0.6670}                                               \\
+	\textbf{SVM'}            & 0.8774              & 0.7646                   & 0.9264                                               \\
+	\hline \addlinespace[3pt]
+	\textbf{Random Forest}   & \textbf{0.9821}            & \textbf{0.9637}                 & \textbf{0.9988}                                               \\
+	
+\end{longtable}
+
+\begin{minipage}{15cm}
+	\small {\footnotesize Nota 1: Los modelos resaltados en \textbf{negrita} son los del nuevo componente.} \\
+	\small {\footnotesize Nota 2: Las métricas resaltadas en \textbf{negrita} indican el valor más alto, así como las \underline{subrayadas} indican el valor más bajo.}
+\end{minipage}
+
+\subsection{Experimento \textsc{II} }
+Para la realización de este experimento se emplea el conjunto de datos \textsc{Human Resources}. Este es escogido debido a que su columna objetivo es binaria, la que presenta un desbalance en la distribución de clases; hay presencia de valores perdidos y de alta cardinalidad; y un desbalance en la distribución de los tipos de atributos donde predominan los de tipo cualitativos. Para más detalles, consultar la Tabla \ref{tab:bd-cap1}.\\
+En la Tabla \ref{tab:res-human-resources} se muestran los resultados acorde a las métricas \textit{Accuracy}, Cohen's Kappa y AUC-ROC.
+
+% \usepackage{array}
+% \usepackage{longtable}
+% \usepackage{booktabs}
+
+
+\begin{longtable}{>{\centering\hspace{0pt}}m{0.28\linewidth}>{\centering\hspace{0pt}}m{0.17\linewidth}>{\centering\hspace{0pt}}m{0.27\linewidth}>{\centering\arraybackslash\hspace{0pt}}m{0.18\linewidth}}
+	\caption{Resultados del desempeño de los modelos para el \textit{dataset} \textsc{Human Resources}\label{tab:res-human-resources}}\\ 
+	\toprule
+	& \multicolumn{3}{>{\centering\arraybackslash\hspace{0pt}}m{0.64\linewidth}}{\textbf{Métricas}}  \\
+	\cmidrule[\heavyrulewidth]{2-4}
+	\textbf{\textbf{Modelo}} & \textbf{Accuracy} & \textbf{Cohen's Kappa} & \textbf{AUC-ROC}                                   \\ 
+	\midrule
+	\endfirsthead 
+	\toprule
+	\textbf{\textbf{Modelo}} & \textbf{Accuracy} & \textbf{Cohen's Kappa} & \textbf{AUC-ROC}                                   \\ 
+	\midrule
+	\endhead
+	\hline \multicolumn{4}{r}{\textit{Continúa en la siguiente página}} \\
+	\endfoot
+	\bottomrule
+	\endlastfoot
+	ID3                      & 0.7287            & 0.2046                 & 0.6225                                             \\
+	\textbf{ID3'}            & 0.7301            & 0.2169                 & 0.6251                                             \\
+	\hline \addlinespace[3pt]
+	C4.5                     & 0.7731            & 0.3241                 & 0.6747                                             \\
+	\textbf{C4.5'}           & \textbf{0.7910}            & 0.4210                 & \textbf{0.7896}                                             \\
+	\hline \addlinespace[3pt]
+	CART                     & 0.7821            & 0.3490                 & 0.6646                                             \\
+	\textbf{CART'}           & 0.7860            & \textbf{0.4237}                 & 0.7745                                             \\
+	\hline \addlinespace[3pt]
+	RProp                    & 0.7668            & 0.2778                 & 0.7489                                             \\
+	\textbf{RProp'}          & 0.7794            & 0.3489                 & 0.7742                                             \\
+	\hline \addlinespace[3pt]
+	PNN                      &\underline{ 0.6938}            & 0.004                 & \underline{0.5105}                                             \\
+	\textbf{PNN'}            & 0.7606            & 0.013                 & 0.8483                                             \\
+	\hline \addlinespace[3pt]
+	SVM                      & 0.7582            & \underline{0.0}                    & 0.6313                                             \\
+	\textbf{SVM'}            & 0.7811            & 0.3228                 & 0.6481                                             \\
+	\hline \addlinespace[3pt]
+	\textbf{Random Forest}   & 0.7868            & 0.3689                 & 0.7718  					\\
+\end{longtable}
+
+\begin{minipage}{15cm}
+	\small {\footnotesize Nota 1: Los modelos resaltados en \textbf{negrita} son los del nuevo componente.} \\
+	\small {\footnotesize Nota 2: Las métricas resaltadas en \textbf{negrita} indican el valor más alto, así como las \underline{subrayadas} indican el valor más bajo.}
+\end{minipage}
+
+\subsection{Experimento \textsc{III} }
+Para la realización de este experimento se emplea el conjunto de datos \textsc{Water Quality and Potability}. Este es escogido debido a que su columna objetivo es binaria, la que presenta un desbalance en la distribución de clases; hay presencia de valores perdidos y un desbalance en la distribución de los tipos de atributos donde predominan los de tipo cuantitativos. Para más detalles, consultar la Tabla \ref{tab:bd-cap1}. \\
+En la Tabla \ref{tab:res-potability} se muestran los resultados acorde a las métricas \textit{Accuracy}, Cohen's Kappa y AUC-ROC.
+
+% \usepackage{array}
+% \usepackage{longtable}
+% \usepackage{booktabs}
+
+
+\begin{longtable}{>{\centering\hspace{0pt}}m{0.28\linewidth}>{\centering\hspace{0pt}}m{0.17\linewidth}>{\centering\hspace{0pt}}m{0.27\linewidth}>{\centering\arraybackslash\hspace{0pt}}m{0.18\linewidth}}
+	\caption{Resultados del desempeño de los modelos para el \textit{dataset} \textsc{Water Quality and Potability}\label{tab:res-potability}}\\ 
+		\toprule
+	& \multicolumn{3}{>{\centering\arraybackslash\hspace{0pt}}m{0.64\linewidth}}{\textbf{Métricas}}  \\
+		\cmidrule[\heavyrulewidth]{2-4}
+	\textbf{\textbf{Modelo}} & \textbf{Accuracy} & \textbf{Cohen's Kappa} & \textbf{AUC-ROC}                                   \\ 
+	\midrule
+	\endfirsthead 
+	\toprule
+	\textbf{\textbf{Modelo}} & \textbf{Accuracy} & \textbf{Cohen's Kappa} & \textbf{AUC-ROC}                                   \\ 
+	\midrule
+	\endhead
+	\hline \multicolumn{4}{r}{\textit{Continúa en la siguiente página}} \\
+	\endfoot
+	\bottomrule
+	\endlastfoot
+	ID3                      & \underline{0.5798}            & 0.081                  & 0.5529                                             \\
+	\textbf{ID3'}            & 0.6012            & 0.038                  & 0.5577                                             \\
+	\hline \addlinespace[3pt]
+	C4.5                     & 0.6042            & 0.070                  & 0.5634                                             \\
+	\textbf{C4.5'}           & 0.6246            & 0.0777                 & 0.5332                                             \\
+	\hline \addlinespace[3pt]
+	CART                     & 0.6164            & 0.11                   & 0.5589                                             \\
+	\textbf{CART'}           & 0.6113            & 0.08                   & 0.5288                                             \\
+	\hline \addlinespace[3pt]
+	RProp                    & 0.6185              & 0.0659                   & 0.5770                                               \\
+	\textbf{RProp'}          & 0.6185              & 0.1173                   & 0.5460                                               \\
+	\hline \addlinespace[3pt]
+	PNN                      & 0.5971              & 0.07                   & 0.5260                                               \\
+	\textbf{PNN'}            & 0.7558              & 0.4119                   & 0.8689                                               \\
+	\hline \addlinespace[3pt]
+	SVM                      & 0.6093              & \underline{0}                   & \underline{0.5044}                                               \\
+	\textbf{SVM'}            & 0.6561              & 0.1663                   & 0.7007                                               \\
+	\hline \addlinespace[3pt]
+	\textbf{Random Forest}   & \textbf{0.8617}              & \textbf{0.6946 }                  & \textbf{0.9418}                                               \\
+\end{longtable}
+
+\begin{minipage}{15cm}
+	\small {\footnotesize Nota 1: Los modelos resaltados en \textbf{negrita} son los del nuevo componente.} \\
+	\small {\footnotesize Nota 2: Las métricas resaltadas en \textbf{negrita} indican el valor más alto, así como las \underline{subrayadas} indican el valor más bajo.}
+\end{minipage}
+
+
+\subsection{Experimento \textsc{IV} }
+Para la realización de este experimento se emplea el conjunto de datos \textsc{Dry Bean}. Este es escogido debido a que su columna objetivo es multiclase, la que presenta un balance en la distribución de clases y hay presencia de un desbalance en la distribución de los tipos de atributos donde predominan los de tipo cuantitativos. Para más detalles, consultar la Tabla \ref{tab:bd-cap1}. \\
+En la Tabla \ref{tab:res-dry-bean} se muestran los resultados acorde a las métricas \textit{Accuracy} y Cohen's Kappa.
+
+\pagebreak
+
+% \usepackage{array}
+% \usepackage[longtable]{multirow}
+% \usepackage{longtable}
+% \usepackage{booktabs}
+
+
+\begin{longtable}{>{\centering\hspace{0pt}}m{0.34\linewidth}>{\centering\hspace{0pt}}m{0.21\linewidth}>{\centering\arraybackslash\hspace{0pt}}m{0.3\linewidth}}
+	\caption{Resultados del desempeño de los modelos para el \textit{dataset} \textsc{Dry Bean}\label{tab:res-dry-bean}}\\ 
+	\toprule
+	& \multicolumn{2}{>{\centering\arraybackslash\hspace{0pt}}m{0.55\linewidth}}{\textbf{Métricas}}  \endfirsthead 
+	\cmidrule[\heavyrulewidth]{2-3}
+	\textbf{\textbf{Modelo}} & \textbf{Accuracy} & \textbf{Cohen's Kappa}                                                      \\ 
+	\midrule
+	ID3                                                                                   & 0.8253            & 0.7901                                                                      \\
+	\textbf{ID3'}                                                                         & 0.8573            & 0.8289                                                                      \\
+	\hline \addlinespace[3pt]
+	C4.5                                                                                  & 0.9026            & 0.8829                                                                      \\
+	\textbf{C4.5'}                                                                        & 0.892             & 0.8699                                                                      \\
+	\hline \addlinespace[3pt]
+	CART                                                                                  & 0.9               & 0.8727                                                                      \\
+	\textbf{CART'}                                                                        & 0.9               & 0.8727                                                                      \\
+	\hline \addlinespace[3pt]
+	RProp                                                                                 & 0.908              & 0.8880                                                                        \\
+	\textbf{RProp'}                                                                       & 0.9106              & 0.8911                                                                        \\
+	\hline \addlinespace[3pt]
+	PNN                                                                                   & 0.628              & 0.5617                                                                        \\
+	\textbf{PNN'}                                                                         & 0.9386              & 0.9256                                                                        \\
+	\hline \addlinespace[3pt]
+	SVM                                                                                   & \underline{0.1506 }             & \underline{0.019}                                                                        \\
+	\textbf{SVM'}                                                                         & 0.9293              & 0.9135                                                                        \\
+	\hline \addlinespace[3pt]
+	\textbf{Random Forest}                                                                & \textbf{0.961}              & \textbf{0.953}                                                                        \\
+	\bottomrule
+\end{longtable}
+
+\begin{minipage}{15cm}
+	\small {\footnotesize Nota 1: Los modelos resaltados en \textbf{negrita} son los del nuevo componente.} \\
+	\small {\footnotesize Nota 2: Las métricas resaltadas en \textbf{negrita} indican el valor más alto, así como las \underline{subrayadas} indican el valor más bajo.}
+\end{minipage}
+
+\subsection{Experimento \textsc{V} }
+Para la realización de este experimento se emplea el conjunto de datos \textsc{Fetal Health}. Este es escogido debido a que su columna objetivo es multiclase, la que presenta un desbalance en la distribución de clases y hay presencia de un desbalance en la distribución de los tipos de atributos donde predominan los de tipo cuantitativos. Para más detalles, consultar la Tabla \ref{tab:bd-cap1}. \\
+En la Tabla \ref{tab:res-fetal} se muestran los resultados acorde a las métricas \textit{Accuracy} y Cohen's Kappa, donde los modelos del componente \textit{AutoML Clasificación} aparecen resaltados en negrita.
+
+\pagebreak
+
+% \usepackage{array}
+% \usepackage[longtable]{multirow}
+% \usepackage{longtable}
+% \usepackage{booktabs}
+
+
+\begin{longtable}{>{\centering\hspace{0pt}}m{0.34\linewidth}>{\centering\hspace{0pt}}m{0.21\linewidth}>{\centering\arraybackslash\hspace{0pt}}m{0.3\linewidth}}
+	\caption{Resultados del desempeño de los modelos para el \textit{dataset} \textsc{Fetal Health}\label{tab:res-fetal}}\\ 
+	\toprule
+	& \multicolumn{2}{>{\centering\arraybackslash\hspace{0pt}}m{0.55\linewidth}}{\textbf{Métricas}}  \endfirsthead 
+	\cmidrule[\heavyrulewidth]{2-3}
+	\textbf{\textbf{Modelo}} & \textbf{Accuracy} & \textbf{Cohen's Kappa}                                                      \\ 
+	\midrule
+	ID3                                                                                   & 0.8793            & 0.6736                                                                      \\
+	\textbf{ID3'}                                                                         & 0.9200            & 0.7786                                                                      \\
+	\hline \addlinespace[3pt]
+	C4.5                                                                                  & 0.9200            & 0.7774                                                                      \\
+	\textbf{C4.5'}                                                                        & 0.9278            & 0.7898                                                                      \\
+	\hline \addlinespace[3pt]
+	CART                                                                                  & 0.9247            & 0.7936                                                                      \\
+	\textbf{CART'}                                                                        & 0.947             & 0.7936                                                                      \\
+	\hline \addlinespace[3pt]
+	RProp                                                                                 & 0.3103            & 0.088                                                                       \\
+	\textbf{RProp'}                                                                       & 0.9169            & 0.7619                                                                      \\
+	\hline \addlinespace[3pt]
+	PNN                                                                                   & \underline{0.084 }            & \underline{0}                                                                           \\
+	\textbf{PNN'}                                                                         & 0.8393            & 0.4675                                                                      \\
+	\hline \addlinespace[3pt]
+	SVM                                                                                   & 0.7767            & \underline{0}                                                                           \\
+	\textbf{SVM'}                                                                         & 0.8706            & 0.5530                                                                      \\
+	\hline \addlinespace[3pt]
+	\textbf{Random Forest}                                                                & \textbf{0.9733}            & \textbf{0.9283}                                                                      \\
+	\bottomrule
+\end{longtable}
+
+\begin{minipage}{15cm}
+	\small {\footnotesize Nota 1: Los modelos resaltados en \textbf{negrita} son los del nuevo componente.} \\
+	\small {\footnotesize Nota 2: Las métricas resaltadas en \textbf{negrita} indican el valor más alto, así como las \underline{subrayadas} indican el valor más bajo.}
+\end{minipage}
+
+\subsection{Análisis de los resultados obtenidos}
+En el presente epígrafe se llevará a cabo un análisis de los datos recopilados en los experimentos realizados. Se abordará cada modelo de clasificación evaluando su rendimiento en función de las métricas empleadas: \textit{Accuracy}, Cohen's Kappa y AUC-ROC; con el propósito de discutir de manera detallada los resultados obtenidos para cada modelo, explorando las tendencias observadas y proporcionando una comprensión más profunda de su efectividad en los distintos conjuntos de datos. Este análisis permitirá una visión más clara de cómo cada modelo aborda los desafíos específicos de los conjuntos de datos empleados en la experimentación.
+
+\subsubsection*{Modelo ID3}
+El análisis comparativo entre el ID3 de la nueva versión del componente y el ID3 anterior revela notables mejoras en el rendimiento. La modificación del pre-procesado ha demostrado ser crucial en la preparación de los datos antes de la construcción del árbol de decisión. \\
+Al examinar los resultados en conjunto, se observa una mejora sistemática en la exactitud del nuevo modelo de ID3 en todos los conjuntos de datos evaluados. Este aumento en la exactitud, que se manifiesta hasta casi un 5\% en el experimento V, indica que el nuevo pre-procesado ha contribuido positivamente a la capacidad del modelo para tomar decisiones precisas en diversos contextos. \\
+En relación con el Cohen's Kappa, también se observa una mejora general en el nuevo modelo, a pesar de que haya tenido un nivel bastante bajo en el experimento III, siendo inferior a su versión anterior en 0.043. No obstante, el resultado global sugiere que la mejora no solo se traduce en un aumento superficial en la exactitud, sino que también refleja una ligera mejora en la capacidad del modelo para superar el rendimiento esperado al azar. \\
+En cuanto al área bajo la curva ROC (AUC-ROC), los resultados revelan una mejora considerable en el experimento I, a pesar de mantenerse ligeramente superiores en los experimentos II y III. \\
+Cabe destacar que para los cinco experimentos, la versión anterior del modelo ID3 revela los peores resultados en exactitud con respecto al resto de los experimentos, de igual modo ocurre con el Cohen's Kappa para los experimentos I, II, IV y V; y con el AUC-ROC para los experimentos I y II.
+
+\subsubsection*{Modelo C4.5}
+La comparación entre la versión anterior y la versión mejorada de C4.5 revela tendencias distintas dependiendo del contexto del conjunto de datos y las condiciones específicas de los experimentos realizados. Se destacan dos escenarios particulares que merecen una atención detallada.\\
+En primer lugar, al evaluar ambos modelos en el experimento IV, un \textit{dataset} multiclase y balanceado, se observa que la versión anterior de C4.5 supera a la versión mejorada en términos de exactitud. La versión anterior logra una exactitud de 0.9026, mientras que la nueva versión alcanza 0.892. Este resultado plantea la interesante consideración de cómo las características específicas del conjunto de datos y la naturaleza multiclase pueden influir en la eficacia de las modificaciones implementadas. \\
+Por otro lado, en los experimentos II, III y V, la versión mejorada de C4.5 emerge como la destacada, logrando los mejores resultados en términos de exactitud. Es particularmente notable que la mejora máxima, aunque poco significativa, se observe en el experimento II, con un aumento de casi un 2\% en la exactitud en comparación con la versión anterior. Este hallazgo sugiere que las modificaciones introducidas en la versión mejorada han sido beneficiosas en ciertos escenarios, especialmente cuando se trata de conjuntos de datos específicos o condiciones experimentales particulares.
+
+\subsubsection*{Modelo CART}
+El análisis detallado de los resultados para el modelo CART revela aspectos significativos en función de las métricas y las modificaciones introducidas en la nueva  versión. \\
+En el Experimento I, la nueva versión de CART logra los resultados más altos en las tres métricas evaluadas. Sin embargo, cabe destacar que estos resultados son idénticos a los obtenidos por la versión anterior de CART en este experimento específico. Aunque la versión mejorada no muestra una mejora estadística en comparación con la versión anterior, su capacidad para igualar los resultados destacados previamente puede considerarse un éxito en términos de mantenimiento del rendimiento. \\
+En términos de Cohen's Kappa, se observa consistencia en los resultados entre la versión anterior y la versión nueva de CART en los Experimentos I, IV y V, donde ambas  obtienen valores idénticos. Sin embargo, se destaca una mejora significativa en el Experimento II con la versión mejorada, alcanzando un valor de 0.4237, en comparación con 0.3490 de la versión anterior. Este incremento indica una mejora sustancial en la concordancia más allá de lo esperado por azar en este contexto específico.  \\
+La similitud en los resultados de Cohen's Kappa y exactitud entre ambas versiones en los Experimentos I, IV y V puede atribuirse a la naturaleza de las modificaciones, que se limitan al tratamiento de valores faltantes. Como los valores faltantes no son prominentes o críticos en estos conjuntos de datos particulares, es comprensible que las mejoras en el pre-procesado no conduzcan a diferencias sustanciales en el rendimiento del modelo.
+
+\subsubsection*{Modelo RProp}
+En el análisis de los resultados de los cinco experimentos, se destacan algunas tendencias y diferencias entre la nueva versión del componente y la antigua, en cuanto al modelo RProp. \\
+En términos de exactitud, el nuevo componente supera consistentemente al componente antiguo en todos los experimentos realizados, evidenciando su capacidad para clasificar correctamente las instancias. Esta superioridad se refuerza aún más al considerar el Cohen's Kappa, donde, en todos los casos, la actualización del componente presenta valores superiores, indicando una mayor concordancia entre las predicciones del modelo y las etiquetas reales, en comparación con su predecesor. Además, al evaluar el AUC-ROC, se confirma una tendencia similar, destacando el mejor rendimiento del componente actualizado en los experimentos I y II. Sugiriendo de manera consistente que el modelo RProp del nuevo componente demuestra ser más efectivo en términos de exactitud y concordancia, resaltando su idoneidad para la tarea en cuestión.
+
+\subsubsection*{Modelo PNN}
+El análisis comparativo entre el PNN de la nueva versión del componente y el PNN anterior, basado en los resultados de los cinco experimentos, arroja una clara superioridad del componente actualizado. En términos generales, el componente actualizado no solo es superior en su exactitud en todos los experimentos, sino que también muestra mejoras sustanciales en métricas cruciales como Cohen’s Kappa, indicando una mayor concordancia entre las predicciones del modelo y las etiquetas reales. En el experimento V, se presenta la mayor diferencia entre estos componentes, donde la mejora está dada en un 0.7553 en la exactitud y en 0.4675 en Cohen’s Kappa, presentando una mejor clasificación de las instancias en este conjunto de datos en específico.
+
+
+\subsubsection*{Modelo SVM}
+En el análisis comparativo entre los modelos SVM de los componentes, basado en los resultados de los cinco experimentos, se revela de manera consistente un rendimiento superior del componente actualizado en todas las métricas evaluadas: \textit{accuracy}, Cohen's Kappa y AUC-ROC. \\
+No solo demuestra una exactitud más alta en la mayoría de los casos, sino que también exhibe una concordancia sustancialmente mejor y una capacidad de discriminación superior en comparación con su predecesor. Esta superioridad se manifiesta de manera especialmente destacada en donde logra Cohen's Kappa y AUC-ROC significativamente más altos: los experimentos I, IV, V; señalando una mejor concordancia entre predicciones y etiquetas reales, así como una mayor habilidad para distinguir entre clases. Aunque la versión anterior logra precisiones competitivas en algunos experimentos (II, III, V) la falta de consistencia en las métricas clave sugiere una menor confiabilidad en su desempeño. Cabe señalar que, tras añadir el componente \textit{Normalizer} a este modelo como parte del pre-procesado, el tiempo de ejecución disminuye considerablemente, demostrando que este algoritmo trabaja de forma más eficaz con los datos normalizados. \\
+En resumen, estos análisis respaldan de manera contundente la preferencia por el componente actualizado, destacando su consistencia y superioridad en términos de calidad predictiva y concordancia. Estos hallazgos tienen implicaciones cruciales para la selección de modelos en aplicaciones prácticas, enfatizando la robustez y fiabilidad en diversos contextos.
+
+\subsubsection*{Modelo Random Forest}
+Al analizar los cinco experimentos del modelo Random Forest del componente actualizado revela un rendimiento robusto y consistente. Desde una alta exactitud inicial, a pesar de una ligera disminución en el experimento II, el modelo mejora significativamente para el experimento III, manteniendo un desempeño destacado en los experimentos restantes. Estos resultados sugieren la capacidad del modelo para adaptarse y sobresalir en diversas condiciones experimentales, respaldando su idoneidad para aplicaciones prácticas en diferentes contextos.
 
 \section{Conclusiones parciales}
-Al terminar este capítulo, se llega a las siguientes conclusiones:
+Al terminar este capítulo, se llega a las siguientes conclusiones: 
+
 \begin{itemize}
-	\item Las pruebas al subcomponente \textit{Discretizer} integrado al \textit{Componente AutoML Clasificación (pre-procesado)}, arrojaron mejores resultados con respecto al componente con una discretización previamente configurada.
-	\item El número de intervalos, tras ejecutar las pruebas al \textit{Componente AutoML Clasificación (pre-procesado)}, influyó en los resultados de la clasificación luego de emplear el mismo método de discretización (Equal-width).
-	\item Las pruebas individuales al \textit{Componente AutoML Clasificación (Optimización de Hiperparámetros)}, arrojaron mejores porcentajes de acierto con respecto al algoritmo no optimizado, demostrando su correcto funcionamiento.
-	\item La prueba de integración del \textit{Componente AutoML Clasificación (Optimización de Hiperparámetros)} al \textit{Componente AutoML Clasificación (pre-procesado)} fue satisfactoria.
-	\item Las pruebas realizadas al componente integrado demostraron una mejoría en la clasificación en comparación con el no integrado.
+	\item El modelo RProp del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)} demostró que con la optimización de hiperparámetros, aunque el modelo nativo presentara predicciones competitivas, clasifica mejor las instancias.
+	\item El modelo PNN del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)} reveló ciertas tendencias positivas con la optimización de hiperparámetros, en comparación con el modelo nativo, indicando una mejor precisión y concordancia entre predicciones y etiquetas reales.
+	\item El modelo SVM del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)} indicó una mejora con la optimización de hiperparámetros, debido a su superioridad en la clasificación de las instancias, con respecto al modelo nativo.
+	\item El modelo Random Forest del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)} destacó, de forma ajustada, una mejora en la predicción con respecto al modelo nativo, evidenciando que con la optimización de hiperparámetros se obtienen mejores resultados en la clasificación. 
 \end{itemize}
+	Con la integración de los componentes del pre-procesado y del componente para la optimización de hiperparámetros al componente \textit{AutoML Clasificación (pre-procesado)}, se definieron ciertos comportamientos en los modelos: 
+	\begin{itemize}
+	\item Se observó una mejora sistemática en la exactitud del nuevo modelo de ID3 en todos los conjuntos de datos evaluados con un aumento de hasta casi un 5\%.
+	\item Al revelar resultados inferiores en la exactitud el modelo ID3 de la antigua versión, con respecto a la nueva versión en los cinco experimentos, se da a demostrar que el pre-procesado añadido es un factor crucial para la preparación de los datos en este modelo.
+	\item En el nuevo modelo C4.5 al obtener resultados favorables y desfavorables en algunos casos con respecto a su antecesor, sugiere que las modificaciones en el pre-procesado pueden ser beneficiosas en ciertas situaciones, pero no en todas. 
+	\item A pesar de que el modelo C4.5 haya presentado resultados inferiores en uno de los experimentos, destacó entre los modelos sin optimización de hiperparámetros con la mayor exactitud en el 60\% de los experimentos realizados.
+	\item El nuevo modelo CART arrojó, en la mayoría de los experimentos, resultados idénticos en comparación con su predecesor, señalando que al tratar solamente las modificaciones del pre-procesado a valores faltantes y evaluando conjunto de datos donde no hay preponderancia de estos, no se representa una mejora sustancial en la clasificación.
+	\item El nuevo modelo RProp destacó en todos los experimentos, obteniendo mejores predicciones con respecto al modelo del componente anterior, evidenciando que se obtienen mejores resultados tras la inclusión de las nuevas implementaciones.
+	\item El nuevo modelo PNN en su análisis comparativo presentó mejores resultados con respecto al del componente sin integrar, indicando que las nuevas implementaciones influyen positivamente en el rendimiento de este modelo.
+	\item Tras analizar el tiempo de ejecución de los modelos SVM con y sin integración, se obtiene que este disminuyó considerablemente en el nuevo modelo, esto a consecuencia de la incorporación del componente para la normalización, demostrando que trabaja de forma más eficaz con los datos normalizados. 
+	\item Obtuvo un mejor porcentaje de acierto en los resultados el modelo Random Forest, con un 91.38\% como promedio en Exactitud, demostrando su robustez y fiabilidad.
+	\item El modelo con peores resultados de acierto fue SVM del componente sin la integración de pre-procesado y optimización de hiperparámetros, con un 0.5665\% como promedio en Exactitud.
+\end{itemize}
+
+
 \pagebreak
