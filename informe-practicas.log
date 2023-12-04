@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.12)  3 DEC 2023 14:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.12)  4 DEC 2023 01:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -963,6 +963,11 @@ File: figuras/firmas/firma jenny.png Graphic file (type png)
 Package pdftex.def Info: figuras/firmas/firma jenny.png  used on input line 15.
 
 (pdftex.def)             Requested size: 93.89265pt x 92.04254pt.
+<figuras/firmas/firma ray.png, id=336, 306.39468pt x 214.55156pt>
+File: figuras/firmas/firma ray.png Graphic file (type png)
+<use figuras/firmas/firma ray.png>
+Package pdftex.def Info: figuras/firmas/firma ray.png  used on input line 16.
+(pdftex.def)             Requested size: 140.84256pt x 98.62288pt.
 
 Overfull \hbox (39.99425pt too wide) in paragraph at lines 12--23
 []  []
@@ -972,10 +977,11 @@ Overfull \hbox (39.99425pt too wide) in paragraph at lines 12--23
 
 
 
- <./figuras/firmas/firma jenny.png>]
+ <./figuras/firmas/firma jenny.png> <./figuras/firmas/firma ray.png>]
 \openout2 = `frase_inicial.aux'.
 
- (frase_inicial.tex
+
+(frase_inicial.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--13
 
  []
@@ -1015,14 +1021,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--16
 
  (agradecimientos-2.tex
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 6.
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--12
+(Font)              scaled to size 12.0pt on input line 11.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 2--160
 
  []
 
@@ -1031,7 +1032,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--12
 
 
 {C:/Users/Jenny/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/xcharter/xch_yelf
-2i.enc}]) [8]
+2i.enc}] [8]
 \openout2 = `resumen.aux'.
 
  (resumen.tex
@@ -1294,7 +1295,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [15]
-<figuras/capi 1/one-hot-ejemplo.png, id=957, 939.51pt x 218.61674pt>
+<figuras/capi 1/one-hot-ejemplo.png, id=959, 939.51pt x 218.61674pt>
 File: figuras/capi 1/one-hot-ejemplo.png Graphic file (type png)
 <use figuras/capi 1/one-hot-ejemplo.png>
 Package pdftex.def Info: figuras/capi 1/one-hot-ejemplo.png  used on input line
@@ -1340,7 +1341,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [18 <./figuras/capi 1/one-hot-ejemplo.png>]
-<figuras/capi 1/Desglose de los subproblemas de AutoML.jpg, id=996, 1601.985pt 
+<figuras/capi 1/Desglose de los subproblemas de AutoML.jpg, id=998, 1601.985pt 
 x 999.735pt>
 File: figuras/capi 1/Desglose de los subproblemas de AutoML.jpg Graphic file (t
 ype jpg)
@@ -1372,7 +1373,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [20] Excluding 'comment' comment.
-<figuras/capi 1/ejemplo_workflow.jpg, id=1048, 374.90062pt x 103.88812pt>
+<figuras/capi 1/ejemplo_workflow.jpg, id=1050, 374.90062pt x 103.88812pt>
 File: figuras/capi 1/ejemplo_workflow.jpg Graphic file (type jpg)
 <use figuras/capi 1/ejemplo_workflow.jpg>
 Package pdftex.def Info: figuras/capi 1/ejemplo_workflow.jpg  used on input lin
@@ -1565,7 +1566,7 @@ Cap\'{\i }tulo 2.
 
 
 ]
-<figuras/capi 2/preprocesado/discretizacion.drawio.png, id=1136, 6474.1875pt x 
+<figuras/capi 2/preprocesado/discretizacion.drawio.png, id=1138, 6474.1875pt x 
 1879.02pt>
 File: figuras/capi 2/preprocesado/discretizacion.drawio.png Graphic file (type 
 png)
@@ -1585,7 +1586,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [34 <./figuras/capi 2/preprocesado/discretizacion.drawio.png>]
-<figuras/capi 2/auto-binner-nodo.png, id=1146, 152.82094pt x 144.54pt>
+<figuras/capi 2/auto-binner-nodo.png, id=1148, 152.82094pt x 144.54pt>
 File: figuras/capi 2/auto-binner-nodo.png Graphic file (type png)
 <use figuras/capi 2/auto-binner-nodo.png>
 Package pdftex.def Info: figuras/capi 2/auto-binner-nodo.png  used on input lin
@@ -1595,7 +1596,7 @@ LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 32.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/it' will be
 (Font)              scaled to size 10.95pt on input line 32.
-<figuras/capi 2/caim-binner-nodo.png, id=1147, 91.84312pt x 78.2925pt>
+<figuras/capi 2/caim-binner-nodo.png, id=1149, 91.84312pt x 78.2925pt>
 File: figuras/capi 2/caim-binner-nodo.png Graphic file (type png)
 <use figuras/capi 2/caim-binner-nodo.png>
 Package pdftex.def Info: figuras/capi 2/caim-binner-nodo.png  used on input lin
@@ -1616,7 +1617,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 [35 <./figuras/capi 2/auto-binner-nodo.png> <./figuras/capi 2/caim-binner-nodo.
 png>]
-<figuras/capi 2/preprocesado/string preprocs.drawio.png, id=1158, 9702.2475pt x
+<figuras/capi 2/preprocesado/string preprocs.drawio.png, id=1160, 9702.2475pt x
  611.28375pt>
 File: figuras/capi 2/preprocesado/string preprocs.drawio.png Graphic file (type
  png)
@@ -1624,7 +1625,7 @@ File: figuras/capi 2/preprocesado/string preprocs.drawio.png Graphic file (type
 Package pdftex.def Info: figuras/capi 2/preprocesado/string preprocs.drawio.png
   used on input line 54.
 (pdftex.def)             Requested size: 445.9955pt x 28.09421pt.
-<figuras/capi 2/preprocesado/filtrar-valores-unicos-flujo.png, id=1160, 751.306
+<figuras/capi 2/preprocesado/filtrar-valores-unicos-flujo.png, id=1162, 751.306
 87pt x 353.82187pt>
 File: figuras/capi 2/preprocesado/filtrar-valores-unicos-flujo.png Graphic file
  (type png)
@@ -1645,7 +1646,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 [36 <./figuras/capi 2/preprocesado/string preprocs.drawio.png> <./figuras/capi 
 2/preprocesado/filtrar-valores-unicos-flujo.png>]
-<figuras/capi 2/preprocesado/flujo-reemplazar-others.png, id=1168, 899.61093pt 
+<figuras/capi 2/preprocesado/flujo-reemplazar-others.png, id=1170, 899.61093pt 
 x 161.10187pt>
 File: figuras/capi 2/preprocesado/flujo-reemplazar-others.png Graphic file (typ
 e png)
@@ -1653,7 +1654,7 @@ e png)
 Package pdftex.def Info: figuras/capi 2/preprocesado/flujo-reemplazar-others.pn
 g  used on input line 75.
 (pdftex.def)             Requested size: 469.47046pt x 84.07335pt.
-<figuras/capi 2/preprocesado/valores faltantes.drawio.png, id=1170, 1758.57pt x
+<figuras/capi 2/preprocesado/valores faltantes.drawio.png, id=1172, 1758.57pt x
  352.31625pt>
 File: figuras/capi 2/preprocesado/valores faltantes.drawio.png Graphic file (ty
 pe png)
@@ -1661,7 +1662,7 @@ pe png)
 Package pdftex.def Info: figuras/capi 2/preprocesado/valores faltantes.drawio.p
 ng  used on input line 89.
 (pdftex.def)             Requested size: 469.47046pt x 94.05147pt.
-<figuras/capi 2/preprocesado/mv imputation.drawio.png, id=1173, 5974.32pt x 121
+<figuras/capi 2/preprocesado/mv imputation.drawio.png, id=1175, 5974.32pt x 121
 9.55624pt>
 File: figuras/capi 2/preprocesado/mv imputation.drawio.png Graphic file (type p
 ng)
@@ -1694,14 +1695,14 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [38 <./figuras/capi 2/preprocesado/mv imputation.drawio.png>]
-<figuras/capi 2/preprocesado/flujo-knni.png, id=1195, 721.94719pt x 284.56313pt
+<figuras/capi 2/preprocesado/flujo-knni.png, id=1197, 721.94719pt x 284.56313pt
 >
 File: figuras/capi 2/preprocesado/flujo-knni.png Graphic file (type png)
 <use figuras/capi 2/preprocesado/flujo-knni.png>
 Package pdftex.def Info: figuras/capi 2/preprocesado/flujo-knni.png  used on in
 put line 132.
 (pdftex.def)             Requested size: 422.52054pt x 166.54039pt.
-<figuras/capi 2/preprocesado/flujo-kmi.png, id=1196, 641.39626pt x 207.77625pt>
+<figuras/capi 2/preprocesado/flujo-kmi.png, id=1198, 641.39626pt x 207.77625pt>
 
 File: figuras/capi 2/preprocesado/flujo-kmi.png Graphic file (type png)
 <use figuras/capi 2/preprocesado/flujo-kmi.png>
@@ -1721,7 +1722,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 [39 <./figuras/capi 2/preprocesado/flujo-knni.png> <./figuras/capi 2/preprocesa
 do/flujo-kmi.png>]
-<figuras/capi 2/preprocesado/number preprocs.drawio.png, id=1211, 5968.2975pt x
+<figuras/capi 2/preprocesado/number preprocs.drawio.png, id=1213, 5968.2975pt x
  1243.64626pt>
 File: figuras/capi 2/preprocesado/number preprocs.drawio.png Graphic file (type
  png)
@@ -1741,7 +1742,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [40 <./figuras/capi 2/preprocesado/number preprocs.drawio.png>]
-<figuras/capi 2/preprocesado/one-hot-flujo.png, id=1219, 998.22937pt x 352.3162
+<figuras/capi 2/preprocesado/one-hot-flujo.png, id=1221, 998.22937pt x 352.3162
 5pt>
 File: figuras/capi 2/preprocesado/one-hot-flujo.png Graphic file (type png)
 <use figuras/capi 2/preprocesado/one-hot-flujo.png>
@@ -1752,7 +1753,7 @@ Package pdftex.def Info: figuras/capi 2/preprocesado/one-hot-flujo.png  used on
 
 LaTeX Warning: Reference `aped:12' on page 41 undefined on input line 171.
 
-<figuras/capi 2/preprocesado/normalizacion.drawio.png, id=1221, 6498.2775pt x 1
+<figuras/capi 2/preprocesado/normalizacion.drawio.png, id=1223, 6498.2775pt x 1
 484.54625pt>
 File: figuras/capi 2/preprocesado/normalizacion.drawio.png Graphic file (type p
 ng)
@@ -1788,7 +1789,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [42]
-<figuras/capi 2/hpo/automl-componente-hpo.jpg, id=1248, 179.16937pt x 82.05656p
+<figuras/capi 2/hpo/automl-componente-hpo.jpg, id=1250, 179.16937pt x 82.05656p
 t>
 File: figuras/capi 2/hpo/automl-componente-hpo.jpg Graphic file (type jpg)
 <use figuras/capi 2/hpo/automl-componente-hpo.jpg>
@@ -1807,7 +1808,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [43 <./figuras/capi 2/hpo/automl-componente-hpo.jpg>]
-<figuras/capi 2/hpo/diagrama-flujo-gral-comp-hpo.jpg, id=1258, 4068.19875pt x 1
+<figuras/capi 2/hpo/diagrama-flujo-gral-comp-hpo.jpg, id=1260, 4068.19875pt x 1
 442.38875pt>
 File: figuras/capi 2/hpo/diagrama-flujo-gral-comp-hpo.jpg Graphic file (type jp
 g)
@@ -1827,7 +1828,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [44]
-<figuras/capi 2/hpo/diagrama-act-selecc-param-hpo.jpg, id=1266, 3146.75626pt x 
+<figuras/capi 2/hpo/diagrama-act-selecc-param-hpo.jpg, id=1268, 3146.75626pt x 
 593.21625pt>
 File: figuras/capi 2/hpo/diagrama-act-selecc-param-hpo.jpg Graphic file (type j
 pg)
@@ -1854,7 +1855,7 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
 (C:\Users\Jenny\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-<figuras/capi 2/hpo/Optimizacion a resumen 2.14.jpg, id=1274, 5305.8225pt x 987
+<figuras/capi 2/hpo/Optimizacion a resumen 2.14.jpg, id=1276, 5305.8225pt x 987
 .69pt>
 File: figuras/capi 2/hpo/Optimizacion a resumen 2.14.jpg Graphic file (type jpg
 )
@@ -1886,7 +1887,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [47]
-<figuras/capi 2/hpo/Optimizacion RProp.jpg, id=1295, 5305.8225pt x 1014.79124pt
+<figuras/capi 2/hpo/Optimizacion RProp.jpg, id=1297, 5305.8225pt x 1014.79124pt
 >
 File: figuras/capi 2/hpo/Optimizacion RProp.jpg Graphic file (type jpg)
 <use figuras/capi 2/hpo/Optimizacion RProp.jpg>
@@ -1905,7 +1906,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [48 <./figuras/capi 2/hpo/Optimizacion RProp.jpg>]
-<figuras/capi 2/hpo/Optimizacion PNN.jpg, id=1307, 5305.8225pt x 1014.79124pt>
+<figuras/capi 2/hpo/Optimizacion PNN.jpg, id=1309, 5305.8225pt x 1014.79124pt>
 File: figuras/capi 2/hpo/Optimizacion PNN.jpg Graphic file (type jpg)
 <use figuras/capi 2/hpo/Optimizacion PNN.jpg>
 Package pdftex.def Info: figuras/capi 2/hpo/Optimizacion PNN.jpg  used on input
@@ -1928,7 +1929,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [49 <./figuras/capi 2/hpo/Optimizacion PNN.jpg>]
-<figuras/capi 2/hpo/Optimizacion SVM.jpg, id=1335, 7594.3725pt x 2357.80875pt>
+<figuras/capi 2/hpo/Optimizacion SVM.jpg, id=1337, 7594.3725pt x 2357.80875pt>
 File: figuras/capi 2/hpo/Optimizacion SVM.jpg Graphic file (type jpg)
 <use figuras/capi 2/hpo/Optimizacion SVM.jpg>
 Package pdftex.def Info: figuras/capi 2/hpo/Optimizacion SVM.jpg  used on input
@@ -1946,7 +1947,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [50 <./figuras/capi 2/hpo/Optimizacion SVM.jpg>]
-<figuras/capi 2/hpo/Optimizacion RandomForest.jpg, id=1355, 7594.3725pt x 2357.
+<figuras/capi 2/hpo/Optimizacion RandomForest.jpg, id=1357, 7594.3725pt x 2357.
 80875pt>
 File: figuras/capi 2/hpo/Optimizacion RandomForest.jpg Graphic file (type jpg)
 <use figuras/capi 2/hpo/Optimizacion RandomForest.jpg>
@@ -1969,14 +1970,14 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [51 <./figuras/capi 2/hpo/Optimizacion RandomForest.jpg>]
-<figuras/capi 2/Diagrama General Componente.jpg, id=1365, 4911.34875pt x 2580.6
+<figuras/capi 2/Diagrama General Componente.jpg, id=1367, 4911.34875pt x 2580.6
 4125pt>
 File: figuras/capi 2/Diagrama General Componente.jpg Graphic file (type jpg)
 <use figuras/capi 2/Diagrama General Componente.jpg>
 Package pdftex.def Info: figuras/capi 2/Diagrama General Componente.jpg  used o
 n input line 392.
 (pdftex.def)             Requested size: 422.52054pt x 222.00958pt.
-<figuras/capi 2/modelos/procesado id3.drawio.png, id=1369, 5606.9475pt x 1505.6
+<figuras/capi 2/modelos/procesado id3.drawio.png, id=1371, 5606.9475pt x 1505.6
 25pt>
 File: figuras/capi 2/modelos/procesado id3.drawio.png Graphic file (type png)
 <use figuras/capi 2/modelos/procesado id3.drawio.png>
@@ -1995,7 +1996,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [52 <./figuras/capi 2/Diagrama General Componente.jpg>]
-<figuras/capi 2/modelos/procesado c4pt5.drawio.png, id=1376, 5865.915pt x 1722.
+<figuras/capi 2/modelos/procesado c4pt5.drawio.png, id=1378, 5865.915pt x 1722.
 435pt>
 File: figuras/capi 2/modelos/procesado c4pt5.drawio.png Graphic file (type png)
 
@@ -2016,14 +2017,14 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 [53 <./figuras/capi 2/modelos/procesado id3.drawio.png> <./figuras/capi 2/model
 os/procesado c4pt5.drawio.png>]
-<figuras/capi 2/modelos/procesado cart.drawio.png, id=1384, 4986.63pt x 1725.44
+<figuras/capi 2/modelos/procesado cart.drawio.png, id=1386, 4986.63pt x 1725.44
 624pt>
 File: figuras/capi 2/modelos/procesado cart.drawio.png Graphic file (type png)
 <use figuras/capi 2/modelos/procesado cart.drawio.png>
 Package pdftex.def Info: figuras/capi 2/modelos/procesado cart.drawio.png  used
  on input line 429.
 (pdftex.def)             Requested size: 469.47046pt x 162.41838pt.
-<figuras/capi 2/modelos/procesado rf.drawio.png, id=1386, 4872.2025pt x 1508.63
+<figuras/capi 2/modelos/procesado rf.drawio.png, id=1388, 4872.2025pt x 1508.63
 625pt>
 File: figuras/capi 2/modelos/procesado rf.drawio.png Graphic file (type png)
 <use figuras/capi 2/modelos/procesado rf.drawio.png>
@@ -2042,7 +2043,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [54 <./figuras/capi 2/modelos/procesado cart.drawio.png>]
-<figuras/capi 2/modelos/procesado rprop.drawio.png, id=1393, 5670.18375pt x 157
+<figuras/capi 2/modelos/procesado rprop.drawio.png, id=1395, 5670.18375pt x 157
 1.8725pt>
 File: figuras/capi 2/modelos/procesado rprop.drawio.png Graphic file (type png)
 
@@ -2063,14 +2064,14 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 [55 <./figuras/capi 2/modelos/procesado rf.drawio.png> <./figuras/capi 2/modelo
 s/procesado rprop.drawio.png>]
-<figuras/capi 2/modelos/procesado pnn.drawio.png, id=1402, 5730.40875pt x 1701.
+<figuras/capi 2/modelos/procesado pnn.drawio.png, id=1404, 5730.40875pt x 1701.
 35625pt>
 File: figuras/capi 2/modelos/procesado pnn.drawio.png Graphic file (type png)
 <use figuras/capi 2/modelos/procesado pnn.drawio.png>
 Package pdftex.def Info: figuras/capi 2/modelos/procesado pnn.drawio.png  used 
 on input line 464.
 (pdftex.def)             Requested size: 469.47046pt x 139.38231pt.
-<figuras/capi 2/modelos/procesado svm.drawio.png, id=1404, 5579.84625pt x 1680.
+<figuras/capi 2/modelos/procesado svm.drawio.png, id=1406, 5579.84625pt x 1680.
 2775pt>
 File: figuras/capi 2/modelos/procesado svm.drawio.png Graphic file (type png)
 <use figuras/capi 2/modelos/procesado svm.drawio.png>
@@ -2124,14 +2125,14 @@ Cap\'{\i }tulo 3.
 
 
 ]
-<figuras/capi 3/pruebas-jenn/comparacion-disc.png, id=1430, 243.15843pt x 64.74
+<figuras/capi 3/pruebas-jenn/comparacion-disc.png, id=1432, 243.15843pt x 64.74
 188pt>
 File: figuras/capi 3/pruebas-jenn/comparacion-disc.png Graphic file (type png)
 <use figuras/capi 3/pruebas-jenn/comparacion-disc.png>
 Package pdftex.def Info: figuras/capi 3/pruebas-jenn/comparacion-disc.png  used
  on input line 38.
 (pdftex.def)             Requested size: 234.73523pt x 62.49922pt.
-<figuras/capi 3/pruebas-jenn/salida-discret.png, id=1431, 639.13782pt x 265.742
+<figuras/capi 3/pruebas-jenn/salida-discret.png, id=1433, 639.13782pt x 265.742
 81pt>
 File: figuras/capi 3/pruebas-jenn/salida-discret.png Graphic file (type png)
 <use figuras/capi 3/pruebas-jenn/salida-discret.png>
@@ -2151,7 +2152,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 [60 <./figuras/capi 3/pruebas-jenn/comparacion-disc.png> <./figuras/capi 3/prue
 bas-jenn/salida-discret.png>]
-<figuras/capi 3/pruebas-jenn/bd-string-preprocs.png, id=1440, 242.40562pt x 375
+<figuras/capi 3/pruebas-jenn/bd-string-preprocs.png, id=1442, 242.40562pt x 375
 .65344pt>
 File: figuras/capi 3/pruebas-jenn/bd-string-preprocs.png Graphic file (type png
 )
@@ -2171,7 +2172,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.49998pt}.
 
 [61 <./figuras/capi 3/pruebas-jenn/bd-string-preprocs.png>]
-<figuras/capi 3/pruebas-jenn/resultado-cp1-string-prep.png, id=1448, 185.19188p
+<figuras/capi 3/pruebas-jenn/resultado-cp1-string-prep.png, id=1450, 185.19188p
 t x 378.66469pt>
 File: figuras/capi 3/pruebas-jenn/resultado-cp1-string-prep.png Graphic file (t
 ype png)
@@ -2179,7 +2180,7 @@ ype png)
 Package pdftex.def Info: figuras/capi 3/pruebas-jenn/resultado-cp1-string-prep.
 png  used on input line 92.
 (pdftex.def)             Requested size: 95.06647pt x 194.38757pt.
-<figuras/capi 3/pruebas-jenn/resultado-cp2-string-prep.png, id=1449, 189.70876p
+<figuras/capi 3/pruebas-jenn/resultado-cp2-string-prep.png, id=1451, 189.70876p
 t x 377.15906pt>
 File: figuras/capi 3/pruebas-jenn/resultado-cp2-string-prep.png Graphic file (t
 ype png)
@@ -2200,14 +2201,14 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 [62 <./figuras/capi 3/pruebas-jenn/resultado-cp1-string-prep.png> <./figuras/ca
 pi 3/pruebas-jenn/resultado-cp2-string-prep.png>]
-<figuras/capi 3/pruebas-jenn/comparacion-mvi.png, id=1460, 239.39438pt x 39.899
+<figuras/capi 3/pruebas-jenn/comparacion-mvi.png, id=1462, 239.39438pt x 39.899
 06pt>
 File: figuras/capi 3/pruebas-jenn/comparacion-mvi.png Graphic file (type png)
 <use figuras/capi 3/pruebas-jenn/comparacion-mvi.png>
 Package pdftex.def Info: figuras/capi 3/pruebas-jenn/comparacion-mvi.png  used 
 on input line 138.
 (pdftex.def)             Requested size: 234.73523pt x 39.1227pt.
-<figuras/capi 3/pruebas-jenn/resultado-cp2-mvi.png, id=1461, 919.93687pt x 270.
+<figuras/capi 3/pruebas-jenn/resultado-cp2-mvi.png, id=1463, 919.93687pt x 270.
 25969pt>
 File: figuras/capi 3/pruebas-jenn/resultado-cp2-mvi.png Graphic file (type png)
 
@@ -2228,20 +2229,20 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 [63 <./figuras/capi 3/pruebas-jenn/comparacion-mvi.png> <./figuras/capi 3/prueb
 as-jenn/resultado-cp2-mvi.png>]
-<figuras/capi 3/pruebas-jenn/comparacion-norm.png, id=1471, 241.65282pt x 54.20
+<figuras/capi 3/pruebas-jenn/comparacion-norm.png, id=1473, 241.65282pt x 54.20
 25pt>
 File: figuras/capi 3/pruebas-jenn/comparacion-norm.png Graphic file (type png)
 <use figuras/capi 3/pruebas-jenn/comparacion-norm.png>
 Package pdftex.def Info: figuras/capi 3/pruebas-jenn/comparacion-norm.png  used
  on input line 182.
 (pdftex.def)             Requested size: 234.73523pt x 52.65326pt.
-<figuras/capi 3/pruebas-jenn/norm-cp1.png, id=1472, 834.86906pt x 239.39438pt>
+<figuras/capi 3/pruebas-jenn/norm-cp1.png, id=1474, 834.86906pt x 239.39438pt>
 File: figuras/capi 3/pruebas-jenn/norm-cp1.png Graphic file (type png)
 <use figuras/capi 3/pruebas-jenn/norm-cp1.png>
 Package pdftex.def Info: figuras/capi 3/pruebas-jenn/norm-cp1.png  used on inpu
 t line 190.
 (pdftex.def)             Requested size: 375.57779pt x 107.69724pt.
-<figuras/capi 3/pruebas-jenn/categorias-a-codificar.png, id=1475, 164.11313pt x
+<figuras/capi 3/pruebas-jenn/categorias-a-codificar.png, id=1477, 164.11313pt x
  39.89906pt>
 File: figuras/capi 3/pruebas-jenn/categorias-a-codificar.png Graphic file (type
  png)
@@ -2262,7 +2263,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 [64 <./figuras/capi 3/pruebas-jenn/comparacion-norm.png> <./figuras/capi 3/prue
 bas-jenn/norm-cp1.png>]
-<figuras/capi 3/pruebas-jenn/resultado-cp3-codif-norm.png, id=1482, 934.24031pt
+<figuras/capi 3/pruebas-jenn/resultado-cp3-codif-norm.png, id=1484, 934.24031pt
  x 242.40562pt>
 File: figuras/capi 3/pruebas-jenn/resultado-cp3-codif-norm.png Graphic file (ty
 pe png)
@@ -2628,7 +2629,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
  (anexo.tex Excluding 'comment' comment.
 Anexos A.
 <figuras/anexos/2.2 Configuracion modelo-----Configuración del componente Auto
-ML Clasificación (Optimización de Hiperparámetros).jpg, id=1623, 550.30594pt
+ML Clasificación (Optimización de Hiperparámetros).jpg, id=1625, 550.30594pt
  x 493.0922pt>
 File: figuras/anexos/2.2 Configuracion modelo-----Configuración del componente
  AutoML Clasificación (Optimización de Hiperparámetros).jpg Graphic file (ty
@@ -2659,7 +2660,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 [91 <./figuras/anexos/2.2 Configuracion modelo-----Configuración del component
 e AutoML Clasificación (Optimización de Hiperparámetros).jpg>]
 Anexos B.
-<figuras/anexos/2.2.2 Evaluar columna objetivo.jpg, id=1633, 561.59813pt x 268.
+<figuras/anexos/2.2.2 Evaluar columna objetivo.jpg, id=1635, 561.59813pt x 268.
 00125pt>
 File: figuras/anexos/2.2.2 Evaluar columna objetivo.jpg Graphic file (type jpg)
 
@@ -2671,7 +2672,7 @@ d on input line 32.
 
  <./figuras/anexos/2.2.2 Evaluar columna objetivo.jpg>]
 Anexos C.
-<figuras/anexos/2.2.2 Graficar Clase binaria.jpg, id=1639, 441.90094pt x 207.77
+<figuras/anexos/2.2.2 Graficar Clase binaria.jpg, id=1641, 441.90094pt x 207.77
 625pt>
 File: figuras/anexos/2.2.2 Graficar Clase binaria.jpg Graphic file (type jpg)
 <use figuras/anexos/2.2.2 Graficar Clase binaria.jpg>
@@ -2682,7 +2683,7 @@ on input line 43.
 
  <./figuras/anexos/2.2.2 Graficar Clase binaria.jpg>]
 Anexos D.
-<figuras/anexos/2.2.2 Graficar Multiclase.jpg, id=1644, 776.9025pt x 255.95625p
+<figuras/anexos/2.2.2 Graficar Multiclase.jpg, id=1646, 776.9025pt x 255.95625p
 t>
 File: figuras/anexos/2.2.2 Graficar Multiclase.jpg Graphic file (type jpg)
 <use figuras/anexos/2.2.2 Graficar Multiclase.jpg>
@@ -2693,7 +2694,7 @@ input line 54.
 
  <./figuras/anexos/2.2.2 Graficar Multiclase.jpg>]
 Anexos E.
-<figuras/anexos/2.2.2 Optimización de hiperparametros.jpg, id=1649, 816.80156p
+<figuras/anexos/2.2.2 Optimización de hiperparametros.jpg, id=1651, 816.80156p
 t x 305.64188pt>
 File: figuras/anexos/2.2.2 Optimización de hiperparametros.jpg Graphic file (t
 ype jpg)
@@ -2706,7 +2707,7 @@ jpg  used on input line 64.
  <./figuras/anexos/2.2.2 Optimización de hiperparametros.jpg>]
 Anexos F.
 <figuras/anexos/Anexo random Configuración del nodo Loop Start para optimizaci
-ón de hiperparámetros.jpg, id=1654, 395.22656pt x 285.31593pt>
+ón de hiperparámetros.jpg, id=1656, 395.22656pt x 285.31593pt>
 File: figuras/anexos/Anexo random Configuración del nodo Loop Start para optim
 ización de hiperparámetros.jpg Graphic file (type jpg)
 <use figuras/anexos/Anexo random Configuración del nodo Loop Start para optimi
@@ -2719,7 +2720,7 @@ op Start para optimización de hiperparámetros.jpg  used on input line 74.
  <./figuras/anexos/Anexo random Configuración del nodo Loop Start para optimiz
 ación de hiperparámetros.jpg>]
 Anexos G.
-<figuras/anexos/Anexo random Evaluacion de modelos (SVM).jpg, id=1659, 1085.555
+<figuras/anexos/Anexo random Evaluacion de modelos (SVM).jpg, id=1661, 1085.555
 62pt x 516.42938pt>
 File: figuras/anexos/Anexo random Evaluacion de modelos (SVM).jpg Graphic file 
 (type jpg)
@@ -2731,7 +2732,7 @@ Package pdftex.def Info: figuras/anexos/Anexo random Evaluacion de modelos (SVM
 
  <./figuras/anexos/Anexo random Evaluacion de modelos (SVM).jpg>]
 Anexos H.
-<figuras/anexos/discretizer.png, id=1664, 883.80188pt x 341.77687pt>
+<figuras/anexos/discretizer.png, id=1666, 883.80188pt x 341.77687pt>
 File: figuras/anexos/discretizer.png Graphic file (type png)
 <use figuras/anexos/discretizer.png>
 Package pdftex.def Info: figuras/anexos/discretizer.png  used on input line 95.
@@ -2741,7 +2742,7 @@ Package pdftex.def Info: figuras/anexos/discretizer.png  used on input line 95.
 
  <./figuras/anexos/discretizer.png>]
 Anexos I.
-<figuras/anexos/ejemplo discretizacion freq id3.png, id=1671, 899.61093pt x 371
+<figuras/anexos/ejemplo discretizacion freq id3.png, id=1673, 899.61093pt x 371
 .88937pt>
 File: figuras/anexos/ejemplo discretizacion freq id3.png Graphic file (type png
 )
@@ -2753,7 +2754,7 @@ ed on input line 106.
 
  <./figuras/anexos/ejemplo discretizacion freq id3.png>]
 Anexos J.
-<figuras/anexos/MV Imputation.png, id=1677, 612.78937pt x 173.89969pt>
+<figuras/anexos/MV Imputation.png, id=1679, 612.78937pt x 173.89969pt>
 File: figuras/anexos/MV Imputation.png Graphic file (type png)
 <use figuras/anexos/MV Imputation.png>
 Package pdftex.def Info: figuras/anexos/MV Imputation.png  used on input line 1
@@ -2763,7 +2764,7 @@ Package pdftex.def Info: figuras/anexos/MV Imputation.png  used on input line 1
 
  <./figuras/anexos/MV Imputation.png>]
 Anexos K.
-<figuras/anexos/normalizer.png, id=1683, 822.07124pt x 402.00188pt>
+<figuras/anexos/normalizer.png, id=1685, 822.07124pt x 402.00188pt>
 File: figuras/anexos/normalizer.png Graphic file (type png)
 <use figuras/anexos/normalizer.png>
 Package pdftex.def Info: figuras/anexos/normalizer.png  used on input line 126.
@@ -2773,7 +2774,7 @@ Package pdftex.def Info: figuras/anexos/normalizer.png  used on input line 126.
 
  <./figuras/anexos/normalizer.png>]
 Anexos L.
-<figuras/anexos/ejemplo normalizacion pnn decimal scaling.png, id=1689, 622.575
+<figuras/anexos/ejemplo normalizacion pnn decimal scaling.png, id=1691, 622.575
 94pt x 228.855pt>
 File: figuras/anexos/ejemplo normalizacion pnn decimal scaling.png Graphic file
  (type png)
@@ -2785,7 +2786,7 @@ ng.png  used on input line 137.
 
  <./figuras/anexos/ejemplo normalizacion pnn decimal scaling.png>]
 Anexos M.
-<figuras/anexos/componente integrado.png, id=1695, 771.63281pt x 389.95688pt>
+<figuras/anexos/componente integrado.png, id=1697, 771.63281pt x 389.95688pt>
 File: figuras/anexos/componente integrado.png Graphic file (type png)
 <use figuras/anexos/componente integrado.png>
 Package pdftex.def Info: figuras/anexos/componente integrado.png  used on input
@@ -2795,7 +2796,7 @@ Package pdftex.def Info: figuras/anexos/componente integrado.png  used on input
 
  <./figuras/anexos/componente integrado.png>]
 Anexos N.
-<figuras/anexos/ejemplo integracion componentes pnn.png, id=1701, 701.62125pt x
+<figuras/anexos/ejemplo integracion componentes pnn.png, id=1703, 701.62125pt x
  275.52937pt>
 File: figuras/anexos/ejemplo integracion componentes pnn.png Graphic file (type
  png)
@@ -2840,10 +2841,10 @@ Package rerunfilecheck Info: File `informe-practicas.out' has not changed.
 (rerunfilecheck)             Checksum: A5CA3AD5AC97443A4FF5AC439D866144;22163.
  ) 
 Here is how much of TeX's memory you used:
- 21845 strings out of 476331
- 398053 string characters out of 5787764
+ 21852 strings out of 476331
+ 398267 string characters out of 5787764
  1882660 words of memory out of 5000000
- 41261 multiletter control sequences out of 15000+600000
+ 41267 multiletter control sequences out of 15000+600000
  680514 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,18n,131p,1982b,782s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2866,9 +2867,9 @@ nny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:
 .pfb><C:/Users/Jenny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmr8.pfb><C:/Users/Jenny/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb>
-Output written on informe-practicas.pdf (125 pages, 8933017 bytes).
+Output written on informe-practicas.pdf (125 pages, 8962082 bytes).
 PDF statistics:
- 1878 PDF objects out of 2073 (max. 8388607)
+ 1880 PDF objects out of 2073 (max. 8388607)
  435 named destinations out of 1000 (max. 500000)
- 936 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 941 words of extra memory for PDF output out of 10000 (max. 10000000)
 
