@@ -1,7 +1,7 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplo de codificación One-Hot (también conocido como \textit {Dummy Encoding}) para el atributo ZIP Code}}{18}{figure.caption.16}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Desglose de los subproblemas de AutoML \citep {zoller2021benchmark}}}{19}{figure.caption.17}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplo de codificación One-Hot (también conocido como \textit {Dummy Encoding}) para el atributo ZIP Code}}{17}{figure.caption.16}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Desglose de los subproblemas de \textit {AutoML} \citep {zoller2021benchmark}}}{19}{figure.caption.17}%
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Ejemplo de flujo de trabajo en la herramienta KNIME.}}{22}{figure.caption.18}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Diagrama de flujo general de \textit {Discretizer}}}{34}{figure.caption.20}%
@@ -24,7 +24,7 @@
 \contentsline {figure}{\numberline {2.18}{\ignorespaces Diagrama de flujo para la optimización de hiperparámetros de PNN}}{49}{figure.caption.41}%
 \contentsline {figure}{\numberline {2.19}{\ignorespaces Diagrama de flujo para la optimización de hiperparámetros de SVM}}{50}{figure.caption.42}%
 \contentsline {figure}{\numberline {2.20}{\ignorespaces Diagrama de flujo para la optimización de hiperparámetros de Random Forest}}{51}{figure.caption.43}%
-\contentsline {figure}{\numberline {2.21}{\ignorespaces Diagrama de flujo de Componente AutoML (Clasificación)}}{52}{figure.caption.44}%
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Diagrama de flujo del componente \textit {AutoML (Clasificación)}}}{52}{figure.caption.44}%
 \contentsline {figure}{\numberline {2.22}{\ignorespaces Diagrama de flujo del procesamiento del modelo ID3}}{53}{figure.caption.45}%
 \contentsline {figure}{\numberline {2.23}{\ignorespaces Diagrama de flujo del procesamiento del modelo C4.5}}{53}{figure.caption.46}%
 \contentsline {figure}{\numberline {2.24}{\ignorespaces Diagrama de flujo del procesado de CART}}{54}{figure.caption.47}%
@@ -40,7 +40,7 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Resultados del CP1 del componente \textit {MV Imputation}}}{63}{figure.caption.59}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Resultado del CP2 del componente \textit {MV Imputation}}}{63}{figure.caption.60}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Resultados del CP1 del componente Codificar y Normalizar}}{64}{figure.caption.62}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Vista previa de la salida del componente Normalizer}}{64}{figure.caption.63}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Vista previa de la salida del componente \textit {Normalizer}}}{64}{figure.caption.63}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Categorías a codificar}}{65}{figure.caption.64}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Vista previa de la salida del componente \textit {Codificar y Normalizar}}}{65}{figure.caption.65}%
 \addvspace {10\p@ }

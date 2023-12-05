@@ -10,27 +10,27 @@
 \contentsline {section}{\numberline {1.4}Herramienta de minería de datos KNIME}{21}{section.1.4}%
 \contentsline {section}{\numberline {1.5}\textit {AutoML} en KNIME}{23}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Extensión H2O.ai}{23}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}Componente AutoML KNIME}{24}{subsection.1.5.2}%
-\contentsline {subsection}{\numberline {1.5.3}Componente KNIME de AutoML Clasificación (pre-procesado)}{25}{subsection.1.5.3}%
-\contentsline {subsection}{\numberline {1.5.4}Análisis comparativo de implementaciones para AutoML en KNIME}{27}{subsection.1.5.4}%
+\contentsline {subsection}{\numberline {1.5.2}Componente \textit {AutoML KNIME}}{24}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Componente KNIME de \textit {AutoML Clasificación (pre-procesado)}}{25}{subsection.1.5.3}%
+\contentsline {subsection}{\numberline {1.5.4}Análisis comparativo de implementaciones para \textit {AutoML} en KNIME}{27}{subsection.1.5.4}%
 \contentsline {section}{\numberline {1.6}Métodos para la evaluación en clasificación}{28}{section.1.6}%
 \contentsline {subsection}{\numberline {1.6.1}Conjuntos de datos de prueba}{28}{subsection.1.6.1}%
 \contentsline {subsection}{\numberline {1.6.2}Métricas}{30}{subsection.1.6.2}%
 \contentsline {section}{\numberline {1.7}Conclusiones parciales}{31}{section.1.7}%
-\contentsline {chapter}{\numberline {2}Propuesta de modificaciones al componente AutoML para pre-procesado}{33}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Propuesta de modificaciones al componente \textit {AutoML} para pre-procesado}{33}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Modificaciones en el pre-procesado}{33}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Discretización de variables numéricas}{34}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Pre-procesado de variables de tipo \textit {string}}{36}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}Manejo de valores faltantes}{37}{subsection.2.1.3}%
 \contentsline {subsection}{\numberline {2.1.4}Codificación y normalización}{40}{subsection.2.1.4}%
-\contentsline {section}{\numberline {2.2}Componente AutoML Clasificación (Optimización de hiperparámetros)}{42}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Requisitos y restricciones del componente AutoML Clasificación (Optimización de Hiperparámetros)}{44}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Modelación del componente AutoML Clasificación (Optimización de Hiperparámetros)}{45}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.2}Componente \textit {AutoML Clasificación (Optimización de hiperparámetros)}}{42}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Requisitos y restricciones del componente \textit {AutoML Clasificación (Optimización de Hiperparámetros)}}{44}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Modelación del componente \textit {AutoML Clasificación (Optimización de Hiperparámetros)}}{45}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Optimización de hiperparámetros para RProp}{47}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}Optimización de hiperparámetros para PNN}{48}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5}Optimización de hiperparámetros para SVM}{49}{subsection.2.2.5}%
 \contentsline {subsection}{\numberline {2.2.6}Optimización de hiperparámetros para Random Forest}{50}{subsection.2.2.6}%
-\contentsline {section}{\numberline {2.3}Modelación de nueva versión del componente AutoML Clasificación}{51}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Modelación de nueva versión del componente \textit {AutoML Clasificación}}{51}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Procesado de ID3}{52}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Procesado para C4.5}{53}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Procesado para CART}{54}{subsection.2.3.3}%
@@ -50,7 +50,7 @@
 \contentsline {subsection}{\numberline {3.2.2}Experimento II}{67}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}Experimento III}{68}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Análisis de los resultados obtenidos}{69}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}Pruebas de integración al componente \textit {AutoML Clasificación}}{70}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Pruebas de integración del componente \textit {AutoML Clasificación}}{70}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Experimento \textsc {I} }{71}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Experimento \textsc {II} }{72}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Experimento \textsc {III} }{72}{subsection.3.3.3}%

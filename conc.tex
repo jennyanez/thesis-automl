@@ -1,13 +1,13 @@
 \chapter*{Conclusiones generales}
 Con el cumplimiento de los objetivos planteados para la investigación, se puede llegar a las siguientes conclusiones:
 \begin{itemize}
-	\item KNIME se ha identificado como una herramienta valiosa para la minería de datos, permitiendo la integración de H2O y la implementación de \textit{AutoML}. Sin embargo, tanto el componente \textit{AutoML} de KNIME como el componente \textit{AutoML Clasificación (pre-procesado)} de la CUJAE presentan áreas de mejora, especialmente en la fase de pre-procesado y la optimización de hiperparámetros.
-	\item La disponibilidad de documentación y la posibilidad de modificación son factores clave a considerar para el desarrollo de esta investigación, por lo que se elige el componente \textit{AutoML Clasificación (pre-procesado)}.
-	\item Las técnicas de pre-procesado como discretización, normalización y tratamiento de valores faltantes, a pesar de tener una gran variedad de métodos cada una, se ha demostrado que su efectividad depende del conjunto de datos y modelo de Aprendizaje Automático que se vaya a emplear.
-	\item Las métricas Exactitud y Cohen's Kappa para la evaluación de los modelos permiten obtener una visión general del rendimiento de estos, independientemente de si los conjuntos de datos son de naturaleza binaria o multiclase.
+	\item KNIME se identificó como una herramienta valiosa para la minería de datos, permitiendo la integración de H2O y la implementación de \textit{AutoML}. Sin embargo, tanto el componente \textit{AutoML} de KNIME como el componente \textit{AutoML Clasificación (pre-procesado)} de la CUJAE presentan áreas de mejora, especialmente en la fase de pre-procesado y la optimización de hiperparámetros.
+	\item La disponibilidad de documentación y la posibilidad de modificación fueron factores clave a considerar para el desarrollo de esta investigación, por lo que se elige el componente \textit{AutoML Clasificación (pre-procesado)}.
+	\item Las técnicas de pre-procesado, como discretización, normalización y tratamiento de valores faltantes, a pesar de tener una gran variedad de métodos cada una, han demostrado que su efectividad depende del conjunto de datos y del modelo de Aprendizaje Automático que se vaya a emplear.
+	\item Las métricas Exactitud y Cohen's Kappa, para la evaluación de los modelos, permitieron obtener una visión general del rendimiento de estos, independientemente de si los conjuntos de datos eran de naturaleza binaria o multiclase.
 	\item El impacto de las técnicas de pre-procesado puede variar dependiendo del modelo y del contexto del conjunto de datos: mientras que el modelo ID3 mostró una mejora sistemática con la integración de pre-procesado, el modelo C4.5 presentó resultados inferiores en uno de los experimentos.
 	\item El modelo que obtuvo los mejores resultados, de forma general, fue Random Forest.
-	\item El modelo que obtuvo los peores resultados, de forma general, fue SVM sin la integración de los nuevos componentes. Sin embargo, al realizarse la integración con estas implementaciones, mejora en un promedio de 25.6\% en términos de exactitud.
+	\item El modelo que obtuvo los peores resultados, de forma general, fue SVM sin la integración de los nuevos componentes. Sin embargo, al realizarse la integración con estas implementaciones, mejoró en un promedio de 25.6\% en términos de exactitud.
 	\item Con las nuevas integraciones, el modelo que presentó una mejora mayor en términos de exactitud fue PNN, con un incremento de un 27.1\% de promedio.
 	\item Entre las métricas evaluadas en la experimentación, el Cohen’s Kappa mostró el mayor incremento con la integración de los componentes de pre-procesado y optimización de hiperparámetros, con un promedio de 25.69\%.
 \end{itemize}

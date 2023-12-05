@@ -2,7 +2,7 @@
 El presente capítulo se adentra en la fase crucial de validación de las soluciones propuestas en el Capítulo \ref{chap:2}. Durante el transcurso de este, se llevará a cabo una evaluación de las soluciones propuestas, centrándose en la comparación de los resultados obtenidos con y sin estas modificaciones. Se analizarán métricas de rendimiento y la capacidad del sistema para adaptarse a diferentes conjuntos de datos y necesidades específicas de clasificación. En última instancia, este capítulo constituirá un pilar fundamental en la evaluación de las contribuciones presentadas en esta tesis, demostrando la efectividad y utilidad de las soluciones propuestas en el contexto del \textit{AutoML} para la clasificación.
 
 \section{Pruebas de caja negra a subcomponentes para el pre-procesado}
-En pos de validar el correcto funcionamiento de las soluciones propuestas en el Capítulo \ref{chap:2}, a continuación se presentan las pruebas realizadas a cada componente y a la integración de los mismos con el componente \textit{AutoML Clasificación (pre-procesado)}. Para ello se emplean los conjuntos de datos descritos en la Tabla \ref{tab:bd-cap1}.
+En pos de validar el correcto funcionamiento de las soluciones propuestas en el Capítulo \ref{chap:2}, se presentan a continuación las pruebas realizadas a cada componente y a la integración de los mismos con el componente \textit{AutoML Clasificación (pre-procesado)}. Para ello se emplean los conjuntos de datos descritos en la Tabla \ref{tab:bd-cap1}.
 
 \subsection{Caso de prueba al componente \textit{Discretizer}}
 
@@ -175,7 +175,7 @@ Para la realización de esta prueba se diseña el caso de prueba de la Tabla \re
 	\end{spacing}
 \end{table}
 
-En la Figura \ref{fig:comparacion-norm} se muestran los resultados del CP1, donde el mejor método para la normalización para este conjunto de datos con este algoritmo es Z-Score, con una precisión de 0.777 y Cohen's Kappa de 0.335. Para el CP2, se presenta en la Figura \ref{fig:norm-cp1} una vista previa de la tabla de salida del componente \textit{Normalizer} con los datos normalizados.
+En la Figura \ref{fig:comparacion-norm} se muestran los resultados del CP1, donde el mejor método para la normalización para este conjunto de datos con este algoritmo es Z-Score, con una exactitud de 0.777 y Cohen's Kappa de 0.335. Para el CP2, se presenta en la Figura \ref{fig:norm-cp1} una vista previa de la tabla de salida del componente \textit{Normalizer} con los datos normalizados.
 
 \begin{figure}[H]
 	\centering
@@ -188,7 +188,7 @@ En la Figura \ref{fig:comparacion-norm} se muestran los resultados del CP1, dond
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{"figuras/capi 3/pruebas-jenn/norm-cp1"}
-	\caption{Vista previa de la salida del componente Normalizer}
+	\caption{Vista previa de la salida del componente \textit{Normalizer}}
 	\label{fig:norm-cp1}
 \end{figure}
 
@@ -378,7 +378,7 @@ El análisis comparativo entre los modelos SVM, basado en los resultados de los 
 Al analizar los tres experimentos del modelo Random Forest, en términos generales, el modelo del componente aumenta su rendimiento, en cuanto a precisión y concordancia entre estas, resaltando el experimento II, con aumento de 0.13 de \textit{accuracy} y 0.23 de Cohen's Kappa, lo que resulta significativo, pues enfatiza su robustez y fiabilidad con respecto al modelo nativo. En los experimentos I y II, se logra competitividad entre los resultados, pero el modelo del componente resulta ganador en las tres métricas.
 
 
-\section{Pruebas de integración al componente \textit{AutoML Clasificación}}
+\section{Pruebas de integración del componente \textit{AutoML Clasificación}}
 
 La integración de distintos flujos y componentes desempeña un papel crucial para asegurar el funcionamiento cohesivo de un componente KNIME. La funcionalidad de estas integraciones se convierte en un aspecto esencial que impacta directamente la experiencia de \textit{AutoML} del usuario y la eficiencia de los modelos en su conjunto. 
 
@@ -578,7 +578,7 @@ En la Tabla \ref{tab:res-potability} se muestran los resultados acorde a las mé
 
 
 \subsection{Experimento \textsc{IV} }
-Para la realización de este experimento se emplea el conjunto de datos \textsc{Dry Bean}. Este es escogido debido a que su columna objetivo es multiclase, la que presenta un balance en la distribución de clases y hay presencia de un desbalance en la distribución de los tipos de atributos donde predominan los de tipo cuantitativos. Para más detalles, consultar la Tabla \ref{tab:bd-cap1}. \\
+Para la realización de este experimento se emplea el conjunto de datos \textsc{Dry Bean}. Este es escogido debido a que su columna objetivo es multiclase, la que presenta un balance en la distribución de clases y hay presencia de una descompensación en la distribución de los tipos de datos, donde predominan los cuantitativos. Para más detalles, consultar la Tabla \ref{tab:bd-cap1}. \\
 En la Tabla \ref{tab:res-dry-bean} se muestran los resultados acorde a las métricas \textit{Accuracy} y Cohen's Kappa.
 
 \pagebreak
@@ -710,7 +710,7 @@ Al analizar los cinco experimentos del modelo Random Forest del componente actua
 Al terminar este capítulo, se llega a las siguientes conclusiones: 
 
 \begin{itemize}
-	\item El modelo RProp del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)} demostró que con la optimización de hiperparámetros, aunque el modelo nativo presentara predicciones competitivas, clasifica mejor las instancias.
+	\item El modelo RProp del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)} demostró que con la optimización de hiperparámetros clasifica mejor las instancias, a pesar de que el modelo nativo presentó predicciones competitivas.
 	\item El modelo PNN del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)} reveló ciertas tendencias positivas con la optimización de hiperparámetros, en comparación con el modelo nativo, indicando una mejor precisión y concordancia entre predicciones y etiquetas reales.
 	\item El modelo SVM del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)} indicó una mejora con la optimización de hiperparámetros, debido a su superioridad en la clasificación de las instancias, con respecto al modelo nativo.
 	\item El modelo Random Forest del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)} destacó, de forma ajustada, una mejora en la predicción con respecto al modelo nativo, evidenciando que con la optimización de hiperparámetros se obtienen mejores resultados en la clasificación. 
@@ -719,14 +719,14 @@ Al terminar este capítulo, se llega a las siguientes conclusiones:
 	\begin{itemize}
 	\item Se observó una mejora sistemática en la exactitud del nuevo modelo de ID3 en todos los conjuntos de datos evaluados con un aumento de hasta casi un 5\%.
 	\item Al revelar resultados inferiores en la exactitud el modelo ID3 de la antigua versión, con respecto a la nueva versión en los cinco experimentos, se da a demostrar que el pre-procesado añadido es un factor crucial para la preparación de los datos en este modelo.
-	\item En el nuevo modelo C4.5 al obtener resultados favorables y desfavorables en algunos casos con respecto a su antecesor, sugiere que las modificaciones en el pre-procesado pueden ser beneficiosas en ciertas situaciones, pero no en todas. 
+	\item El nuevo modelo C4.5, al obtener resultados favorables y desfavorables en algunos casos con respecto a su antecesor, sugiere que las modificaciones en el pre-procesado pueden ser beneficiosas en ciertas situaciones, pero no en todas. 
 	\item A pesar de que el modelo C4.5 haya presentado resultados inferiores en uno de los experimentos, destacó entre los modelos sin optimización de hiperparámetros con la mayor exactitud en el 60\% de los experimentos realizados.
 	\item El nuevo modelo CART arrojó, en la mayoría de los experimentos, resultados idénticos en comparación con su predecesor, señalando que al tratar solamente las modificaciones del pre-procesado a valores faltantes y evaluando conjunto de datos donde no hay preponderancia de estos, no se representa una mejora sustancial en la clasificación.
 	\item El nuevo modelo RProp destacó en todos los experimentos, obteniendo mejores predicciones con respecto al modelo del componente anterior, evidenciando que se obtienen mejores resultados tras la inclusión de las nuevas implementaciones.
 	\item El nuevo modelo PNN en su análisis comparativo presentó mejores resultados con respecto al del componente sin integrar, indicando que las nuevas implementaciones influyen positivamente en el rendimiento de este modelo.
 	\item Tras analizar el tiempo de ejecución de los modelos SVM con y sin integración, se obtiene que este disminuyó considerablemente en el nuevo modelo, esto a consecuencia de la incorporación del componente para la normalización, demostrando que trabaja de forma más eficaz con los datos normalizados. 
 	\item Obtuvo un mejor porcentaje de acierto en los resultados el modelo Random Forest, con un 91.38\% como promedio en Exactitud, demostrando su robustez y fiabilidad.
-	\item El modelo con peores resultados de acierto fue SVM del componente sin la integración de pre-procesado y optimización de hiperparámetros, con un 0.5665\% como promedio en Exactitud.
+	\item El modelo con peores resultados de acierto fue SVM del componente sin las integraciones de pre-procesado y optimización de hiperparámetros, con un 0.5665\% como promedio en Exactitud.
 \end{itemize}
 
 

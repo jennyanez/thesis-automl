@@ -1,5 +1,5 @@
-\chapter{Propuesta de modificaciones al componente AutoML para pre-procesado}\label{chap:2}
-En el presente capítulo, se propone una serie de modificaciones destinadas a mejorar el componente \emph{AutoML Clasificación (pre-procesado)}. Estas modificaciones se centran en el pre-procesamiento de datos, incluyendo la automatización de tareas como la discretización, normalización y el tratamiento de valores únicos, valores de alta cardinalidad y valores faltantes. Además, se explorará la inclusión de técnicas de Optimización de Hiperparámetros (HPO) para encontrar configuraciones óptimas para los modelos. El enfoque principal de esta propuesta es la integración de estas dos facetas con el componente AutoML existente para clasificación. A lo largo de este capítulo, se describirá cómo estas modificaciones buscan mejorar la eficiencia y precisión del proceso de AutoML, creando modelos de clasificación más sólidos y adaptados a las necesidades específicas de los datos.
+\chapter{Propuesta de modificaciones al componente \textit{AutoML} para pre-procesado}\label{chap:2}
+En el presente capítulo, se propone una serie de modificaciones destinadas a mejorar el componente \emph{AutoML Clasificación (pre-procesado)}. Estas modificaciones se centran en el pre-procesamiento de datos, incluyendo la automatización de tareas como la discretización, normalización y el tratamiento de valores únicos, valores de alta cardinalidad y valores faltantes. Además, se explorará la inclusión de técnicas de Optimización de Hiperparámetros para encontrar configuraciones óptimas para los modelos. El enfoque principal de esta propuesta es la integración de estas dos facetas con el componente \textit{AutoML} existente para la clasificación. A lo largo de este capítulo, se describirá cómo estas modificaciones buscan mejorar la eficiencia y precisión del proceso de \textit{AutoML}, creando modelos de clasificación más sólidos y adaptados a las necesidades específicas de los datos.
 
 \section{Modificaciones en el pre-procesado}
 Con el fin de abordar las problemáticas presentadas en el subepígrafe \ref{sec:componente-knime-de-automl-clasificacion-pre-procesado}, es decir, la falta de automatización de la discretización y normalización, el tratamiento de valores únicos, valores de alta cardinalidad y valores faltantes, se llevaron a cabo una serie de modificaciones sustanciales en el proceso de pre-procesamiento de datos. \\
@@ -7,7 +7,7 @@ Con el fin de abordar las problemáticas presentadas en el subepígrafe \ref{sec
 
 \subsection{Discretización de variables numéricas} 
 La discretización de variables numéricas se utiliza para convertir datos continuos en datos discretos, lo que permite que los algoritmos de aprendizaje automático puedan procesarlos y analizarlos adecuadamente. La discretización también puede mejorar la precisión de los modelos de aprendizaje automático al reducir el ruido en los datos y hacer que los patrones sean más fáciles de detectar. En aras de automatizar este proceso, se propone el componente \textit{Discretizer}. \\
-El componente \textit{Discretizer} toma en su puerto de entrada los datos en formato tabular. Dichos datos, de tipo numéricos, son procesados por varios algoritmos de discretización y, como puerto de salida, se obtienen discretizados acorde al método de discretización con mejor precisión. Tiene una única restricción: no pueden tener valores perdidos como entrada. El diagrama de flujo de la Figura \ref{fig:discretizacion} expone el flujo general del componente \textit{Discretizer}. El flujo KNIME correspondiente está presente en el Anexo \ref{aped:8}. 
+El componente \textit{Discretizer} toma en su puerto de entrada los datos en formato tabular. Dichos datos, de tipo numéricos, son procesados por varios algoritmos de discretización y, como puerto de salida, se obtienen discretizados acorde al modelo que obtuvo mayor exactitud. Tiene una única restricción: no puede tener valores perdidos como entrada. El diagrama de flujo de la Figura \ref{fig:discretizacion} expone el flujo general del componente \textit{Discretizer}. El flujo KNIME correspondiente está presente en el Anexo \ref{aped:8}. 
 
 \begin{figure}[H]
 	\centering
@@ -16,10 +16,10 @@ El componente \textit{Discretizer} toma en su puerto de entrada los datos en for
 	\label{fig:discretizacion}
 \end{figure}
 
-Para la discretización se emplean los nodos presentes en la Figura \ref{fig:discretizacion-nodos}. El nodo \textit{Auto-Binner} contiene tres métodos de discretización: \textit{Equal-Width, Equal-Frequency} (Anexo \ref{aped:9}) y \textit{Quantile-Based}; mientras el nodo \textit{CAIM Binner} contiene el método \textit{CAIM}. Para la elección de los \textit{k} intervalos se emplea la Regla de Sturges, descrita en el epígrafe \ref{sub-epigrafe-disc}, debido a su sencilla implementación en la herramienta. El nodo \textit{CAIM Binner} no requiere una configuración en específico, y para el método \textit{Quantile-Based} se escogieron los cuantiles 0.0, 0.25, 0.5, 0.75 y 1.0. Esta decisión se basa en varios aspectos como:
+Para la discretización se emplean los nodos presentes en la Figura \ref{fig:discretizacion-nodos}. El nodo \textit{Auto-Binner} contiene tres métodos de discretización: \textit{Equal-Width, Equal-Frequency} (Anexo \ref{aped:9}) y \textit{Quantile-Based}; mientras el nodo \textit{CAIM Binner} contiene el método \textit{CAIM}. Para la elección de los \textit{k} intervalos se emplea la Regla de Sturges, descrita en el epígrafe \ref{sub-epigrafe-disc}, debido a su sencilla implementación en la herramienta. El nodo \textit{CAIM Binner} no requiere una configuración en específico, y para el método \textit{Quantile-Based} se escogieron los cuantiles 0.0, 0.25, 0.5, 0.75 y 1.0. Esta decisión se basa en varios aspectos, como:
 \begin{enumerate}
 	\item Distribución de los datos: para capturar diversos puntos en la distribución de los datos. Estos cuantiles proporcionan una representación equitativa de la variabilidad de los valores en el conjunto de datos. El cuantil 0.0 representa el valor mínimo, el cuantil 1.0 representa el valor máximo y los cuantiles 0.25, 0.5 y 0.75 dividen los datos en cuartiles. Esta selección asegura que se están considerando tanto los extremos como los valores centrales de la distribución.
-	\item Robustez ante valores atípicos: la elección de estos cuantiles también está respaldada por la necesidad de que los modelos sean robustos ante valores atípicos. Los cuantiles 0.0 y 1.0 permiten considerar directamente los valores mínimos y máximos, lo que puede ser crítico para lidiar con datos extremos que pueden afectar significativamente el rendimiento de nuestros modelos.
+	\item Robustez ante valores atípicos: la elección de estos cuantiles también está respaldada por la necesidad de que los modelos sean robustos ante valores atípicos. Los cuantiles 0.0 y 1.0 permiten considerar directamente los valores mínimos y máximos, lo que puede ser crítico para lidiar con datos extremos que pueden afectar significativamente el rendimiento de los modelos.
 	\item Interpretabilidad: para mejorar la interpretabilidad de los resultados, se opta por seleccionar los cuantiles 0.25, 0.5 y 0.75, que representan los cuartiles. Los cuartiles son puntos de referencia bien conocidos en estadísticas y facilitan la comunicación de resultados a personas no técnicas. 
 	\item Consistencia y comparabilidad: utilizar cuantiles específicos como 0.0, 0.25, 0.5, 0.75 y 1.0 puede hacer que los resultados sean más consistentes y comparables entre diferentes análisis o modelos, ya que se utilizan puntos de corte estándar en la distribución de los datos.
 \end{enumerate}
@@ -68,7 +68,7 @@ A continuación se exponen los cambios realizados al componente \textit{String p
 		\label{fig:filtrar-valores-unicos-flujo}
 	\end{figure}
 
-	\item Reemplazar con otros: en este nuevo componente, los valores únicos en una columna que representan una minoría, son reemplazados por la categoría '\textit{other}'.  Para ello, iterando por cada columna dentro de un ciclo, se calculan la frecuencia absoluta y relativa de cada atributo (nodo \textit{Math Formula}), y aquellos que representen menos del 1\% son los elegidos para la sustitución por la nueva categoría (nodo \textit{Java Snippet}). En la Figura \ref{fig:flujo-reemplazar-others} se muestra una parte del flujo KNIME donde se implementa esta tarea. 
+	\item Reemplazar con 'otros': en este nuevo componente, los valores únicos en una columna que representan una minoría, son reemplazados por la categoría '\textit{other}'.  Para ello, iterando por cada columna dentro de un ciclo, se calculan la frecuencia absoluta y relativa de cada atributo (nodo \textit{Math Formula}), y aquellos que representen menos del 1\% son los elegidos para la sustitución por la nueva categoría (nodo \textit{Java Snippet}). En la Figura \ref{fig:flujo-reemplazar-others} se muestra una parte del flujo KNIME donde se implementa esta tarea. 
 
 	\begin{figure}[H]
 		\centering
@@ -100,8 +100,8 @@ La imputación de valores faltantes ha sido modificada, dado que anteriormente s
 	\label{fig:mv-imputation}
 \end{figure}
 
-Primeramente se aplican en paralelo las técnicas de imputación kNN y k-Means, al terminar se aplica el algoritmo de aprendizaje automático en cuestión con los datos imputados por cada método y, finalmente, se comparan los resultados acorde al esquema descrito en el componente \textit{Discretizer} para devolver los datos con la mejor sustitución. \\
-Para la implementación de kNN y k-Means, se crearon dos subcomponentes: kNNI (\textit{k-Nearest Neighbors Imputation}) y kMI (\textit{k-Means Imputation}). Se emplean los nodos \textit{kNN} y \textit{k-Means}, ambos nativos de KNIME. Para escoger \textit{k}, en k-Means se utiliza el Método de la Silueta, ya que KNIME contiene el nodo \textit{Silhouette Coefficient}; mientras que para kNN se decide emplear la raíz cuadrada de la muestra, debido a su simpleza en la implementación y que este método podría ofrecer cierta estabilidad en la elección del número de vecinos, independientemente del tamaño específico del conjunto de datos. Esto podría hacer que el modelo sea menos sensible a variaciones en el tamaño de la muestra. A continuación se describe el funcionamiento de k-NNI y kMI:
+Primeramente se aplican en paralelo las técnicas de imputación kNN y k-Means, al terminar se aplica el algoritmo de aprendizaje automático en cuestión con los datos imputados por cada método y, finalmente, se comparan los resultados acorde al esquema descrito en el componente \textit{Discretizer}, para devolver los datos con la mejor sustitución. \\
+Para la implementación de kNN y k-Means, se crearon dos subcomponentes: kNNI (\textit{k-Nearest Neighbors Imputation}) y kMI (\textit{k-Means Imputation}). Se emplean los nodos \textit{kNN} y \textit{k-Means}, ambos nativos de KNIME. Para escoger \textit{k}, en k-Means se utiliza el Método de la Silueta, ya que KNIME contiene el nodo \textit{Silhouette Coefficient}; mientras que para kNN se decide emplear la raíz cuadrada de la muestra, debido a su simpleza en la implementación y que este método podría ofrecer cierta estabilidad en la elección del número de vecinos, independientemente del tamaño específico del conjunto de datos. Esto podría hacer que el modelo sea menos sensible a variaciones en el tamaño de la muestra. A continuación se describe el funcionamiento de kNNI y kMI:
 
 \begin{itemize}
 	\item kMI:
@@ -117,7 +117,7 @@ Para la implementación de kNN y k-Means, se crearon dos subcomponentes: kNNI (\
 	\item kNNI:
 	\begin{enumerate}
 		\item Convertir los valores nominales en numéricos para que el nodo trabaje con ellos, ya que este algoritmo solamente trata este tipo de valores.
-		\item Extraer los nombres de las columnas que contienen valores perdidas.
+		\item Extraer los nombres de las columnas que contienen valores perdidos.
 		\item Por cada columna, se separan los valores perdidos del resto de los datos, éstos se reemplazan por 0 si son numéricos, si son de tipo \textit{string} se ignoran.
 		\item Calcular el valor de \textit{k} mediante la raíz cuadrada de la muestra. 
 		\item Los datos sin valores perdidos se emplean para el entrenamiento de kNN, mientras los datos con estos se emplean para la predicción.
@@ -155,11 +155,11 @@ En KNIME es posible implementar la normalización a partir del nodo \textit{Norm
 	\label{fig:number-preprocs}
 \end{figure}
 Por otro lado, los valores de alta cardinalidad, aquellos que se repiten con frecuencia y pueden ser numerosos, son cruciales para comprender tendencias y patrones en los datos. La codificación de estas variables se refiere a técnicas especiales de codificación que se utilizan cuando se tienen variables categóricas con un gran número de categorías o niveles distintos. La alta cardinalidad puede dificultar la gestión de estas variables en modelos de aprendizaje automático, y es importante abordarlas de manera eficiente. \\ 
-A continuación se exponen los cambios realizados al pre-procesado para la codificación y normalización:
+A continuación, se exponen los cambios realizados al pre-procesado para la codificación y normalización:
 
 \begin{itemize}
 
-	\item Codificar con \textit{One-Hot Encoding}: para el tratamiento de valores con alta cardinalidad, se emplea la codificación One-Hot (ver subepígrafe \ref{alta-cardinalidad}), ya que KNIME brinda el nodo \textit{One To Many} para esta tarea. Para esto se escogen los atributos que tienen como mínimo 15 categorías distintas. \textit{One-Hot Encoding} se utiliza para codificar variables categóricas en una forma que no impone un orden implícito en las categorías. Cuando se tienen más de 15 categorías, es poco probable que haya un orden natural o jerarquía en esas categorías, por lo que codificarlas como variables binarias evita interpretaciones erróneas de orden o importancia. Dado que esta técnica produce gran dimensionalidad, se utiliza para su reducción el método PCA, con un límite de conservación de la información del 90\%. Este proceso se encuentra implementado en la Figura \ref{fig:one-hot-flujo}.
+	\item Codificar con \textit{One-Hot Encoding}: para el tratamiento de valores con alta cardinalidad, se emplea la codificación One-Hot (ver subepígrafe \ref{alta-cardinalidad}), ya que KNIME brinda el nodo \textit{One To Many} para esta tarea. Para esto, se escogen los atributos que tienen como mínimo 15 categorías distintas. \textit{One-Hot Encoding} se utiliza para codificar variables categóricas en una forma que no impone un orden implícito en las categorías. Cuando se tienen más de 15 categorías, es poco probable que haya un orden natural o jerarquía en esas categorías, por lo que codificarlas como variables binarias evita interpretaciones erróneas de orden o importancia. Dado que esta técnica produce gran dimensionalidad, se utiliza para su reducción el método PCA, con un límite de conservación de la información del 90\%. Este proceso se encuentra implementado en la Figura \ref{fig:one-hot-flujo}.
 	
 	\begin{figure}[H]
 		\centering
@@ -182,7 +182,7 @@ A continuación se exponen los cambios realizados al pre-procesado para la codif
 Siguiendo el mismo esquema del componente \textit{Discretizer}, tras aplicar la normalización con los distintos métodos ofrecidos por la herramienta KNIME, se aplica el algoritmo de aprendizaje automático que requiere los datos normalizados y posteriormente, se realiza la evaluación del desempeño de cada uno, acorde a las métricas Exactitud y Cohen's Kappa. Luego de escoger el mejor, se devuelve la tabla con los datos normalizados.
 
 
-\section{Componente AutoML Clasificación (Optimización de hiperparámetros)}
+\section{Componente \textit{AutoML Clasificación (Optimización de hiperparámetros)}}
 Antes de explorar en detalle las adaptaciones realizadas en cada modelo, es fundamental presentar un nuevo componente para la optimización de hiperparámetros, con el objetivo de facilitar el entendimiento en los epígrafes posteriores. \\
 Los modelos a optimizar en el componente propuesto en este acápite, se derivan del componente \textit{AutoML Clasificación (pre-procesado)}, dichos modelos son: redes neuronales mediante retropropagación (RProp), redes neuronales probabilísticas (PNN) y máquinas de soporte vectorial (SVM). Es importante señalar que, a diferencia del componente \textit{AutoML Clasificación (pre-procesado)}, no se incorporan los modelos ID3, CART y C4.5. Esto se debe a que no permiten la optimización de hiperparámetros, ya que son nodos de la extensión KNIME WEKA, que carecen de configuración de variables de flujo. Por esta razón, se ha tomado la decisión de implementar Random Forest. \\
 La selección adecuada de hiperparámetros desempeña un papel fundamental en el desarrollo de modelos de aprendizaje automático y estadísticos. Los hiperparámetros que se incluyen en un modelo no solo afectan su capacidad para comprender patrones y tomar decisiones precisas, sino que también pueden influir significativamente en la eficiencia computacional y los recursos requeridos. Al elegirlos correctamente, se simplifica y mejora la interpretación de los modelos, reduce el riesgo de sobreajuste y acelera el tiempo de entrenamiento. Algunos hiperparámetros que influyen en el rendimiento de los modelos son \citep{montavon2012neural}, \citep{scholkopf2018learning}, \citep{lakshmanan2021practical}, \citep{hastie2009elements}, \citep{gupta2017analysis}: 
@@ -196,7 +196,7 @@ La selección adecuada de hiperparámetros desempeña un papel fundamental en el
 	\item Redes Neuronales Probabilísticas: conexión sináptica entre dos neuronas, tasa de aprendizaje, número de épocas, número de capas y la cantidad de neuronas por capa.
 \end{itemize}
 
-Es importante destacar que la selección de variables debe basarse en un conocimiento sólido del problema en cuestión y en un análisis cuidadoso de su impacto en la calidad y eficacia del modelo. La selección de variables a optimizar por algoritmo se desarrolla en los epígrafes posteriores. 
+Es importante destacar que la selección de hiperparámetros debe basarse en un conocimiento sólido del problema en cuestión y en un análisis cuidadoso de su impacto en la calidad y eficacia del modelo. La selección de hiperparámetros a optimizar por algoritmo se desarrolla en los epígrafes posteriores. 
 
 \subsubsection*{Configuración del modelo}
 
@@ -221,7 +221,7 @@ Ajustar las configuraciones de un modelo es clave para lograr un rendimiento óp
 	\item Puerto de salida: tabla de selección múltiple de modelos con hiperparámetros optimizados.
 \end{enumerate}
 
-\subsection{Requisitos y restricciones del componente AutoML Clasificación (Optimización de Hiperparámetros)}
+\subsection{Requisitos y restricciones del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}}
 El componente propuesto debe cumplir los siguientes requisitos funcionales (RF):
 
 \begin{itemize}
@@ -246,7 +246,7 @@ El componente propuesto presenta las siguientes restricciones para su funcionami
 	\item Los datos numéricos deben estar previamente normalizados.
 \end{itemize}
 
-\subsection{Modelación del componente AutoML Clasificación (Optimización de Hiperparámetros)}
+\subsection{Modelación del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}}
 El diagrama de flujo de la Figura \ref{fig:diagrama-flujo-gral-comp-hpo} expone el flujo general del componente \textit{AutoML Clasificación (Optimización de Hiperparámetros)}.
 
 \begin{figure}[h]
@@ -384,13 +384,13 @@ La Figura \ref{fig:optimizacion-randomforest} brinda una representación organiz
 \end{figure}
 
 
-\section{Modelación de nueva versión del componente AutoML Clasificación}
-El enfoque principal de esta propuesta es la integración de los subcomponentes desarrollados para el pre-procesado y el componente \textit{AutoML Clasificación (Optimización de hiperparámetros)} con el componente AutoML existente para clasificación, cuyo diagrama de flujo se presenta en la Figura \ref{fig:diagrama-general-componente}. \\
+\section{Modelación de nueva versión del componente \textit{AutoML Clasificación}}
+El enfoque principal de esta propuesta es la integración de los subcomponentes desarrollados para el pre-procesado y el componente \textit{AutoML Clasificación (Optimización de hiperparámetros)} con el componente \textit{AutoML} existente para clasificación, cuyo diagrama de flujo se presenta en la Figura \ref{fig:diagrama-general-componente}. \\
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\linewidth]{"figuras/capi 2/Diagrama General Componente"}
-	\caption{Diagrama de flujo de Componente AutoML (Clasificación)}
+	\caption{Diagrama de flujo del componente \textit{AutoML (Clasificación)}}
 	\label{fig:diagrama-general-componente}
 \end{figure}
 
@@ -409,7 +409,7 @@ El algoritmo ID3 se puede ejecutar en KNIME a través del nodo \textit{Id3 (3.7)
 Tal como se puede apreciar en la Figura \ref{fig:procesado-id3}, simplemente se realizaron las modificaciones pertinentes en el manejo de valores faltantes, la discretización y el pre-procesado de \textit{string}. No se incorpora la codificación y normalización, dado que este algoritmo no tolera variables numéricas.
 
 \subsection{Procesado para C4.5}
-El algoritmo C4.5 se puede ejecutar en KNIME a través del nodo \textit{J48}. Este, al igual que Id3, forma parte de la extensión Weka y no permite la incorporación de la optimización de hiperparámetros. Las modificaciones efectuadas en el pre-procesado están presentes en el diagrama de flujo de la Figura \ref{fig:procesado-c4pt5}.
+El algoritmo C4.5 se puede ejecutar en KNIME a través del nodo \textit{J48}. Este, al igual que ID3, forma parte de la extensión Weka y no permite la incorporación de la optimización de hiperparámetros. Las modificaciones efectuadas en el pre-procesado están presentes en el diagrama de flujo de la Figura \ref{fig:procesado-c4pt5}.
 
 \begin{figure}[h]
 	\centering
@@ -418,7 +418,7 @@ El algoritmo C4.5 se puede ejecutar en KNIME a través del nodo \textit{J48}. Es
 	\label{fig:procesado-c4pt5}
 \end{figure}
 
-Como se observa, estas modificaciones fueron las mismas que a su predecesor, con la diferencia de que, en la versión anterior del componente \textit{AutoML Clasificación (pre-procesado)}, en este modelo no estaba presente la discretización, ya que es un algoritmo versátil y puede manejar tanto variables categóricas como numéricas. Sin embargo, se decide incorporarla ya que, a pesar de lo anteriormente expuesto, C4.5 puede ser menos eficaz cuando se utiliza en conjuntos de datos con datos numéricos muy dispersos. En tales casos, los árboles de decisión pueden requerir una mayor profundidad para capturar patrones en las variables numéricas, lo que puede llevar a árboles más complejos y propensos al sobreajuste. 
+Como se observa, estas modificaciones fueron las mismas que a su predecesor, con la diferencia de que, en la versión anterior del componente \textit{AutoML Clasificación (pre-procesado)}, en este modelo no estaba presente la discretización, ya que es un algoritmo versátil y puede manejar tanto variables categóricas como numéricas. Sin embargo, se decide incorporarla ya que, a pesar de lo anteriormente expuesto, C4.5 puede ser menos eficaz cuando se utiliza en conjuntos de datos con atributos numéricos muy dispersos. En tales casos, los árboles de decisión pueden requerir una mayor profundidad para capturar patrones en las variables numéricas, lo que puede llevar a árboles más complejos y propensos al sobreajuste. 
 
 \subsection{Procesado para CART}
 El algoritmo CART tiene los mismos requisitos que C4.5 para su ejecución, por lo que la diferencia entre ambos es el nodo que ejecuta el algoritmo, pues emplea el nodo \textit{SimpleCart (3.7)}. La única diferencia es que no se emplea la discretización de variables numéricas, ya que este árbol de decisión puede ser empleado tanto en tareas de clasificación como de regresión, lo que provoca que funcione de manera efectiva tanto con datos numéricos como nominales. Por otra parte, al formar parte de la extensión Weka, este nodo tampoco presenta la optimización de hiperparámetros. \\
@@ -481,20 +481,20 @@ En este algoritmo, al igual que en las redes neuronales, se trabaja con atributo
 \section{Conclusiones parciales}
 A partir de lo analizado en este capítulo, se arriba a las siguientes conclusiones:
 \begin{itemize}
-	\item El componente Discretizer, que emplea los métodos Equal-Width, Equal-Frequency, CAIM y Quantiles Based, tiene como objetivo dar solución a la problematica de la discretizacion estática. 
-	\item La Regla de Sturges para la elección del numero de bins en la discretización garantiza que sin importar el tamaño de la muestra se crearán bins acorde a ello.
-	\item La división en cuartiles para la elección de los cuantiles, dan una buena interpretabilidad a los resultados, siendo mas robustos ante valores atípicos y logrando que los resultados sean más consistentes y comparables entre diferentes análisis o modelos.
-	\item El componente Normalizer, que emplea los métodos \textit{Z-Score}, \textit{Min-Max} y \textit{Decimal Scaling}, tiene como objetivo dar solución a la normalización estática.
+	\item El componente \textit{Discretizer}, que emplea los métodos Equal-Width, Equal-Frequency, CAIM y Quantiles-Based, tiene como objetivo dar solución a la problemática de la discretización estática. 
+	\item La Regla de Sturges para la elección del número de bins en la discretización garantiza que sin importar el tamaño de la muestra se crearán bins acorde a ello.
+	\item La división en cuartiles para la elección de los cuantiles, dan una buena interpretabilidad a los resultados, siendo más robustos ante valores atípicos y logrando que los resultados sean más consistentes y comparables entre diferentes análisis o modelos.
+	\item El componente \textit{Normalizer}, que emplea los métodos \textit{Z-Score}, \textit{Min-Max} y \textit{Decimal Scaling}, tiene como objetivo dar solución a la normalización estática.
 	\item El uso de un umbral del 80\% para el filtrado de valores únicos evita que se aporte ruido al proceso de aprendizaje de los modelos de Aprendizaje Automático. 
-	\item La aplicación de la codificacion One-Hot a los atributos que contengan como mínimo 15 categorías distintas evita interpretaciones erróneas de orden o importancia, ya que cuando se tiene este umbral es poco probable que haya un orden natural o jerarquía en esas categorías.
-	\item El componente MV Imputation tiene como objetivo dar solución al tratamiento de valores faltantes al utilizar los modelos de Aprendizaje Automático para la imputación.
-	\item A pesar de que el Método de la Silueta puede ser empleado en la elección de k tanto para kMI como para kNNI, se ha demostrado en la literatura que para kNNI el empleo de la raíz cuadrada de la muestra para la elección de k es efectivo, ya que este método puede ofrecer cierta estabilidad en la elección del número de vecinos, independientemente del tamaño específico del conjunto de datos.
+	\item La aplicación de la codificación One-Hot a los atributos que contengan como mínimo 15 categorías distintas evita interpretaciones erróneas de orden o importancia, ya que cuando se tiene este umbral es poco probable que haya un orden natural o jerarquía en esas categorías.
+	\item El componente \textit{MV Imputation} tiene como objetivo dar solución al tratamiento de valores faltantes al utilizar los modelos de Aprendizaje Automático para la imputación.
+	\item A pesar de que el Método de la Silueta puede ser empleado en la elección de \textit{k} tanto para kMI como para kNNI, se ha demostrado en la literatura que para kNNI el empleo de la raíz cuadrada de la muestra para la elección de \textit{k} es efectivo, ya que este método puede ofrecer cierta estabilidad en la elección del número de vecinos, independientemente del tamaño específico del conjunto de datos.
 	\item Los nodos pertenecientes a la extensión WEKA de KNIME carecen de configuración de variables de flujo, lo que no permite la optimización de hiperparámetros a los modelos ID3, C4.5 y CART.
-	\item La inclusión del algoritmo de clasificación Random Forest permite continuar con el trabajo con arboles de decisión.
-	\item En el modelo Random Forest los hiperparámetros identificados fueron: profundidad máxima, cantidad de modelos, tamaño mínimo del nodo y selección del criterio de división, debido a su importancia en el rendimiento del modelo y a las limitaciones de KNIME.
-	\item En el modelo RProp los hiperparámetros escogidos fueron: número máximo de iteraciones, cantidad de neuronas y número de capas, debido a su importancia en el rendimiento del modelo y a las limitaciones de KNIME.
-	\item En el modelo PNN los hiperparámetros escogidos fueron: número máximo de iteraciones, theta minus y theta plus, debido a su importancia en el rendimiento del modelo y a las limitaciones de KNIME.
-	\item En el modelo SVM los hiperparámetros escogidos fueron: selección de kernels, bias y gamma, debido a su importancia en el rendimiento del modelo y a las limitaciones de KNIME.
+	\item La inclusión del algoritmo de clasificación Random Forest permite continuar con el trabajo con árboles de decisión.
+	\item En el modelo Random Forest, los hiperparámetros identificados fueron: profundidad máxima, cantidad de modelos, tamaño mínimo del nodo y selección del criterio de división, debido a su importancia en el rendimiento del modelo y a las limitaciones de KNIME.
+	\item En el modelo RProp, los hiperparámetros escogidos fueron: número máximo de iteraciones, cantidad de neuronas y número de capas, debido a su importancia en el rendimiento del modelo y a las limitaciones de KNIME.
+	\item En el modelo PNN, los hiperparámetros escogidos fueron: número máximo de iteraciones, theta minus y theta plus, debido a su importancia en el rendimiento del modelo y a las limitaciones de KNIME.
+	\item En el modelo SVM, los hiperparámetros escogidos fueron: selección de kernels, bias y gamma, debido a su importancia en el rendimiento del modelo y a las limitaciones de KNIME.
 \end{itemize}
 
 
